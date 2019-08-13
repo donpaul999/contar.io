@@ -17,7 +17,7 @@
        <script src = "resources\js\password.js"></script>
    </head>
    <body>
-     <a href = "register.php"><input type = "button" value="Register"></a>
-     <a href = "login.php"><input type = "button" value="Log In"></a>
+     <a href = "login_pg\register.php"><input type = "button" value="Register"></a>
+     <a href = "login_pg\login.php"><input type = "button" value="Log In"></a>
    </body>
  </html>
