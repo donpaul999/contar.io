@@ -20,8 +20,9 @@ if(!isset($_SESSION['loggedin']))
       <form method="POST" action="update_code.php">
           <input type="text" name="facebook" placeholder="Your Facebook profile">
           <input type="text" name="instagram" placeholder="Your Instagram profile">
-          <input type="submit" id="update" name="update" value="Update">
+          <input type="submit" id="update" name="update" value="Update"><br>
       </form>
+      <a href="../contar.php"><input type = "button" id="back" value="Go Back"></a>
     </div>
   </body>
 </html>
