@@ -22,7 +22,7 @@ if(!isset($_SESSION['loggedin']))
           <input type="text" name="instagram" placeholder="Your Instagram profile">
           <input type="submit" id="update" name="update" value="Update"><br>
       </form>
-      <a href="../contar.php"><input type = "button" id="back" value="Go Back"></a>
+      <a href="../contar"><input type = "button" id="back" value="Go Back"></a>
     </div>
   </body>
 </html>

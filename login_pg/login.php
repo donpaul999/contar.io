@@ -12,11 +12,11 @@
         session_start();
         $_SESSION['loggedin'] = '1';
         $_SESSION['username'] = $username;
-        header("location:..\contar.php");
+        header("location:..\contar");
       }
     else
     {
-      header("location:loginfailed.php");
+      header("location:loginfailed");
     }
   }
 
@@ -44,7 +44,7 @@
         <input type="password" name="password" value="" id="password" placeholder="Password" required>
            <input type="checkbox" onclick="showpass()"> <h5>Show Password</h5>
            <input type="submit" id="login" name="login" value="Log In">
-           <a href = "register.php"><input type = "button" value="Sign Up"></a>
+           <a href = "register"><input type = "button" value="Sign Up"></a>
        </form>
      </div>
    </body>

@@ -31,7 +31,7 @@
  }
 
  if($ok == 1)
-  return header("location:update_successful.php");
- return header("location:update.php")
+  return header("location:update_successful");
+ return header("location:update")
 
 ?>

@@ -21,6 +21,6 @@ if(!isset($_SESSION['loggedin']))
     <h1>Update succesful!</h1>
   </head>
   <body>
-    <a href = "..\contar.php"><input type = "button" value="Go Back"></a>
+    <a href = "..\contar"><input type = "button" value="Go Back"></a>
   </body>
 </html>

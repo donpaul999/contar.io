@@ -19,6 +19,6 @@
    </head>
    <body>
      <h1>ERROR: Username already exists!</h1>
-     <a href="register.php"><input type="button" value="Go Back"></a>
+     <a href="register"><input type="button" value="Go Back"></a>
    </body>
  </html>

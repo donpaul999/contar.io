@@ -19,8 +19,8 @@
    </head>
    <body>
      <h1>Login Failed! Username or/and the password is/are wrong </h1>
-     <a href="login.php"><input type="button" value="Go Back"></a>
+     <a href="login"><input type="button" value="Go Back"></a>
      <h2>If you have problems logining in contact me here</h2>
-     <a href="..\contact.html"><input type="button" value="Contact"></a>
+     <a href="..\contact"><input type="button" value="Contact"></a>
    </body>
  </html>

@@ -19,6 +19,6 @@
    </head>
    <body>
      <h1>ERROR: Email already in use!</h1>
-     <a href="register.php"><input type="button" value="Go Back"></a>
+     <a href="register"><input type="button" value="Go Back"></a>
    </body>
  </html>

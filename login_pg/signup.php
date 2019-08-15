@@ -13,16 +13,16 @@
       $email = $_POST['email'];
       $query = mysqli_query($conectare, "SELECT * FROM users WHERE username= '$user'");
       if(mysqli_num_rows($query) > 0) { //check if there is already an entry for that username
-        header("location:username_error.php");
+        header("location:username_error");
       }else{
         $query = mysqli_query($conectare, "SELECT * FROM users WHERE email= '$email'");
         if(mysqli_num_rows($query) > 0 ) { //check if there is already an entry for that username
-          header("location:email_error.php");
+          header("location:email_error");
         }
         else{
         $sql ="INSERT INTO users(username, FullName, birthdate, email, password) VALUES ('$user', '$FullName','$date','$email','$pass')";
 				$result = mysqli_query($conectare, $sql);
-        header("location:register_successful.php");
+        header("location:register_successful");
       }
       }
     }

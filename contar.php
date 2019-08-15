@@ -18,8 +18,8 @@ $username = $_SESSION['username'];
   </head>
   <body>
     <?php
-    echo '<a href ="profile.php?id='.$username.'"><input type = "button" value="See your profile"></a><br>';
+    echo '<a href ="'.$username.'"><input type = "button" value="See your profile"></a><br>';
     ?>
-    <a href = "update_pg\update.php"><input type = "button" value="Update your profile"></a>
+    <a href = "update_pg\update"><input type = "button" value="Update your profile"></a>
   </body>
 </html>

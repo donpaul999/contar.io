@@ -21,7 +21,7 @@ $fn = mysqli_fetch_array($var);
     <link rel="shortcut icon" type="image/x-icon" href="icons\logo.png" />
     <link rel="stylesheet" type="text/css" href="resources\css\style_index.css">
     <title>Contar.io</title>
-    <h1><?php echo $fn['fullname']?></h1>
+    <h1><?php echo $fn['fullname'];?></h1>
   </head>
   <body>
     <?php
@@ -34,8 +34,8 @@ $fn = mysqli_fetch_array($var);
      echo "<a href =".$row['instagram']." target='_blank'><input type='button' value='Instagram'></a><br>";
     if($ok == 1)
     {
-      echo "<a href = 'update_pg\update.php'><input type = 'button' value='Update your profile'></a><br>";
-      echo "<a href='contar.php'><input type = 'button' id='back' value='Go Back'></a>";
+      echo "<a href = 'update_pg\update'><input type = 'button' value='Update your profile'></a><br>";
+      echo "<a href='contar'><input type = 'button' id='back' value='Go Back'></a>";
     }
     ?>
   </body>

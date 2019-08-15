@@ -30,7 +30,7 @@
            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" oninput="check(this)" required > <br>
            <span id='message'></span>
            <input type="submit" id="submit" value="Sign Up">
-           <a href = "login.php"><input type = "button" value="Log In"></a>
+           <a href = "login"><input type = "button" value="Log In"></a>
        </form>
      </div>
    </body>

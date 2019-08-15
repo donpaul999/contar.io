@@ -19,6 +19,6 @@
    </head>
    <body>
      <h1>Registration successfully completed!</h1>
-     <a href="login.php"><input type="button" value="Go Back"></a>
+     <a href="login"><input type="button" value="Go Back"></a>
    </body>
  </html>
