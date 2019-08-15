@@ -1,3 +1,3 @@
 # contar.io
-Online "visiting card"
+Online "visiting card".
 All of your online accounts in one place.
