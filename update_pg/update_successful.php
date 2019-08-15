@@ -22,5 +22,6 @@ if(!isset($_SESSION['loggedin']))
   </head>
   <body>
     <a href = "..\contar"><input type = "button" value="Go Back"></a>
+    <a href='login_pg\logout.php'><input type = 'button' id='logout' value='Log Out'></a>
   </body>
 </html>

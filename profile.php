@@ -36,6 +36,8 @@ $fn = mysqli_fetch_array($var);
     {
       echo "<a href = 'update_pg\update'><input type = 'button' value='Update your profile'></a><br>";
       echo "<a href='contar'><input type = 'button' id='back' value='Go Back'></a>";
+      echo "<a href='login_pg\logout.php'><input type = 'button' id='logout' value='Log Out'></a>";
+
     }
     ?>
   </body>

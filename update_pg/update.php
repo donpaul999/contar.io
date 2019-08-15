@@ -23,6 +23,7 @@ if(!isset($_SESSION['loggedin']))
           <input type="submit" id="update" name="update" value="Update"><br>
       </form>
       <a href="../contar"><input type = "button" id="back" value="Go Back"></a>
+      <a href='login_pg\logout.php'><input type = 'button' id='logout' value='Log Out'></a>
     </div>
   </body>
 </html>
