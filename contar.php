@@ -18,14 +18,8 @@ $username = $_SESSION['username'];
   </head>
   <body>
     <?php
-      $sql = "SELECT * FROM accounts WHERE username='$username'";
-      $var = mysqli_query($conectare, $sql);
-      $row = mysqli_fetch_array($var);
-    if(!empty($row['facebook']) && !ctype_space($row['facebook']))
-     echo "<a href =".$row['facebook']." target='_blank'><input type='button' value='Facebook'></a><br>";
-    if(!empty($row['instagram']) && !ctype_space($row['instagram']))
-     echo "<a href =".$row['instagram']." target='_blank'><input type='button' value='Instagram'></a><br>";
-     ?>
+    echo '<a href ="profile.php?id='.$username.'"><input type = "button" value="See your profile"></a><br>';
+    ?>
     <a href = "update_pg\update.php"><input type = "button" value="Update your profile"></a>
   </body>
 </html>
