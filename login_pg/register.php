@@ -15,13 +15,14 @@
        <meta name="viewport" content="width=device-width, initial-scale=1">
        <link rel="stylesheet" type="text/css" href="..\resources\css\style_index.css">
        <script src = "..\resources\js\password.js"></script>
+       <script src = "..\resources\js\lettersandnumbers.js"></script>
    </head>
    <body>
      <div class="form-wrap">
        <form method="POST" action="signup.php">
            <h1>Register</h1>
-           <input type="text" name="username" placeholder="Your username" required><br><br>
-           <input type="text" name="FullName" placeholder="Your Full Name" required><br><br>
+           <input type="text" name="username" id="username" placeholder="Your username" required><br><br>
+           <input type="text" name="FullName" placeholder="Your Full Name - letters, space and dash only" onkeypress="return alphanumdash(event)" required><br><br>
            <input type="date" name="birthdate" placeholder="Your Birth Date" required><br><br>
            <input type="email" name="email" placeholder="Email" required><br><br>
            <input type="password" name="password" value="" pattern=".{8,}" title="Must contain at least 8 or more characters" id="password" placeholder="Password" required><br><br>
