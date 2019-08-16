@@ -7,8 +7,8 @@
   $date = $_POST['birthdate'];
   //$sql = "INSERT INTO users VALUES ('$username', '$FullName', '$date', '$email', '$password')";
 
-  /*if($user = "contar" || $user = "profile" || $user = "update" || $user = "conectare" || $user = "contact" || $user = "index")
-    return header("location:username_error"); */
+  if($user = "contar" || $user = "profile" || $user = "update" || $user = "conectare" || $user = "contact" || $user = "index")
+    return header("location:username_error");
   if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email'])){
       $user = $_POST['username'];
       $pass = $_POST['password'];

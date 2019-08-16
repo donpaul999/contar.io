@@ -21,7 +21,7 @@
      <div class="form-wrap">
        <form method="POST" action="signup.php">
            <h1>Register</h1>
-           <input type="text" name="username" id="username" placeholder="Your username" required><br><br>
+           <input type="text" name="username" id="username" placeholder="Your username - letters and numbers only" onkeypress="return alphanum(event)" required><br><br>
            <input type="text" name="FullName" placeholder="Your Full Name - letters, space and dash only" onkeypress="return alphanumdash(event)" required><br><br>
            <input type="date" name="birthdate" placeholder="Your Birth Date" required><br><br>
            <input type="email" name="email" placeholder="Email" required><br><br>
