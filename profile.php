@@ -24,18 +24,19 @@ $fn = mysqli_fetch_array($var);
   </head>
   <body>
     <?php
-      $sql = "SELECT * FROM accounts WHERE username='$usr'";
-      $var = mysqli_query($conectare, $sql);
-      $row = mysqli_fetch_array($var);
-    if(!empty($row['facebook']) && !ctype_space($row['facebook']))
-     echo "<a href =".$row['facebook']." target='_blank'><input type='button' value='Facebook'></a><br>";
-    if(!empty($row['instagram']) && !ctype_space($row['instagram']))
-     echo "<a href =".$row['instagram']." target='_blank'><input type='button' value='Instagram'></a><br>";
-    if(!empty($row['linkedin']) && !ctype_space($row['linkedin']))
-     echo "<a href =".$row['linkedin']." target='_blank'><input type='button' value='LinkedIn'></a><br>";
-    if(!empty($row['github']) && !ctype_space($row['github']))
-     echo "<a href =".$row['github']." target='_blank'><input type='button' value='GitHub'></a><br>";
-
+    require 'profile_code.php';
+    echo '<div class="user">';
+    echo  '<ul>';
+       if(!empty($row['facebook']) && !ctype_space($row['facebook']))
+        echo"<li><a href =".$row['facebook']." target='_blank'><input type='button' value='Facebook'></a></li>";
+        if(!empty($row['instagram']) && !ctype_space($row['instagram']))
+         echo "<li><a href =".$row['instagram']." target='_blank'><input type='button' value='Instagram'></a></li>";
+        if(!empty($row['linkedin']) && !ctype_space($row['linkedin']))
+         echo "<li><a href =".$row['linkedin']." target='_blank'><input type='button' value='LinkedIn'></a></li>";
+        if(!empty($row['github']) && !ctype_space($row['github']))
+         echo "<li><a href =".$row['github']." target='_blank'><input type='button' value='GitHub'></a></li>";
+    echo  '</ul>';
+    echo  '</div>';
     if($ok == 1)
     {
       echo "<a href = '..\update_pg\update'><input type = 'button' value='Update your profile'></a><br>";
