@@ -20,7 +20,7 @@ $username = $_SESSION['username'];
     <?php
     echo '<a href ="p/'.$username.'"><input type = "button" value="See your profile"></a><br>';
     ?>
-    <a href = "update_pg\update"><input type = "button" value="Update your profile"></a>
-    <a href='login_pg\logout.php'><input type = 'button' id='logout' value='Log Out'></a>
+    <a href = "..\update_pg\update"><input type = "button" value="Update your profile"></a>
+    <a href='..\login_pg\logout.php'><input type = 'button' id='logout' value='Log Out'></a>
   </body>
 </html>

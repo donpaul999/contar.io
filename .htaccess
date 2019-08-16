@@ -1,9 +1,9 @@
 RewriteEngine On
-RewriteRule ^([a-zA-Z0-9-z]+)$ profile.php?id=$1 [NC]
+RewriteRule ^p/(.*)$ profile.php?id=$1 [NC]
 
-RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ $1.php [L,NC]
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
+RewriteRule ^([^\.]+)$ $1.php [NC]
+
+
+
