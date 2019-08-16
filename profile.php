@@ -35,6 +35,8 @@ $fn = mysqli_fetch_array($var);
          echo "<li><a href =".$row['linkedin']." target='_blank'><input type='button' value='LinkedIn'></a></li>";
         if(!empty($row['github']) && !ctype_space($row['github']))
          echo "<li><a href =".$row['github']." target='_blank'><input type='button' value='GitHub'></a></li>";
+        if(!empty($row['spotify']) && !ctype_space($row['spotify']))
+         echo "<li><a href =".$row['spotify']." target='_blank'><input type='button' value='Spotify'></a></li>";
     echo  '</ul>';
     echo  '</div>';
     if($ok == 1)
