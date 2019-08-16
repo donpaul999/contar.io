@@ -1,6 +1,6 @@
 <?php
 
-  require 'conectare.php';
+  require '..\conectare.php';
 
  ?>
  <!DOCTYPE html>

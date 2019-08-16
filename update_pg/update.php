@@ -20,10 +20,12 @@ if(!isset($_SESSION['loggedin']))
       <form method="POST" action="update_code.php">
           <input type="text" name="facebook" placeholder="Your Facebook profile">
           <input type="text" name="instagram" placeholder="Your Instagram profile">
+          <input type="text" name="linkedin" placeholder="Your LinkedIn profile">
+          <input type="text" name="github" placeholder="Your GitHub profile">
           <input type="submit" id="update" name="update" value="Update"><br>
       </form>
-      <a href="../contar"><input type = "button" id="back" value="Go Back"></a>
-      <a href='login_pg\logout.php'><input type = 'button' id='logout' value='Log Out'></a>
+      <a href="..\contar"><input type = "button" id="back" value="Go Back"></a>
+      <a href='..\login_pg\logout.php'><input type = 'button' id='logout' value='Log Out'></a>
     </div>
   </body>
 </html>

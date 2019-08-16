@@ -2,7 +2,7 @@
 require 'conectare.php';
 session_start();
 if(!isset($_SESSION['loggedin']))
-  return header("location:login_pg\login.php");
+  return header("location:login_pg\login");
 $username = $_SESSION['username'];
 ?>
 
@@ -18,7 +18,7 @@ $username = $_SESSION['username'];
   </head>
   <body>
     <?php
-    echo '<a href ="'.$username.'"><input type = "button" value="See your profile"></a><br>';
+    echo '<a href ="profile/'.$username.'"><input type = "button" value="See your profile"></a><br>';
     ?>
     <a href = "update_pg\update"><input type = "button" value="Update your profile"></a>
     <a href='login_pg\logout.php'><input type = 'button' id='logout' value='Log Out'></a>
