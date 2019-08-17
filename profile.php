@@ -41,10 +41,16 @@ $fn = mysqli_fetch_array($var);
     echo  '</div>';
     if($ok == 1)
     {
-      echo "<a href = '..\update_pg\update'><input type = 'button' value='Update your profile'></a><br>";
-      echo "<a href='..\contar'><input type = 'button' id='back' value='Go Back'></a>";
-      echo "<a href='..\login_pg\logout.php'><input type = 'button' id='logout' value='Log Out'></a>";
-
+      echo '<div class="username">';
+      echo '<ul>';
+      echo '<li><a href = "'.$row['username'].'"><input type = "button" value='.$row['username'].'></a></li>';
+      echo '<ul class="sub-menu">';
+        echo "<li><a href='..\contar'><input type = 'button' id='back' value='Home'></a></li>";
+        echo "<li><a href = '..\update_pg\update'><input type = 'button' value='Update your profile'></a></li>";
+        echo "<li><a href='..\login_pg\logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+      echo '</ul>';
+      echo  '</ul>';
+      echo  '</div>';
     }
     ?>
   </body>
