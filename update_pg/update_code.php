@@ -68,6 +68,46 @@
    $result = mysqli_query($conectare, $_sql);
    $ok = 1;
  }
+
+ if(!empty($_POST['snapchat']) && !ctype_space($_POST['snapchat'])){
+   $sp = $_POST['snapchat'];
+   $query = mysqli_query($conectare, "SELECT * FROM accounts WHERE username= '$user'");
+   if(mysqli_num_rows($query) > 0){
+     $_sql = "UPDATE accounts SET snapchat= '$sp' WHERE username= '$user'";
+   }
+   else {
+     $_sql ="INSERT INTO accounts(username, snapchat) VALUES('$user','$sp')";
+   }
+   $result = mysqli_query($conectare, $_sql);
+   $ok = 1;
+ }
+
+ if(!empty($_POST['discord']) && !ctype_space($_POST['discord'])){
+   $sp = $_POST['discord'];
+   $query = mysqli_query($conectare, "SELECT * FROM accounts WHERE username= '$user'");
+   if(mysqli_num_rows($query) > 0){
+     $_sql = "UPDATE accounts SET discord = '$sp' WHERE username= '$user'";
+   }
+   else {
+     $_sql ="INSERT INTO accounts(username, discord) VALUES('$user','$sp')";
+   }
+   $result = mysqli_query($conectare, $_sql);
+   $ok = 1;
+ }
+
+ if(!empty($_POST['skype']) && !ctype_space($_POST['skype'])){
+   $sp = $_POST['skype'];
+   $query = mysqli_query($conectare, "SELECT * FROM accounts WHERE username= '$user'");
+   if(mysqli_num_rows($query) > 0){
+     $_sql = "UPDATE accounts SET skype = '$sp' WHERE username= '$user'";
+   }
+   else {
+     $_sql ="INSERT INTO accounts(username, skype) VALUES('$user','$sp')";
+   }
+   $result = mysqli_query($conectare, $_sql);
+   $ok = 1;
+ }
+
  if($ok == 1)
   return header("location:update_successful");
  return header("location:update")
