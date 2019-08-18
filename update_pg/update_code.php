@@ -108,6 +108,19 @@
    $ok = 1;
  }
 
+ if(!empty($_POST['youtube']) && !ctype_space($_POST['youtube'])){
+   $sp = $_POST['youtube'];
+   $query = mysqli_query($conectare, "SELECT * FROM accounts WHERE username= '$user'");
+   if(mysqli_num_rows($query) > 0){
+     $_sql = "UPDATE accounts SET youtube = '$sp' WHERE username= '$user'";
+   }
+   else {
+     $_sql ="INSERT INTO accounts(username, youtube) VALUES('$user','$sp')";
+   }
+   $result = mysqli_query($conectare, $_sql);
+   $ok = 1;
+ }
+
  if($ok == 1)
   return header("location:update_successful");
  return header("location:update")

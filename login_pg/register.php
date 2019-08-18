@@ -16,6 +16,7 @@
        <link rel="stylesheet" type="text/css" href="..\resources\css\style_index.css">
        <script src = "..\resources\js\password.js"></script>
        <script src = "..\resources\js\lettersandnumbers.js"></script>
+       <script src="https://www.google.com/recaptcha/api.js" async defer></script>
    </head>
    <body>
      <div class="form-wrap">
@@ -30,6 +31,7 @@
            <h5>Show Password</h5>
            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" oninput="check(this)" required > <br>
            <span id='message'></span>
+           <div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp"></div>
            <input type="submit" id="submit" value="Sign Up">
            <a href = "login"><input type = "button" value="Log In"></a>
        </form>

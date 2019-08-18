@@ -2,7 +2,7 @@
 require '../conectare.php';
 session_start();
 if(!isset($_SESSION['loggedin']))
-  return header("location:..\login_pg\login.php");
+  return header("location:..\login_pg\login");
 $username = $_SESSION['username'];
 ?>
 
@@ -19,13 +19,14 @@ $username = $_SESSION['username'];
     <div class="form-wrap">
       <form method="POST" action="update_code.php">
           <input type="text" name="facebook" placeholder="Your Facebook profile"><br><br>
-          <input type="text" name="instagram" placeholder="Your Instagram profile"><br><br>
+          <input type="text" name="instagram" placeholder="Your Instagram profile or username"><br><br>
           <input type="text" name="linkedin" placeholder="Your LinkedIn profile"><br><br>
           <input type="text" name="github" placeholder="Your GitHub profile"><br><br>
           <input type="text" name="spotify" placeholder="Your Spotify profile"><br><br>
-          <input type="text" name="snapchat" placeholder="Your Snapchat profile"><br><br>
-          <input type="text" name="discord" placeholder="Your Discord profile"><br><br>
-          <input type="text" name="skype" placeholder="Your Skype profile"><br><br>
+          <input type="text" name="snapchat" placeholder="Your Snapchat username"><br><br>
+          <input type="text" name="discord" placeholder="Your Discord username + tag"><br><br>
+          <input type="text" name="skype" placeholder="Your Skype username"><br><br>
+          <input type="text" name="youtube" placeholder="Your YouTube channel"><br><br>
           <input type="submit" id="update" name="update" value="Update"><br>
       </form>
     </div>

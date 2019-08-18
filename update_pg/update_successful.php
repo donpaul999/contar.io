@@ -2,7 +2,7 @@
 require '../conectare.php';
 session_start();
 if(!isset($_SESSION['loggedin']))
-  return header("location:..\login_pg\login.php");
+  return header("location:..\login_pg\login");
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,17 @@ if(!isset($_SESSION['loggedin']))
     <h1>Update succesful!</h1>
   </head>
   <body>
-    <a href = "..\contar"><input type = "button" value="Go Back"></a>
-    <a href='..\login_pg\logout.php'><input type = 'button' id='logout' value='Log Out'></a>
+    <?php
+    echo '<div class="username">';
+    echo '<ul>';
+    echo '<li><a href = "../p/'.$username.'"><input type = "button" value='.$username.'></a></li>';
+    echo '<ul class="sub-menu">';
+      echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
+      echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
+      echo "<li><a href='../login_pg\logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+    echo '</ul>';
+    echo  '</ul>';
+    echo  '</div>';
+    ?>
   </body>
 </html>

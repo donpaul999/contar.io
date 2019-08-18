@@ -30,7 +30,7 @@ $fn = mysqli_fetch_array($var);
       if (strpos($var, 'web.') == 8 && (strstr($var, 'facebook') == true || strstr($var, 'fb') == true))
          return true;
       else
-        if(strpos($var,'instagram') == 12 || strpos($var, 'linkedin') == 12 || strpos($var, 'github') == 8 || strpos($var, 'spotify') == 12 ||  strpos($var,'skype') == 12 ||  strpos($var, 'discord') == 8)
+        if(strpos($var,'instagram') == 12 || strpos($var,'youtube') || strpos($var,'youtu') == 8 || strpos($var, 'linkedin') == 12 || strpos($var, 'github') == 8 || strpos($var, 'spotify') == 12 ||  strpos($var,'skype') == 12 ||  strpos($var, 'discord') == 8)
           return true;
       return false;
     }
@@ -94,6 +94,14 @@ $fn = mysqli_fetch_array($var);
           echo "<li><a href =".$row['skype']." target='_blank'><input type='button' value='Skype'></a></li>";
         else
           echo"<li><input type='button' onclick=hide('skype') value='Skype'><p id='skype', hidden=true>".$row['skype']."</p></li>";
+
+      }
+      if(!empty($row['youtube']) && !ctype_space($row['youtube']))
+      {
+        if(link_1($row['youtube']))
+          echo "<li><a href =".$row['youtube']." target='_blank'><input type='button' value='YouTube'></a></li>";
+        else
+          echo"<li><input type='button' onclick=hide('yt') value='Youtube'><p id='yt', hidden=true>".$row['youtube']."</p></li>";
 
       }
     echo  '</ul>';
