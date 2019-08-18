@@ -20,7 +20,7 @@
         return header("location:captcha_log");
      }
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = md5($_POST['password']);
     $query = "SELECT * FROM users WHERE username='$username' and password='$password'";
     $result = mysqli_query($conectare, $query);
     $count = mysqli_num_rows($result);

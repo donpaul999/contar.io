@@ -3,7 +3,7 @@
   $user = $_POST['username'];
   $email = $_POST['email'];
   $FullName = $_POST['FullName'];
-  $pass = $_POST['password'];
+  $pass = md5($_POST['password']);
   $date = $_POST['birthdate'];
   //$sql = "INSERT INTO users VALUES ('$username', '$FullName', '$date', '$email', '$password')";
 
@@ -23,7 +23,7 @@
       if($responseData->success)
       {
       $user = $_POST['username'];
-      $pass = $_POST['password'];
+      $pass = md5($_POST['password']);
       $email = $_POST['email'];
       $query = mysqli_query($conectare, "SELECT * FROM users WHERE username= '$user'");
       if(mysqli_num_rows($query) > 0) { //check if there is already an entry for that username
