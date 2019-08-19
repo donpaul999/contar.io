@@ -3,6 +3,7 @@ require '../conectare.php';
 session_start();
 if(!isset($_SESSION['loggedin']))
   return header("location:..\login_pg\login");
+$username = $_SESSION['username'];
 ?>
 
 <!DOCTYPE html>

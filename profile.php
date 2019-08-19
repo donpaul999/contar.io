@@ -49,6 +49,14 @@ $fn = mysqli_fetch_array($var);
           else
             echo"<li><input type='button' onclick=hide('ig') value='Instagram'><p id='ig', hidden=true>".$row['instagram']."</p></li>";
         }
+        if(!empty($row['youtube']) && !ctype_space($row['youtube']))
+        {
+          if(link_1($row['youtube']))
+          echo "<li><a href =".$row['youtube']." target='_blank'><input type='button' value='YouTube'></a></li>";
+          else
+          echo"<li><input type='button' onclick=hide('yt') value='Youtube'><p id='yt', hidden=true>".$row['youtube']."</p></li>";
+
+        }
         if(!empty($row['linkedin']) && !ctype_space($row['linkedin']))
          {
            if(link_1($row['linkedin']))
@@ -94,14 +102,6 @@ $fn = mysqli_fetch_array($var);
           echo "<li><a href =".$row['skype']." target='_blank'><input type='button' value='Skype'></a></li>";
         else
           echo"<li><input type='button' onclick=hide('skype') value='Skype'><p id='skype', hidden=true>".$row['skype']."</p></li>";
-
-      }
-      if(!empty($row['youtube']) && !ctype_space($row['youtube']))
-      {
-        if(link_1($row['youtube']))
-          echo "<li><a href =".$row['youtube']." target='_blank'><input type='button' value='YouTube'></a></li>";
-        else
-          echo"<li><input type='button' onclick=hide('yt') value='Youtube'><p id='yt', hidden=true>".$row['youtube']."</p></li>";
 
       }
     echo  '</ul>';

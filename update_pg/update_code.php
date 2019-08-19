@@ -1,128 +1,79 @@
 <?php
  require '..\conectare.php';
  session_start();
- $user = $_SESSION['username'];
  $ok = 0;
+ $user = $_SESSION['username'];
 
+function upd($link, $site, &$ok, $user, $conectare)
+{
+  $query = mysqli_query($conectare, "SELECT * FROM accounts WHERE username= '$user'");
+  if(mysqli_num_rows($query) > 0){
+    $_sql = "UPDATE accounts SET $site = '$link' WHERE username= '$user'";
+  }
+  else {
+    $_sql ="INSERT INTO accounts(username, $site) VALUES('$user','$link')";
+  }
+  $result = mysqli_query($conectare, $_sql);
+  $ok = 1;
+  //echo $_sql;
+}
  if(!empty($_POST['facebook']) && !ctype_space($_POST['facebook'])){
    $fb = $_POST['facebook'];
-   $query = mysqli_query($conectare, "SELECT * FROM accounts WHERE username= '$user'");
-   if(mysqli_num_rows($query) > 0){
-     $_sql = "UPDATE accounts SET facebook = '$fb' WHERE username= '$user'";
-   }
-   else {
-     $_sql ="INSERT INTO accounts(username, facebook) VALUES('$user','$fb')";
-   }
-   $result = mysqli_query($conectare, $_sql);
-   $ok = 1;
+   $site = "facebook";
+   upd($fb, $site, $ok, $user, $conectare);
  }
 
  if(!empty($_POST['instagram']) && !ctype_space($_POST['instagram'])){
-   $ig = $_POST['instagram'];
-   $query = mysqli_query($conectare, "SELECT * FROM accounts WHERE username= '$user'");
-   if(mysqli_num_rows($query) > 0){
-     $_sql = "UPDATE accounts SET instagram = '$ig' WHERE username= '$user'";
-   }
-   else {
-     $_sql ="INSERT INTO accounts(username, instagram) VALUES('$user','$ig')";
-   }
-   $result = mysqli_query($conectare, $_sql);
-   $ok = 1;
+   $fb = $_POST['instagram'];
+   $site = "instagram";
+   upd($fb, $site, $ok, $user, $conectare);
  }
 
  if(!empty($_POST['linkedin']) && !ctype_space($_POST['linkedin'])){
-   $li = $_POST['linkedin'];
-   $query = mysqli_query($conectare, "SELECT * FROM accounts WHERE username= '$user'");
-   if(mysqli_num_rows($query) > 0){
-     $_sql = "UPDATE accounts SET linkedin = '$li' WHERE username= '$user'";
-   }
-   else {
-     $_sql ="INSERT INTO accounts(username, linkedin) VALUES('$user','$li')";
-   }
-   $result = mysqli_query($conectare, $_sql);
-   $ok = 1;
+   $fb = $_POST['linkedin'];
+   $site = "linkedin";
+   upd($fb, $site, $ok, $user, $conectare);
  }
 
  if(!empty($_POST['github']) && !ctype_space($_POST['github'])){
-   $gh = $_POST['github'];
-   $query = mysqli_query($conectare, "SELECT * FROM accounts WHERE username= '$user'");
-   if(mysqli_num_rows($query) > 0){
-     $_sql = "UPDATE accounts SET github = '$gh' WHERE username= '$user'";
-   }
-   else {
-     $_sql ="INSERT INTO accounts(username, github) VALUES('$user','$gh')";
-   }
-   $result = mysqli_query($conectare, $_sql);
-   $ok = 1;
+   $fb = $_POST['github'];
+   $site = "github";
+   upd($fb, $site, $ok, $user, $conectare);
  }
 
  if(!empty($_POST['spotify']) && !ctype_space($_POST['spotify'])){
-   $sp = $_POST['spotify'];
-   $query = mysqli_query($conectare, "SELECT * FROM accounts WHERE username= '$user'");
-   if(mysqli_num_rows($query) > 0){
-     $_sql = "UPDATE accounts SET spotify = '$sp' WHERE username= '$user'";
-   }
-   else {
-     $_sql ="INSERT INTO accounts(username, spotify) VALUES('$user','$sp')";
-   }
-   $result = mysqli_query($conectare, $_sql);
-   $ok = 1;
+   $fb = $_POST['spotify'];
+   $site = "spotify";
+   upd($fb, $site, $ok, $user, $conectare);
  }
 
  if(!empty($_POST['snapchat']) && !ctype_space($_POST['snapchat'])){
-   $sp = $_POST['snapchat'];
-   $query = mysqli_query($conectare, "SELECT * FROM accounts WHERE username= '$user'");
-   if(mysqli_num_rows($query) > 0){
-     $_sql = "UPDATE accounts SET snapchat= '$sp' WHERE username= '$user'";
-   }
-   else {
-     $_sql ="INSERT INTO accounts(username, snapchat) VALUES('$user','$sp')";
-   }
-   $result = mysqli_query($conectare, $_sql);
-   $ok = 1;
+   $fb = $_POST['snapchat'];
+   $site = "snapchat";
+   upd($fb, $site, $ok, $user, $conectare);
  }
 
  if(!empty($_POST['discord']) && !ctype_space($_POST['discord'])){
-   $sp = $_POST['discord'];
-   $query = mysqli_query($conectare, "SELECT * FROM accounts WHERE username= '$user'");
-   if(mysqli_num_rows($query) > 0){
-     $_sql = "UPDATE accounts SET discord = '$sp' WHERE username= '$user'";
-   }
-   else {
-     $_sql ="INSERT INTO accounts(username, discord) VALUES('$user','$sp')";
-   }
-   $result = mysqli_query($conectare, $_sql);
-   $ok = 1;
+   $fb = $_POST['discord'];
+   $site = "discord";
+   upd($fb, $site, $ok, $user, $conectare);
  }
 
  if(!empty($_POST['skype']) && !ctype_space($_POST['skype'])){
-   $sp = $_POST['skype'];
-   $query = mysqli_query($conectare, "SELECT * FROM accounts WHERE username= '$user'");
-   if(mysqli_num_rows($query) > 0){
-     $_sql = "UPDATE accounts SET skype = '$sp' WHERE username= '$user'";
-   }
-   else {
-     $_sql ="INSERT INTO accounts(username, skype) VALUES('$user','$sp')";
-   }
-   $result = mysqli_query($conectare, $_sql);
-   $ok = 1;
+   $fb = $_POST['skype'];
+   $site = "skype";
+   upd($fb, $site, $ok, $user, $conectare);
  }
 
  if(!empty($_POST['youtube']) && !ctype_space($_POST['youtube'])){
-   $sp = $_POST['youtube'];
-   $query = mysqli_query($conectare, "SELECT * FROM accounts WHERE username= '$user'");
-   if(mysqli_num_rows($query) > 0){
-     $_sql = "UPDATE accounts SET youtube = '$sp' WHERE username= '$user'";
-   }
-   else {
-     $_sql ="INSERT INTO accounts(username, youtube) VALUES('$user','$sp')";
-   }
-   $result = mysqli_query($conectare, $_sql);
-   $ok = 1;
+   $fb = $_POST['youtube'];
+   $site = "youtube";
+   upd($fb, $site, $ok, $user, $conectare);
  }
 
- if($ok == 1)
-  return header("location:update_successful");
- return header("location:update")
+ 
+if($ok == 1)
+ return header("location:update_successful");
+return header("location:update");
 
 ?>

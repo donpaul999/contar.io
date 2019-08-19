@@ -20,13 +20,13 @@ $username = $_SESSION['username'];
       <form method="POST" action="update_code.php">
           <input type="text" name="facebook" placeholder="Your Facebook profile" maxlength="200"><br><br>
           <input type="text" name="instagram" placeholder="Your Instagram profile or username" maxlength="200"><br><br>
+          <input type="text" name="youtube" placeholder="Your YouTube channel" maxlength="200"><br><br>
           <input type="text" name="linkedin" placeholder="Your LinkedIn profile" maxlength="200"><br><br>
           <input type="text" name="github" placeholder="Your GitHub profile" maxlength="200"><br><br>
           <input type="text" name="spotify" placeholder="Your Spotify profile" maxlength="200"><br><br>
           <input type="text" name="snapchat" placeholder="Your Snapchat username" maxlength="200"><br><br>
           <input type="text" name="discord" placeholder="Your Discord username + tag" maxlength="200"><br><br>
           <input type="text" name="skype" placeholder="Your Skype username" maxlength="200"><br><br>
-          <input type="text" name="youtube" placeholder="Your YouTube channel" maxlength="200"><br><br>
           <input type="submit" id="update" name="update" value="Update"><br>
       </form>
     </div>
