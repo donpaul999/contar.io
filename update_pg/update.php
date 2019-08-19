@@ -24,6 +24,7 @@ $username = $_SESSION['username'];
           <input type="text" name="linkedin" placeholder="Your LinkedIn profile" maxlength="200"><br><br>
           <input type="text" name="github" placeholder="Your GitHub profile" maxlength="200"><br><br>
           <input type="text" name="spotify" placeholder="Your Spotify profile" maxlength="200"><br><br>
+          <input type="text" name="steam" placeholder="Your Steam profile" maxlength="200"><br><br>
           <input type="text" name="snapchat" placeholder="Your Snapchat username" maxlength="200"><br><br>
           <input type="text" name="discord" placeholder="Your Discord username + tag" maxlength="200"><br><br>
           <input type="text" name="skype" placeholder="Your Skype username" maxlength="200"><br><br>

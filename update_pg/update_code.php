@@ -71,7 +71,12 @@ function upd($link, $site, &$ok, $user, $conectare)
    upd($fb, $site, $ok, $user, $conectare);
  }
 
- 
+ if(!empty($_POST['steam']) && !ctype_space($_POST['steam'])){
+   $fb = $_POST['steam'];
+   $site = "steam";
+   upd($fb, $site, $ok, $user, $conectare);
+ }
+
 if($ok == 1)
  return header("location:update_successful");
 return header("location:update");
