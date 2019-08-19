@@ -86,7 +86,7 @@ $fn = mysqli_fetch_array($var);
     {
       echo '<div class="username">';
       echo '<ul>';
-      echo '<li><a href = "'.$row['username'].'"><input type = "button" value='.$row['username'].'></a></li>';
+      echo '<li><a href = "'.$usr.'"><input type = "button" value='.$usr.'></a></li>';
       echo '<ul class="sub-menu">';
         echo "<li><a href='..\contar'><input type = 'button' id='back' value='Home'></a></li>";
         echo "<li><a href = '..\update_pg\update'><input type = 'button' value='Update your profile'></a></li>";

@@ -2,8 +2,7 @@
   require '..\conectare.php';
   session_start();
   if(!isset($_SESSION['wrong']))
-  $_SESSION['wrong'] = 0;
-
+    $_SESSION['wrong'] = 0;
   if(!empty($_POST['login']))
   {
     $ok = 1;
@@ -24,7 +23,7 @@
     $query = "SELECT * FROM users WHERE username='$username' and password='$password'";
     $result = mysqli_query($conectare, $query);
     $count = mysqli_num_rows($result);
-    if($count > 0 && $ok = 1)
+    if($count > 0 && $ok == 1)
       {
         session_start();
         $_SESSION['loggedin'] = '1';
