@@ -27,11 +27,8 @@ $fn = mysqli_fetch_array($var);
     require 'profile_code.php';
     function link_1($var)
     {
-      if (strstr($var, 'facebook') == true || strstr($var, 'fb') == true)
-         return true;
-      else
-        if(strpos($var,'instagram') == 12 || strpos($var,'youtube') || strpos($var,'youtu') == 8 || strpos($var, 'linkedin') == 12 || strpos($var, 'github') == 8 || strpos($var, 'spotify') == 12 ||  strpos($var,'skype') == 12 ||  strpos($var, 'discord') == 8)
-          return true;
+      if (filter_var($var, FILTER_VALIDATE_URL))
+        return true;
       return false;
     }
     function buttonorlist($var, $id, $value){
