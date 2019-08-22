@@ -1,0 +1,15 @@
+/***********************************************
+/* START HERO
+***********************************************/
+.hero {
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; }
+  .hero.hero-1 {
+    background-image: url(../img/content/hero-8.jpg); }
+
+/***********************************************
+/* END HERO
+***********************************************/

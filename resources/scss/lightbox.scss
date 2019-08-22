@@ -1,0 +1,324 @@
+// lightbox.scss
+// by Kadar Claudiu
+// www.kadarclaudiu.com
+
+// Here is the code for Fancybox plugin.
+
+.fancybox-wrap,
+.fancybox-skin,
+.fancybox-outer,
+.fancybox-inner,
+.fancybox-image,
+.fancybox-wrap iframe,
+.fancybox-wrap object,
+.fancybox-nav,
+.fancybox-nav span,
+.fancybox-tmp {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	vertical-align: top;
+}
+
+.fancybox-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99920;
+}
+
+.fancybox-skin {
+	position: relative;
+	padding: 0!important;
+}
+.fancybox-opened {
+	z-index: 99930;
+}
+.fancybox-inner {
+	overflow: hidden;
+}
+.fancybox-outer,
+.fancybox-inner {
+	position: relative;
+	overflow: hidden;
+}
+.fancybox-type-iframe .fancybox-inner {
+	-webkit-overflow-scrolling: touch;
+}
+
+.fancybox-error {
+	color: #FFF;
+	margin: 0;
+	padding: 15px;
+	white-space: nowrap;
+}
+
+.fancybox-image, .fancybox-iframe {
+	cursor: default;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.fancybox-image {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+#fancybox-loading {
+	cursor: pointer;
+	height: 40px;
+	left: 50%;
+	margin-left: -20px;
+	margin-top: -20px;
+	position: relative;
+	position: fixed;
+	text-align: center;
+	top: 50%;
+	width: 40px;
+	z-index: 99960;
+	-webkit-animation: sk-chasingDotsRotate 1.5s infinite linear;
+	        animation: sk-chasingDotsRotate 1.5s infinite linear; 
+}
+
+#fancybox-loading div {
+	background-color: #181818;
+	border-radius: 100%;
+	display: inline-block;
+	height: 60%;
+	position: absolute;
+	top: 0;
+	width: 60%;
+	-webkit-animation: sk-chasingDotsBounce 1.5s infinite ease-in-out;
+	        animation: sk-chasingDotsBounce 1.5s infinite ease-in-out; 
+}
+
+#fancybox-loading .sk-dot2 {
+	bottom: 0px;
+	top: auto;
+	-webkit-animation-delay: -1s;
+	        animation-delay: -1s; 
+}
+
+.fancybox-close {
+	display: none;
+}
+
+.fancybox-nav {
+	cursor: pointer;
+	height: 100%;
+	position: absolute;
+	text-decoration: none;
+	top: 0;
+	width: 50%;
+	z-index: 99940;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.fancybox-nav span {
+	background: url('../img/lightbox/sprite.png') no-repeat #FFF;
+	cursor: pointer;
+	height: 55px;
+	margin-top: -27px;
+	position: absolute;
+	top: 50%;
+	width: 55px;
+	z-index: 99940;
+	-webkit-transition: background-color .1s;
+	   -moz-transition: background-color .1s;
+		-ms-transition: background-color .1s;
+		 -o-transition: background-color .1s;
+}
+
+.fancybox-nav:hover span { 
+	background-color: #181818;
+}
+
+.fancybox-next {
+	right: 0;
+}
+.fancybox-prev {
+	left: 0;
+}
+
+.ie9 .fancybox-next:hover,
+.ie9 .fancybox-prev:hover {
+	cursor: pointer;
+}
+
+.fancybox-next span {
+	background-position: -22px -373px;
+	right: 30px;
+}
+
+.fancybox-next:hover span {
+	background-position: -22px -273px;
+}	
+
+.fancybox-prev span {
+	background-position: -24px -323px;
+	left: 30px;
+}
+
+.fancybox-prev:hover span {
+	background-position: -24px -223px;
+}
+
+.fancybox-nav span {
+	visibility: visible!important;
+	-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;	
+	-webkit-animation-name: fadeslideleft;	
+			animation-name: fadeslideleft;
+	-webkit-animation-duration: .1s;	
+			animation-duration: .1s;
+	-webkit-animation-timing-function: ease-in-out;
+			animation-timing-function: ease-in-out;
+}
+@keyframes fadeslideleft {
+	0%   {
+		transform: translateX(100%);
+	}			
+	100% {
+		transform: translateX(0%);
+	}
+}
+@-webkit-keyframes fadeslideleft {
+	0%   {
+		-webkit-transform: translateX(100%);
+	}		
+	100% {
+		-webkit-transform: translateX(0%);
+	}
+}
+
+.fancybox-prev span {
+	-webkit-animation-name: fadeslideright;	
+			animation-name: fadeslideright;
+}
+@keyframes fadeslideright {
+	0%   {
+		transform: translateX(-100%);
+	}			
+	100% {
+		transform: translateX(0%);
+	}
+}
+@-webkit-keyframes fadeslideright {
+	0%   {
+		-webkit-transform: translateX(-100%);
+	}		
+	100% {
+		-webkit-transform: translateX(0%);
+	}
+}
+
+.fancybox-tmp {
+	left: -99999px;
+	max-height: 99999px;
+	max-width: 99999px;
+	overflow: visible !important;
+	position: absolute;
+	top: -99999px;
+	visibility: hidden;
+}
+
+/* OVERLAY HELPER */
+.fancybox-lock {
+	overflow: hidden !important;
+	width: auto;
+}
+.fancybox-lock body {
+	overflow: hidden !important;
+}
+.fancybox-lock-test {
+	overflow-y: hidden !important;
+}
+
+.fancybox-overlay {
+	background: rgba(0,0,0,0.7);
+	display: none;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	z-index: 99910;
+}
+
+.fancybox-overlay-fixed {
+	bottom: 0;
+	position: fixed;
+	right: 0;
+}
+
+.fancybox-lock .fancybox-overlay {
+	cursor: pointer;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.fancybox-title {
+	visibility: hidden;
+	position: relative;
+	text-shadow: none;
+	z-index: 99950;
+}
+
+.fancybox-opened .fancybox-title {
+	visibility: visible;
+}
+
+.fancybox-title-float-wrap {
+	bottom: 0;
+	margin-bottom: -35px;
+	position: absolute;
+	right: 50%;
+	text-align: center;
+	z-index: 99950;
+}
+
+.fancybox-title-float-wrap .child {
+	background: transparent;
+	color: #FFF;
+	display: inline-block;
+	margin-right: -100%;
+	padding: 2px 20px;
+	white-space: nowrap;
+	display: none;
+}
+
+.fancybox-title-outside-wrap {
+	color: #FFF;
+	margin-top: 10px;
+	position: relative;
+}
+
+.fancybox-title-inside-wrap {
+	padding-top: 10px;
+}
+
+.fancybox-title-over-wrap {
+	background: #000;
+	background: rgba(0, 0, 0, .8);
+	bottom: 0;
+	color: #6F6F6F;
+	left: 0;
+	padding: 10px;
+	position: absolute;
+}
+
+img.hidden,
+a.lightbox.hidden {
+	display: none!important;
+}
+
+@media (max-width: 500px) {
+	.fancybox-prev span {
+		left: 0;
+	}
+
+	.fancybox-next span {
+		right: 0;
+	}
+}

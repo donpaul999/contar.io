@@ -1,0 +1,212 @@
+// functions.scss
+// by Kadar Claudiu
+// www.kadarclaudiu.com
+
+// Here is all functions we need.
+
+@mixin transition($time:0.2s,$delay-timing:0) {
+	-webkit-transition-delay: $delay-timing;
+	transition-delay: $delay-timing;
+	-webkit-transition-property: all;
+	-webkit-transition-duration: $time;
+	-webkit-transition-timing-function: ease-in-out;
+	transition-property: all;
+	transition-duration: $time;
+	transition-timing-function: ease-in-out;
+}
+
+@mixin transition-linear($time:0.2s,$delay-timing:0) {
+	-webkit-transition-delay: $delay-timing;
+	transition-delay: $delay-timing;
+	-webkit-transition-property: all;
+	-webkit-transition-duration: $time;
+	-webkit-transition-timing-function: linear;
+	transition-property: all;
+	transition-duration: $time;
+	transition-timing-function: linear;
+}
+
+@mixin transition-object($object: all) {
+	-webkit-transition-property: $object;
+	transition-property: $object;
+}
+
+@mixin transition-cubic($time:1s) {
+	-webkit-transition:all $time cubic-bezier(.23,-0.19,.74,1.17);
+	-moz-transition:all $time cubic-bezier(.23,-0.19,.74,1.17);
+	-o-transition:all $time cubic-bezier(.23,-0.19,.74,1.17);
+	-ms-transition:all $time cubic-bezier(.23,-0.19,.74,1.17);
+	transition:all $time cubic-bezier(.23,-0.19,.74,1.17);
+}
+
+@mixin translate($translateY, $translateX) {
+	-webkit-transform: translate($translateY , $translateX);
+	-moz-transform: translate($translateY , $translateX);
+	-o-transform: translate($translateY , $translateX);
+	-ms-transform: translate($translateY , $translateX);
+	transform: translate($translateY , $translateX);
+}
+
+@mixin translateY($translateY) {
+	-webkit-transform: translateY($translateY);
+	-moz-transform: translateY($translateY);
+	-o-transform: translateY($translateY);
+	-ms-transform: translateY($translateY);
+	transform: translateY($translateY);
+}
+
+@mixin translateZ($translateZ) {
+	-webkit-transform: translateZ($translateZ);
+	-moz-transform: translateZ($translateZ);
+	-o-transform: translateZ($translateZ);
+	-ms-transform: translateZ($translateZ);
+	transform: translateZ($translateZ);
+}
+
+@mixin origin($origin: 0% 0%) {
+	transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+}
+
+@mixin rotate($deg) {
+	-webkit-transform: rotate($deg);
+	transform: rotate($deg);
+}
+
+@mixin blur($blur:5px) {
+	-webkit-filter: blur($blur);
+	-moz-filter: blur($blur);
+	-o-filter: blur($blur);
+	-ms-filter: blur($blur);
+	filter: blur($blur);
+}
+
+// @mixin css-scroll(#505050,#0e0e0e);
+@mixin css-scroll($bg,$color) {
+	&::-webkit-scrollbar {
+		width: 4px;
+		background: $bg;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: $color;
+		width: 4px;
+		-webkit-box-shadow: inset 0 0 0 1px $bg;
+		-moz-box-shadow: inset 0 0 0 1px $bg;
+		box-shadow: inset 0 0 0 1px $bg;
+	}
+}
+
+@mixin rotateY($deg) {
+	-webkit-transform: rotateY($deg);
+	transform: rotateY($deg);
+}
+
+@mixin rotateX($deg) {
+	-webkit-transform: rotateX($deg);
+	transform: rotateX($deg);
+}
+
+@mixin background-gradient($start, $stop) {
+	background: mix($start, $stop, 50%);
+	background: -webkit-gradient(linear, left top, left bottom, from($start), to($stop));
+	background: -webkit-linear-gradient(bottom, $start, $stop);
+	background:	-moz-linear-gradient(bottom, $start, $stop);
+	background:	-o-linear-gradient(bottom, $start, $stop);
+	background:	linear-gradient(to top, $start, $stop);
+}
+
+@mixin translateX($translateX) {
+	-webkit-transform: translateX($translateX);
+	-moz-transform: translateX($translateX);
+	-o-transform: translateX($translateX);
+	-ms-transform: translateX($translateX);
+	transform: translateX($translateX);
+}
+
+@mixin skewY($value){
+	-webkit-transform: skewY($value);
+	-moz-transform: skewY($value);
+	-o-transform: skewY($value);
+	-ms-transform: skewY($value);
+	transform: skewY($value);
+}
+
+@mixin bxs($h,$v,$b,$color) {
+	-webkit-box-shadow: $h $v $b $color;
+	-moz-box-shadow: $h $v $b $color;
+	box-shadow: $h $v $b $color;
+}
+
+@mixin bd($bd-h:1px,$type-bd:solid,$color-bd:#000) {
+	border: $bd-h $type-bd $color-bd;
+}
+
+@mixin scale($scale-val) {
+	-webkit-transform: scale($scale-val);
+	-moz-transform: scale($scale-val);
+	-o-transform: scale($scale-val);
+	-ms-transform: scale($scale-val);
+	transform: scale($scale-val);
+}
+
+@mixin button($w,$lh:45px,$bg:#3498db,$color:#fff,$color-bxs: none,$radius:3px,$h:4px,$v:4px,$b:0px) {
+	background: $bg;
+	@include bxs($h,$v,$b,$color-bxs);
+	color: $color !important;
+	line-height: $lh;
+	border-radius: $radius;
+	display: block;
+	text-align: center;
+	width: $w;
+	height: $lh;
+}
+
+@function long-shadow($direction, $length, $color, $fade: false, $shadow-count: 100) {
+	$shadows: ();
+	$conversion-map: (
+		to top: 180deg,
+		to top right: 135deg,
+		to right top: 135deg,
+		to right: 90deg,
+		to bottom right: 45deg,
+		to right bottom: 45deg,
+		to bottom: 0deg,
+		to bottom left: 315deg,
+		to left bottom: 315deg,
+		to left: 270deg,
+		to left top: 225deg,
+		to top left: 225deg
+	);
+
+	@if map-has-key($conversion-map, $direction) {
+		$direction: map-get($conversion-map, $direction);
+	}
+
+	@for $i from 1 through $shadow-count {
+		$current-step: ($i * $length / $shadow-count);
+		$current-color: if(not $fade, $color, if(type-of($fade) == 'color',	mix($fade, $color, ($i / $shadow-count * 100)), rgba($color, 1 - $i / $shadow-count)));
+
+		$shadows: append($shadows, (sin(0deg + $direction) * $current-step) (cos(0deg + $direction) * $current-step) 0 $current-color, 'comma');
+	}
+
+	@return $shadows;
+}
+
+// Example for long shadow.
+
+/*
+
+text-shadow: long-shadow(
+
+	$direction: 42deg,
+
+	$length: 100px,
+
+	$color: #16a085,
+
+	$fade: #1abc9c
+
+);
+
+*/

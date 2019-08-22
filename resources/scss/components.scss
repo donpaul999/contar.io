@@ -1,0 +1,190 @@
+/***********************************************
+/* START GENERAL
+***********************************************/
+.user-title {
+	text-align: center;
+	width: 100%;
+}
+
+.fullname {
+	text-align: center;
+	margin-top: 184px;
+	font-size: 90px;
+	font-weight: 600;
+	padding: 40px 60px;
+	background-color: #fcfbd3;
+	display: inline-block;
+}
+/***********************************************
+/* END GENERAL
+***********************************************/
+
+/***********************************************
+/* START PROFILE-PAGE
+***********************************************/
+.contar-profile {
+	margin-top: 76.55px;
+	text-align: center;
+	position: relative;
+
+	&.active {
+		z-index: -1;
+	}
+}
+
+.social-button {
+	display: block;
+	width: 25%;
+	position: relative;
+	@include translateX(-50%);
+	@include transition;
+	height: 56px;
+	margin-bottom: 30px;
+	left: 50%;
+	input {
+		border-radius: 300px;
+		border: 1px solid #333;
+		background-color: transparent;
+		-webkit-appearance: none;
+		font-weight: 600;
+		height: 56px;
+    	padding: 0 45px;
+    	
+    	@include transition;
+
+    	&:hover {
+    		background-color: $hover-bgk;
+    		border-color: $hover-bgk;
+    		color: #fff;
+    	}
+
+    	&:before {
+    		-moz-osx-font-smoothing: grayscale;
+		    -webkit-font-smoothing: antialiased;
+		    display: inline-block;
+		    font-style: normal;
+		    font-family: 'Font Awesome 5 Brands';
+		    font-variant: normal;
+		    text-rendering: auto;
+		    line-height: 1;
+		    content: "\f39e";
+		    position: absolute;
+		    left: 24%;
+		    top: 25%;
+		    color: #3578E5;
+		    font-size: 0.9rem;
+    	}
+	}
+
+	&.go-back {
+		margin-bottom: 47px;
+	}
+
+	&.log-out {
+		position: absolute;
+		top: -120%;
+		width: 1px;
+		left: 110%;
+		input {
+			text-transform: uppercase;
+			font-size: 0.8rem;
+			border: none;
+			padding: 0;
+			&:hover {
+				background-color: transparent;
+				color: $hover;
+			}
+		}
+	}
+
+	&.facebook {
+		&:after {
+		    -moz-osx-font-smoothing: grayscale;
+		    -webkit-font-smoothing: antialiased;
+		    display: inline-block;
+		    font-style: normal;
+		    font-family: 'Font Awesome 5 Brands';
+		    font-variant: normal;
+		    text-rendering: auto;
+		    line-height: 1;
+		    content: "\f39e";
+		    position: absolute;
+		    left: 13%;
+    		top: 35%;
+		    color: #3578E5;
+		    font-size: 0.9rem;
+		}
+		width: 17%;
+	}
+
+	&.instagram {
+		&:after {
+		    -moz-osx-font-smoothing: grayscale;
+		    -webkit-font-smoothing: antialiased;
+		    display: inline-block;
+		    font-style: normal;
+		    font-family: 'Font Awesome 5 Brands';
+		    font-variant: normal;
+		    text-rendering: auto;
+		    line-height: 1;
+		    content: "\f16d";
+		    position: absolute;
+		    left: 13%;
+    		top: 35%;
+		    color: #ff7777;
+		    font-size: 0.9rem;
+		}
+		width: 17%;
+	}
+
+	&:hover {
+		&:after {
+			display: none;
+		}
+	}
+}
+/***********************************************
+/* END PROFILE-PAGE
+***********************************************/
+
+/***********************************************
+/* START FOOTER
+***********************************************/
+.footer {
+	background: #f0f3f3;
+	width: 100%;
+	padding: 10px 0;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	
+	.footer__social {
+		text-align: center;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		a {
+			@include transition;
+			&:after {
+				content: none;
+			}
+
+			&:hover {
+				color: $hover;
+			}
+
+			&.copyright {
+				font-size: 1rem;
+				line-height: 1;
+			}
+		}
+		i {
+			font-size: 0.75rem;
+		}
+	}
+}
+/***********************************************
+/* END FOOTER
+***********************************************/

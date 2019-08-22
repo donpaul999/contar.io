@@ -1,0 +1,46 @@
+// Here is typo style from this project.
+
+h1, .h1, h2, .h2, h3, .h3 {
+	margin: 0;
+	font-family: 'nvRegular';
+}
+
+h4 , .h4 , h5 , .h5 , h6 , .h6 {
+	margin: 0;
+}
+
+a {
+	color: $theme-color-dark;
+	padding: 0;
+	text-decoration: none;
+	line-height: inherit;
+	font-family: 'nvRegular';
+
+	&:focus, &:hover {
+		text-decoration: none;
+	}
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+	em {
+		font-style: italic;
+	}
+	strong {
+		font-weight: 600;
+	}
+	small {
+		font-size: 1.6rem;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		padding: 0;
+	}
+}
+

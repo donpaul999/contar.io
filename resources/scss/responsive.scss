@@ -1,0 +1,193 @@
+/***********************************************
+/* START HEADER
+***********************************************/
+@media(max-width: 800px) {
+	.header {
+		opacity: 0;
+		visibility: hidden;
+		height: 100%;
+		width: 100%;
+		@include transition();
+
+		.col-sm-12 {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include translate(-50%, -50%);
+		}
+
+		&.active {
+			opacity: 1;
+			visibility: visible;
+			background: $header;
+		}
+	}
+
+	.logo {
+		display: none;
+	}
+
+	.full-menu {
+		margin-bottom: 25px;
+	}
+
+	.full-menu, .info-area, .mobile-info {
+		text-align: center;
+		display: block;
+		float: none;
+		position: initial;
+		transform: initial;
+	}
+
+	.srf-full-menu {
+		li {
+			display: block;
+			margin: 0 0 15px 0;
+
+			// &:last-child {
+			// 	margin-bottom: 0;
+			// }
+			a {
+				font-size: 1.8rem;
+
+				&:after {
+					content: none;
+				}
+				i {
+					font-size: 1.6rem;
+				}
+			}
+		}
+
+		&.social {
+			li {
+				display: inline-block;
+				margin-right: 10px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}	
+
+	.mobile-info {
+		margin-top: 15px;
+		display: block;
+		p {
+			font-size: 1.2rem;
+		}
+	}
+
+	.menu-trigger {
+		display: block;
+	}
+}
+
+.header-fullscreen {
+	padding: 15px;
+}
+/***********************************************
+/* END HEADER
+***********************************************/
+
+/***********************************************
+/* START  LANSCAPE
+***********************************************/
+@media(max-width: 1024px) 
+and (orientation: landscape) {
+	.header {
+		opacity: 0;
+		visibility: hidden;
+		height: 100%;
+		width: 100%;
+		padding: 0;
+		@include transition();
+
+		.col-sm-12 {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include translate(-50%, -50%);
+		}
+
+		&.active {
+			opacity: 1;
+			visibility: visible;
+			background: $header;
+		}
+	}
+
+	.logo {
+		display: none!important;
+	}
+
+	.full-menu {
+		margin-bottom: 20px;
+	}
+
+	.full-menu, .info-area, .mobile-info {
+		text-align: center;
+		display: block;
+		float: none;
+		position: initial;
+		transform: initial;
+	}
+
+	.srf-full-menu {
+		li {
+			display: block;
+			margin: 0;
+
+			// &:last-child {
+			// 	margin-bottom: 0;
+			// }
+			a {
+				font-size: 1.2rem;
+				line-height: 26px;
+
+				&:after {
+					content: none;
+				}
+				i {
+					font-size: 1rem;
+				}
+			}
+		}
+
+		&.social {
+			li {
+				display: inline-block;
+				margin-right: 10px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}	
+
+	.mobile-info {
+		display: block;
+		margin-top: 0;
+		p {
+			font-size: 0.8rem;
+			margin-bottom: 0;
+		}
+	}
+
+	.menu-trigger {
+		display: block;
+	}
+
+	.info-area {
+		.social {
+			li {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+/***********************************************
+/* END LANSCAPE 
+***********************************************/

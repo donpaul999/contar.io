@@ -12,7 +12,7 @@ $username = $_SESSION['username'];
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="icons\logo.png" />
-    <link rel="stylesheet" type="text/css" href="resources\css\style_index.css">
+    <link rel="stylesheet" href="resources/css/master.css">
     <title>Contar.io</title>
     <h1>Welcome <?php echo $username; ?> !</h1>
   </head>

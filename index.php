@@ -17,7 +17,7 @@
      </style>
        <title> Contar.io </title>
        <meta name="viewport" content="width=device-width, initial-scale=1">
-       <link rel="stylesheet" type="text/css" href="resources\ggcss\style_index.css">
+       <link rel="stylesheet" href="resources/css/master.css">
        <script src = "resources\js\password.js"></script>
    </head>
    <body>

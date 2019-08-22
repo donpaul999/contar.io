@@ -18,3 +18,4 @@ function check(input) {
       password.type = "password";
     }
   }
+

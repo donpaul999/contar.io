@@ -1,0 +1,27 @@
+// Here is the code responsible for simple tags.
+// Here, on html tag, is defined value for one 'rem' unit who is equal with 15px. You can change this value by changing font-size value from html tag.
+
+html {
+	overflow-x: hidden;
+	background-color: #fff;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+	height: 100%;
+	body {
+		background-color: $body-bgk;
+		-webkit-background-size: cover;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
+		font-family: 'nvRegular';
+		font-weight: 300;
+		font-size: 1.4rem;
+		line-height: 2.1rem;
+		color: #000;
+		position: relative;
+		z-index: 1;
+		min-height: 100%;
+	}
+}

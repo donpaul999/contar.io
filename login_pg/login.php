@@ -1,8 +1,9 @@
 <?php
   require '..\conectare.php';
   session_start();
-  if(!isset($_SESSION['wrong']))
-    $_SESSION['wrong'] = 0;
+  /*if(!isset($_SESSION['wrong']))
+  $_SESSION['wrong'] = 0;*/
+
   if(!empty($_POST['login']))
   {
     $ok = 1;
@@ -32,8 +33,9 @@
       }
     else
     {
-      $_SESSION['wrong']++;
-      header("location:loginfailed");
+      //$_SESSION['wrong']++;
+      return header("location:loginfailed");
+
     }
   }
 
@@ -62,9 +64,9 @@
         <input type="password" name="password" value="" id="password" placeholder="Password" required>
            <input type="checkbox" onclick="showpass()"> <h5>Show Password</h5> <br>
            <?php
-           if($_SESSION['wrong'] >= 3)
+           /*if($_SESSION['wrong'] >= 3)
             echo '<div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp"></div>';
-            ?>
+            */?>
            <input type="submit" id="login" name="login" value="Log In">
            <a href = "register"><input type = "button" value="Sign Up"></a>
        </form>

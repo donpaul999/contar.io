@@ -1,0 +1,37 @@
+// Here will be all variables for this project, excluding variables for materialize.
+
+$theme-color-dark: 			#000;
+$theme-color-dark-rgba: 	0,0,0;
+$theme-color-light: 		#fff;
+$theme-color-light-rgba: 	255,255,255;
+$theme-font-sans-serif: 	'Roboto' , Helvetica , Arial , sans-serif;
+$theme-font-serif: 			Georgia , Times , serif;
+
+/* Hedaer */
+.header-fixed {
+	position: fixed;
+}
+/* Header */
+
+/* Colors */
+$header-font: #000;
+$header:	  #f9fbfc;//rgba(255,255,255, 0.96);
+$light:		  #fff;
+$dark: 		  #000;
+$hover:		  #ff7777;
+$body-bgk:	  #f9fbfc;
+$hover-bgk:	  #ff7777;
+/* Colors */
+
+/* Fonts */
+@font-face {
+	font-family: 'nvRegular';
+	src: url('../webfonts/nvRegular.otf');
+}
+/* End Fonts */
+
+/* Start BEM */
+.header--bgk {
+	background-color: $header;
+}
+/* End BEM */
