@@ -28,9 +28,24 @@ $fn = mysqli_fetch_array($var);
   <body>
     <!-- ========== START HEADER ========== -->
     <div class="top-nav top-nav--burger-1 clearfix">
-              <div class="logo">
-                  <a href="#"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
-              </div><!-- end logo -->
+      <div class="logo">
+          <a href="#"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
+      </div><!-- end logo -->
+      <?php
+      if($ok == 1)
+      {
+        echo '<div class="username">';
+        echo '<ul>';
+        echo '<li><a href = "'.$usr.'"><input type = "button" value='.$usr.'></a></li>';
+        echo '<ul class="sub-menu">';
+          echo "<li><a href='..\contar'><input type = 'button' id='back' value='Home'></a></li>";
+          echo "<li><a href = '..\update_pg\update'><input type = 'button' value='Update your profile'></a></li>";
+          echo "<li><a href='..\login_pg\logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+        echo '</ul>';
+        echo  '</ul>';
+        echo  '</div>';
+      }
+      ?>
       <div class="menu-trigger">
         <input type="checkbox">
         <span></span>
@@ -86,70 +101,72 @@ $fn = mysqli_fetch_array($var);
                   return true;
                 return false;
               }
-              function buttonorlist($var, $id, $value){
+              function buttonorlist($var, $id, $value,$id1){
                 if(link_1($var))
-                  echo "<li><a class='social-button' href =".$var." target='_blank'><input type='button' value=".$value."></a></li>";
+                  echo "<li><a href =".$var." target='_blank'><input class='social-button' type='button' value=".$value."><p id='".$id."'></p></a></li>";
                 else
-                  echo"<li><input type='button' onclick=hide('".$id."') value=".$value."><p id='".$id."', hidden=true>".$var."</p></li>";
-
+                  { ?>
+                    <li><input type='button' id="<?php echo $id1; ?>" class='social-button' value="<?php echo $value; ?>"  onclick="swaptxt('<?php echo $id1; ?>', '<?php echo $var; ?>','<?php echo $value; ?>')"><p id="<?php echo $id; ?>"></p></li>
+                    <?php
+                  }
               }
               echo '<div class="user">';
-              echo  '<ul>';
+              echo  '<ul id="sortable">';
                  if(!empty($row['facebook']) && !ctype_space($row['facebook']))
                   {
-                    buttonorlist($row['facebook'], "fb", "Facebook");
+                    buttonorlist($row['facebook'], "fb", "Facebook", "fb1");
                   }
                   if(!empty($row['instagram']) && !ctype_space($row['instagram']))
                   {
-                    buttonorlist($row['instagram'], "ig", "Instagram");
+                    buttonorlist($row['instagram'], "ig", "Instagram", "ig1");
                   }
                   if(!empty($row['youtube']) && !ctype_space($row['youtube']))
                   {
-                    buttonorlist($row['youtube'], "yt", "YouTube");
+                    buttonorlist($row['youtube'], "yt", "YouTube", "yt1");
                   }
                   if(!empty($row['linkedin']) && !ctype_space($row['linkedin']))
                    {
-                     buttonorlist($row['linkedin'], "linkedin", "LinkedIn");
+                     buttonorlist($row['linkedin'], "linkedin", "LinkedIn", "linkedin1");
                    }
                   if(!empty($row['github']) && !ctype_space($row['github']))
                   {
-                    buttonorlist($row['github'], "github", "GitHub");
+                    buttonorlist($row['github'], "github", "GitHub","github1");
                   }
                   if(!empty($row['spotify']) && !ctype_space($row['spotify']))
                   {
-                    buttonorlist($row['spotify'], "spotify", "Spotify");
+                    buttonorlist($row['spotify'], "spotify", "Spotify","spotify1");
                   }
                   if(!empty($row['steam']) && !ctype_space($row['steam']))
                   {
-                    buttonorlist($row['steam'], "steam", "Steam");
+                    buttonorlist($row['steam'], "steam", "Steam","steam1");
                   }
                  if(!empty($row['snapchat']) && !ctype_space($row['snapchat']))
                  {
-                   buttonorlist($row['snapchat'], "snap", "Snapchat");
+                   buttonorlist($row['snapchat'], "snap", "Snapchat", "snap1");
                  }
                 if(!empty($row['discord']) && !ctype_space($row['discord']))
                 {
-                  buttonorlist($row['discord'], "discord", "Discord");
+                  buttonorlist($row['discord'], "discord", "Discord", "discord1");
                 }
                 if(!empty($row['skype']) && !ctype_space($row['skype']))
                 {
-                  buttonorlist($row['skype'], "skype", "Skype");
+                  buttonorlist($row['skype'], "skype", "Skype", "skype1");
                 }
               echo  '</ul>';
               echo  '</div>';
-              if($ok == 1)
-              {
-                echo '<div class="username">';
-                echo '<ul>';
-                echo '<li><a href = "'.$usr.'"><input type = "button" value='.$usr.'></a></li>';
-                echo '<ul class="sub-menu">';
-                  echo "<li><a href='..\contar'><input type = 'button' id='back' value='Home'></a></li>";
-                  echo "<li><a href = '..\update_pg\update'><input type = 'button' value='Update your profile'></a></li>";
-                  echo "<li><a href='..\login_pg\logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
-                echo '</ul>';
-                echo  '</ul>';
-                echo  '</div>';
-              }
+              // if($ok == 1)
+              // {
+              //   echo '<div class="username">';
+              //   echo '<ul>';
+              //   echo '<li><a href = "'.$usr.'"><input type = "button" value='.$usr.'></a></li>';
+              //   echo '<ul class="sub-menu">';
+              //     echo "<li><a href='..\contar'><input type = 'button' id='back' value='Home'></a></li>";
+              //     echo "<li><a href = '..\update_pg\update'><input type = 'button' value='Update your profile'></a></li>";
+              //     echo "<li><a href='..\login_pg\logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+              //   echo '</ul>';
+              //   echo  '</ul>';
+              //   echo  '</div>';
+              // }
               ?>
           </div><!-- end col-sm-12 -->
         </div><!-- end row -->
@@ -182,6 +199,7 @@ $fn = mysqli_fetch_array($var);
 
   <!-- ========== START JS ========== -->
   <script src="../resources/js/jquery.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="../resources/js/bootstrap.min.js"></script>
   <script src="../resources/js/plugins.js"></script>
   <script src="../resources/js/main.js"></script>
@@ -196,6 +214,15 @@ $fn = mysqli_fetch_array($var);
       document.getElementById(index).hidden = true;
   }
 
-  </script>
+function swaptxt(index, text1, text2){
+    var elem = document.getElementById(index);
+    if (elem.value===text1)
+      elem.value = text2;
+    else
+      elem.value = text1;
+
+
+}
+</script>
 
 </html>

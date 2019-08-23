@@ -35,3 +35,13 @@ $hover-bgk:	  #ff7777;
 	background-color: $header;
 }
 /* End BEM */
+
+.fixed {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+.mrg-header-size {
+	margin-top: 76.55px;
+}

@@ -1,7 +1,7 @@
 jQuery(document).ready(function(){
-  
+
   "use strict";
-  
+
   // LightBox Options
   $(".attachment").find('a > img:not(.attachment-thumbnail)').parent().attr('rel','gallery').fancybox({
     fitToView: true,
@@ -31,6 +31,18 @@ jQuery(document).ready(function(){
     }
   });
   //End LightBox Options
+  $("#fb1, #ig1, #yt1").on("click", function() {
+  var el = $(this);
+  if (el.text() == el.data("text-swap")) {
+    el.text(el.data("text-original"));
+  } else {
+    el.data("text-original", el.text());
+    el.text(el.data("text-swap"));
+  }
+});
+  //start sortable
+  $( "#sortable" ).sortable();
+  //end sortable
 
   //Menu Trigger
   $(".menu-trigger").click(function() {
@@ -48,7 +60,7 @@ jQuery(document).ready(function(){
 
   });
   //end header-fullscreen__trigger
-  
+
   //Detect Menu Item & Add Active Class
   jQuery(function($) {
 
@@ -60,7 +72,7 @@ jQuery(document).ready(function(){
      }
 
     });
-    
+
   });
   //End Detect Menu Item & Add Active Class
 
@@ -163,4 +175,3 @@ function addThingToDo(thing){
 
   list.insertBefore(item, list.childNodes[0]);
 }
-

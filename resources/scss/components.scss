@@ -15,8 +15,46 @@
 	background-color: #fcfbd3;
 	display: inline-block;
 }
+
+.welcome-content {
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	@include translate(-50%, -50%);
+
+	.social-button {
+		width: 30%;
+	}
+}
+
+.go-back {
+	display: block;
+	margin-top: 70px;
+}
 /***********************************************
 /* END GENERAL
+***********************************************/
+
+/***********************************************
+/* START HOME-CONTAINER
+***********************************************/
+.home-container {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include translate(-50%, -50%);
+	a {
+		display: block;
+	}
+	input {
+		text-align: center;
+		cursor: pointer;
+	}
+}
+/***********************************************
+/* END HOME CONTAINER
 ***********************************************/
 
 /***********************************************
@@ -26,9 +64,214 @@
 	margin-top: 76.55px;
 	text-align: center;
 	position: relative;
+	z-index: -1;
+	height: 100vh;
 
 	&.active {
 		z-index: -1;
+	}
+}
+
+.user {
+	li {
+		position: relative;
+		p {
+			position: relative;
+			&:before {
+				-moz-osx-font-smoothing: grayscale;
+				-webkit-font-smoothing: antialiased;
+				display: inline-block;
+				font-style: normal;
+				font-family: 'Font Awesome 5 Brands';
+				font-variant: normal;
+				text-rendering: auto;
+				line-height: 1;
+				position: absolute;
+				left: 43.5%;
+				top: 50%;
+				@include translateY(-420%);
+				font-size: 1rem;
+			}
+		}
+
+
+		#fb {//facebook
+			&:before {
+				content: "\f39e";
+				color: #3578E5;
+			}
+		}
+
+		#ig {//instagram
+			&:before {
+				content: "\f16d";
+				color: #405DE6;
+			}
+
+		}
+
+		#yt {//youtube
+			&:before {
+				color: #FF0000;
+				content: "\f167";
+			}
+
+		}
+
+		#linkedin {//linkedin
+			&:before {
+				color: #0077B5;
+				content: "\f08c";
+			}
+
+		}
+
+		#github {//git
+			&:before {
+				color: #333;
+				content: "\f09b";
+			}
+
+		}
+
+		#spotify { //spotify
+			&:before {
+				color: #1DB954;
+				content: "\f1bc";
+			}
+
+		}
+
+		#steam {//steam
+			&:before {
+				color: #112758;
+				content: "\f1b6";
+			}
+
+		}
+
+		#snap {//snapchat
+			&:before {
+				color: #FFFC00;
+				content: "\f2ab";
+			}
+
+		}
+
+		#discord {//discord
+			&:before {
+				color: #7289DA;
+				content: "\f392";
+			}
+
+		}
+
+		#skype {//skype
+			&:before {
+				color: #00AFF0;
+				content: "\f17e";
+			}
+
+		}
+	}
+}
+
+.username {
+	position: absolute;
+	right: 0;
+	top: 31%;
+	margin-right: 30px;
+	@include translateY(-50%);
+	> ul {
+		text-align: center;
+		width: 200px;
+		height: 1px;
+		//float: right;
+		li {
+			input {
+				background-color: transparent;
+				border: none;
+			}
+		}
+
+		> li {
+			position: relative;
+			margin-bottom: 10px;
+			padding: 0 30px;
+
+			a {
+				position: relative;
+
+				&::before {
+					content: "";
+					position: absolute;
+					width: 100%;
+					height: 2px;
+					bottom: -5px;
+					left: 0;
+					background-color: #000;
+					visibility: hidden;
+					-webkit-transform: scaleX(0);
+					transform: scaleX(0);
+					-webkit-transition: all 0.3s ease-in-out 0s;
+					transition: all 0.3s ease-in-out 0s;
+				}
+			}
+
+		}
+
+		.sub-menu {
+			text-align: center;
+			opacity: 0;
+			visibility: hidden;
+			@include transition(0.4s);
+			li {
+				background: transparent;
+				@include transition;
+				position: relative;
+				transition: color 0.5s;
+				transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+
+				&:before {
+					content: '';
+					position: absolute;
+					z-index: -1;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					height: 50%;
+					opacity: 0.3;
+					background: $hover;
+					transform: scale3d(0,1,1);
+					transform-origin: 0% 50%;
+					transition: transform 0.5s;
+					transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+				}
+
+				&:hover {
+					&:before {
+						transform: scale3d(1,1,1);
+					}
+				}
+			}
+		}
+
+		&:hover {
+			> li {
+				a {
+					&:before {
+						visibility: visible;
+						-webkit-transform: scaleX(1);
+						transform: scaleX(1);
+					}
+				}
+			}
+
+			.sub-menu {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
 	}
 }
 
@@ -41,110 +284,115 @@
 	height: 56px;
 	margin-bottom: 30px;
 	left: 50%;
-	input {
-		border-radius: 300px;
-		border: 1px solid #333;
-		background-color: transparent;
-		-webkit-appearance: none;
-		font-weight: 600;
-		height: 56px;
-    	padding: 0 45px;
-    	
-    	@include transition;
-
-    	&:hover {
-    		background-color: $hover-bgk;
-    		border-color: $hover-bgk;
-    		color: #fff;
-    	}
-
-    	&:before {
-    		-moz-osx-font-smoothing: grayscale;
-		    -webkit-font-smoothing: antialiased;
-		    display: inline-block;
-		    font-style: normal;
-		    font-family: 'Font Awesome 5 Brands';
-		    font-variant: normal;
-		    text-rendering: auto;
-		    line-height: 1;
-		    content: "\f39e";
-		    position: absolute;
-		    left: 24%;
-		    top: 25%;
-		    color: #3578E5;
-		    font-size: 0.9rem;
-    	}
-	}
-
-	&.go-back {
-		margin-bottom: 47px;
-	}
-
-	&.log-out {
-		position: absolute;
-		top: -120%;
-		width: 1px;
-		left: 110%;
-		input {
-			text-transform: uppercase;
-			font-size: 0.8rem;
-			border: none;
-			padding: 0;
-			&:hover {
-				background-color: transparent;
-				color: $hover;
-			}
-		}
-	}
-
-	&.facebook {
-		&:after {
-		    -moz-osx-font-smoothing: grayscale;
-		    -webkit-font-smoothing: antialiased;
-		    display: inline-block;
-		    font-style: normal;
-		    font-family: 'Font Awesome 5 Brands';
-		    font-variant: normal;
-		    text-rendering: auto;
-		    line-height: 1;
-		    content: "\f39e";
-		    position: absolute;
-		    left: 13%;
-    		top: 35%;
-		    color: #3578E5;
-		    font-size: 0.9rem;
-		}
-		width: 17%;
-	}
-
-	&.instagram {
-		&:after {
-		    -moz-osx-font-smoothing: grayscale;
-		    -webkit-font-smoothing: antialiased;
-		    display: inline-block;
-		    font-style: normal;
-		    font-family: 'Font Awesome 5 Brands';
-		    font-variant: normal;
-		    text-rendering: auto;
-		    line-height: 1;
-		    content: "\f16d";
-		    position: absolute;
-		    left: 13%;
-    		top: 35%;
-		    color: #ff7777;
-		    font-size: 0.9rem;
-		}
-		width: 17%;
-	}
+	border-radius: 300px;
+	border: 1px solid #333;
+	background-color: transparent;
+	-webkit-appearance: none;
+	font-weight: 600;
+	height: 56px;
+	padding: 0 45px;
+	width: 17%;
+	@include transition;
 
 	&:hover {
-		&:after {
-			display: none;
-		}
+		background-color: $hover-bgk;
+		border-color: $hover-bgk;
+		color: #fff;
 	}
 }
 /***********************************************
 /* END PROFILE-PAGE
+***********************************************/
+
+/***********************************************
+/* START LOGIN-CONTAINER
+***********************************************/
+.form-wrap {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include translate(-50%, -50%);
+
+	.fullname {
+		display: block;
+		margin-top: 0;
+		margin-bottom: 40px;
+	}
+	form {
+		input[type=text],
+		input[type=date],
+		input[type=email],
+		input[type=password] {
+			border: 0;
+			color: #1f1f1f;
+			font-size: 14px;
+			font-weight: 400;
+			width: 100%;
+			padding: 0 0 3px;
+			margin-bottom: 35px;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+			-webkit-transition-delay: 0;
+			-o-transition-delay: 0;
+			transition-delay: 0;
+			-webkit-transition-property: all;
+			-webkit-transition-duration: 0.2s;
+			-webkit-transition-timing-function: ease-in-out;
+			-o-transition-property: all;
+			transition-property: all;
+			-o-transition-duration: 0.2s;
+			transition-duration: 0.2s;
+			-o-transition-timing-function: ease-in-out;
+			transition-timing-function: ease-in-out;
+			background-color: transparent;
+
+			&:focus {
+				border-bottom: 1px solid #000;
+			}
+		}
+
+		h5 {
+			margin-bottom: 40px;
+		}
+
+		input[type=checkbox],
+		h5 {
+			display: inline-block;
+		}
+
+		.social-button {
+			width: 50%;
+		}
+	}
+
+	&.form-wrap-register,
+	&.form-wrap-update {
+		position: initial;
+		top: initial;
+		left: initial;
+		transform: initial;
+	}
+
+	&.form-wrap-update {
+		margin-top: 60px;
+	}
+}
+
+.show-pass {
+	float: left;
+}
+
+.g-recaptcha {
+	text-align: center;
+	> div {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-bottom: 30px;
+	}
+}
+/***********************************************
+/* END LOGIN-CONTAINER
 ***********************************************/
 
 /***********************************************
@@ -154,10 +402,10 @@
 	background: #f0f3f3;
 	width: 100%;
 	padding: 10px 0;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	
+	// position: fixed;
+	// bottom: 0;
+	// left: 0;
+
 	.footer__social {
 		text-align: center;
 		width: 100%;
@@ -182,6 +430,10 @@
 		}
 		i {
 			font-size: 0.75rem;
+		}
+
+		.social {
+			margin-bottom: 7px;
 		}
 	}
 }
