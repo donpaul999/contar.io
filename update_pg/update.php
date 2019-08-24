@@ -17,6 +17,7 @@ $username = $_SESSION['username'];
     <title>Contar.io</title>
     <div class="user-title">
       <h1 class="fullname">Update your profile</h1>
+      <h4>Add usernames or links to your online accounts</h4>
     </div>
   </head>
   <body>
