@@ -18,6 +18,11 @@
        <script src = "..\resources\js\password.js"></script>
    </head>
    <body>
+     <!-- ========== START HEADER ========== -->
+     <div class="top-nav top-nav--burger-1 clearfix">
+       <div class="logo">
+           <a href="../contar"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
+       </div><!-- end logo -->
      <h1>Login Failed! Username or/and the password is/are wrong </h1>
      <a href="login"><input type="button" value="Go Back"></a>
      <h2>If you have problems logining in contact me here</h2>

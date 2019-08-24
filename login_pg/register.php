@@ -25,7 +25,7 @@
     <!-- ========== START HEADER ========== -->
     <div class="top-nav top-nav--burger-1 clearfix">
       <div class="logo">
-          <a href="#"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
+          <a href="register"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
       </div><!-- end logo -->
       <div class="menu-trigger">
         <input type="checkbox">
@@ -70,7 +70,7 @@
     <!-- ========== END HEADER ========== -->
 
     <!-- ========== START REGISTER CONTAINER ========== -->
-    
+
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -81,12 +81,12 @@
                 <input type="text" name="FullName" placeholder="Your Full Name - letters, space and dash only" onkeypress="return alphanumdash(event)" required maxlength="100">
                 <input type="date" name="birthdate" placeholder="Your Birth Date" required>
                 <input type="email" name="email" placeholder="Email" required maxlength="50">
-                <input type="password" name="password" value="" pattern=".{8,}" title="Must contain at least 8 or more characters" id="password" placeholder="Password" required>        
+                <input type="password" name="password" value="" pattern=".{8,}" title="Must contain at least 8 or more characters" id="password" placeholder="Password" required>
                 <div class="show-pass">
                   <input type="checkbox" onclick="showpass()">
                   <h5>Show Password</h5>
                 </div>
-                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" oninput="check(this)" required maxlength="20"> 
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" oninput="check(this)" required maxlength="20">
                 <span id='message'></span>
                 <div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp"></div>
                 <input class="social-button" type="submit" id="submit" value="Sign Up">
@@ -95,7 +95,7 @@
           </div><!-- end container -->
         </div>
       </div>
-    </div> 
+    </div>
     <!-- ========== END REGISTER CONTAINER========== -->
 
     <!-- ========== START FOOTER ========== -->

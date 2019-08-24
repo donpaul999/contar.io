@@ -24,7 +24,11 @@
      <div class="user-title">
        <h1 class="fullname">ERROR: Username already exists!</h1>
      </div>
-     
+     <!-- ========== START HEADER ========== -->
+     <div class="top-nav top-nav--burger-1 clearfix">
+       <div class="logo">
+           <a href="register"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
+       </div><!-- end logo -->
      <a href="register"><input class="social-button go-back" type="button" value="Go Back"></a>
    </body>
  </html>

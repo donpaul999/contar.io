@@ -29,7 +29,7 @@ $fn = mysqli_fetch_array($var);
     <!-- ========== START HEADER ========== -->
     <div class="top-nav top-nav--burger-1 clearfix">
       <div class="logo">
-          <a href="#"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
+          <a href="../contar"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
       </div><!-- end logo -->
       <?php
       if($ok == 1)
