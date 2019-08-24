@@ -17,6 +17,7 @@
      </style>
        <title> Contar.io </title>
        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="shortcut icon" type="image/x-icon" href="resources/img/title.png" />
        <link rel="stylesheet" href="resources/css/master.css">
        <script src = "resources/js/password.js"></script>
    </head>
@@ -25,13 +26,7 @@
     <div class="top-nav top-nav--burger-1 clearfix">
       <div class="logo">
           <a href="index"><img src="resources/img/logo_png.png" alt="Contar-Logo"></a>
-      </div><!-- end logo -->
-      <div class="menu-trigger">
-        <input type="checkbox">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div><!-- end menu-trigger -->
+      </div><!-- end logo --><!-- end menu-trigger -->
       <header class="header header--bgk">
         <div class="container">
           <div class="row">

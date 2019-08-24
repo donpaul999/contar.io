@@ -11,7 +11,7 @@ $username = $_SESSION['username'];
 <html lang="en" dir="ltr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="icons/logo.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="resources/img/title.png" />
     <link rel="stylesheet" href="resources/css/master.css">
     <title>Contar.io</title>
     <div class="user-title">
