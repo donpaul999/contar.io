@@ -80,7 +80,7 @@
                 <h1 class="fullname">Register</h1>
                 <input type="text" name="username" id="username" placeholder="Your username - letters and numbers only" onkeypress="return alphanum(event)" required maxlength="25">
                 <input type="text" name="FullName" placeholder="Your Full Name - letters, space and dash only" onkeypress="return alphanumdash(event)" required maxlength="100">
-                <input type="date" name="birthdate" placeholder="Your Birth Date" required>
+                <input required type="text" class="form-control" placeholder="Date" onfocus="(this.type='date')"/>
                 <input type="email" name="email" placeholder="Email" required maxlength="50">
                 <input type="password" name="password" value="" pattern=".{8,}" title="Must contain at least 8 or more characters" id="password" placeholder="Password" required>
                 <div class="show-pass">
@@ -91,7 +91,7 @@
                 <span id='message'></span>
                 <div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp"></div>
                 <input class="social-button" type="submit" id="submit" value="Sign Up">
-                <a href = "login"><input class="social-button" type = "button" value="Log In"></a>
+                <a href = "login"><input class="social-button" type = "button" value="Already registered? Log In"></a>
             </form>
           </div><!-- end container -->
         </div>
@@ -100,7 +100,7 @@
     <!-- ========== END REGISTER CONTAINER========== -->
 
     <!-- ========== START FOOTER ========== -->
-    <footer class="footer">
+    <footer class="footer fixed">
       <div class="container">
         <div class="row">
           <div class="footer__social">

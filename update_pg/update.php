@@ -102,7 +102,7 @@ $username = $_SESSION['username'];
   <!-- ========== END UPDATE CONTAINER========== -->
 
     <!-- ========== START FOOTER ========== -->
-    <footer class="footer">
+    <footer class="footer fixed">
       <div class="container">
         <div class="row">
           <div class="footer__social">
