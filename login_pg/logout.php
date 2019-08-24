@@ -1,6 +1,6 @@
 <?php
 
-  require '..\conectare.php';
+  require '../conectare.php';
   session_start();
   session_destroy();
   unset($_SESSION['username']);

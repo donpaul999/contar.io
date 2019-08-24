@@ -2,7 +2,7 @@
 require '../conectare.php';
 session_start();
 if(!isset($_SESSION['loggedin']))
-  return header("location:..\login_pg\login");
+  return header("location:../login_pg/login");
 $username = $_SESSION['username'];
 ?>
 
@@ -18,9 +18,9 @@ $username = $_SESSION['username'];
     <meta charset="UTF-8">
     <meta name="HandheldFriendly" content="true">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="shortcut icon" type="../image/x-icon" href="icons\logo.png" />
+    <link rel="shortcut icon" type="../image/x-icon" href="icons/logo.png" />
     <link rel="stylesheet" href="../resources/css/master.css">
-    <script src = "resources\js\password.js"></script>
+    <script src = "resources/js/password.js"></script>
     <div class="user-title">
     <h1 class="fullname">Update succesful!</h1>
     </div>
@@ -40,7 +40,7 @@ $username = $_SESSION['username'];
       echo '<ul class="sub-menu">';
         echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
         echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
-        echo "<li><a href='../login_pg\logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+        echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
       echo '</ul>';
       echo  '</ul>';
       echo  '</div>';

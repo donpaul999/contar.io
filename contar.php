@@ -2,7 +2,7 @@
 require 'conectare.php';
 session_start();
 if(!isset($_SESSION['loggedin']))
-  return header("location:login_pg\login");
+  return header("location:login_pg/login");
 $username = $_SESSION['username'];
 ?>
 
@@ -11,7 +11,7 @@ $username = $_SESSION['username'];
 <html lang="en" dir="ltr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="icons\logo.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="icons/logo.png" />
     <link rel="stylesheet" href="resources/css/master.css">
     <title>Contar.io</title>
     <div class="user-title">
@@ -31,8 +31,8 @@ $username = $_SESSION['username'];
         echo '<li><a href = "p/'.$username.'"><input type = "button" value='.$username.'></a></li>';
         echo '<ul class="sub-menu">';
           echo "<li><a href='contar'><input type = 'button' id='back' value='Home'></a></li>";
-          echo "<li><a href = 'update_pg\update'><input type = 'button' value='Update your profile'></a></li>";
-          echo "<li><a href='login_pg\logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+          echo "<li><a href = 'update_pg/update'><input type = 'button' value='Update your profile'></a></li>";
+          echo "<li><a href='login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
         echo '</ul>';
         echo  '</ul>';
         echo  '</div>';

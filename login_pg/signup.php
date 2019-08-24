@@ -1,5 +1,5 @@
 <?php
-  require '..\conectare.php';
+  require '../conectare.php';
   $user = $_POST['username'];
   $email = $_POST['email'];
   $FullName = $_POST['FullName'];

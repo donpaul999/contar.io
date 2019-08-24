@@ -1,5 +1,5 @@
 <?php
-  require '..\conectare.php';
+  require '../conectare.php';
   session_start();
   /*if(!isset($_SESSION['wrong']))
   $_SESSION['wrong'] = 0;*/
@@ -29,7 +29,7 @@
         session_start();
         $_SESSION['loggedin'] = '1';
         $_SESSION['username'] = $username;
-        header("location:..\contar");
+        header("location:../contar");
       }
     else
     {
@@ -52,9 +52,9 @@
        <meta charset="UTF-8">
        <meta name="HandheldFriendly" content="true">
        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-       <link rel="shortcut icon" type="../image/x-icon" href="icons\logo.png" />
+       <link rel="shortcut icon" type="../image/x-icon" href="icons/logo.png" />
        <link rel="stylesheet" href="../resources/css/master.css">
-       <script src = "..\resources\js\password.js"></script>
+       <script src = "../resources/js/password.js"></script>
        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
    </head>
    <body>

@@ -18,7 +18,7 @@
        <title> Contar.io </title>
        <meta name="viewport" content="width=device-width, initial-scale=1">
        <link rel="stylesheet" href="resources/css/master.css">
-       <script src = "resources\js\password.js"></script>
+       <script src = "resources/js/password.js"></script>
    </head>
    <body>
     <!-- ========== START HEADER ========== -->
@@ -70,8 +70,8 @@
 
      <!-- ========== START HOME CONTAINER ========== -->
      <div class="container home-container">
-        <a href = "login_pg\register"><input class="social-button" type = "button" value="Register"></a>
-        <a href = "login_pg\login"><input class="social-button type = "button" value="Log In"></a>
+        <a href = "login_pg/register"><input class="social-button" type = "button" value="Register"></a>
+        <a href = "login_pg/login"><input class="social-button type = "button" value="Log In"></a>
      </div>
      <!-- ========== END HOME CONTAINER========== -->
      <!-- ========== START FOOTER ========== -->
