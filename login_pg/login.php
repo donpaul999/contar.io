@@ -1,8 +1,8 @@
 <?php
   require '../conectare.php';
   session_start();
-  /*if(!isset($_SESSION['wrong']))
-  $_SESSION['wrong'] = 0;*/
+if(!isset($_SESSION['wrong']))
+  $_SESSION['wrong'] = 0;
 
   if(!empty($_POST['login']))
   {
@@ -33,7 +33,7 @@
       }
     else
     {
-      //$_SESSION['wrong']++;
+      $_SESSION['wrong']++;
       return header("location:loginfailed");
 
     }
@@ -61,7 +61,7 @@
     <!-- ========== START HEADER ========== -->
     <div class="top-nav top-nav--burger-1 clearfix">
       <div class="logo">
-          <a href="../contar"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
+          <a href="../index"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
       </div><!-- end logo -->
       <div class="menu-trigger">
         <input type="checkbox">
@@ -85,13 +85,13 @@
               <div class="info-area">
                 <ul class="">
                   <li>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/stefanut999" target='_blank'><i class="fab fa-facebook-f"></i></a>
                   </li>
                   <li>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/paulstefancolta/" target='_blank'><i class="fab fa-linkedin-in"></i></i></a>
                   </li>
                   <li>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/paulstefancolta/" target='_blank'><i class="fab fa-instagram"></i></a>
                   </li>
                 </ul>
               </div><!-- end info-area -->
@@ -115,9 +115,9 @@
           <input type="password" name="password" value="" id="password" placeholder="Password" required>
             <input type="checkbox" onclick="showpass()"> <h5>Show Password</h5>
             <?php
-            /*if($_SESSION['wrong'] >= 3)
+            if($_SESSION['wrong'] >= 3)
               echo '<div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp"></div>';
-              */?>
+              ?>
             <input class="social-button"  type="submit" id="login" name="login" value="Log In">
             <a  href = "register"><input class="social-button"  type = "button" value="Sign Up"></a>
         </form>
@@ -132,13 +132,13 @@
           <div class="footer__social">
             <ul class="social srf-full-menu">
                 <li>
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.facebook.com/stefanut999" target='_blank'><i class="fab fa-facebook-f"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.linkedin.com/in/paulstefancolta/" target='_blank'><i class="fab fa-linkedin-in"></i></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.instagram.com/paulstefancolta/" target='_blank'><i class="fab fa-instagram"></i></a>
                 </li>
               </ul>
                <a href="#" class="copyright">&copy; Paul Colta - Contar.io</a>

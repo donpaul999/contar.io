@@ -29,7 +29,7 @@ $username = $_SESSION['username'];
     <?php
       echo '<div class="username">';
       echo '<ul>';
-      echo '<li><a href = "../p/'.$username.'"><input type = "button" value='.$username.'></a></li>';
+      echo '<li><input type = "button" value='.$username.'></li>';
       echo '<ul class="sub-menu">';
         echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
         echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
@@ -60,13 +60,13 @@ $username = $_SESSION['username'];
             <div class="info-area">
               <ul class="">
                 <li>
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.facebook.com/stefanut999" target='_blank'><i class="fab fa-facebook-f"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.linkedin.com/in/paulstefancolta/" target='_blank'><i class="fab fa-linkedin-in"></i></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.instagram.com/paulstefancolta/" target='_blank'><i class="fab fa-instagram"></i></a>
                 </li>
               </ul>
             </div><!-- end info-area -->
@@ -107,13 +107,13 @@ $username = $_SESSION['username'];
           <div class="footer__social">
             <ul class="social srf-full-menu">
                 <li>
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.facebook.com/stefanut999" target='_blank'><i class="fab fa-facebook-f"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.linkedin.com/in/paulstefancolta/" target='_blank'><i class="fab fa-linkedin-in"></i></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.instagram.com/paulstefancolta/" target='_blank'><i class="fab fa-instagram"></i></a>
                 </li>
               </ul>
                <a href="#" class="copyright">&copy; Paul Colta - Contar.io</a>

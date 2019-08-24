@@ -80,7 +80,7 @@
 	a {
 		display: block;
 		img {
-			max-height: 40px;
+			max-height: 83px;
 		}
 	}
 }
@@ -192,6 +192,7 @@
 			left: 0;
 			top: 0;
 			padding: 0.8% 0 0 30px;
+			padding-top: 0;
 		}
 	
 		.full-menu {
@@ -221,7 +222,7 @@
 						content: none;
 					}
 					i {
-						font-size: 1.6rem;
+						//font-size: 1.6rem;
 					}
 				}
 			}

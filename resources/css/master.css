@@ -12394,6 +12394,74 @@ p {
   display: block;
   margin-top: 70px; }
 
+.update-succes .social-button {
+  margin-top: 23%; }
+
+.login-failed {
+  text-align: center; }
+  .login-failed .user-title {
+    margin-bottom: 25px;
+    padding: 0 100px; }
+    .login-failed .user-title .fullname {
+      font-size: 50px;
+      background-color: #ff7777; }
+  .login-failed h2 {
+    margin-bottom: 25px; }
+
+.menu-trigger {
+  visibility: hidden; }
+
+.inuse .fullname {
+  background-color: #ff7777; }
+
+.home .user-title {
+  -webkit-animation: fadein 2.5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2.5s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 2.5s;
+  /* Internet Explorer */
+  -o-animation: fadein 2.5s;
+  /* Opera < 12.1 */
+  animation: fadein 2.5s; }
+
+.home-container {
+  margin-top: 30px; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 /***********************************************
 /* END GENERAL
 ***********************************************/
@@ -12453,6 +12521,8 @@ p {
       -ms-transform: translateY(-420%);
       transform: translateY(-420%);
       font-size: 1rem; }
+  .user li.active p::before {
+    content: none !important; }
   .user li #fb:before {
     content: "\f39e";
     color: #3578E5; }
@@ -12488,7 +12558,6 @@ p {
   position: absolute;
   right: 0;
   top: 31%;
-  margin-right: 30px;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -o-transform: translateY(-50%);
@@ -12596,7 +12665,6 @@ p {
 
 .social-button {
   display: block;
-  width: 25%;
   position: relative;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -12625,7 +12693,7 @@ p {
   font-weight: 600;
   height: 56px;
   padding: 0 45px;
-  width: 17%;
+  max-width: 100%;
   -webkit-transition-delay: 0;
   transition-delay: 0;
   -webkit-transition-property: all;
@@ -12774,7 +12842,7 @@ p {
 /* END FOOTER
 ***********************************************/
 /***********************************************
-/* START
+/* START  
 ***********************************************/
 /***********************************************
 /* START HEADER
@@ -12857,7 +12925,7 @@ p {
   .logo a {
     display: block; }
     .logo a img {
-      max-height: 40px; }
+      max-height: 83px; }
 
 .info-area {
   float: right;
@@ -12984,7 +13052,8 @@ p {
       position: fixed;
       left: 0;
       top: 0;
-      padding: 0.8% 0 0 30px; }
+      padding: 0.8% 0 0 30px;
+      padding-top: 0; }
     .top-nav--burger-1 .full-menu {
       margin-bottom: 25px; }
     .top-nav--burger-1 .full-menu, .top-nav--burger-1 .info-area, .top-nav--burger-1 .mobile-info {
@@ -13002,8 +13071,6 @@ p {
         font-size: 1.8rem; }
         .top-nav--burger-1 .srf-full-menu li a:after {
           content: none; }
-        .top-nav--burger-1 .srf-full-menu li a i {
-          font-size: 1.6rem; }
     .top-nav--burger-1 .srf-full-menu.social li {
       display: inline-block;
       margin-right: 10px; }
@@ -13018,7 +13085,7 @@ p {
       display: inline-block; } }
 
 /***********************************************
-/* END HEADER-BURGER-1
+/* END HEADER-BURGER-1  
 ***********************************************/
 /***********************************************
 /* START  HEADER-FULLSCREEN
@@ -13343,7 +13410,7 @@ p {
   .isotope-item {
     width: 100% !important; } }
 
-/*
+/* 
  *	Owl Carousel - Animate Plugin
  */
 .owl-carousel .animated {
@@ -13374,7 +13441,7 @@ p {
   100% {
     opacity: 0; } }
 
-/*
+/* 
  * 	Owl Carousel - Auto Height Plugin
  */
 .owl-height {
@@ -13384,7 +13451,7 @@ p {
   -o-transition: height 500ms ease-in-out;
   transition: height 500ms ease-in-out; }
 
-/*
+/* 
  *	Core Owl Carousel CSS File
  */
 .owl-carousel {
@@ -13477,7 +13544,7 @@ p {
 .no-js .owl-carousel {
   display: block; }
 
-/*
+/* 
  * 	Owl Carousel - Lazy Load Plugin
  */
 .owl-carousel .owl-item .owl-lazy {
@@ -13492,7 +13559,7 @@ p {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
 
-/*
+/* 
  * 	Owl Carousel - Video Plugin
  */
 .owl-carousel .owl-video-wrapper {
@@ -13614,7 +13681,9 @@ p {
     .mobile-info p {
       font-size: 1.2rem; }
   .menu-trigger {
-    display: block; } }
+    display: block; }
+  .form-wrap-register {
+    margin-top: 20px !important; } }
 
 .header-fullscreen {
   padding: 15px; }
@@ -13696,7 +13765,37 @@ p {
     margin-bottom: 0; } }
 
 /***********************************************
-/* END LANSCAPE
+/* END LANSCAPE 
+***********************************************/
+/***********************************************
+/* START CONTAR
+***********************************************/
+@media (max-width: 800px) {
+  .user-title {
+    margin-top: 0; }
+    .user-title h1 {
+      font-size: 30px; }
+  .username {
+    right: -7%; }
+  .fullname {
+    font-size: 30px; }
+  .social-button {
+    width: initial !important; }
+  .contar-profile {
+    height: initial; }
+  .user li p:before {
+    left: 30%; }
+  .fullname {
+    margin-top: 100px; }
+  .form-wrap {
+    margin-top: -56.55px; }
+  .sub-menu li {
+    line-height: 20px; }
+    .sub-menu li a {
+      font-size: 14px; } }
+
+/***********************************************
+/* END CONTAR  
 ***********************************************/
 .fancybox-wrap,
 .fancybox-skin,
@@ -14013,7 +14112,7 @@ a.lightbox.hidden {
     font-size: 24px; }
 
 /***********************************************
-/* START C-HERO-1
+/* START C-HERO-1  
 ***********************************************/
 /*! jQuery UI - v1.12.1 - 2019-08-11
 * http://jqueryui.com

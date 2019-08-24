@@ -82,6 +82,10 @@
 	.menu-trigger {
 		display: block;
 	}
+
+	.form-wrap-register {
+		margin-top: 20px!important;
+	}
 }
 
 .header-fullscreen {
@@ -190,4 +194,63 @@ and (orientation: landscape) {
 }
 /***********************************************
 /* END LANSCAPE 
+***********************************************/
+
+/***********************************************
+/* START CONTAR
+***********************************************/
+@media(max-width: 800px) {
+	.user-title {
+		margin-top: 0;
+		h1 {
+			font-size: 30px;
+		}
+	}
+
+	.username {
+		right: -7%;
+	}
+
+	.fullname {
+		font-size: 30px;
+	}
+
+	.social-button {
+		width: initial!important;
+	}
+
+	.contar-profile {
+		height: initial;
+	}
+
+	.user {
+		li {
+			p {
+				&:before {
+					left: 30%;
+				}
+			}
+		}
+	}
+
+	.fullname {
+		margin-top: 100px;
+	}
+
+	.form-wrap {
+		margin-top: -56.55px;
+	}
+
+	.sub-menu {
+		li {
+			line-height: 20px;
+			a {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+/***********************************************
+/* END CONTAR  
 ***********************************************/

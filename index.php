@@ -21,7 +21,7 @@
        <link rel="stylesheet" href="resources/css/master.css">
        <script src = "resources/js/password.js"></script>
    </head>
-   <body>
+   <body class="home">
     <!-- ========== START HEADER ========== -->
     <div class="top-nav top-nav--burger-1 clearfix">
       <div class="logo">
@@ -43,13 +43,13 @@
               <div class="info-area">
                 <ul class="">
                   <li>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/stefanut999" target='_blank'><i class="fab fa-facebook-f"></i></a>
                   </li>
                   <li>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/paulstefancolta/" target='_blank'><i class="fab fa-linkedin-in"></i></i></a>
                   </li>
                   <li>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/paulstefancolta/" target='_blank'><i class="fab fa-instagram"></i></a>
                   </li>
                 </ul>
               </div><!-- end info-area -->
@@ -63,10 +63,14 @@
     </div><!-- end top-nav -->
     <!-- ========== END HEADER ========== -->
 
+    <div class="user-title">
+       <h1 class="fullname">All of your online accounts in one place.</h1>
+     </div>
+
      <!-- ========== START HOME CONTAINER ========== -->
      <div class="container home-container">
+        <a href = "login_pg/login"><input class="social-button" type = "button" value="Log In"></a>
         <a href = "login_pg/register"><input class="social-button" type = "button" value="Register"></a>
-        <a href = "login_pg/login"><input class="social-button type = "button" value="Log In"></a>
      </div>
      <!-- ========== END HOME CONTAINER========== -->
      <!-- ========== START FOOTER ========== -->
@@ -76,13 +80,13 @@
           <div class="footer__social">
             <ul class="social srf-full-menu">
                 <li>
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.facebook.com/stefanut999" target='_blank'><i class="fab fa-facebook-f"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.linkedin.com/in/paulstefancolta/" target='_blank'><i class="fab fa-linkedin-in"></i></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.instagram.com/paulstefancolta/" target='_blank'><i class="fab fa-instagram"></i></a>
                 </li>
               </ul>
                <a href="#" class="copyright">&copy; Paul Colta - Contar.io</a>

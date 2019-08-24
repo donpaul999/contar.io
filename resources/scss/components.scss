@@ -32,6 +32,79 @@
 	display: block;
 	margin-top: 70px;
 }
+
+.update-succes {
+	.social-button {
+		margin-top: 23%;
+	}
+}
+
+.login-failed {
+	.user-title {
+		margin-bottom: 25px;
+		padding: 0 100px;
+		
+		.fullname {
+			font-size: 50px;
+			background-color: $hover;
+		}
+	}
+	text-align: center;
+	h2 {
+		margin-bottom: 25px;
+	}
+}
+
+.menu-trigger {
+	visibility: hidden;
+}
+
+.inuse {
+	.fullname {
+		background-color: $hover;	
+	}
+}
+
+.home .user-title {
+    -webkit-animation: fadein 2.5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2.5s; /* Firefox < 16 */
+        -ms-animation: fadein 2.5s; /* Internet Explorer */
+         -o-animation: fadein 2.5s; /* Opera < 12.1 */
+            animation: fadein 2.5s;
+}
+
+.home-container {
+	margin-top: 30px;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 /***********************************************
 /* END GENERAL
 ***********************************************/
@@ -91,6 +164,14 @@
 				top: 50%;
 				@include translateY(-420%);
 				font-size: 1rem;
+			}
+		}
+
+		&.active {
+			p {
+				&::before {
+					content: none!important;
+				}
 			}
 		}
 
@@ -180,7 +261,6 @@
 	position: absolute;
 	right: 0;
 	top: 31%;
-	margin-right: 30px;
 	@include translateY(-50%);
 	> ul {
 		text-align: center;
@@ -277,7 +357,6 @@
 
 .social-button {
 	display: block;
-	width: 25%;
 	position: relative;
 	@include translateX(-50%);
 	@include transition;
@@ -291,7 +370,7 @@
 	font-weight: 600;
 	height: 56px;
 	padding: 0 45px;
-	width: 17%;
+	max-width: 100%;
 	@include transition;
 
 	&:hover {

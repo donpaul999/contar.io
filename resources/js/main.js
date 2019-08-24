@@ -32,14 +32,20 @@ jQuery(document).ready(function(){
   });
   //End LightBox Options
   $("#fb1, #ig1, #yt1").on("click", function() {
-  var el = $(this);
-  if (el.text() == el.data("text-swap")) {
-    el.text(el.data("text-original"));
-  } else {
-    el.data("text-original", el.text());
-    el.text(el.data("text-swap"));
-  }
-});
+    var el = $(this);
+    if (el.text() == el.data("text-swap")) {
+      el.text(el.data("text-original"));
+    } else {
+      el.data("text-original", el.text());
+      el.text(el.data("text-swap"));
+    }
+  });
+
+  $(".contar-profile ul li").click(function() {
+
+    $(this).toggleClass("active");
+
+  });
   //start sortable
   $( "#sortable" ).sortable();
   //end sortable
