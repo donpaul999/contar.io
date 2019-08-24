@@ -6,6 +6,8 @@
 
 function upd($link, $site, &$ok, $user, $conectare)
 {
+  if(strstr($link,"<script>"))
+      return header("location:update");
   $query = mysqli_query($conectare, "SELECT * FROM accounts WHERE username= '$user'");
   if(mysqli_num_rows($query) > 0){
     $_sql = "UPDATE accounts SET $site = '$link' WHERE username= '$user'";
