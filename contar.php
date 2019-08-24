@@ -17,13 +17,13 @@ $username = $_SESSION['username'];
     <div class="user-title">
     <h1 class="fullname">Welcome <?php echo $username; ?> !</h1>
     </div>
-    
+
   </head>
   <body>
     <!-- ========== START HEADER ========== -->
     <div class="top-nav top-nav--burger-1 clearfix">
       <div class="logo">
-          <a href="#"><img src="resources/img/logo_png.png" alt="Contar-Logo"></a>
+          <a href="contar"><img src="resources/img/logo_png.png" alt="Contar-Logo"></a>
       </div><!-- end logo -->
       <?php
         echo '<div class="username">';

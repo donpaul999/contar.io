@@ -24,7 +24,7 @@ $username = $_SESSION['username'];
   <!-- ========== START HEADER ========== -->
   <div class="top-nav top-nav--burger-1 clearfix">
     <div class="logo">
-        <a href="#"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
+        <a href="../contar"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
     </div><!-- end logo -->
     <?php
       echo '<div class="username">';
@@ -79,25 +79,25 @@ $username = $_SESSION['username'];
     </header>
   </div><!-- end top-nav -->
   <!-- ========== END HEADER ========== -->
-  
+
   <!-- ========== START UPDATE CONTAINER ========== -->
   <div class="container">
     <div class="form-wrap form-wrap-update">
       <form method="POST" action="update_code.php">
-            <input type="text" name="facebook" placeholder="Your Facebook profile" maxlength="200"><br><br>
-            <input type="text" name="instagram" placeholder="Your Instagram profile or username" maxlength="200"><br><br>
-            <input type="text" name="youtube" placeholder="Your YouTube channel" maxlength="200"><br><br>
-            <input type="text" name="linkedin" placeholder="Your LinkedIn profile" maxlength="200"><br><br>
-            <input type="text" name="github" placeholder="Your GitHub profile" maxlength="200"><br><br>
-            <input type="text" name="spotify" placeholder="Your Spotify profile" maxlength="200"><br><br>
-            <input type="text" name="steam" placeholder="Your Steam profile" maxlength="200"><br><br>
-            <input type="text" name="snapchat" placeholder="Your Snapchat username" maxlength="200"><br><br>
-            <input type="text" name="discord" placeholder="Your Discord username + tag" maxlength="200"><br><br>
-            <input type="text" name="skype" placeholder="Your Skype username" maxlength="200"><br><br>
+            <input type="text" name="facebook" placeholder="Your Facebook profile" maxlength="200"><br>
+            <input type="text" name="instagram" placeholder="Your Instagram profile or username" maxlength="200"><br>
+            <input type="text" name="youtube" placeholder="Your YouTube channel" maxlength="200"><br>
+            <input type="text" name="linkedin" placeholder="Your LinkedIn profile" maxlength="200"><br>
+            <input type="text" name="github" placeholder="Your GitHub profile" maxlength="200"><br>
+            <input type="text" name="spotify" placeholder="Your Spotify profile" maxlength="200"><br>
+            <input type="text" name="steam" placeholder="Your Steam profile" maxlength="200"><br>
+            <input type="text" name="snapchat" placeholder="Your Snapchat username" maxlength="200"><br>
+            <input type="text" name="discord" placeholder="Your Discord username + tag" maxlength="200"><br>
+            <input type="text" name="skype" placeholder="Your Skype username" maxlength="200"><br>
             <input type="submit" class="social-button" id="update" name="update" value="Update"><br>
       </form>
     </div><!-- end form-wrap -->
-  </div><!-- end container --> 
+  </div><!-- end container -->
   <!-- ========== END UPDATE CONTAINER========== -->
 
     <!-- ========== START FOOTER ========== -->

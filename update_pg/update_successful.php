@@ -24,15 +24,16 @@ $username = $_SESSION['username'];
     <div class="user-title">
     <h1 class="fullname">Update succesful!</h1>
     </div>
-    
+
   </head>
   <body>
     <!-- ========== START HEADER ========== -->
     <div class="top-nav top-nav--burger-1 clearfix">
       <div class="logo">
-          <a href="#"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
+          <a href="../contar"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
       </div><!-- end logo -->
       <?php
+      echo '<a href ="../p/'.$username.'"><input class="social-button" type = "button" value="See your profile"></a><br>';
       echo '<div class="username">';
       echo '<ul>';
       echo '<li><a href = "../p/'.$username.'"><input type = "button" value='.$username.'></a></li>';
@@ -86,7 +87,7 @@ $username = $_SESSION['username'];
     </div><!-- end top-nav -->
     <!-- ========== END HEADER ========== -->
 
-    
+
 
     <!-- ========== START FOOTER ========== -->
     <footer class="footer fixed">
