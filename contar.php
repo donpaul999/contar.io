@@ -63,6 +63,8 @@ $username = $_SESSION['username'];
       <?php
         echo '<a href ="p/'.$username.'"><input class="social-button" type = "button" value="See your profile"></a><br>';
       ?>
+      <a href = 'update_pg/update'><input type = 'button' class="social-button" value='Update your profile'></a></li>
+
     </div>
     <!-- ========== END WELCOME CONTENT ========== -->
 
