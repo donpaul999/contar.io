@@ -119,7 +119,7 @@ if(!isset($_SESSION['wrong']))
               echo '<div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp"></div>';
               ?>
             <input class="social-button"  type="submit" id="login" name="login" value="Log In">
-            <a  href = "register"><input class="social-button"  type = "button" value="Sign Up"></a>
+            <a  href = "register"><input class="social-button"  type = "button" value="You don't have an account? Sign Up"></a>
         </form>
       </div>
     </div><!-- end form-wrap -->
