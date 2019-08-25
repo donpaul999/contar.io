@@ -91,8 +91,8 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
 
     <!-- ========== START PROFILE-CONTENT ========== -->
     <div class="contar-profile">
-      <div class="container">
-        <div class="row">
+      <div class="container main-container">
+        <div class="main">
           <div class="col-sm-12">
             <?php
               require 'profile_code.php';
@@ -143,7 +143,7 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
                   }
                  if(!empty($row['snapchat']) && !ctype_space($row['snapchat']))
                  {
-                   buttonorlist($row['snapchat'], "snap", "Snapchat", "snap1");
+                   buttonorlist($row['snapchat'], "snap", "Snap", "snap1");
                  }
                 if(!empty($row['discord']) && !ctype_space($row['discord']))
                 {
@@ -164,7 +164,6 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
               //     echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
               //     echo "<li><a href = '../update_pg/update'><input type = 'button' value='Update your profile'></a></li>";
               //     echo "<li><a href='../update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
-echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
               //   echo '</ul>';
               //   echo  '</ul>';
               //   echo  '</div>';

@@ -3,7 +3,7 @@
 
 html {
 	overflow-x: hidden;
-	background-color: #fff;
+	background-color: $body-bgk;
 	background-attachment: fixed;
 	background-position: center center;
 	background-size: cover;
@@ -22,6 +22,7 @@ html {
 		color: #000;
 		position: relative;
 		z-index: 1;
-		min-height: 100%;
+		height: 100%;
+		
 	}
 }

@@ -106,10 +106,13 @@ if(!isset($_SESSION['wrong']))
     <!-- ========== END HEADER ========== -->
 
     <!-- ========== START LOGIN-CONTAINER ========== -->
-    <div class="form-wrap">
-      <div class="container">
+    <div class="form-wrap container main-container">
+      <div class="main">
         <form method="POST">
+          <div class="user-title">
             <h1 class="fullname">Log In</h1>
+          </div>
+            
             <input type="text" name="username" placeholder="Your username" required>
           <!--   <input type="email" name="email" placeholder="Email" required> -->
           <input type="password" name="password" value="" id="password" placeholder="Password" required>
@@ -126,7 +129,7 @@ if(!isset($_SESSION['wrong']))
     <!-- ========== END LOGIN-CONTAINER ========== -->
 
     <!-- ========== START FOOTER ========== -->
-    <footer class="footer fixed">
+    <footer class="footer">
       <div class="container">
         <div class="row">
           <div class="footer__social">

@@ -21,7 +21,9 @@
        <script src = "../resources/js/password.js"></script>
    </head>
    <body>
-     <div class="user-title">
+     <div class="container main-container privacy">
+       <div class="main">
+       <div class="user-title">
        <h1 class="fullname">Privacy Policy for Contar.io</h1>
      </div>
      <p>At Contar.io, accessible from http://contar.io/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Contar.io and how we use it.</p>
@@ -91,13 +93,16 @@
 
      <h2>Consent</h2>
 
-     <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>     <!-- ========== START HEADER ========== -->
+     <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
+       </div>
+       <a href="register"><input class="social-button go-back" type="button" value="Go Back"></a>
+     </div>
+    <!-- ========== START HEADER ========== -->
      <div class="top-nav top-nav--burger-1 clearfix">
        <div class="logo">
            <a href="register"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
        </div><!-- end logo -->
     </div>
-     <a href="register"><input class="social-button go-back" type="button" value="Go Back"></a>
 
      <!-- ========== START FOOTER ========== -->
     <footer class="footer fixed">

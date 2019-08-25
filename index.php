@@ -63,16 +63,18 @@
     </div><!-- end top-nav -->
     <!-- ========== END HEADER ========== -->
 
-    <div class="user-title">
-       <h1 class="fullname">All of your online accounts in one place.</h1>
-     </div>
-
      <!-- ========== START HOME CONTAINER ========== -->
-     <div class="container home-container">
+     <div class="container main-container home-container">
+       <div class="main">
+        <div class="user-title">
+          <h1 class="fullname">All of your online accounts in one place.</h1>
+        </div>
         <a href = "login_pg/login"><input class="social-button" type = "button" value="Log In"></a>
         <a href = "login_pg/register"><input class="social-button" type = "button" value="Register"></a>
-     </div>
+       </div><!-- end main  -->
+     </div><!-- end  container -->
      <!-- ========== END HOME CONTAINER========== -->
+
      <!-- ========== START FOOTER ========== -->
     <footer class="footer fixed">
       <div class="container">

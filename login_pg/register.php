@@ -72,8 +72,8 @@
 
     <!-- ========== START REGISTER CONTAINER ========== -->
 
-    <div class="container">
-      <div class="row">
+    <div class="container main-container">
+      <div class="main">
         <div class="col-sm-12">
           <div class="form-wrap mrg-header-size form-wrap-register">
             <form method="POST" action="signup.php">
@@ -84,10 +84,16 @@
                 <input type="email" name="email" placeholder="Email" required maxlength="50">
                 <input type="password" name="password" value="" pattern=".{8,}" title="Must contain at least 8 or more characters" id="password" placeholder="Password" required>
                 <div class="show-pass">
-                  <input type="checkbox" onclick="showpass()">
-                  <h5>Show Password</h5><br>
-                  <input type="checkbox" required>
-                  <h5>I have read and agree with <a href="privacy" style="color:blue">the Privacy Policy</a></h5>
+                  <div class="show-pass__block">
+                    <input type="checkbox" onclick="showpass()">
+                    <h5>Show Password</h5><br>
+                  </div>
+                  <div class="show-pass__block">
+                    <input type="checkbox" required>
+                    <h5>I have read and agree with <a href="privacy" style="color:blue">the Privacy Policy</a></h5>
+                  </div>
+                  
+                  
                 </div>
                 <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" oninput="check(this)" required maxlength="20">
                 <span id='message'></span>

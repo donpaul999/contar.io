@@ -17,11 +17,6 @@
   background-color: #f9fbfc; }
 
 /* End BEM */
-.fixed {
-  position: fixed;
-  bottom: 0;
-  left: 0; }
-
 .mrg-header-size {
   margin-top: 76.55px; }
 
@@ -153,8 +148,6 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  overflow-y: hidden;
-  overflow:scroll;
   background-color: #fff; }
 
 [tabindex="-1"]:focus {
@@ -12309,7 +12302,7 @@ readers do not read off random characters that represent icons */
 
 html {
   overflow-x: hidden;
-  background-color: #fff;
+  background-color: #f9fbfc;
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
@@ -12328,7 +12321,7 @@ html {
     color: #000;
     position: relative;
     z-index: 1;
-    min-height: 100%; }
+    height: 100%; }
 
 h1, .h1, h2, .h2, h3, .h3 {
   margin: 0;
@@ -12379,28 +12372,15 @@ p {
   background-color: #fcfbd3;
   display: inline-block; }
 
-.fullname2 {
-    text-align: center;
-    margin-top: 184px;
-    font-size: 90px;
-    font-weight: 600;
-    padding: 40px 60px;
-    background-color: #fcfbd3;
-    display: inline-block;
- }
+.privacy {
+  font-size: 14px; }
+  .privacy .user-title {
+    margin-bottom: 40px; }
 
 .welcome-content {
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
-  .welcome-content .social-button {
-    width: 30%; }
+  text-align: center; }
+  .welcome-content .fullname {
+    margin-bottom: 60px; }
 
 .go-back {
   display: block;
@@ -12419,6 +12399,14 @@ p {
       background-color: #ff7777; }
   .login-failed h2 {
     margin-bottom: 25px; }
+  .login-failed .top-nav {
+    text-align: left; }
+
+.update-profile .fullname {
+  margin-bottom: 30px; }
+
+.update-profile .user-title {
+  margin-bottom: 30px; }
 
 .menu-trigger {
   visibility: hidden; }
@@ -12439,6 +12427,9 @@ p {
 
 .home-container {
   margin-top: 30px; }
+
+.main-container {
+  min-height: 100%; }
 
 @keyframes fadein {
   from {
@@ -12474,6 +12465,10 @@ p {
   to {
     opacity: 1; } }
 
+.main {
+  overflow: auto;
+  padding-bottom: 100px; }
+
 /***********************************************
 /* END GENERAL
 ***********************************************/
@@ -12481,20 +12476,14 @@ p {
 /* START HOME-CONTAINER
 ***********************************************/
 .home-container {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  text-align: center; }
   .home-container a {
     display: block; }
   .home-container input {
     text-align: center;
     cursor: pointer; }
+  .home-container .user-title {
+    margin-bottom: 40px; }
 
 /***********************************************
 /* END HOME CONTAINER
@@ -12727,14 +12716,8 @@ p {
 ***********************************************/
 .form-wrap {
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  margin-top: 184px;
+  padding: 0 300px; }
   .form-wrap .fullname {
     display: block;
     margin-top: 0;
@@ -12774,20 +12757,14 @@ p {
   .form-wrap form input[type=checkbox],
   .form-wrap form h5 {
     display: inline-block; }
-  .form-wrap form .social-button {
-    width: 50%; }
-  .form-wrap.form-wrap-register, .form-wrap.form-wrap-update {
-    position: initial;
-    top: initial;
-    left: initial;
-    -webkit-transform: initial;
-    -ms-transform: initial;
-    transform: initial; }
   .form-wrap.form-wrap-update {
     margin-top: 60px; }
 
 .show-pass {
   float: left; }
+  .show-pass .show-pass__block {
+    display: block;
+    text-align: left; }
 
 .g-recaptcha {
   text-align: center; }
@@ -12808,7 +12785,9 @@ p {
 .footer {
   background: #f0f3f3;
   width: 100%;
-  padding: 10px 0; }
+  padding: 10px 0;
+  clear: both;
+  position: relative; }
   .footer .footer__social {
     text-align: center;
     width: 100%;
@@ -12854,7 +12833,7 @@ p {
 /* END FOOTER
 ***********************************************/
 /***********************************************
-/* START
+/* START  
 ***********************************************/
 /***********************************************
 /* START HEADER
@@ -12875,7 +12854,8 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; }
+  width: 100%;
+  z-index: 1; }
 
 .mobile-info {
   display: none; }
@@ -13097,7 +13077,7 @@ p {
       display: inline-block; } }
 
 /***********************************************
-/* END HEADER-BURGER-1
+/* END HEADER-BURGER-1  
 ***********************************************/
 /***********************************************
 /* START  HEADER-FULLSCREEN
@@ -13422,7 +13402,7 @@ p {
   .isotope-item {
     width: 100% !important; } }
 
-/*
+/* 
  *	Owl Carousel - Animate Plugin
  */
 .owl-carousel .animated {
@@ -13453,7 +13433,7 @@ p {
   100% {
     opacity: 0; } }
 
-/*
+/* 
  * 	Owl Carousel - Auto Height Plugin
  */
 .owl-height {
@@ -13463,7 +13443,7 @@ p {
   -o-transition: height 500ms ease-in-out;
   transition: height 500ms ease-in-out; }
 
-/*
+/* 
  *	Core Owl Carousel CSS File
  */
 .owl-carousel {
@@ -13556,7 +13536,7 @@ p {
 .no-js .owl-carousel {
   display: block; }
 
-/*
+/* 
  * 	Owl Carousel - Lazy Load Plugin
  */
 .owl-carousel .owl-item .owl-lazy {
@@ -13571,7 +13551,7 @@ p {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
 
-/*
+/* 
  * 	Owl Carousel - Video Plugin
  */
 .owl-carousel .owl-video-wrapper {
@@ -13661,8 +13641,6 @@ p {
       opacity: 1;
       visibility: visible;
       background: #f9fbfc; }
-  .logo {
-    display: none; }
   .full-menu {
     margin-bottom: 25px; }
   .full-menu, .info-area, .mobile-info {
@@ -13693,9 +13671,7 @@ p {
     .mobile-info p {
       font-size: 1.2rem; }
   .menu-trigger {
-    display: block; }
-  .form-wrap-register {
-    margin-top: 20px !important; } }
+    display: block; } }
 
 .header-fullscreen {
   padding: 15px; }
@@ -13777,15 +13753,28 @@ p {
     margin-bottom: 0; } }
 
 /***********************************************
-/* END LANSCAPE
+/* END LANSCAPE 
 ***********************************************/
 /***********************************************
 /* START CONTAR
 ***********************************************/
+@media (max-width: 600px) {
+  .sub-menu {
+    background-color: rgba(255, 255, 255, 0.9); }
+    .sub-menu li {
+      padding-bottom: 10px;
+      border-bottom: 0.8px solid #333; }
+      .sub-menu li:before {
+        content: none; } }
+
 @media (max-width: 800px) {
   .user-title {
     margin-top: 0; }
     .user-title h1 {
+      font-size: 30px; }
+  .login-failed .user-title {
+    padding: 0; }
+    .login-failed .user-title .fullname {
       font-size: 30px; }
   .username {
     right: -7%; }
@@ -13799,15 +13788,26 @@ p {
     left: 30%; }
   .fullname {
     margin-top: 100px; }
+  .update .form-wrap {
+    margin-top: 50px; }
   .form-wrap {
-    margin-top: -56.55px; }
+    padding: 0 20px; }
+    .form-wrap .social-button {
+      padding: initial !important;
+      width: 100% !important; }
+    .form-wrap h5 {
+      font-size: 12px; }
+    .form-wrap input {
+      font-size: 16px; }
+  .form-wrap-register {
+    padding: 0; }
   .sub-menu li {
     line-height: 20px; }
     .sub-menu li a {
       font-size: 14px; } }
 
 /***********************************************
-/* END CONTAR
+/* END CONTAR  
 ***********************************************/
 .fancybox-wrap,
 .fancybox-skin,
@@ -14124,7 +14124,7 @@ a.lightbox.hidden {
     font-size: 24px; }
 
 /***********************************************
-/* START C-HERO-1
+/* START C-HERO-1  
 ***********************************************/
 /*! jQuery UI - v1.12.1 - 2019-08-11
 * http://jqueryui.com

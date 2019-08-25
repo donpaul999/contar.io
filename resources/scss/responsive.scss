@@ -24,7 +24,7 @@
 	}
 
 	.logo {
-		display: none;
+		
 	}
 
 	.full-menu {
@@ -84,7 +84,6 @@
 	}
 
 	.form-wrap-register {
-		margin-top: 20px!important;
 	}
 }
 
@@ -199,11 +198,35 @@ and (orientation: landscape) {
 /***********************************************
 /* START CONTAR
 ***********************************************/
+@media(max-width: 600px) {
+	.sub-menu {
+		background-color: rgba(255,255,255, 0.9);
+		li {
+			padding-bottom: 10px;
+			border-bottom: 0.8px solid #333;
+
+			&:before {
+				content: none;
+			}
+		}
+	}
+}
+
 @media(max-width: 800px) {
 	.user-title {
 		margin-top: 0;
 		h1 {
 			font-size: 30px;
+		}
+	}
+
+	.login-failed {
+		.user-title {
+			padding: 0;
+			
+			.fullname {
+				font-size: 30px;
+			}
 		}
 	}
 
@@ -237,8 +260,30 @@ and (orientation: landscape) {
 		margin-top: 100px;
 	}
 
+
+	.update {
+		.form-wrap {
+			margin-top: 50px;
+		}
+	}
+
 	.form-wrap {
-		margin-top: -56.55px;
+		.social-button {
+			padding: initial!important;
+			width: 100%!important;
+		}
+		padding: 0 20px;;
+		h5 {
+			font-size: 12px;
+		}
+
+		input {
+			font-size: 16px;
+		}
+	}
+
+	.form-wrap-register {
+		padding: 0;
 	}
 
 	.sub-menu {

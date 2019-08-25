@@ -20,7 +20,7 @@ $usr = $_SESSION['username'];
       <h4>Add usernames or links to your online accounts</h4>
     </div>
   </head>
-  <body>
+  <body class="update-profile">
 
   <!-- ========== START HEADER ========== -->
   <div class="top-nav top-nav--burger-1 clearfix">
@@ -83,25 +83,27 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
   <!-- ========== END HEADER ========== -->
 
   <!-- ========== START UPDATE CONTAINER ========== -->
-  <div class="container">
-    <div class="form-wrap form-wrap-update">
-      <form method="POST" action="update_code.php">
-          <?php
-          require '../profile_code.php';
-           ?>
-            <input type="text" name="facebook" placeholder="Your Facebook profile: <?php echo $row['facebook']; ?>" maxlength="200"><br>
-            <input type="text" name="instagram" placeholder="Your Instagram profile or username: <?php echo $row['instagram']; ?>" maxlength="200"><br>
-            <input type="text" name="youtube" placeholder="Your YouTube channel: <?php echo $row['youtube']; ?>" maxlength="200"><br>
-            <input type="text" name="linkedin" placeholder="Your LinkedIn profile: <?php echo $row['linkedin']; ?>" maxlength="200"><br>
-            <input type="text" name="github" placeholder="Your GitHub profile: <?php echo $row['github']; ?>" maxlength="200"><br>
-            <input type="text" name="spotify" placeholder="Your Spotify profile: <?php echo $row['spotify']; ?>" maxlength="200"><br>
-            <input type="text" name="steam" placeholder="Your Steam profile: <?php echo $row['steam']; ?>" maxlength="200"><br>
-            <input type="text" name="snapchat" placeholder="Your Snapchat username: <?php echo $row['snapchat']; ?>" maxlength="200"><br>
-            <input type="text" name="discord" placeholder="Your Discord username + tag: <?php echo $row['discord']; ?>" maxlength="200"><br>
-            <input type="text" name="skype" placeholder="Your Skype username: <?php echo $row['skype']; ?>" maxlength="200"><br>
-            <input type="submit" class="social-button" id="update" name="update: <?php echo $row['discord']; ?>" value="Update"><br>
-      </form>
-    </div><!-- end form-wrap -->
+  <div class="container main-container">
+    <div class="main">
+      <div class="form-wrap form-wrap-update">
+        <form method="POST" action="update_code.php">
+            <?php
+            require '../profile_code.php';
+            ?>
+              <input type="text" name="facebook" placeholder="Your Facebook profile: <?php echo $row['facebook']; ?>" maxlength="200"><br>
+              <input type="text" name="instagram" placeholder="Your Instagram profile or username: <?php echo $row['instagram']; ?>" maxlength="200"><br>
+              <input type="text" name="youtube" placeholder="Your YouTube channel: <?php echo $row['youtube']; ?>" maxlength="200"><br>
+              <input type="text" name="linkedin" placeholder="Your LinkedIn profile: <?php echo $row['linkedin']; ?>" maxlength="200"><br>
+              <input type="text" name="github" placeholder="Your GitHub profile: <?php echo $row['github']; ?>" maxlength="200"><br>
+              <input type="text" name="spotify" placeholder="Your Spotify profile: <?php echo $row['spotify']; ?>" maxlength="200"><br>
+              <input type="text" name="steam" placeholder="Your Steam profile: <?php echo $row['steam']; ?>" maxlength="200"><br>
+              <input type="text" name="snapchat" placeholder="Your Snapchat username: <?php echo $row['snapchat']; ?>" maxlength="200"><br>
+              <input type="text" name="discord" placeholder="Your Discord username + tag: <?php echo $row['discord']; ?>" maxlength="200"><br>
+              <input type="text" name="skype" placeholder="Your Skype username: <?php echo $row['skype']; ?>" maxlength="200"><br>
+              <input type="submit" class="social-button" id="update" name="update: <?php echo $row['discord']; ?>" value="Update"><br>
+        </form>
+      </div><!-- end form-wrap -->
+    </div>
   </div><!-- end container -->
   <!-- ========== END UPDATE CONTAINER========== -->
 

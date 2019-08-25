@@ -39,14 +39,13 @@ if(!empty($_POST['change_pass']))
     <script src = "resources/js/password.js"></script>
 
   </head>
-  <body class="update-succes">
+  <body class="update-succes update">
     <!-- ========== START HEADER ========== -->
     <div class="top-nav top-nav--burger-1 clearfix">
       <div class="logo">
           <a href="../contar"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
       </div><!-- end logo -->
       <?php
-      echo '<a href ="../p/'.$username.'"><input class="social-button" type = "button" value="See your profile"></a><br>';
       echo '<div class="username">';
       echo '<ul>';
       echo '<li><input type = "button" value='.$username.'></li>';
@@ -101,24 +100,27 @@ if(!empty($_POST['change_pass']))
     </div><!-- end top-nav -->
     <!-- ========== END HEADER ========== -->
 
-    <div class="user-title">
-      <h1 class="fullname">Change your password</h1>
-    </div>
-
-    <div class="form-wrap">
-      <div class="container">
-        <form method="POST">
-          <input type="password" name="old_pass" placeholder="Old password" required>
-          <input type="password" name="password" value="" pattern=".{8,}" title="Must contain at least 8 or more characters" id="password" placeholder="Password" required>
-          <input type="checkbox" onclick="showpass()"> <h5>Show Password</h5>
-          <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" oninput="check(this)" required maxlength="20">
-          <input class="social-button"  type="submit" id="change_pass" name="change_pass" value="Change Password">
-        </form>
+    <div class="container main-container">
+      <div class="main">
+          <div class="user-title">
+            <h1 class="fullname">Change your password</h1>
+          </div>
+        <div class="form-wrap">
+          <div class="container">
+            <form method="POST">
+              <input type="password" name="old_pass" placeholder="Old password" required>
+              <input type="password" name="password" value="" pattern=".{8,}" title="Must contain at least 8 or more characters" id="password" placeholder="Password" required>
+              <div class="show-pass">
+                <input type="checkbox" onclick="showpass()"> <h5>Show Password</h5>
+              </div>
+              
+              <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" oninput="check(this)" required maxlength="20">
+              <input class="social-button"  type="submit" id="change_pass" name="change_pass" value="Change Password">
+            </form>
+          </div>
+        </div><!-- end form-wrap -->
       </div>
-    </div><!-- end form-wrap -->
-
-
-
+    </div>
 
     <!-- ========== START FOOTER ========== -->
     <footer class="footer fixed">

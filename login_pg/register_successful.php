@@ -20,12 +20,15 @@
        <script src = "../resources/js/password.js"></script>
    </head>
    <body>
-     <div class="user-title">
-      <h1 class="fullname">Registration successfully completed!</h1>
+     <div class="container main-container">
+       <div class="main">
+        <div class="user-title">
+          <h1 class="fullname">Registration successfully completed!</h1>
+        </div>
+        <a href="login" class="go-back"><input class="social-button" type="button" value="Go Back"></a>
+       </div>
      </div>
-
-     <a href="login" class="go-back"><input class="social-button" type="button" value="Go Back"></a>
-
+     
      <!-- ========== START HEADER ========== -->
     <div class="top-nav top-nav--burger-1 clearfix">
       <div class="logo">

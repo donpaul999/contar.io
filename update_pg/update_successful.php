@@ -29,10 +29,8 @@ $username = $_SESSION['username'];
       <div class="logo">
           <a href="../contar"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
       </div><!-- end logo -->
-      <a href="../contar"><input class="social-button go-back" type="button" value="Go Back"></a>
 
       <?php
-      echo '<a href ="../p/'.$username.'"><input class="social-button" type = "button" value="See your profile"></a><br>';
       echo '<div class="username">';
       echo '<ul>';
       echo '<li><input type = "button" value='.$username.'></li>';
@@ -86,10 +84,19 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
       </header>
     </div><!-- end top-nav -->
     <!-- ========== END HEADER ========== -->
-
-    <div class="user-title">
-      <h1 class="fullname">Update succesful!</h1>
+    <div class="container main-container">
+      <div class="main">
+        <div class="user-title">
+        <h1 class="fullname">Update succesful!</h1>
+      </div>
+      <?php
+      echo '<a href ="../p/'.$username.'"><input class="social-button" type = "button" value="See your profile"></a>';
+      ?>
+      <a href="../contar"><input class="social-button go-back" type="button" value="Go Back"></a>
+      
+      </div>
     </div>
+    
 
     <!-- ========== START FOOTER ========== -->
     <footer class="footer fixed">

@@ -27,14 +27,20 @@
        </div><!-- end logo -->
      </div>
 
-     <div class="user-title">
-       <h1 class="fullname">Login Failed! Username or the password are wrong </h1>
+     <div class="container main-container">
+       <div class="main">
+       <div class="user-title">
+          <h1 class="fullname">Login Failed! Username or the password are wrong </h1>
+        </div>
+
+
+        <a href="login"><input class="social-button" type="button" value="Go Back"></a>
+        <h2>If you have problems loging in contact me here</h2>
+        <a href="../p/stefanut999"><input class="social-button" type="button" value="Contact"></a>
+       </div>
      </div>
 
-
-     <a href="login"><input class="social-button" type="button" value="Go Back"></a>
-     <h2>If you have problems loging in contact me here</h2>
-     <a href="../p/stefanut999"><input class="social-button" type="button" value="Contact"></a>
+     
 
      <footer class="footer fixed">
       <div class="container">
