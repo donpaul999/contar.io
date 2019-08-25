@@ -3,7 +3,7 @@ require '../conectare.php';
 session_start();
 if(!isset($_SESSION['loggedin']))
   return header("location:../login_pg/login");
-$username = $_SESSION['username'];
+$usr = $_SESSION['username'];
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ $username = $_SESSION['username'];
     <?php
       echo '<div class="username">';
       echo '<ul>';
-      echo '<li><input type = "button" value='.$username.'></li>';
+      echo '<li><input type = "button" value='.$usr.'></li>';
       echo '<ul class="sub-menu">';
         echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
         echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
@@ -85,17 +85,20 @@ $username = $_SESSION['username'];
   <div class="container">
     <div class="form-wrap form-wrap-update">
       <form method="POST" action="update_code.php">
-            <input type="text" name="facebook" placeholder="Your Facebook profile" maxlength="200"><br>
-            <input type="text" name="instagram" placeholder="Your Instagram profile or username" maxlength="200"><br>
-            <input type="text" name="youtube" placeholder="Your YouTube channel" maxlength="200"><br>
-            <input type="text" name="linkedin" placeholder="Your LinkedIn profile" maxlength="200"><br>
-            <input type="text" name="github" placeholder="Your GitHub profile" maxlength="200"><br>
-            <input type="text" name="spotify" placeholder="Your Spotify profile" maxlength="200"><br>
-            <input type="text" name="steam" placeholder="Your Steam profile" maxlength="200"><br>
-            <input type="text" name="snapchat" placeholder="Your Snapchat username" maxlength="200"><br>
-            <input type="text" name="discord" placeholder="Your Discord username + tag" maxlength="200"><br>
-            <input type="text" name="skype" placeholder="Your Skype username" maxlength="200"><br>
-            <input type="submit" class="social-button" id="update" name="update" value="Update"><br>
+          <?php
+          require '../profile_code.php';
+           ?>
+            <input type="text" name="facebook" placeholder="Your Facebook profile: <?php echo $row['facebook']; ?>" maxlength="200"><br>
+            <input type="text" name="instagram" placeholder="Your Instagram profile or username: <?php echo $row['instagram']; ?>" maxlength="200"><br>
+            <input type="text" name="youtube" placeholder="Your YouTube channel: <?php echo $row['youtube']; ?>" maxlength="200"><br>
+            <input type="text" name="linkedin" placeholder="Your LinkedIn profile: <?php echo $row['linkedin']; ?>" maxlength="200"><br>
+            <input type="text" name="github" placeholder="Your GitHub profile: <?php echo $row['github']; ?>" maxlength="200"><br>
+            <input type="text" name="spotify" placeholder="Your Spotify profile: <?php echo $row['spotify']; ?>" maxlength="200"><br>
+            <input type="text" name="steam" placeholder="Your Steam profile: <?php echo $row['steam']; ?>" maxlength="200"><br>
+            <input type="text" name="snapchat" placeholder="Your Snapchat username: <?php echo $row['snapchat']; ?>" maxlength="200"><br>
+            <input type="text" name="discord" placeholder="Your Discord username + tag: <?php echo $row['discord']; ?>" maxlength="200"><br>
+            <input type="text" name="skype" placeholder="Your Skype username: <?php echo $row['skype']; ?>" maxlength="200"><br>
+            <input type="submit" class="social-button" id="update" name="update: <?php echo $row['discord']; ?>" value="Update"><br>
       </form>
     </div><!-- end form-wrap -->
   </div><!-- end container -->
