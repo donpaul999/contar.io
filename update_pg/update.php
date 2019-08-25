@@ -34,7 +34,8 @@ $usr = $_SESSION['username'];
       echo '<ul class="sub-menu">';
         echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
         echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
-        echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+        echo "<li><a href='../update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
+echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
       echo '</ul>';
       echo  '</ul>';
       echo  '</div>';
@@ -133,5 +134,6 @@ $usr = $_SESSION['username'];
   <script src="../resources/js/plugins.js"></script>
   <script src="../resources/js/main.js"></script>
   <!-- ========== END JS ========== -->
+<!--Start Cookie Script--> <script type="text/javascript" charset="UTF-8" src="http://chs03.cookie-script.com/s/de14ee1f8e19ae0e12c4eff22fa89a19.js"></script> <!--End Cookie Script-->
   </body>
 </html>

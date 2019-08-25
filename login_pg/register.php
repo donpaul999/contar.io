@@ -85,7 +85,9 @@
                 <input type="password" name="password" value="" pattern=".{8,}" title="Must contain at least 8 or more characters" id="password" placeholder="Password" required>
                 <div class="show-pass">
                   <input type="checkbox" onclick="showpass()">
-                  <h5>Show Password</h5>
+                  <h5>Show Password</h5><br>
+                  <input type="checkbox" required>
+                  <h5>I have read and agree with <a href="privacy" style="color:blue">the Privacy Policy</a></h5>
                 </div>
                 <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" oninput="check(this)" required maxlength="20">
                 <span id='message'></span>
@@ -128,5 +130,6 @@
   <script src="../resources/js/plugins.js"></script>
   <script src="../resources/js/main.js"></script>
   <!-- ========== END JS ========== -->
+<!--Start Cookie Script--> <script type="text/javascript" charset="UTF-8" src="http://chs03.cookie-script.com/s/de14ee1f8e19ae0e12c4eff22fa89a19.js"></script> <!--End Cookie Script-->
   </body>
  </html>
