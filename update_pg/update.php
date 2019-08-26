@@ -84,33 +84,35 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
 
   <!-- ========== START UPDATE CONTAINER ========== -->
   <div class="container main-container">
-    <div class="main">
-      <img onclick=myFunction(this) id='b_fb' src='../resources/img/fb.png'>
-      <button onclick=myFunction(this) id='b_ig'>Instagram</button>
-      <button onclick=myFunction(this) id='b_yt'>YouTube</button>
-      <button onclick=myFunction(this) id='b_linked'>LinkedIn</button>
-      <button onclick=myFunction(this) id='b_github'>GitHub</button>
-      <button onclick=myFunction(this) id='b_spotify'>Spotify</button>
-      <button onclick=myFunction(this) id='b_steam'>Steam</button>
-      <button onclick=myFunction(this) id='b_snap'>Snapchat</button>
-      <button onclick=myFunction(this) id='b_discord'>Discord</button>
-      <button onclick=myFunction(this) id='b_skype'>Skype</button>
+    <div class="main update-main">
+      <div>
+        <button class="update-icon" id='b_fb'><i style="color: #3578E5;" class="fab fa-facebook-f"></i></button>
+        <button class="update-icon" id='b_ig'><i style="color: #C13584;" class="fab fa-instagram"></i></button>
+        <button class="update-icon" id='b_yt'><i style="color: #FF0000;" class="fab fa-youtube"></i></button>
+        <button class="update-icon" id='b_linked'><i style="color: #0077B5;" class="fab fa-linkedin"></i></button>
+        <button class="update-icon" id='b_github'><i style="color: #333;" class="fab fa-github"></i></button>
+        <button class="update-icon" id='b_spotify'><i style="color: #1DB954;" class="fab fa-spotify"></i></button>
+        <button class="update-icon" id='b_steam'><i style="color: #112758;" class="fab fa-steam"></i></button>
+        <button class="update-icon" id='b_snap'><i style="color: #FFFC00;" class="fab fa-snapchat"></i></button>
+        <button class="update-icon" id='b_discord'><i style="color: #7289DA;" class="fab fa-discord"></i></button>
+        <button class="update-icon" id='b_skype'><i style="color: #00AFF0;" class="fab fa-skype"></i></button>
+      </div>
       <div class="form-wrap form-wrap-update">
         <form method="POST" action="update_code.php">
             <?php
             require '../profile_code.php';
             ?>
-              <input type="text" name="facebook" id='fb' placeholder="Your Facebook profile: <?php echo $row['facebook']; ?>" maxlength="200"><br>
-              <input type="text" name="instagram" id='ig' placeholder="Your Instagram profile or username: <?php echo $row['instagram']; ?>" maxlength="200"><br>
-              <input type="text" name="youtube" id='yt' placeholder="Your YouTube channel: <?php echo $row['youtube']; ?>" maxlength="200"><br>
-              <input type="text" name="linkedin" id='linked' placeholder="Your LinkedIn profile: <?php echo $row['linkedin']; ?>" maxlength="200"><br>
-              <input type="text" name="github" id='github' placeholder="Your GitHub profile: <?php echo $row['github']; ?>" maxlength="200"><br>
-              <input type="text" name="spotify" id='spotify' placeholder="Your Spotify profile: <?php echo $row['spotify']; ?>" maxlength="200"><br>
-              <input type="text" name="steam" id='steam' placeholder="Your Steam profile: <?php echo $row['steam']; ?>" maxlength="200"><br>
-              <input type="text" name="snapchat" id='snap' placeholder="Your Snapchat username: <?php echo $row['snapchat']; ?>" maxlength="200"><br>
-              <input type="text" name="discord" id='discord' placeholder="Your Discord username + tag: <?php echo $row['discord']; ?>" maxlength="200"><br>
-              <input type="text" name="skype" id='skype' placeholder="Your Skype username: <?php echo $row['skype']; ?>" maxlength="200"><br>
-              <input type="submit" class="social-button" id="update" name="update: <?php echo $row['discord']; ?>" value="Update"><br>
+              <input type="text" name="facebook" id='fb' placeholder="Your Facebook profile: <?php echo $row['facebook']; ?>" maxlength="200">
+              <input type="text" name="instagram" id='ig' placeholder="Your Instagram profile or username: <?php echo $row['instagram']; ?>" maxlength="200">
+              <input type="text" name="youtube" id='yt' placeholder="Your YouTube channel: <?php echo $row['youtube']; ?>" maxlength="200">
+              <input type="text" name="linkedin" id='linked' placeholder="Your LinkedIn profile: <?php echo $row['linkedin']; ?>" maxlength="200">
+              <input type="text" name="github" id='github' placeholder="Your GitHub profile: <?php echo $row['github']; ?>" maxlength="200">
+              <input type="text" name="spotify" id='spotify' placeholder="Your Spotify profile: <?php echo $row['spotify']; ?>" maxlength="200">
+              <input type="text" name="steam" id='steam' placeholder="Your Steam profile: <?php echo $row['steam']; ?>" maxlength="200">
+              <input type="text" name="snapchat" id='snap' placeholder="Your Snapchat username: <?php echo $row['snapchat']; ?>" maxlength="200">
+              <input type="text" name="discord" id='discord' placeholder="Your Discord username + tag: <?php echo $row['discord']; ?>" maxlength="200">
+              <input type="text" name="skype" id='skype' placeholder="Your Skype username: <?php echo $row['skype']; ?>" maxlength="200">
+              <input type="submit" class="social-button" id="update" name="update: <?php echo $row['discord']; ?>" value="Update">
         </form>
       </div><!-- end form-wrap -->
     </div>
@@ -145,17 +147,7 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
   <script src="../resources/js/bootstrap.min.js"></script>
   <script src="../resources/js/plugins.js"></script>
   <script src="../resources/js/main.js"></script>
-  <script>
-  function myFunction(id) {
-  var id = id.id.split("_")[1];//extract input id from button id
-    var x = document.getElementById(id);
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-  }
-  </script>
+  
   <!-- ========== END JS ========== -->
 <!--Start Cookie Script--> <script type="text/javascript" charset="UTF-8" src="http://chs03.cookie-script.com/s/de14ee1f8e19ae0e12c4eff22fa89a19.js"></script> <!--End Cookie Script-->
   </body>

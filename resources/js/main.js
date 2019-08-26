@@ -46,6 +46,66 @@ jQuery(document).ready(function(){
     $(this).toggleClass("active");
 
   });
+
+  $("#b_fb").click(function() {
+    
+    $("#fb").toggleClass("active");
+
+  });
+
+  $("#b_ig").click(function() {
+    
+    $("#ig").toggleClass("active");
+
+  });
+  
+  $("#b_yt").click(function() {
+    
+    $("#yt").toggleClass("active");
+
+  });
+
+  $("#b_linked").click(function() {
+    
+    $("#linked").toggleClass("active");
+
+  });
+
+  $("#b_github").click(function() {
+    
+    $("#github").toggleClass("active");
+
+  });
+
+  $("#b_spotify").click(function() {
+    
+    $("#spotify").toggleClass("active");
+
+  });
+
+  $("#b_steam").click(function() {
+    
+    $("#steam").toggleClass("active");
+
+  });
+
+  $("#b_snap").click(function() {
+    
+    $("#snap").toggleClass("active");
+
+  });
+
+  $("#b_discord").click(function() {
+    
+    $("#discord").toggleClass("active");
+
+  });
+
+  $("#b_skype").click(function() {
+    
+    $("#skype").toggleClass("active");
+
+  });
   //start sortable
   $( "#sortable" ).sortable();
   //end sortable

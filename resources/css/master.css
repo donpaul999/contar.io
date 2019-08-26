@@ -12372,6 +12372,15 @@ p {
   background-color: #fcfbd3;
   display: inline-block; }
 
+.update-icon {
+  border: 0;
+  background: transparent; }
+  .update-icon i {
+    font-size: 35px; }
+
+.main > div {
+  text-align: center; }
+
 .privacy {
   font-size: 14px; }
   .privacy .user-title {
@@ -12406,6 +12415,9 @@ p {
   margin-bottom: 30px; }
 
 .update-profile .user-title {
+  margin-bottom: 30px; }
+
+#share_profile {
   margin-bottom: 30px; }
 
 .menu-trigger {
@@ -12529,7 +12541,7 @@ p {
     color: #3578E5; }
   .user li #ig:before {
     content: "\f16d";
-    color: #405DE6; }
+    color: #C13584; }
   .user li #yt:before {
     color: #FF0000;
     content: "\f167"; }
@@ -12554,6 +12566,15 @@ p {
   .user li #skype:before {
     color: #00AFF0;
     content: "\f17e"; }
+
+.update-main #fb, .update-main #ig, .update-main #yt, .update-main #linked,
+.update-main #github, .update-main #spotify, .update-main #steam,
+.update-main #skype, .update-main #snap, .update-main #discord {
+  display: none; }
+  .update-main #fb.active, .update-main #ig.active, .update-main #yt.active, .update-main #linked.active,
+  .update-main #github.active, .update-main #spotify.active, .update-main #steam.active,
+  .update-main #skype.active, .update-main #snap.active, .update-main #discord.active {
+    display: block; }
 
 .username {
   position: absolute;
@@ -12833,7 +12854,7 @@ p {
 /* END FOOTER
 ***********************************************/
 /***********************************************
-/* START
+/* START  
 ***********************************************/
 /***********************************************
 /* START HEADER
@@ -13077,7 +13098,7 @@ p {
       display: inline-block; } }
 
 /***********************************************
-/* END HEADER-BURGER-1
+/* END HEADER-BURGER-1  
 ***********************************************/
 /***********************************************
 /* START  HEADER-FULLSCREEN
@@ -13402,7 +13423,7 @@ p {
   .isotope-item {
     width: 100% !important; } }
 
-/*
+/* 
  *	Owl Carousel - Animate Plugin
  */
 .owl-carousel .animated {
@@ -13433,7 +13454,7 @@ p {
   100% {
     opacity: 0; } }
 
-/*
+/* 
  * 	Owl Carousel - Auto Height Plugin
  */
 .owl-height {
@@ -13443,7 +13464,7 @@ p {
   -o-transition: height 500ms ease-in-out;
   transition: height 500ms ease-in-out; }
 
-/*
+/* 
  *	Core Owl Carousel CSS File
  */
 .owl-carousel {
@@ -13536,7 +13557,7 @@ p {
 .no-js .owl-carousel {
   display: block; }
 
-/*
+/* 
  * 	Owl Carousel - Lazy Load Plugin
  */
 .owl-carousel .owl-item .owl-lazy {
@@ -13551,7 +13572,7 @@ p {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
 
-/*
+/* 
  * 	Owl Carousel - Video Plugin
  */
 .owl-carousel .owl-video-wrapper {
@@ -13641,6 +13662,9 @@ p {
       opacity: 1;
       visibility: visible;
       background: #f9fbfc; }
+  .update-icon {
+    margin-right: 10px;
+    margin-bottom: 20px; }
   .full-menu {
     margin-bottom: 25px; }
   .full-menu, .info-area, .mobile-info {
@@ -13753,7 +13777,7 @@ p {
     margin-bottom: 0; } }
 
 /***********************************************
-/* END LANSCAPE
+/* END LANSCAPE 
 ***********************************************/
 /***********************************************
 /* START CONTAR
@@ -13807,7 +13831,7 @@ p {
       font-size: 14px; } }
 
 /***********************************************
-/* END CONTAR
+/* END CONTAR  
 ***********************************************/
 .fancybox-wrap,
 .fancybox-skin,
@@ -14124,7 +14148,7 @@ a.lightbox.hidden {
     font-size: 24px; }
 
 /***********************************************
-/* START C-HERO-1
+/* START C-HERO-1  
 ***********************************************/
 /*! jQuery UI - v1.12.1 - 2019-08-11
 * http://jqueryui.com

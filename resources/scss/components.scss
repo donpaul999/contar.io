@@ -16,6 +16,21 @@
 	display: inline-block;
 }
 
+.update-icon {
+	border: 0;
+	background: transparent;
+	i {
+		font-size: 35px;
+		
+	}
+}
+
+.main {
+	> div {
+		text-align: center;
+	}
+}
+
 .privacy {
 	font-size: 14px;
 
@@ -75,6 +90,10 @@
 	.user-title {
 		margin-bottom: 30px;
 	}
+}
+
+#share_profile {
+	margin-bottom: 30px;
 }
 
 .menu-trigger {
@@ -221,7 +240,7 @@
 		#ig {//instagram
 			&:before {
 				content: "\f16d";
-				color: #405DE6;
+				color: #C13584;
 			}
 
 		}
@@ -291,6 +310,20 @@
 		}
 	}
 }
+
+.update-main {
+	#fb, #ig, #yt, #linked, 
+	#github, #spotify, #steam, 
+	#skype, #snap, #discord {
+		display: none;
+	
+		&.active {
+			display: block;
+		}
+	}
+}
+
+
 
 .username {
 	position: absolute;

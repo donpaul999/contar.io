@@ -88,7 +88,6 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
       </header>
     </div><!-- end top-nav -->
     <!-- ========== END HEADER ========== -->
-
     <!-- ========== START PROFILE-CONTENT ========== -->
     <div class="contar-profile">
       <div class="container main-container">
@@ -111,8 +110,10 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
                     <?php
                   }
               }
-              echo "Share your profile:";
-              echo "<textarea id= 'share_profile' name= 'share_profile'>contar.io/p/".$usr."</textarea>";
+              if($ok == 1){
+                  echo "Share your profile:";
+                  echo "<input id= 'share_profile' name= 'share_profile' value='contar.io/p/".$usr."'>";
+              }
               echo '<div class="user">';
               echo  '<ul id="sortable">';
                  if(!empty($row['facebook']) && !ctype_space($row['facebook']))
@@ -145,7 +146,7 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
                   }
                  if(!empty($row['snapchat']) && !ctype_space($row['snapchat']))
                  {
-                   buttonorlist($row['snapchat'], "snap", "Snap", "snap1");
+                   buttonorlist($row['snapchat'], "snap", "Snapchat", "snap1");
                  }
                 if(!empty($row['discord']) && !ctype_space($row['discord']))
                 {
