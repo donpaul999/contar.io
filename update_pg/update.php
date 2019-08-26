@@ -85,21 +85,31 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
   <!-- ========== START UPDATE CONTAINER ========== -->
   <div class="container main-container">
     <div class="main">
+      <img onclick=myFunction(this) id='b_fb' src='../resources/img/fb.png'>
+      <button onclick=myFunction(this) id='b_ig'>Instagram</button>
+      <button onclick=myFunction(this) id='b_yt'>YouTube</button>
+      <button onclick=myFunction(this) id='b_linked'>LinkedIn</button>
+      <button onclick=myFunction(this) id='b_github'>GitHub</button>
+      <button onclick=myFunction(this) id='b_spotify'>Spotify</button>
+      <button onclick=myFunction(this) id='b_steam'>Steam</button>
+      <button onclick=myFunction(this) id='b_snap'>Snapchat</button>
+      <button onclick=myFunction(this) id='b_discord'>Discord</button>
+      <button onclick=myFunction(this) id='b_skype'>Skype</button>
       <div class="form-wrap form-wrap-update">
         <form method="POST" action="update_code.php">
             <?php
             require '../profile_code.php';
             ?>
-              <input type="text" name="facebook" placeholder="Your Facebook profile: <?php echo $row['facebook']; ?>" maxlength="200"><br>
-              <input type="text" name="instagram" placeholder="Your Instagram profile or username: <?php echo $row['instagram']; ?>" maxlength="200"><br>
-              <input type="text" name="youtube" placeholder="Your YouTube channel: <?php echo $row['youtube']; ?>" maxlength="200"><br>
-              <input type="text" name="linkedin" placeholder="Your LinkedIn profile: <?php echo $row['linkedin']; ?>" maxlength="200"><br>
-              <input type="text" name="github" placeholder="Your GitHub profile: <?php echo $row['github']; ?>" maxlength="200"><br>
-              <input type="text" name="spotify" placeholder="Your Spotify profile: <?php echo $row['spotify']; ?>" maxlength="200"><br>
-              <input type="text" name="steam" placeholder="Your Steam profile: <?php echo $row['steam']; ?>" maxlength="200"><br>
-              <input type="text" name="snapchat" placeholder="Your Snapchat username: <?php echo $row['snapchat']; ?>" maxlength="200"><br>
-              <input type="text" name="discord" placeholder="Your Discord username + tag: <?php echo $row['discord']; ?>" maxlength="200"><br>
-              <input type="text" name="skype" placeholder="Your Skype username: <?php echo $row['skype']; ?>" maxlength="200"><br>
+              <input type="text" name="facebook" id='fb' placeholder="Your Facebook profile: <?php echo $row['facebook']; ?>" maxlength="200"><br>
+              <input type="text" name="instagram" id='ig' placeholder="Your Instagram profile or username: <?php echo $row['instagram']; ?>" maxlength="200"><br>
+              <input type="text" name="youtube" id='yt' placeholder="Your YouTube channel: <?php echo $row['youtube']; ?>" maxlength="200"><br>
+              <input type="text" name="linkedin" id='linked' placeholder="Your LinkedIn profile: <?php echo $row['linkedin']; ?>" maxlength="200"><br>
+              <input type="text" name="github" id='github' placeholder="Your GitHub profile: <?php echo $row['github']; ?>" maxlength="200"><br>
+              <input type="text" name="spotify" id='spotify' placeholder="Your Spotify profile: <?php echo $row['spotify']; ?>" maxlength="200"><br>
+              <input type="text" name="steam" id='steam' placeholder="Your Steam profile: <?php echo $row['steam']; ?>" maxlength="200"><br>
+              <input type="text" name="snapchat" id='snap' placeholder="Your Snapchat username: <?php echo $row['snapchat']; ?>" maxlength="200"><br>
+              <input type="text" name="discord" id='discord' placeholder="Your Discord username + tag: <?php echo $row['discord']; ?>" maxlength="200"><br>
+              <input type="text" name="skype" id='skype' placeholder="Your Skype username: <?php echo $row['skype']; ?>" maxlength="200"><br>
               <input type="submit" class="social-button" id="update" name="update: <?php echo $row['discord']; ?>" value="Update"><br>
         </form>
       </div><!-- end form-wrap -->
@@ -135,6 +145,17 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
   <script src="../resources/js/bootstrap.min.js"></script>
   <script src="../resources/js/plugins.js"></script>
   <script src="../resources/js/main.js"></script>
+  <script>
+  function myFunction(id) {
+  var id = id.id.split("_")[1];//extract input id from button id
+    var x = document.getElementById(id);
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  </script>
   <!-- ========== END JS ========== -->
 <!--Start Cookie Script--> <script type="text/javascript" charset="UTF-8" src="http://chs03.cookie-script.com/s/de14ee1f8e19ae0e12c4eff22fa89a19.js"></script> <!--End Cookie Script-->
   </body>

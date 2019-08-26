@@ -111,6 +111,8 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
                     <?php
                   }
               }
+              echo "Share your profile:";
+              echo "<textarea id= 'share_profile' name= 'share_profile'>contar.io/p/".$usr."</textarea>";
               echo '<div class="user">';
               echo  '<ul id="sortable">';
                  if(!empty($row['facebook']) && !ctype_space($row['facebook']))
