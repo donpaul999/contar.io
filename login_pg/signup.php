@@ -1,10 +1,14 @@
 <?php
   require '../conectare.php';
-  $user = $_POST['username'];
-  $email = $_POST['email'];
-  $FullName = $_POST['FullName'];
+  $user =  str_replace("&lt","",str_replace("&gt","", $_POST['username']));
+  $email =  str_replace("&lt","",str_replace("&gt","", $_POST['email']));
+  $FullName =  str_replace("&lt","",str_replace("&gt","", $_POST['FullName']));
   $pass = md5($_POST['password']);
-  $date = $_POST['birthdate'];
+  $date = str_replace("&lt","",str_replace("&gt","",$_POST['birthdate']));
+  $user =  str_replace(">","",str_replace("<","", $user));
+  $email =  str_replace(">","",str_replace("<","", $email));
+  $FullName =  str_replace(">","",str_replace("<","", $FullName ));
+  $date = str_replace(">","",str_replace("<","",$date));
   //$sql = "INSERT INTO users VALUES ('$username', '$FullName', '$date', '$email', '$password')";
 
   if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email'])){
@@ -22,9 +26,6 @@
         // If reCAPTCHA response is valid
       if($responseData->success)
       {
-      $user = $_POST['username'];
-      $pass = md5($_POST['password']);
-      $email = $_POST['email'];
       $query = mysqli_query($conectare, "SELECT * FROM users WHERE username= '$user'");
       if(mysqli_num_rows($query) > 0) { //check if there is already an entry for that username
         return header("location:username_error");

@@ -80,7 +80,7 @@
                 <h1 class="fullname">Register</h1>
                 <input type="text" name="username" id="username" placeholder="Your username - letters and numbers only" onkeypress="return alphanum(event)" required maxlength="25">
                 <input type="text" name="FullName" placeholder="Your Full Name - letters, space and dash only" onkeypress="return alphanumdash(event)" required maxlength="100">
-                <input required type="text" class="form-control" placeholder="Date" onfocus="(this.type='date')"/>
+                <input required type="text" class="form-control" name="birthdate" placeholder="Date" onfocus="(this.type='date')"/>
                 <input type="email" name="email" placeholder="Email" required maxlength="50">
                 <input type="password" name="password" value="" pattern=".{8,}" title="Must contain at least 8 or more characters" id="password" placeholder="Password" required>
                 <div class="show-pass">
@@ -92,8 +92,8 @@
                     <input type="checkbox" required>
                     <h5>I have read and agree with <a href="privacy" style="color:blue">the Privacy Policy</a></h5>
                   </div>
-                  
-                  
+
+
                 </div>
                 <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" oninput="check(this)" required maxlength="20">
                 <span id='message'></span>
