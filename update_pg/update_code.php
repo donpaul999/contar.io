@@ -34,6 +34,9 @@ function upd($link, $site, &$ok, $user, $conectare)
    upd($_POST['github'], "github", $ok, $user, $conectare);
  }
 
+ if(!empty($_POST['paypal']) && !ctype_space($_POST['paypal'])){
+   upd($_POST['paypal'], "paypal", $ok, $user, $conectare);
+ }
  if(!empty($_POST['spotify']) && !ctype_space($_POST['spotify'])){
    upd($_POST['spotify'],"spotify", $ok, $user, $conectare);
  }

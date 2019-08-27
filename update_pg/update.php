@@ -91,6 +91,7 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
         <button class="update-icon" id='b_yt'><i style="color: #FF0000;" class="fab fa-youtube"></i></button>
         <button class="update-icon" id='b_linked'><i style="color: #0077B5;" class="fab fa-linkedin"></i></button>
         <button class="update-icon" id='b_github'><i style="color: #333;" class="fab fa-github"></i></button>
+        <button class="update-icon" id='b_paypal'><i style="color: #3578E5;" class="fab fa-paypal-f"></i></button>
         <button class="update-icon" id='b_spotify'><i style="color: #1DB954;" class="fab fa-spotify"></i></button>
         <button class="update-icon" id='b_steam'><i style="color: #112758;" class="fab fa-steam"></i></button>
         <button class="update-icon" id='b_snap'><i style="color: #FFFC00;" class="fab fa-snapchat"></i></button>
@@ -107,6 +108,7 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
               <input type="text" name="youtube" id='yt' placeholder="Your YouTube channel: <?php echo $row['youtube']; ?>" maxlength="200">
               <input type="text" name="linkedin" id='linked' placeholder="Your LinkedIn profile: <?php echo $row['linkedin']; ?>" maxlength="200">
               <input type="text" name="github" id='github' placeholder="Your GitHub profile: <?php echo $row['github']; ?>" maxlength="200">
+              <input type="text" name="paypal" id='paypal' placeholder="Your PayPal.me link : <?php echo $row['github']; ?>" maxlength="200">
               <input type="text" name="spotify" id='spotify' placeholder="Your Spotify profile: <?php echo $row['spotify']; ?>" maxlength="200">
               <input type="text" name="steam" id='steam' placeholder="Your Steam profile: <?php echo $row['steam']; ?>" maxlength="200">
               <input type="text" name="snapchat" id='snap' placeholder="Your Snapchat username: <?php echo $row['snapchat']; ?>" maxlength="200">
@@ -147,7 +149,7 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
   <script src="../resources/js/bootstrap.min.js"></script>
   <script src="../resources/js/plugins.js"></script>
   <script src="../resources/js/main.js"></script>
-  
+
   <!-- ========== END JS ========== -->
 <!--Start Cookie Script--> <script type="text/javascript" charset="UTF-8" src="http://chs03.cookie-script.com/s/de14ee1f8e19ae0e12c4eff22fa89a19.js"></script> <!--End Cookie Script-->
   </body>

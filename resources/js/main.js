@@ -77,6 +77,12 @@ jQuery(document).ready(function(){
 
   });
 
+  $("#b_paypal").click(function() {
+
+    $("#paypal").toggleClass("active");
+
+  });
+  
   $("#b_spotify").click(function() {
 
     $("#spotify").toggleClass("active");

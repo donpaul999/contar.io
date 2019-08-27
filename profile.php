@@ -137,6 +137,10 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
                   {
                     buttonorlist($row['github'], "github", "GitHub","github1");
                   }
+                  if(!empty($row['paypal']) && !ctype_space($row['paypal']))
+                  {
+                    buttonorlist($row['paypal'], "paypal", "PayPal","paypal1");
+                  }
                   if(!empty($row['spotify']) && !ctype_space($row['spotify']))
                   {
                     buttonorlist($row['spotify'], "spotify", "Spotify","spotify1");
