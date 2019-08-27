@@ -113,7 +113,7 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
               }
               if($ok == 1 && $username == $usr){
                   echo "Share your profile:";
-                  echo "<input id= 'share_profile' name= 'share_profile' value='contar.io/p/".$usr."'>";
+                  echo "<input id= 'share_profile' name= 'share_profile' value='https://contar.io/p/".$usr."'>";
               }
               echo '<div class="user">';
               echo  '<ul id="sortable">';
