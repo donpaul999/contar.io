@@ -3,9 +3,10 @@ require 'conectare.php';
 session_start();
 
 $ok = 0;
+$usr = $_GET['id'];
+$username = $_SESSION['username'];
 if(isset($_SESSION['loggedin']))
   $ok = 1;
-$usr = $_GET['id'];
 $sql = "SELECT fullname FROM users WHERE username='$usr'";
 $var = mysqli_query($conectare, $sql);
 $fn = mysqli_fetch_array($var);
@@ -36,7 +37,7 @@ $fn = mysqli_fetch_array($var);
       {
         echo '<div class="username">';
         echo '<ul>';
-        echo '<li><input type = "button" value='.$usr.'></li>';
+        echo '<li><input type = "button" value='.$username.'></li>';
         echo '<ul class="sub-menu">';
           echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
           echo "<li><a href = '../update_pg/update'><input type = 'button' value='Update your profile'></a></li>";
@@ -110,7 +111,7 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
                     <?php
                   }
               }
-              if($ok == 1){
+              if($ok == 1 && $username == $usr){
                   echo "Share your profile:";
                   echo "<input id= 'share_profile' name= 'share_profile' value='contar.io/p/".$usr."'>";
               }
