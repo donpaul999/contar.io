@@ -163,5 +163,10 @@ window.onload = function() {
     </script>
     <?php
   }
+  else
+    return header("location:../contar");
 }
+  else
+    return header("location:../contar");
+
 ?>
