@@ -48,13 +48,13 @@ try {
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'contario999@gmail.com';                   // SMTP username
-    $mail->Password   = 'paulicadelaroman';                               // SMTP password
+    $mail->Username   = 'aici_email';                     // SMTP username
+    $mail->Password   = 'aici_pass';                               // SMTP password
     $mail->SMTPSecure = 'ssl';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 465;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('contario999@gmail.com', 'Paul');
+    $mail->setFrom('aici_email', 'Paul');
     $mail->addAddress($email, $FullName);     // Add a recipient
     $mail->addReplyTo('no-reply@gmail.com', 'No reply');
     $link="<a href='www.contar.io/reset/reset_pass.php?key=".$email."&reset=".$pass."'>link</a>";
