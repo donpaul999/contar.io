@@ -114,6 +114,8 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
               if($ok == 1 && $username == $usr){
                   echo "Share your profile:";
                   echo "<input id= 'share_profile' name= 'share_profile' value='https://contar.io/p/".$usr."'>";
+                  echo  '<button onclick="copy()">Copy text</button>';
+
               }
               echo '<div class="user">';
               echo  '<ul id="sortable">';
@@ -231,7 +233,21 @@ function swaptxt(index, text1, text2){
     else
       elem.value = text1;
 
+}
 
+function copy() {
+  /* Get the text field */
+  var copyText = document.getElementById("share_profile");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
 }
 </script>
 

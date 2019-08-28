@@ -1,13 +1,5 @@
 <?php
-require '../conectare.php';
-session_start();
 
-$ok = 0;
-if(isset($_SESSION['loggedin']))
-  {
-    $ok = 1;
-    $username = $_SESSION['username'];
-  }
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +16,7 @@ if(isset($_SESSION['loggedin']))
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="shortcut icon" type="image/x-icon" href="../resources/img/title.png"  />
     <link rel="stylesheet" href="../resources/css/master.css">
-    <script src = "../resources/js/password.js"></script>
+    <script src = "resources/js/password.js"></script>
 
   </head>
   <body class="update-succes">
@@ -33,21 +25,8 @@ if(isset($_SESSION['loggedin']))
       <div class="logo">
           <a href="../contar"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
       </div><!-- end logo -->
-      <?php
-      if($ok == 1){
-      echo '<div class="username">';
-      echo '<ul>';
-      echo '<li><input type = "button" value='.$username.'></li>';
-      echo '<ul class="sub-menu">';
-        echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
-        echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
-        echo "<li><a href='../update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
-echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
-      echo '</ul>';
-      echo  '</ul>';
-      echo  '</div>';
-    }
-      ?>
+
+
       <div class="menu-trigger">
         <input type="checkbox">
         <span></span>
@@ -89,19 +68,16 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
       </header>
     </div><!-- end top-nav -->
     <!-- ========== END HEADER ========== -->
-
     <div class="container main-container">
       <div class="main">
         <div class="user-title">
-          <h1 class="fullname">Password changed succesful!</h1>
-        </div>
-        <?php
-        if($ok == 1)
-        echo '<a href ="../p/'.$username.'"><input class="social-button" type = "button" value="See your profile"></a>';
-        ?>
-        <a href="../contar"><input class="social-button go-back" type="button" value="Go Back"></a>
+        <h1 class="fullname">Mail sent!</h1>
+      </div>
+      <a href="../index"><input class="social-button go-back" type="button" value="Go Back"></a>
+
       </div>
     </div>
+
 
     <!-- ========== START FOOTER ========== -->
     <footer class="footer fixed">

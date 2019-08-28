@@ -1,15 +1,3 @@
-<?php
-require '../conectare.php';
-session_start();
-
-$ok = 0;
-if(isset($_SESSION['loggedin']))
-  {
-    $ok = 1;
-    $username = $_SESSION['username'];
-  }
-?>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -24,7 +12,8 @@ if(isset($_SESSION['loggedin']))
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="shortcut icon" type="image/x-icon" href="../resources/img/title.png"  />
     <link rel="stylesheet" href="../resources/css/master.css">
-    <script src = "../resources/js/password.js"></script>
+    <script src = "resources/js/password.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   </head>
   <body class="update-succes">
@@ -33,21 +22,6 @@ if(isset($_SESSION['loggedin']))
       <div class="logo">
           <a href="../contar"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
       </div><!-- end logo -->
-      <?php
-      if($ok == 1){
-      echo '<div class="username">';
-      echo '<ul>';
-      echo '<li><input type = "button" value='.$username.'></li>';
-      echo '<ul class="sub-menu">';
-        echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
-        echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
-        echo "<li><a href='../update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
-echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
-      echo '</ul>';
-      echo  '</ul>';
-      echo  '</div>';
-    }
-      ?>
       <div class="menu-trigger">
         <input type="checkbox">
         <span></span>
@@ -89,19 +63,22 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
       </header>
     </div><!-- end top-nav -->
     <!-- ========== END HEADER ========== -->
-
     <div class="container main-container">
       <div class="main">
         <div class="user-title">
-          <h1 class="fullname">Password changed succesful!</h1>
-        </div>
-        <?php
-        if($ok == 1)
-        echo '<a href ="../p/'.$username.'"><input class="social-button" type = "button" value="See your profile"></a>';
-        ?>
-        <a href="../contar"><input class="social-button go-back" type="button" value="Go Back"></a>
+        <h1 class="fullname">Reset your password!</h1>
+      </div>
+      <form method="post" action="send_link.php">
+        <p>Enter Email Address To Send Password Link</p>
+        <input type="text" name="email" required>
+        <div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp"></div>
+        <input type="submit" name="submit_email"  required>
+      </form>
+
+      <a href="../login_pg/login"><input class="social-button go-back" type="button" value="Go Back"></a>
       </div>
     </div>
+
 
     <!-- ========== START FOOTER ========== -->
     <footer class="footer fixed">
@@ -136,3 +113,12 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
 <!--Start Cookie Script--> <script type="text/javascript" charset="UTF-8" src="http://chs03.cookie-script.com/s/de14ee1f8e19ae0e12c4eff22fa89a19.js"></script> <!--End Cookie Script-->
   </body>
 </html>
+<script>
+window.onload = function() {
+    var $recaptcha = document.querySelector('#g-recaptcha-response');
+
+    if($recaptcha) {
+        $recaptcha.setAttribute("required", "required");
+    }
+};
+</script>
