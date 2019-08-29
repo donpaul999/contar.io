@@ -1,6 +1,7 @@
 <?php
 
   require '../conectare.php';
+$ok = 0;
 
  ?>
  <!DOCTYPE html>

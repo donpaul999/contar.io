@@ -8,6 +8,7 @@ require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 require '../conectare.php';
+$ok = 0;
 
 if(isset($_POST['submit_email']) && $_POST['email'])
 {
@@ -42,26 +43,26 @@ if(isset($_POST['submit_email']) && $_POST['email'])
 $mail = new PHPMailer(true);
 
 try {
-  $mail->SMTPDebug = 3;                               // Enable verbose debug output
+    $mail->SMTPDebug = 3;                               // Enable verbose debug output
 
     //Server settings
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'aici_email';                     // SMTP username
-    $mail->Password   = 'aici_parola';                               // SMTP password
+    $mail->Username   = 'contario999@gmail.com';                     // SMTP username
+    $mail->Password   = 'hnrbbpvottmabdap';                               // SMTP password
     $mail->SMTPSecure = 'ssl';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 465;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('aici_email', 'Paul');
+    $mail->setFrom('contario999@gmail.com', 'Paul');
     $mail->addAddress($email, $FullName);     // Add a recipient
     $mail->addReplyTo('no-reply@gmail.com', 'No reply');
     $link="<a href='www.contar.io/reset/reset_pass.php?key=".$email."&reset=".$pass."'>link</a>";
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Password reset - Contar.io';
-    $mail->Body    = 'Hi! I can see that you forgot your password. Click on this '.$link.' to reset it';
+    $mail->Body    = 'Hi! I can see that you forgot your password. Click on this '.$link.' to reset it!';
 
     $mail->send();
     return header("location:mail_sent");

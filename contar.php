@@ -4,7 +4,7 @@ session_start();
 if(!isset($_SESSION['loggedin']))
   return header("location:login_pg/login");
 $username = $_SESSION['username'];
-
+$ok = 1;
 ?>
 
 
@@ -15,7 +15,7 @@ $username = $_SESSION['username'];
     <link rel="shortcut icon" type="image/x-icon" href="resources/img/title.png" />
     <link rel="stylesheet" href="resources/css/master.css">
     <title>Contar.io</title>
-    
+
   </head>
   <body>
     <!-- ========== START HEADER ========== -->
@@ -36,20 +36,33 @@ $username = $_SESSION['username'];
         echo  '</ul>';
         echo  '</div>';
         ?>
-      <div class="menu-trigger">
-        <input type="checkbox">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div><!-- end menu-trigger -->
+      <?php
+      if($ok == 1) {
+        echo'<div class="menu-trigger">';
+         echo' <input type="checkbox">';
+          echo'<span></span>';
+          echo'<span></span>';
+          echo'<span></span>';
+        echo'</div><!-- end menu-trigger -->';
+      }
+      ?>
       <header class="header header--bgk">
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-
-              <div class="mobile-info">
-                <p>&copy; Paul Colta - Contar.io</p>
-              </div><!-- end mobile-info -->
+              <?php
+                echo '<div class="username">';
+                echo '<ul>';
+                echo '<li><input type = "button" value='.$username.'></li>';
+                echo '<ul class="sub-menu">';
+                  echo "<li><a href='contar'><input type = 'button' id='back' value='Home'></a></li>";
+                  echo "<li><a href = 'update_pg/update'><input type = 'button' value='Update your profile'></a></li>";
+                  echo "<li><a href='update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
+                  echo "<li><a href='login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+                echo '</ul>';
+                echo  '</ul>';
+                echo  '</div>';
+              ?>
             </div><!-- end col-sm-12 -->
           </div><!-- end row -->
         </div><!-- end container -->

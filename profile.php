@@ -4,9 +4,10 @@ session_start();
 
 $ok = 0;
 $usr = $_GET['id'];
-$username = $_SESSION['username'];
-if(isset($_SESSION['loggedin']))
+if(isset($_SESSION['loggedin'])) {
   $ok = 1;
+  $username = $_SESSION['username'];
+}
 $sql = "SELECT fullname FROM users WHERE username='$usr'";
 $var = mysqli_query($conectare, $sql);
 $fn = mysqli_fetch_array($var);
@@ -19,7 +20,7 @@ $fn = mysqli_fetch_array($var);
     <meta charset="UTF-8">
     <meta name="HandheldFriendly" content="true">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="shortcut icon" type="image/x-icon" href="resources/img/title.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../resources/img/title.png"/>
     <link rel="stylesheet" href="../resources/css/master.css">
     <title>Contar.io</title>
     <div class="user-title">
@@ -42,47 +43,40 @@ $fn = mysqli_fetch_array($var);
           echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
           echo "<li><a href = '../update_pg/update'><input type = 'button' value='Update your profile'></a></li>";
           echo "<li><a href='../update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
-echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+          echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
         echo '</ul>';
         echo  '</ul>';
         echo  '</div>';
       }
       ?>
-      <div class="menu-trigger">
-        <input type="checkbox">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div><!-- end menu-trigger -->
+      <?php
+      if($ok == 1) {
+        echo'<div class="menu-trigger">';
+         echo' <input type="checkbox">';
+          echo'<span></span>';
+          echo'<span></span>';
+          echo'<span></span>';
+        echo'</div><!-- end menu-trigger -->';
+      }
+      ?>
+
       <header class="header header--bgk">
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <nav class="full-menu">
-                <ul class="srf-full-menu">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
-              </nav>
-              <div class="info-area">
-                <ul class="">
-                  <li>
-                    <a href="https://www.facebook.com/stefanut999" target='_blank'><i class="fab fa-facebook-f"></i></a>
-                  </li>
-                  <li>
-                    <a href="https://www.linkedin.com/in/paulstefancolta/" target='_blank'><i class="fab fa-linkedin-in"></i></i></a>
-                  </li>
-                  <li>
-                    <a href="https://www.instagram.com/paulstefancolta/" target='_blank'><i class="fab fa-instagram"></i></a>
-                  </li>
-                </ul>
-              </div><!-- end info-area -->
-              <div class="mobile-info">
-                <p>&copy; Paul Colta - Contar.io</p>
-              </div><!-- end mobile-info -->
+              <?php
+                echo '<div class="username">';
+                echo '<ul>';
+                echo '<li><input type = "button" value='.$username.'></li>';
+                echo '<ul class="sub-menu">';
+                  echo "<li><a href='contar'><input type = 'button' id='back' value='Home'></a></li>";
+                  echo "<li><a href = 'update_pg/update'><input type = 'button' value='Update your profile'></a></li>";
+                  echo "<li><a href='update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
+                  echo "<li><a href='login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+                echo '</ul>';
+                echo  '</ul>';
+                echo  '</div>';
+              ?>
             </div><!-- end col-sm-12 -->
           </div><!-- end row -->
         </div><!-- end container -->
@@ -104,17 +98,17 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
               }
               function buttonorlist($var, $id, $value,$id1){
                 if(link_1($var))
-                  echo "<li><a href =".$var." target='_blank'><input class='social-button' type='button' value=".$value."><p id='".$id."'></p></a></li>";
+                  echo "<li><a href =".$var." target='_blank'><input class='social-button' type='button' value=".$value."><i class='fab fa-instagram'></i><p id='".$id."'></p></a></li>";
                 else
                   { ?>
-                    <li><input type='button' id="<?php echo $id1; ?>" class='social-button' value="<?php echo $value; ?>"  onclick="swaptxt('<?php echo $id1; ?>', '<?php echo $var; ?>','<?php echo $value; ?>')"><p id="<?php echo $id; ?>"></p></li>
+                    <li><button type='button' id="<?php echo $id1; ?>" class='social-button'  onclick="swaptxt('<?php echo $id1; ?>', '<?php echo $var; ?>','<?php echo $value; ?>')"><i class='fab fa-instagram'></i><?php echo $value; ?></button><p id="<?php echo $id; ?>"></p></li>
                     <?php
                   }
               }
               if($ok == 1 && $username == $usr){
                   echo "Share your profile:";
                   echo "<input id= 'share_profile' name= 'share_profile' value='https://contar.io/p/".$usr."'>";
-                  echo  '<button onclick="copy()">Copy text</button>';
+                  echo  '<button class="copy-text" onclick="copy()">Copy text <span class="text-copied">Text copied</span></button>';
 
               }
               echo '<div class="user">';
@@ -226,16 +220,16 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
       document.getElementById(index).hidden = true;
   }
 
-function swaptxt(index, text1, text2){
+  function swaptxt(index, text1, text2){
     var elem = document.getElementById(index);
-    if (elem.value===text1)
-      elem.value = text2;
+    if (elem.innerHTML === text1)
+      elem.innerHTML = text2;
     else
-      elem.value = text1;
+      elem.innerHTML = text1;
 
 }
 
-function copy() {
+  function copy() {
   /* Get the text field */
   var copyText = document.getElementById("share_profile");
 
@@ -247,7 +241,7 @@ function copy() {
   document.execCommand("copy");
 
   /* Alert the copied text */
-  alert("Copied the text: " + copyText.value);
+  //alert("Copied the text: " + copyText.value);
 }
 </script>
 

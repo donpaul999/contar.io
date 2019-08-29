@@ -1,5 +1,6 @@
 <?php
 require '../conectare.php';
+$ok = 0;
 if(isset($_POST['submit_password']) && $_POST['password'] && $_POST['email'])
 {
   // Validate reCAPTCHA box

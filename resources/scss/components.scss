@@ -6,6 +6,17 @@
 	width: 100%;
 }
 
+.copy-text {
+	background-color: transparent;
+	border: 1px solid #000;
+	border-left: 0;
+}
+
+#share_profile {
+	margin-bottom: 30px;
+	border: 1px solid #000;
+}
+
 .fullname {
 	text-align: center;
 	margin-top: 184px;
@@ -92,14 +103,6 @@
 	}
 }
 
-#share_profile {
-	margin-bottom: 30px;
-}
-
-.menu-trigger {
-	visibility: hidden;
-}
-
 .inuse {
 	.fullname {
 		background-color: $hover;	
@@ -160,6 +163,57 @@
 ***********************************************/
 
 /***********************************************
+/* START TOOLTIP TEXT COPIED
+***********************************************/
+.copy-text {
+	position: relative;
+
+	.text-copied {
+		position: absolute;
+		top: -140%;
+		font-size: 14px;
+		width: 150px;
+		color: #fff;
+	    left: 50%;
+    	transform: translateX(-50%);
+    	background-color: #ff7777;
+    	border-radius: 30px;
+    	opacity: 0;
+    	visibility: hidden;
+    	@include transition;
+
+    	&:after {
+	    	content: "";
+		    position: absolute;
+			top: 100%;
+			left: 50%;
+			margin-left: -10px;
+			border-width: 10px;
+			border-style: solid;
+			border-color: #ff7777 transparent transparent transparent;
+    	}
+
+    	&:focus, &:active {
+    		outline: none;
+    	}
+	}
+
+	&:focus, &:active {
+		outline: none;
+	}
+
+	&.active {
+		.text-copied {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+/***********************************************
+/* END TOOLTIP TEXT COPIED
+***********************************************/
+
+/***********************************************
 /* START HOME-CONTAINER
 ***********************************************/
 .home-container {
@@ -188,11 +242,16 @@
 /* START PROFILE-PAGE
 ***********************************************/
 .contar-profile {
-	margin-top: 76.55px;
 	text-align: center;
 	position: relative;
-	z-index: -1;
-	height: 100vh;
+
+	.main-container {
+    	margin-top: 76.55px;
+
+    	.main {
+    		padding-top: 50px;
+    	}
+	}
 
 	&.active {
 		z-index: -1;
@@ -205,36 +264,36 @@
 		p {
 			position: relative;
 			&:before {
-				-moz-osx-font-smoothing: grayscale;
-				-webkit-font-smoothing: antialiased;
-				display: inline-block;
-				font-style: normal;
-				font-family: 'Font Awesome 5 Brands';
-				font-variant: normal;
-				text-rendering: auto;
-				line-height: 1;
-				position: absolute;
-				left: 43.5%;
-				top: 50%;
-				@include translateY(-420%);
-				font-size: 1rem;
+				// -moz-osx-font-smoothing: grayscale;
+				// -webkit-font-smoothing: antialiased;
+				// display: inline-block;
+				// font-style: normal;
+				// font-family: 'Font Awesome 5 Brands';
+				// font-variant: normal;
+				// text-rendering: auto;
+				// line-height: 1;
+				// position: absolute;
+				// left: 43.5%;
+				// top: 50%;
+				// @include translateY(-420%);
+				// font-size: 1rem;
 			}
 		}
 
-		&.active {
-			p {
-				&::before {
-					content: none!important;
-				}
-			}
-		}
+		// &.active {
+		// 	p {
+		// 		&::before {
+		// 			content: none!important;
+		// 		}
+		// 	}
+		// }
 
 
 		#fb {//facebook
 			&:before {
 				content: "\f39e";
 				color: #3578E5;
-			}
+			}	
 		}
 
 		#ig {//instagram
@@ -305,6 +364,14 @@
 			&:before {
 				color: #00AFF0;
 				content: "\f17e";
+			}
+
+		}
+
+		#paypal {//skype
+			&:before {
+				color: #3b7bbf ;
+				content: "\f1ed";
 			}
 
 		}

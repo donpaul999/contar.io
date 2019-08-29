@@ -1,5 +1,4 @@
 /* Hedaer */
-
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600");
 .header-fixed {
   position: fixed; }
@@ -12364,6 +12363,15 @@ p {
   text-align: center;
   width: 100%; }
 
+.copy-text {
+  background-color: transparent;
+  border: 1px solid #000;
+  border-left: 0; }
+
+#share_profile {
+  margin-bottom: 30px;
+  border: 1px solid #000; }
+
 .fullname {
   text-align: center;
   margin-top: 184px;
@@ -12417,12 +12425,6 @@ p {
 
 .update-profile .user-title {
   margin-bottom: 30px; }
-
-#share_profile {
-  margin-bottom: 30px; }
-
-.menu-trigger {
-  visibility: hidden; }
 
 .inuse .fullname {
   background-color: #ff7777; }
@@ -12486,6 +12488,57 @@ p {
 /* END GENERAL
 ***********************************************/
 /***********************************************
+/* START TOOLTIP TEXT COPIED
+***********************************************/
+.copy-text {
+  position: relative; }
+  .copy-text .text-copied {
+    position: absolute;
+    top: -140%;
+    font-size: 14px;
+    width: 150px;
+    color: #fff;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #ff7777;
+    border-radius: 30px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition-delay: 0;
+    -o-transition-delay: 0;
+    transition-delay: 0;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-property: all;
+    transition-property: all;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out; }
+    .copy-text .text-copied:after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -10px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: #ff7777 transparent transparent transparent; }
+    .copy-text .text-copied:focus, .copy-text .text-copied:active {
+      outline: none; }
+  .copy-text:focus, .copy-text:active {
+    outline: none; }
+  .copy-text.active .text-copied {
+    opacity: 1;
+    visibility: visible; }
+
+/***********************************************
+/* END TOOLTIP TEXT COPIED
+***********************************************/
+/***********************************************
 /* START HOME-CONTAINER
 ***********************************************/
 .home-container {
@@ -12505,11 +12558,12 @@ p {
 /* START PROFILE-PAGE
 ***********************************************/
 .contar-profile {
-  margin-top: 76.55px;
   text-align: center;
-  position: relative;
-  z-index: -1;
-  height: 100vh; }
+  position: relative; }
+  .contar-profile .main-container {
+    margin-top: 76.55px; }
+    .contar-profile .main-container .main {
+      padding-top: 50px; }
   .contar-profile.active {
     z-index: -1; }
 
@@ -12517,26 +12571,6 @@ p {
   position: relative; }
   .user li p {
     position: relative; }
-    .user li p:before {
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-font-smoothing: antialiased;
-      display: inline-block;
-      font-style: normal;
-      font-family: 'Font Awesome 5 Brands';
-      font-variant: normal;
-      text-rendering: auto;
-      line-height: 1;
-      position: absolute;
-      left: 43.5%;
-      top: 50%;
-      -webkit-transform: translateY(-420%);
-      -moz-transform: translateY(-420%);
-      -o-transform: translateY(-420%);
-      -ms-transform: translateY(-420%);
-      transform: translateY(-420%);
-      font-size: 1rem; }
-  .user li.active p::before {
-    content: none !important; }
   .user li #fb:before {
     content: "\f39e";
     color: #3578E5; }
@@ -12567,6 +12601,9 @@ p {
   .user li #skype:before {
     color: #00AFF0;
     content: "\f17e"; }
+  .user li #paypal:before {
+    color: #3b7bbf;
+    content: "\f1ed"; }
 
 .update-main #fb, .update-main #ig, .update-main #yt, .update-main #linked,
 .update-main #github, .update-main #spotify, .update-main #steam,
@@ -12855,7 +12892,7 @@ p {
 /* END FOOTER
 ***********************************************/
 /***********************************************
-/* START
+/* START  
 ***********************************************/
 /***********************************************
 /* START HEADER
@@ -12869,6 +12906,21 @@ p {
   width: 100%;
   top: 0;
   left: 0; }
+  .header .username {
+    position: initial;
+    display: block; }
+    .header .username > ul {
+      width: 100%;
+      height: 100%;
+      text-align: center; }
+      .header .username > ul > li {
+        display: none; }
+    .header .username .sub-menu {
+      display: block;
+      visibility: visible;
+      opacity: 1; }
+      .header .username .sub-menu li:before {
+        content: none; }
 
 .top-nav.active {
   height: 76.55px;
@@ -13032,6 +13084,7 @@ p {
     z-index: 1;
     width: 100%; }
     .top-nav--burger-1 .header {
+      display: none;
       opacity: 0;
       visibility: hidden;
       height: 100%;
@@ -13094,12 +13147,10 @@ p {
       margin-top: 15px;
       display: block; }
       .top-nav--burger-1 .mobile-info p {
-        font-size: 1.2rem; }
-    .top-nav--burger-1 .menu-trigger {
-      display: inline-block; } }
+        font-size: 1.2rem; } }
 
 /***********************************************
-/* END HEADER-BURGER-1
+/* END HEADER-BURGER-1  
 ***********************************************/
 /***********************************************
 /* START  HEADER-FULLSCREEN
@@ -13424,7 +13475,7 @@ p {
   .isotope-item {
     width: 100% !important; } }
 
-/*
+/* 
  *	Owl Carousel - Animate Plugin
  */
 .owl-carousel .animated {
@@ -13455,7 +13506,7 @@ p {
   100% {
     opacity: 0; } }
 
-/*
+/* 
  * 	Owl Carousel - Auto Height Plugin
  */
 .owl-height {
@@ -13465,7 +13516,7 @@ p {
   -o-transition: height 500ms ease-in-out;
   transition: height 500ms ease-in-out; }
 
-/*
+/* 
  *	Core Owl Carousel CSS File
  */
 .owl-carousel {
@@ -13558,7 +13609,7 @@ p {
 .no-js .owl-carousel {
   display: block; }
 
-/*
+/* 
  * 	Owl Carousel - Lazy Load Plugin
  */
 .owl-carousel .owl-item .owl-lazy {
@@ -13573,7 +13624,7 @@ p {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
 
-/*
+/* 
  * 	Owl Carousel - Video Plugin
  */
 .owl-carousel .owl-video-wrapper {
@@ -13663,6 +13714,8 @@ p {
       opacity: 1;
       visibility: visible;
       background: #f9fbfc; }
+  .username {
+    display: none; }
   .update-icon {
     margin-right: 10px;
     margin-bottom: 20px; }
@@ -13778,25 +13831,19 @@ p {
     margin-bottom: 0; } }
 
 /***********************************************
-/* END LANSCAPE
+/* END LANSCAPE 
 ***********************************************/
 /***********************************************
 /* START CONTAR
 ***********************************************/
-@media (max-width: 600px) {
-  .sub-menu {
-    background-color: rgba(255, 255, 255, 0.9); }
-    .sub-menu li {
-      padding-bottom: 10px;
-      border-bottom: 0.8px solid #333; }
-      .sub-menu li:before {
-        content: none; } }
-
 @media (max-width: 800px) {
   .user-title {
     margin-top: 0; }
     .user-title h1 {
       font-size: 30px; }
+  .copy-text {
+    margin-bottom: 30px;
+    border-left: 1px solid #000; }
   .login-failed .user-title {
     padding: 0; }
     .login-failed .user-title .fullname {
@@ -13832,7 +13879,7 @@ p {
       font-size: 14px; } }
 
 /***********************************************
-/* END CONTAR
+/* END CONTAR  
 ***********************************************/
 .fancybox-wrap,
 .fancybox-skin,
@@ -14149,7 +14196,7 @@ a.lightbox.hidden {
     font-size: 24px; }
 
 /***********************************************
-/* START C-HERO-1
+/* START C-HERO-1  
 ***********************************************/
 /*! jQuery UI - v1.12.1 - 2019-08-11
 * http://jqueryui.com

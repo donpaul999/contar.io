@@ -1,3 +1,6 @@
+<?php
+  $ok = 0;
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -22,41 +25,33 @@
       <div class="logo">
           <a href="../contar"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
       </div><!-- end logo -->
-      <div class="menu-trigger">
-        <input type="checkbox">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div><!-- end menu-trigger -->
+      <?php
+      if($ok == 1) {
+        echo'<div class="menu-trigger">';
+         echo' <input type="checkbox">';
+          echo'<span></span>';
+          echo'<span></span>';
+          echo'<span></span>';
+        echo'</div><!-- end menu-trigger -->';
+      }
+      ?>
       <header class="header header--bgk">
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <nav class="full-menu">
-                <ul class="srf-full-menu">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
-              </nav>
-              <div class="info-area">
-                <ul class="">
-                  <li>
-                    <a href="https://www.facebook.com/stefanut999" target='_blank'><i class="fab fa-facebook-f"></i></a>
-                  </li>
-                  <li>
-                    <a href="https://www.linkedin.com/in/paulstefancolta/" target='_blank'><i class="fab fa-linkedin-in"></i></i></a>
-                  </li>
-                  <li>
-                    <a href="https://www.instagram.com/paulstefancolta/" target='_blank'><i class="fab fa-instagram"></i></a>
-                  </li>
-                </ul>
-              </div><!-- end info-area -->
-              <div class="mobile-info">
-                <p>&copy; Paul Colta - Contar.io</p>
-              </div><!-- end mobile-info -->
+              <?php
+                echo '<div class="username">';
+                echo '<ul>';
+                echo '<li><input type = "button" value='.$username.'></li>';
+                echo '<ul class="sub-menu">';
+                  echo "<li><a href='contar'><input type = 'button' id='back' value='Home'></a></li>";
+                  echo "<li><a href = 'update_pg/update'><input type = 'button' value='Update your profile'></a></li>";
+                  echo "<li><a href='update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
+                  echo "<li><a href='login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+                echo '</ul>';
+                echo  '</ul>';
+                echo  '</div>';
+              ?>
             </div><!-- end col-sm-12 -->
           </div><!-- end row -->
         </div><!-- end container -->

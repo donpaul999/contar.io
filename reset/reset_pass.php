@@ -1,5 +1,6 @@
 <?php
 require '../conectare.php';
+$ok = 0;
 
 if($_GET['key'] && $_GET['reset'])
 {

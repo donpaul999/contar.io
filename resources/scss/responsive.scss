@@ -23,6 +23,10 @@
 		}
 	}
 
+	.username {
+		display: none;
+	}
+
 	.update-icon {
 		margin-right: 10px;
    		margin-bottom: 20px;
@@ -204,17 +208,17 @@ and (orientation: landscape) {
 /* START CONTAR
 ***********************************************/
 @media(max-width: 600px) {
-	.sub-menu {
-		background-color: rgba(255,255,255, 0.9);
-		li {
-			padding-bottom: 10px;
-			border-bottom: 0.8px solid #333;
+	// .sub-menu {
+	// 	background-color: rgba(255,255,255, 0.9);
+	// 	li {
+	// 		padding-bottom: 10px;
+	// 		border-bottom: 0.8px solid #333;
 
-			&:before {
-				content: none;
-			}
-		}
-	}
+	// 		&:before {
+	// 			content: none;
+	// 		}
+	// 	}
+	// }
 }
 
 @media(max-width: 800px) {
@@ -223,6 +227,11 @@ and (orientation: landscape) {
 		h1 {
 			font-size: 30px;
 		}
+	}
+
+	.copy-text {
+		margin-bottom: 30px;
+		border-left: 1px solid #000;
 	}
 
 	.login-failed {

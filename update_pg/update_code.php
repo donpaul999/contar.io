@@ -1,5 +1,6 @@
 <?php
  require '../conectare.php';
+$ok = 0;
  session_start();
  $ok = 0;
  $user = $_SESSION['username'];

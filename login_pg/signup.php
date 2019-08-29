@@ -1,5 +1,6 @@
 <?php
   require '../conectare.php';
+$ok = 0;
   $user =  str_replace("&lt","",str_replace("&gt","", $_POST['username']));
   $email =  str_replace("&lt","",str_replace("&gt","", $_POST['email']));
   $FullName =  str_replace("&lt","",str_replace("&gt","", $_POST['FullName']));

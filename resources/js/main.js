@@ -125,6 +125,21 @@ jQuery(document).ready(function(){
   });
   //End Menu Trigger
 
+  /* Copy Text*/
+  $('.copy-text').click(function(){
+    $(this).toggleClass('active');
+  });
+
+  // $("button").click(function (e) {
+  //   e.stopPropagation();
+  //   $('.copy-text').addClass('active');
+  // });
+
+  $('body').click(function(){
+    $('span.text-copied').removeClass('active');
+  });
+  /*End Copy Text*/
+
   //header-fullscreen__trigger
   $('.header-fullscreen__trigger').click(function(){
 
@@ -169,3 +184,19 @@ jQuery(document).ready(function($) {
   topNav();
 });
 /* End Top Nav Trigger Active */
+
+/* Copy Function */
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied: " + copyText.value;
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
