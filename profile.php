@@ -1,10 +1,10 @@
 <?php
 require 'conectare.php';
-$ok = 0;
 session_start();
 
 $ok = 0;
 $usr = $_GET['id'];
+$username = "./";
 if(isset($_SESSION['loggedin'])) {
   $ok = 1;
   $username = $_SESSION['username'];
@@ -106,7 +106,7 @@ $fn = mysqli_fetch_array($var);
                     <?php
                   }
               }
-              if($ok == 1 && $username == $usr){
+              if($username == $usr){
                   echo "Share your profile:";
                   echo "<input id= 'share_profile' name= 'share_profile' value='https://contar.io/p/".$usr."'>";
                   echo  '<button class="copy-text" onclick="copy()">Copy text <span class="text-copied">Text copied</span></button>';
