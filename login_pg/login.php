@@ -4,7 +4,7 @@ $ok = 0;
   session_start();
 if(!isset($_SESSION['wrong']))
   $_SESSION['wrong'] = 0;
-$ok = 0;
+
   if(!empty($_POST['login']))
   {
     $ok = 1;

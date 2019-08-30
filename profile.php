@@ -1,5 +1,6 @@
 <?php
 require 'conectare.php';
+$ok = 0;
 session_start();
 
 $ok = 0;
@@ -98,10 +99,10 @@ $fn = mysqli_fetch_array($var);
               }
               function buttonorlist($var, $id, $value,$id1){
                 if(link_1($var))
-                  echo "<li><a href =".$var." target='_blank'><input class='social-button' type='button' value=".$value."><i class='fab fa-instagram'></i><p id='".$id."'></p></a></li>";
+                  echo "<li><a class='btn btn-default' id=".$id1." href =".$var." target='_blank'><input class='' type='button' value=".$value."><i class='fab fa-instagram'></i><p id='".$id."'></p></a></li>";
                 else
                   { ?>
-                    <li><button type='button' id="<?php echo $id1; ?>" class='social-button'  onclick="swaptxt('<?php echo $id1; ?>', '<?php echo $var; ?>','<?php echo $value; ?>')"><i class='fab fa-instagram'></i><?php echo $value; ?></button><p id="<?php echo $id; ?>"></p></li>
+                    <li><button type='button' id="<?php echo $id1; ?>" class='social-button'  onclick="swaptxt('<?php echo $id; ?>', '<?php echo $var; ?>','<?php echo $value; ?>')"><i class='fab fa-instagram'></i><p id="<?php echo $id; ?>" style="font-weight:bold"><?php echo $value; ?></p></button></li>
                     <?php
                   }
               }

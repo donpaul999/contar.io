@@ -10,6 +10,13 @@
 	background-color: transparent;
 	border: 1px solid #000;
 	border-left: 0;
+	@include transition();
+
+	&:hover {
+		background-color: $hover;	
+		border-color: $hover;
+		color: #fff;
+	}
 }
 
 #share_profile {
@@ -262,7 +269,7 @@
 	li {
 		position: relative;
 		p {
-			position: relative;
+			//position: relative;
 			&:before {
 				// -moz-osx-font-smoothing: grayscale;
 				// -webkit-font-smoothing: antialiased;
@@ -287,89 +294,91 @@
 		// 		}
 		// 	}
 		// }
+		i {
+			margin: 0 10px 0 0;
+		}
 
-
-		#fb {//facebook
-			&:before {
-				content: "\f39e";
+		#fb1, #fb {//facebook
+			i:before {
+				content: "\f39e"!important;
 				color: #3578E5;
 			}	
 		}
 
 		#ig {//instagram
-			&:before {
+			i:before {
 				content: "\f16d";
 				color: #C13584;
 			}
 
 		}
 
-		#yt {//youtube
-			&:before {
+		#yt1, #yt {//youtube
+			i:before {
 				color: #FF0000;
-				content: "\f167";
+				content: "\f167"!important;
 			}
 
 		}
 
-		#linkedin {//linkedin
-			&:before {
+		#linkedin, #linkedin1 {//linkedin
+			i:before {
 				color: #0077B5;
 				content: "\f08c";
 			}
 
 		}
 
-		#github {//git
-			&:before {
+		#github, #github1 {//git
+			i:before {
 				color: #333;
 				content: "\f09b";
 			}
 
 		}
 
-		#spotify { //spotify
-			&:before {
+		#spotify, #spotify1 { //spotify
+			i:before {
 				color: #1DB954;
 				content: "\f1bc";
 			}
 
 		}
 
-		#steam {//steam
-			&:before {
+		#steam, #steam1 {//steam
+			i:before {
 				color: #112758;
 				content: "\f1b6";
 			}
 
 		}
 
-		#snap {//snapchat
-			&:before {
+		#snap, #snap1 {//snapchat
+			i:before {
 				color: #FFFC00;
 				content: "\f2ab";
 			}
 
 		}
 
-		#discord {//discord
-			&:before {
+		#discord, #discord1 {//discord
+			i:before {
 				color: #7289DA;
 				content: "\f392";
 			}
 
 		}
 
-		#skype {//skype
-			&:before {
+		#skype, #skype1 {//skype
+			i:before {
 				color: #00AFF0;
 				content: "\f17e";
 			}
 
 		}
 
-		#paypal {//skype
-			&:before {
+		#paypal, #paypal1 {//skype
+			i:before {
 				color: #3b7bbf ;
 				content: "\f1ed";
 			}
@@ -491,7 +500,9 @@
 }
 
 .social-button {
-	display: block;
+	display: flex;
+	flex-flow: row;
+	align-items: flex-start;
 	position: relative;
 	@include translateX(-50%);
 	@include transition;
@@ -506,13 +517,82 @@
 	height: 56px;
 	padding: 0 45px;
 	max-width: 100%;
+	font-size: 20px;
+	font-family: 'nvRegular';
 	@include transition;
+	i {
+		margin-top: 5%!important;
+	}
 
 	&:hover {
 		background-color: $hover-bgk;
 		border-color: $hover-bgk;
 		color: #fff;
+		i {
+			&:before {
+				color: #fff!important;
+			}
+		}
 	}
+
+	&:focus,
+	&:active {
+		outline: none;
+	}
+}
+
+.btn {
+	position: relative;
+	@include transition;
+	height: 56px;
+	margin-bottom: 30px;
+	border-radius: 300px;
+	border: 1px solid #333;
+	background-color: transparent;
+	-webkit-appearance: none;
+	font-weight: 600;
+	height: 56px;
+	padding: 0 45px;
+	max-width: 100%;
+	font-size: 13.3333px;
+	@include transition;
+	font-family: 'nvRegular';
+	display: inline-flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	i {
+		font-size: 20px;
+		position: absolute;
+	}
+
+	&:hover {
+		background-color: $hover-bgk;
+		border-color: $hover-bgk;
+		color: #fff;
+		input {
+			color: #fff;
+		}
+		i:before {
+			color: #fff!important;
+		}
+	}
+
+	&:focus,
+	&:active {
+		outline: none;
+		box-shadow: none;
+	}
+	input {
+		margin-left: 20px;
+		font-size: 20px;
+		font-weight: 600;
+		font-family: 'nvRegular';
+		border: 0;
+		background-color: transparent;
+
+	}
+		
 }
 /***********************************************
 /* END PROFILE-PAGE

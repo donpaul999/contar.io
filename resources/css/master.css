@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Hedaer */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600");
 .header-fixed {
@@ -12366,7 +12367,23 @@ p {
 .copy-text {
   background-color: transparent;
   border: 1px solid #000;
-  border-left: 0; }
+  border-left: 0;
+  -webkit-transition-delay: 0;
+  -o-transition-delay: 0;
+  transition-delay: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-property: all;
+  transition-property: all;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; }
+  .copy-text:hover {
+    background-color: #ff7777;
+    border-color: #ff7777;
+    color: #fff; }
 
 #share_profile {
   margin-bottom: 30px;
@@ -12569,39 +12586,39 @@ p {
 
 .user li {
   position: relative; }
-  .user li p {
-    position: relative; }
-  .user li #fb:before {
-    content: "\f39e";
+  .user li i {
+    margin: 0 10px 0 0; }
+  .user li #fb1 i:before, .user li #fb i:before {
+    content: "" !important;
     color: #3578E5; }
-  .user li #ig:before {
+  .user li #ig i:before {
     content: "\f16d";
     color: #C13584; }
-  .user li #yt:before {
+  .user li #yt1 i:before, .user li #yt i:before {
     color: #FF0000;
-    content: "\f167"; }
-  .user li #linkedin:before {
+    content: "" !important; }
+  .user li #linkedin i:before, .user li #linkedin1 i:before {
     color: #0077B5;
     content: "\f08c"; }
-  .user li #github:before {
+  .user li #github i:before, .user li #github1 i:before {
     color: #333;
     content: "\f09b"; }
-  .user li #spotify:before {
+  .user li #spotify i:before, .user li #spotify1 i:before {
     color: #1DB954;
     content: "\f1bc"; }
-  .user li #steam:before {
+  .user li #steam i:before, .user li #steam1 i:before {
     color: #112758;
     content: "\f1b6"; }
-  .user li #snap:before {
+  .user li #snap i:before, .user li #snap1 i:before {
     color: #FFFC00;
     content: "\f2ab"; }
-  .user li #discord:before {
+  .user li #discord i:before, .user li #discord1 i:before {
     color: #7289DA;
     content: "\f392"; }
-  .user li #skype:before {
+  .user li #skype i:before, .user li #skype1 i:before {
     color: #00AFF0;
     content: "\f17e"; }
-  .user li #paypal:before {
+  .user li #paypal i:before, .user li #paypal1 i:before {
     color: #3b7bbf;
     content: "\f1ed"; }
 
@@ -12724,7 +12741,16 @@ p {
       visibility: visible; }
 
 .social-button {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   position: relative;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -12754,6 +12780,8 @@ p {
   height: 56px;
   padding: 0 45px;
   max-width: 100%;
+  font-size: 20px;
+  font-family: 'nvRegular';
   -webkit-transition-delay: 0;
   transition-delay: 0;
   -webkit-transition-property: all;
@@ -12762,10 +12790,84 @@ p {
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out; }
+  .social-button i {
+    margin-top: 5% !important; }
   .social-button:hover {
     background-color: #ff7777;
     border-color: #ff7777;
     color: #fff; }
+    .social-button:hover i:before {
+      color: #fff !important; }
+  .social-button:focus, .social-button:active {
+    outline: none; }
+
+.btn {
+  position: relative;
+  -webkit-transition-delay: 0;
+  -o-transition-delay: 0;
+  transition-delay: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-property: all;
+  transition-property: all;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  height: 56px;
+  margin-bottom: 30px;
+  border-radius: 300px;
+  border: 1px solid #333;
+  background-color: transparent;
+  -webkit-appearance: none;
+  font-weight: 600;
+  height: 56px;
+  padding: 0 45px;
+  max-width: 100%;
+  font-size: 13.3333px;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  font-family: 'nvRegular';
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center; }
+  .btn i {
+    font-size: 20px;
+    position: absolute; }
+  .btn:hover {
+    background-color: #ff7777;
+    border-color: #ff7777;
+    color: #fff; }
+    .btn:hover input {
+      color: #fff; }
+    .btn:hover i:before {
+      color: #fff !important; }
+  .btn:focus, .btn:active {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  .btn input {
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'nvRegular';
+    border: 0;
+    background-color: transparent; }
 
 /***********************************************
 /* END PROFILE-PAGE
@@ -12892,7 +12994,7 @@ p {
 /* END FOOTER
 ***********************************************/
 /***********************************************
-/* START  
+/* START
 ***********************************************/
 /***********************************************
 /* START HEADER
@@ -13150,7 +13252,7 @@ p {
         font-size: 1.2rem; } }
 
 /***********************************************
-/* END HEADER-BURGER-1  
+/* END HEADER-BURGER-1
 ***********************************************/
 /***********************************************
 /* START  HEADER-FULLSCREEN
@@ -13475,7 +13577,7 @@ p {
   .isotope-item {
     width: 100% !important; } }
 
-/* 
+/*
  *	Owl Carousel - Animate Plugin
  */
 .owl-carousel .animated {
@@ -13506,7 +13608,7 @@ p {
   100% {
     opacity: 0; } }
 
-/* 
+/*
  * 	Owl Carousel - Auto Height Plugin
  */
 .owl-height {
@@ -13516,7 +13618,7 @@ p {
   -o-transition: height 500ms ease-in-out;
   transition: height 500ms ease-in-out; }
 
-/* 
+/*
  *	Core Owl Carousel CSS File
  */
 .owl-carousel {
@@ -13609,7 +13711,7 @@ p {
 .no-js .owl-carousel {
   display: block; }
 
-/* 
+/*
  * 	Owl Carousel - Lazy Load Plugin
  */
 .owl-carousel .owl-item .owl-lazy {
@@ -13624,7 +13726,7 @@ p {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
 
-/* 
+/*
  * 	Owl Carousel - Video Plugin
  */
 .owl-carousel .owl-video-wrapper {
@@ -13831,7 +13933,7 @@ p {
     margin-bottom: 0; } }
 
 /***********************************************
-/* END LANSCAPE 
+/* END LANSCAPE
 ***********************************************/
 /***********************************************
 /* START CONTAR
@@ -13879,7 +13981,7 @@ p {
       font-size: 14px; } }
 
 /***********************************************
-/* END CONTAR  
+/* END CONTAR
 ***********************************************/
 .fancybox-wrap,
 .fancybox-skin,
@@ -14196,7 +14298,7 @@ a.lightbox.hidden {
     font-size: 24px; }
 
 /***********************************************
-/* START C-HERO-1  
+/* START C-HERO-1
 ***********************************************/
 /*! jQuery UI - v1.12.1 - 2019-08-11
 * http://jqueryui.com

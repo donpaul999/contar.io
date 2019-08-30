@@ -62,7 +62,7 @@ try {
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Password reset - Contar.io';
-    $mail->Body    = 'Hi! I can see that you forgot your password. Click on this '.$link.' to reset it!';
+    $mail->Body    = 'Hi! I can see that you forgot your password. Click on this '.$link.' to reset it';
 
     $mail->send();
     return header("location:mail_sent");

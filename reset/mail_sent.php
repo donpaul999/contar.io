@@ -64,7 +64,6 @@
       <div class="main">
         <div class="user-title">
         <h1 class="fullname">Mail sent!</h1>
-        <h4>Check your spam folder if you can't find the email!</h4>
       </div>
       <a href="../index"><input class="social-button go-back" type="button" value="Go Back"></a>
 

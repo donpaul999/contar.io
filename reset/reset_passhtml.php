@@ -1,6 +1,8 @@
 <?php
+
   $ok = 0;
-?>
+ ?>
+
 <!DOCTYPE html>
 <html>
   <head>

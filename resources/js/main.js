@@ -41,11 +41,11 @@ jQuery(document).ready(function(){
     }
   });
 
-  $(".contar-profile ul li").click(function() {
+  // $(".contar-profile ul li").click(function() {
 
-    $(this).toggleClass("active");
+  //   $(this).toggleClass("active");
 
-  });
+  // });
 
   $("#b_fb").click(function() {
 
