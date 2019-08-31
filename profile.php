@@ -50,11 +50,8 @@ $fn = mysqli_fetch_array($var);
         echo  '</div>';
       }
       else {
-        echo '<div class="username">';
-        echo '<ul>';
-        echo "<li><a href='../index'><input type = 'button' id='back' value='Join here'></a></li>";
-        echo '</ul>';
-        echo  '</div>';
+        echo "<a href='../index'><input type = 'button' id='back' value='Join here'></a>";
+
       }
       ?>
       <?php
