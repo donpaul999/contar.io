@@ -1,5 +1,6 @@
 <?php
   require '../conectare.php';
+  require '../user_info/UserInfo.php';
 $ok = 0;
   $user =  str_replace("&lt","",str_replace("&gt","", $_POST['username']));
   $email =  str_replace("&lt","",str_replace("&gt","", $_POST['email']));
@@ -38,6 +39,13 @@ $ok = 0;
         else{
         $sql ="INSERT INTO users(username, FullName, birthdate, email, password) VALUES ('$user', '$FullName','$date','$email','$pass')";
 				$result = mysqli_query($conectare, $sql);
+        $ip = UserInfo::get_ip();
+        $os = UserInfo::get_os();
+        $browser = UserInfo::get_browser();
+        $device = UserInfo::get_device();
+        $date = date('Y-m-d H:i:s');
+        $sql ="INSERT INTO stats(username, date_reg, date_last, ip_reg, ip_last, log_count, device_reg, device_last, os_reg, os_last, browser_reg, browser_last) VALUES ('$user','$date','$date', '$ip','$ip','1','$device', '$device', '$os', '$os', '$browser', '$browser')";
+        $result = mysqli_query($conectare, $sql);
         return header("location:register_successful");
       }
       }

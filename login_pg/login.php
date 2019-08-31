@@ -30,6 +30,7 @@ if(!isset($_SESSION['wrong']))
         session_start();
         $_SESSION['loggedin'] = '1';
         $_SESSION['username'] = $username;
+        require('../user_info/stats.php');
         header("location:../contar");
       }
     else
