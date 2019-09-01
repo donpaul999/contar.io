@@ -62,7 +62,8 @@ if($_GET['key'] && $_GET['reset'])
                 <h5>Show Password</h5><br>
               </div>
             </div>
-            <div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp" required></div>
+            <div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp
+" required></div>
             <input class="social-button" type="submit" name="submit_password">
              <a href="../login_pg/login"><input class="social-button go-back" type="button" value="Go Back"></a>
           </form>

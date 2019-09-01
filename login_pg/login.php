@@ -11,7 +11,8 @@ if(!isset($_SESSION['wrong']))
     if($_SESSION['wrong'] >= 3){
       $ok = 0;
         if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
-          $secretKey = '6Lexj7MUAAAAACPzsQJE1Myokq0wIqSeDtODI7Oo';
+          $secretKey = '6Lexj7MUAAAAACPzsQJE1Myokq0wIqSeDtODI7Oo
+';
           $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']);
           $responseData = json_decode($verifyResponse);
         if($responseData->success)
@@ -101,7 +102,8 @@ if(!isset($_SESSION['wrong']))
             <input type="checkbox" onclick="showpass()"> <h5>Show Password</h5>
             <?php
             if($_SESSION['wrong'] >= 3)
-              echo '<div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp"></div>';
+              echo '<div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp
+"></div>';
               ?>
             <input class="social-button"  type="submit" id="login" name="login" value="Log In">
             <a  href = "register"><input  class="social-button"  type = "button" value="You don't have an account? Sign Up"></a>

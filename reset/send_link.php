@@ -15,7 +15,7 @@ if(isset($_POST['submit_email']) && $_POST['email'])
   // Validate reCAPTCHA box
     if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
       // Google reCAPTCHA API secret key
-      $secretKey = '6Lexj7MUAAAAACPzsQJE1Myokq0wIqSeDtODI7Oo';
+      $secretKey = '6LeoqbQUAAAAAFSYUTHD30nzFH47r4HhXuNZIJRK';
 
       // Verify the reCAPTCHA response
       $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']);
@@ -50,7 +50,7 @@ try {
     $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'contario999@gmail.com';                     // SMTP username
-    $mail->Password   = 'hnrbbpvottmabdap';                               // SMTP password
+    $mail->Password   = 'pass';                               // SMTP password
     $mail->SMTPSecure = 'ssl';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 465;                                    // TCP port to connect to
 
@@ -58,7 +58,7 @@ try {
     $mail->setFrom('contario999@gmail.com', 'Paul');
     $mail->addAddress($email, $FullName);     // Add a recipient
     $mail->addReplyTo('no-reply@gmail.com', 'No reply');
-    $link="<a href='www.contar.io/reset/reset_pass.php?key=".$email."&reset=".$pass."'>link</a>";
+    $link="<a href='https://www.contar.io/reset/reset_pass.php?key=".$email."&reset=".$pass."'>link</a>";
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Password reset - Contar.io';

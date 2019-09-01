@@ -22,16 +22,22 @@ $ok = 0;
        <script src = "../resources/js/password.js"></script>
    </head>
    <body class="inuse">
-     <div class="user-title">
-       <h1 class="fullname">ERROR: Old password is wrong!</h1>
-     </div>
-     <!-- ========== START HEADER ========== -->
-     <div class="top-nav top-nav--burger-1 clearfix">
-       <div class="logo">
-           <a href="update_pass"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
-       </div><!-- end logo -->
-    </div>
-     <a href="update_pass"><input class="social-button go-back" type="button" value="Go Back"></a>
+
+    <div class="container main-container">
+        <div class="main">
+          <div class="user-title">
+         <h1 class="fullname">ERROR: Old password is wrong!</h1>
+       </div>
+       <!-- ========== START HEADER ========== -->
+       <div class="top-nav top-nav--burger-1 clearfix">
+         <div class="logo">
+             <a href="update_pass"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
+         </div><!-- end logo -->
+      </div>
+       <a href="update_pass"><input class="social-button go-back" type="button" value="Go Back"></a>
+      </div><!-- end main -->
+    </div><!-- end container -->
+
 
      <!-- ========== START FOOTER ========== -->
     <footer class="footer fixed">

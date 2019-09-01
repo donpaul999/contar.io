@@ -87,6 +87,7 @@ $fn = mysqli_fetch_array($var);
       </header>
     </div><!-- end top-nav -->
     <!-- ========== END HEADER ========== -->
+
     <!-- ========== START PROFILE-CONTENT ========== -->
     <div class="contar-profile">
       <div class="container main-container">
@@ -119,7 +120,7 @@ $fn = mysqli_fetch_array($var);
 
               }
               echo '<div class="user">';
-              echo  '<ul id="sortable">';
+              echo  '<ul>';
                  if(!empty($row['facebook']) && !ctype_space($row['facebook']))
                   {
                     buttonorlist($row['facebook'], "fb", "Facebook", "fb1");

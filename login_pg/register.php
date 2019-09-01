@@ -87,7 +87,8 @@ $ok = 0;
                     <h5>I have read and agree with <a href="privacy" style="color:blue">the Privacy Policy</a></h5>
                   </div>
                 <span id='message'></span>
-                <div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp"></div>
+                <div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp
+"></div>
                 <input class="social-button" type="submit" id="submit" value="Sign Up">
                 <a href = "login"><input class="social-button" type = "button" value="Already registered? Log In"></a>
             </form>
