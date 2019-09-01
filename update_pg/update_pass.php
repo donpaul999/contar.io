@@ -78,10 +78,10 @@ if(!empty($_POST['change_pass']))
                 echo '<ul>';
                 echo '<li><input type = "button" value='.$username.'></li>';
                 echo '<ul class="sub-menu">';
-                  echo "<li><a href='contar'><input type = 'button' id='back' value='Home'></a></li>";
-                  echo "<li><a href = 'update_pg/update'><input type = 'button' value='Update your profile'></a></li>";
-                  echo "<li><a href='update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
-                  echo "<li><a href='login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+                  echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
+                  echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
+                  echo "<li><a href='update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
+                  echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
                 echo '</ul>';
                 echo  '</ul>';
                 echo  '</div>';
@@ -106,7 +106,7 @@ if(!empty($_POST['change_pass']))
               <div class="show-pass">
                 <input type="checkbox" onclick="showpass()"> <h5>Show Password</h5>
               </div>
-              
+
               <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" oninput="check(this)" required maxlength="20">
               <input class="social-button"  type="submit" id="change_pass" name="change_pass" value="Change Password">
             </form>

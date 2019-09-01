@@ -73,10 +73,10 @@ $fn = mysqli_fetch_array($var);
                 echo '<ul>';
                 echo '<li><input type = "button" value='.$username.'></li>';
                 echo '<ul class="sub-menu">';
-                  echo "<li><a href='contar'><input type = 'button' id='back' value='Home'></a></li>";
-                  echo "<li><a href = 'update_pg/update'><input type = 'button' value='Update your profile'></a></li>";
-                  echo "<li><a href='update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
-                  echo "<li><a href='login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+                  echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
+                  echo "<li><a href = '../update_pg/update'><input type = 'button' value='Update your profile'></a></li>";
+                  echo "<li><a href='../update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
+                  echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
                 echo '</ul>';
                 echo  '</ul>';
                 echo  '</div>';
@@ -183,7 +183,7 @@ $fn = mysqli_fetch_array($var);
                 if(!empty($row['twitch']) && !ctype_space($row['twitch']))
                 {
                   buttonorlist($row['twitch'], "twitch", "Twitch","twitch1");
-                }  
+                }
               echo  '</ul>';
               echo  '</div>';
               ?>
