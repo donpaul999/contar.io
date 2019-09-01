@@ -8,4 +8,4 @@ Instead of sharing every online account you have, you can share all accounts at 
 
 You can update your profile with a list of websites, by clicking the logo of the site you choose. The list is updated with new sites every week.
 
-![alt text](https://i.imgur.com/QDjAbTC.png)
+![alt text](https://i.imgur.com/5H5AADn.png)
