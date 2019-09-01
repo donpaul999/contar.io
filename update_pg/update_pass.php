@@ -5,16 +5,10 @@ session_start();
 if(!isset($_SESSION['loggedin']))
   return header("location:../login_pg/login");
 $username = $_SESSION['username'];
+$ok = 1;
 
 if(!empty($_POST['change_pass']))
   {
-    if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
-      $secretKey = '6Lexj7MUAAAAACPzsQJE1Myokq0wIqSeDtODI7Oo';
-      $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']);
-      $responseData = json_decode($verifyResponse);
-    if($responseData->success)
-     $ok = 1;
-    }
     $old_pass = md5($_POST['old_pass']);
     $query = "SELECT * FROM users WHERE username='$username' and password='$old_pass'";
     $result = mysqli_query($conectare, $query);
@@ -45,7 +39,6 @@ if(!empty($_POST['change_pass']))
     <link rel="shortcut icon" type="image/x-icon" href="../resources/img/title.png"  />
     <link rel="stylesheet" href="../resources/css/master.css">
     <script src = "../resources/js/password.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   </head>
   <body class="update-succes update">
@@ -70,14 +63,14 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
     }
       ?>
       <?php
-
+      
         echo'<div class="menu-trigger">';
          echo' <input type="checkbox">';
           echo'<span></span>';
           echo'<span></span>';
           echo'<span></span>';
         echo'</div><!-- end menu-trigger -->';
-
+      
       ?>
       <header class="header header--bgk">
         <div class="container">
@@ -116,8 +109,8 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
               <div class="show-pass">
                 <input type="checkbox" onclick="showpass()"> <h5>Show Password</h5>
               </div>
+
               <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" oninput="check(this)" required maxlength="20">
-              <div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp"></div>
               <input class="social-button"  type="submit" id="change_pass" name="change_pass" value="Change Password">
             </form>
           </div>
@@ -179,12 +172,5 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
       }
     }
 
-    window.onload = function() {
-        var $recaptcha = document.querySelector('#g-recaptcha-response');
-
-        if($recaptcha) {
-            $recaptcha.setAttribute("required", "required");
-        }
-    };
-    </script>
+  </script>
 </html>
