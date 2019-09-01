@@ -35,6 +35,26 @@ function upd($link, $site, &$ok, $user, $conectare)
    upd($_POST['github'], "github", $ok, $user, $conectare);
  }
 
+ if(!empty($_POST['reddit']) && !ctype_space($_POST['reddit'])){
+   upd($_POST['reddit'], "reddit", $ok, $user, $conectare);
+ }
+
+ if(!empty($_POST['tumblr']) && !ctype_space($_POST['tumblr'])){
+   upd($_POST['tumblr'], "tumblr", $ok, $user, $conectare);
+ }
+
+ if(!empty($_POST['pinterest']) && !ctype_space($_POST['pinterest'])){
+   upd($_POST['pinterest'], "pinterest", $ok, $user, $conectare);
+ }
+
+ if(!empty($_POST['twitter']) && !ctype_space($_POST['twitter'])){
+   upd($_POST['twitter'], "twitter", $ok, $user, $conectare);
+ }
+
+ if(!empty($_POST['twitch']) && !ctype_space($_POST['twitch'])){
+   upd($_POST['twitch'], "twitch", $ok, $user, $conectare);
+ }
+
  if(!empty($_POST['paypal']) && !ctype_space($_POST['paypal'])){
    upd($_POST['paypal'], "paypal", $ok, $user, $conectare);
  }

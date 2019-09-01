@@ -28,19 +28,7 @@ $usr = $_SESSION['username'];
     <div class="logo">
         <a href="../contar"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
     </div><!-- end logo -->
-    <?php
-      echo '<div class="username">';
-      echo '<ul>';
-      echo '<li><input type = "button" value='.$usr.'></li>';
-      echo '<ul class="sub-menu">';
-        echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
-        echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
-        echo "<li><a href='../update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
-echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
-      echo '</ul>';
-      echo  '</ul>';
-      echo  '</div>';
-    ?>
+    
     <div class="menu-trigger">
       <input type="checkbox">
       <span></span>
@@ -51,31 +39,19 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <nav class="full-menu">
-              <ul class="srf-full-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </nav>
-            <div class="info-area">
-              <ul class="">
-                <li>
-                  <a href="https://www.facebook.com/stefanut999" target='_blank'><i class="fab fa-facebook-f"></i></a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/in/paulstefancolta/" target='_blank'><i class="fab fa-linkedin-in"></i></i></a>
-                </li>
-                <li>
-                  <a href="https://www.instagram.com/paulstefancolta/" target='_blank'><i class="fab fa-instagram"></i></a>
-                </li>
-              </ul>
-            </div><!-- end info-area -->
-            <div class="mobile-info">
-              <p>&copy; Paul Colta - Contar.io</p>
-            </div><!-- end mobile-info -->
+            <?php
+              echo '<div class="username">';
+              echo '<ul>';
+              echo '<li><input type = "button" value='.$usr.'></li>';
+              echo '<ul class="sub-menu">';
+                echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
+                echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
+                echo "<li><a href='../update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
+              echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+              echo '</ul>';
+              echo  '</ul>';
+              echo  '</div>';
+            ?>
           </div><!-- end col-sm-12 -->
         </div><!-- end row -->
       </div><!-- end container -->
@@ -89,15 +65,20 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
       <div>
         <button class="update-icon" id='b_fb'><i style="color: #3578E5;" class="fab fa-facebook-f"></i></button>
         <button class="update-icon" id='b_ig'><i style="color: #C13584;" class="fab fa-instagram"></i></button>
+        <button class="update-icon" id='b_twitter'><i style="color: #0099e5;" class="fab fa-twitter"></i></button>
         <button class="update-icon" id='b_yt'><i style="color: #FF0000;" class="fab fa-youtube"></i></button>
         <button class="update-icon" id='b_linked'><i style="color: #0077B5;" class="fab fa-linkedin"></i></button>
+        <button class="update-icon" id='b_reddit'><i style="color: #ff4500;" class="fab fa-reddit"></i></button>
+        <button class="update-icon" id='b_pinterest'><i style="color: #bd081c;" class="fab fa-pinterest"></i></button>
+        <button class="update-icon" id='b_tumblr'><i style="color: #35465c;" class="fab fa-tumblr"></i></button>
         <button class="update-icon" id='b_github'><i style="color: #333;" class="fab fa-github"></i></button>
-        <button class="update-icon" id='b_paypal'><i style="color: #3578E5;" class="fab fa-paypal-f"></i></button>
+        <button class="update-icon" id='b_paypal'><i style="color: #3578E5;" class="fab fa-paypal"></i></button>
         <button class="update-icon" id='b_spotify'><i style="color: #1DB954;" class="fab fa-spotify"></i></button>
-        <button class="update-icon" id='b_steam'><i style="color: #112758;" class="fab fa-steam"></i></button>
         <button class="update-icon" id='b_snap'><i style="color: #FFFC00;" class="fab fa-snapchat"></i></button>
         <button class="update-icon" id='b_discord'><i style="color: #7289DA;" class="fab fa-discord"></i></button>
         <button class="update-icon" id='b_skype'><i style="color: #00AFF0;" class="fab fa-skype"></i></button>
+        <button class="update-icon" id='b_steam'><i style="color: #112758;" class="fab fa-steam"></i></button>
+        <button class="update-icon" id='b_twitch'><i style="color: #6441a5;" class="fab fa-twitch"></i></button>
       </div>
       <div class="form-wrap form-wrap-update">
         <form method="POST" action="update_code.php">
@@ -106,16 +87,23 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
             ?>
               <input type="text" name="facebook" id='fb' placeholder="Your Facebook profile: <?php echo $row['facebook']; ?>" maxlength="200">
               <input type="text" name="instagram" id='ig' placeholder="Your Instagram profile or username: <?php echo $row['instagram']; ?>" maxlength="200">
+              <input type="text" name="twitter" id='twitter' placeholder="Your Twitter profile or username: <?php echo $row['twitter']; ?>" maxlength="200">
               <input type="text" name="youtube" id='yt' placeholder="Your YouTube channel: <?php echo $row['youtube']; ?>" maxlength="200">
               <input type="text" name="linkedin" id='linked' placeholder="Your LinkedIn profile: <?php echo $row['linkedin']; ?>" maxlength="200">
+              <input type="text" name="reddit" id='reddit' placeholder="Your Reddit profile or username: <?php echo $row['reddit']; ?>" maxlength="200">
+              <input type="text" name="pinterest" id='pinterest' placeholder="Your Pinterest profile or username: <?php echo $row['pinterest']; ?>" maxlength="200">
+              <input type="text" name="tumblr" id='tumblr' placeholder="Your Tumblr profile or username: <?php echo $row['tumblr']; ?>" maxlength="200">
               <input type="text" name="github" id='github' placeholder="Your GitHub profile: <?php echo $row['github']; ?>" maxlength="200">
-              <input type="text" name="paypal" id='paypal' placeholder="Your PayPal.me link : <?php echo $row['github']; ?>" maxlength="200">
+              <input type="text" name="paypal" id='paypal' placeholder="Your PayPal.me link : <?php echo $row['paypal']; ?>" maxlength="200">
               <input type="text" name="spotify" id='spotify' placeholder="Your Spotify profile: <?php echo $row['spotify']; ?>" maxlength="200">
-              <input type="text" name="steam" id='steam' placeholder="Your Steam profile: <?php echo $row['steam']; ?>" maxlength="200">
               <input type="text" name="snapchat" id='snap' placeholder="Your Snapchat username: <?php echo $row['snapchat']; ?>" maxlength="200">
               <input type="text" name="discord" id='discord' placeholder="Your Discord username + tag: <?php echo $row['discord']; ?>" maxlength="200">
               <input type="text" name="skype" id='skype' placeholder="Your Skype username: <?php echo $row['skype']; ?>" maxlength="200">
-              <input type="submit" class="social-button" id="update" name="update: <?php echo $row['discord']; ?>" value="Update">
+              <input type="text" name="steam" id='steam' placeholder="Your Steam profile: <?php echo $row['steam']; ?>" maxlength="200">
+              <input type="text" name="twitch" id='twitch' placeholder="Your Twitch profile: <?php echo $row['twitch']; ?>" maxlength="200">
+              <!-- start update -->
+              <input type="submit" class="social-button" id="update" name="update" value="Update">
+              <!-- end update -->
         </form>
       </div><!-- end form-wrap -->
     </div>

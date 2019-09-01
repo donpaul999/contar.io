@@ -6,6 +6,41 @@
 	width: 100%;
 }
 
+.mail-sent {
+	text-align: center;
+	p {
+		margin: 20px 0 0 0;
+	}
+}
+
+.join {
+	float: right;
+
+	.social-button {
+		border: 0;
+		top: 50%;
+	    position: absolute;
+	    transform: translateY(-50%);
+	    right: 0;
+	    left: 90%;
+	    @media(max-width: 1366px) {
+	    	left: 86%;
+	    }
+		@media(max-width: 800px) {
+			left: 79%;
+		}
+
+	   	@media(max-width: 600px) {
+	   		left: 63%;
+	   	}
+
+		&:hover {
+			background-color: transparent;
+			color: $hover;
+		}
+	}
+}
+
 .copy-text {
 	background-color: transparent;
 	border: 1px solid #000;
@@ -39,7 +74,11 @@
 	background: transparent;
 	i {
 		font-size: 35px;
-		
+	}
+
+	&:focus,
+	&:active {
+		outline: none;
 	}
 }
 
@@ -126,6 +165,144 @@
 
 .home-container {
 	margin-top: 30px;
+
+	.main {
+		margin-top: 184px;
+
+		.fullname {
+			margin-top: 30px;
+		}
+	}
+
+	button {
+		&:nth-child(1) {
+			-webkit-animation: fadein 2.5s; /* Safari, Chrome and Opera > 12.1 */
+	        -moz-animation: fadein 2.5s; /* Firefox < 16 */
+	        -ms-animation: fadein 2.5s; /* Internet Explorer */
+	        -o-animation: fadein 2.5s; /* Opera < 12.1 */
+	           animation: fadein 2.5s;
+		}
+
+		&:nth-child(2) {
+			-webkit-animation: fadein 2.6s; /* Safari, Chrome and Opera > 12.1 */
+	        -moz-animation: fadein 2.6s; /* Firefox < 16 */
+	        -ms-animation: fadein 2.6s; /* Internet Explorer */
+	        -o-animation: fadein 2.6s; /* Opera < 12.1 */
+	           animation: fadein 2.6s;
+		}
+
+		&:nth-child(3) {
+			-webkit-animation: fadein 2.65s; /* Safari, Chrome and Opera > 12.1 */
+	        -moz-animation: fadein 2.65s; /* Firefox < 16 */
+	        -ms-animation: fadein 2.65s; /* Internet Explorer */
+	        -o-animation: fadein 2.65s; /* Opera < 12.1 */
+	           animation: fadein 2.65s;
+		}
+
+		&:nth-child(4) {
+			-webkit-animation: fadein 2.7s; /* Safari, Chrome and Opera > 12.1 */
+	        -moz-animation: fadein 2.7s; /* Firefox < 16 */
+	        -ms-animation: fadein 2.7s; /* Internet Explorer */
+	        -o-animation: fadein 2.7s; /* Opera < 12.1 */
+	           animation: fadein 2.7s;
+		}
+
+		&:nth-child(5) {
+			-webkit-animation: fadein 2.75s; /* Safari, Chrome and Opera > 12.1 */
+	        -moz-animation: fadein 2.75s; /* Firefox < 16 */
+	        -ms-animation: fadein 2.75s; /* Internet Explorer */
+	        -o-animation: fadein 2.75s; /* Opera < 12.1 */
+	           animation: fadein 2.75s;
+		}
+
+		&:nth-child(6) {
+			-webkit-animation: fadein 2.8s; /* Safari, Chrome and Opera > 12.1 */
+	        -moz-animation: fadein 2.8s; /* Firefox < 16 */
+	        -ms-animation: fadein 2.8s; /* Internet Explorer */
+	        -o-animation: fadein 2.8s; /* Opera < 12.1 */
+	           animation: fadein 2.8s;
+		}
+
+		&:nth-child(7) {
+			-webkit-animation: fadein 2.85s; /* Safari, Chrome and Opera > 12.1 */
+	        -moz-animation: fadein 2.85s; /* Firefox < 16 */
+	        -ms-animation: fadein 2.85s; /* Internet Explorer */
+	        -o-animation: fadein 2.85s; /* Opera < 12.1 */
+	           animation: fadein 2.85s;
+		}
+
+		&:nth-child(8) {
+			-webkit-animation: fadein 2.9s; /* Safari, Chrome and Opera > 12.1 */
+	        -moz-animation: fadein 2.9s; /* Firefox < 16 */
+	        -ms-animation: fadein 2.9s; /* Internet Explorer */
+	        -o-animation: fadein 2.9s; /* Opera < 12.1 */
+	           animation: fadein 2.9s;
+		}
+
+		&:nth-child(9) {
+			-webkit-animation: fadein 2.95s; /* Safari, Chrome and Opera > 12.1 */
+	        -moz-animation: fadein 2.95s; /* Firefox < 16 */
+	        -ms-animation: fadein 2.95s; /* Internet Explorer */
+	        -o-animation: fadein 2.95s; /* Opera < 12.1 */
+	           animation: fadein 2.95s;
+		}
+
+		&:nth-child(10) {
+			-webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+	        -moz-animation: fadein 3s; /* Firefox < 16 */
+	        -ms-animation: fadein 3s; /* Internet Explorer */
+	        -o-animation: fadein 3s; /* Opera < 12.1 */
+	           animation: fadein 3s;
+		}
+
+		&:nth-child(11) {
+			-webkit-animation: fadein 3.25s; /* Safari, Chrome and Opera > 12.1 */
+	        -moz-animation: fadein 3.25s; /* Firefox < 16 */
+	        -ms-animation: fadein 3.25s; /* Internet Explorer */
+	        -o-animation: fadein 3.25s; /* Opera < 12.1 */
+	           animation: fadein 3.25s;
+		}
+
+		&:nth-child(12) {
+			-webkit-animation: fadein 3.5s; /* Safari, Chrome and Opera > 12.1 */
+	        -moz-animation: fadein 3.5s; /* Firefox < 16 */
+	        -ms-animation: fadein 3.5s; /* Internet Explorer */
+	        -o-animation: fadein 3.5s; /* Opera < 12.1 */
+	           animation: fadein 3.5s;
+		}
+
+		&:nth-child(13) {
+			-webkit-animation: fadein 3.75s; /* Safari, Chrome and Opera > 12.1 */
+	        -moz-animation: fadein 3.75s; /* Firefox < 16 */
+	        -ms-animation: fadein 3.75s; /* Internet Explorer */
+	        -o-animation: fadein 3.75s; /* Opera < 12.1 */
+	           animation: fadein 3.75s;
+		}
+
+		&:nth-child(14) {
+			-webkit-animation: fadein 3.95s; /* Safari, Chrome and Opera > 12.1 */
+	        -moz-animation: fadein 3.95s; /* Firefox < 16 */
+	        -ms-animation: fadein 3.95s; /* Internet Explorer */
+	        -o-animation: fadein 3.95s; /* Opera < 12.1 */
+	           animation: fadein 3.95s;
+		}
+
+		&:nth-child(15) {
+			-webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+	        -moz-animation: fadein 4s; /* Firefox < 16 */
+	        -ms-animation: fadein 4s; /* Internet Explorer */
+	        -o-animation: fadein 4s; /* Opera < 12.1 */
+	           animation: fadein 4s;
+		}
+
+		&:nth-child(16) {
+			-webkit-animation: fadein 4.2s; /* Safari, Chrome and Opera > 12.1 */
+	        -moz-animation: fadein 4.2s; /* Firefox < 16 */
+	        -ms-animation: fadein 4.2s; /* Internet Explorer */
+	        -o-animation: fadein 4.2s; /* Opera < 12.1 */
+	           animation: fadein 4.2s;
+		}
+	}
 }
 
 .main-container {
@@ -163,7 +340,7 @@
 
 .main {
 	overflow: auto;
-	padding-bottom: 100px;
+	padding-bottom: 78px;
 }
 /***********************************************
 /* END GENERAL
@@ -229,6 +406,11 @@
 	// top: 50%;
 	// left: 50%;
 	// @include translate(-50%, -50%);
+	@media(max-width: 600px) {
+		.main {
+			margin-top: 120px;
+		}
+	}
 	a {
 		display: block;
 	}
@@ -239,6 +421,24 @@
 
 	.user-title {
 		margin-bottom: 40px;
+	}
+
+	.home-icons {
+		display: none;
+
+		@media(max-width: 800px) {
+			margin-bottom: 40px;
+			display: block;
+			i {
+				font-size: 18px;
+			}
+		}
+	}
+}
+
+@media(max-width: 800px) {
+	.home-icons-active {
+		display: none;
 	}
 }
 /***********************************************
@@ -253,7 +453,7 @@
 	position: relative;
 
 	.main-container {
-    	margin-top: 76.55px;
+    	margin-top: 50px;
 
     	.main {
     		padding-top: 50px;
@@ -305,7 +505,7 @@
 			}	
 		}
 
-		#ig {//instagram
+		#ig, #ig1 {//instagram
 			i:before {
 				content: "\f16d";
 				color: #C13584;
@@ -377,10 +577,49 @@
 
 		}
 
-		#paypal, #paypal1 {//skype
+		#paypal, #paypal1 {//paypal
 			i:before {
 				color: #3b7bbf ;
 				content: "\f1ed";
+			}
+
+		}
+
+		#pinterest, #pinterest1 {//pinterest
+			i:before {
+				color: #bd081c;
+				content: "\f0d2";
+			}
+
+		}
+
+		#twitch, #twitch1 {//twitch
+			i:before {
+				color: #6441a5 ;
+				content: "\f1e8";
+			}
+
+		}
+
+		#reddit, #reddit1 {//reddit
+			i:before {
+				color: #ff4500 ;
+				content: "\f1a1";
+			}
+		}
+
+		#tumblr, #tumblr1 {//tumblr
+			i:before {
+				color: #35465c ;
+				content: "\f173";
+			}
+
+		}
+
+		#twitter, #twitter1 {//twitter
+			i:before {
+				color: #0099e5 ;
+				content: "\f099";
 			}
 
 		}
@@ -390,7 +629,9 @@
 .update-main {
 	#fb, #ig, #yt, #linked, 
 	#github, #spotify, #steam, 
-	#skype, #snap, #discord {
+	#skype, #snap, #discord, #paypal,
+	#twitter, #pinterest, #twitch,
+	#reddit, #tumblr {
 		display: none;
 	
 		&.active {
@@ -599,6 +840,80 @@
 ***********************************************/
 
 /***********************************************
+/* START RESET
+***********************************************/
+.reset-page {
+	text-align: center;
+
+	.user-title {
+		margin-bottom: 50px;
+	}
+	form {
+		padding: 0 300px;
+		p {
+			margin-bottom: 20px;
+		}
+		h5 {
+			display: inline-block;
+		}
+		input[type=password], input[type=text] {
+			border: 0;
+		    color: #1f1f1f;
+		    font-size: 14px;
+		    font-weight: 400;
+		    width: 100%;
+		    padding: 0 0 3px;
+		    margin-bottom: 35px;
+		    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		    -webkit-transition-delay: 0;
+		    -o-transition-delay: 0;
+		    transition-delay: 0;
+		    -webkit-transition-property: all;
+		    -webkit-transition-duration: 0.2s;
+		    -webkit-transition-timing-function: ease-in-out;
+		    -o-transition-property: all;
+		    transition-property: all;
+		    -o-transition-duration: 0.2s;
+		    transition-duration: 0.2s;
+		    -o-transition-timing-function: ease-in-out;
+		    transition-timing-function: ease-in-out;
+    		background-color: transparent;
+		}
+
+		.show-pass {
+			display: block;
+			margin-bottom: 20px;
+		}
+
+		@media(max-width: 800px) {
+			padding: 0;
+		}
+	}
+
+	.g-recaptcha {
+		margin-top: 20px;
+	}
+
+	.social-button {
+		margin-top: 0;
+		width: initial;
+		
+		&.go-back {
+			margin-top: 0;
+		}
+	}
+
+	&.miscelaneous {
+		.g-recaptcha  {
+			margin-bottom: 50px;
+		}
+	}
+}
+/***********************************************
+/* END RESET
+***********************************************/
+
+/***********************************************
 /* START LOGIN-CONTAINER
 ***********************************************/
 .form-wrap {
@@ -702,12 +1017,10 @@
 .footer {
 	background: #f0f3f3;
 	width: 100%;
+	height: 78px;
 	padding: 10px 0;
 	clear: both;
 	position: relative;
-	// position: fixed;
-	// bottom: 0;
-	// left: 0;
 
 	.footer__social {
 		text-align: center;

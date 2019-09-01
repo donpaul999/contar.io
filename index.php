@@ -55,8 +55,44 @@ $ok = 0;
      <!-- ========== START HOME CONTAINER ========== -->
      <div class="container main-container home-container">
        <div class="main">
+        <div class="home-icons-active">
+          <button class="update-icon" id='b_fb'><i style="color: #3578E5;" class="fab fa-facebook-f"></i></button>
+          <button class="update-icon" id='b_ig'><i style="color: #C13584;" class="fab fa-instagram"></i></button>
+          <button class="update-icon" id='b_twitter'><i style="color: #0099e5;" class="fab fa-twitter"></i></button>
+          <button class="update-icon" id='b_yt'><i style="color: #FF0000;" class="fab fa-youtube"></i></button>
+          <button class="update-icon" id='b_linked'><i style="color: #0077B5;" class="fab fa-linkedin"></i></button>
+          <button class="update-icon" id='b_reddit'><i style="color: #ff4500;" class="fab fa-reddit"></i></button>
+          <button class="update-icon" id='b_pinterest'><i style="color: #bd081c;" class="fab fa-pinterest"></i></button>
+          <button class="update-icon" id='b_tumblr'><i style="color: #35465c;" class="fab fa-tumblr"></i></button>
+          <button class="update-icon" id='b_github'><i style="color: #333;" class="fab fa-github"></i></button>
+          <button class="update-icon" id='b_paypal'><i style="color: #3578E5;" class="fab fa-paypal"></i></button>
+          <button class="update-icon" id='b_spotify'><i style="color: #1DB954;" class="fab fa-spotify"></i></button>
+          <button class="update-icon" id='b_snap'><i style="color: #FFFC00;" class="fab fa-snapchat"></i></button>
+          <button class="update-icon" id='b_discord'><i style="color: #7289DA;" class="fab fa-discord"></i></button>
+          <button class="update-icon" id='b_skype'><i style="color: #00AFF0;" class="fab fa-skype"></i></button>
+          <button class="update-icon" id='b_steam'><i style="color: #112758;" class="fab fa-steam"></i></button>
+          <button class="update-icon" id='b_twitch'><i style="color: #6441a5;" class="fab fa-twitch"></i></button>
+        </div>
         <div class="user-title">
           <h1 class="fullname">All of your online accounts in one place.</h1>
+        </div>
+        <div class="home-icons">
+          <button class="update-icon" id='b_fb'><i style="color: #3578E5;" class="fab fa-facebook-f"></i></button>
+          <button class="update-icon" id='b_ig'><i style="color: #C13584;" class="fab fa-instagram"></i></button>
+          <button class="update-icon" id='b_twitter'><i style="color: #0099e5;" class="fab fa-twitter"></i></button>
+          <button class="update-icon" id='b_yt'><i style="color: #FF0000;" class="fab fa-youtube"></i></button>
+          <button class="update-icon" id='b_linked'><i style="color: #0077B5;" class="fab fa-linkedin"></i></button>
+          <button class="update-icon" id='b_reddit'><i style="color: #ff4500;" class="fab fa-reddit"></i></button>
+          <button class="update-icon" id='b_pinterest'><i style="color: #bd081c;" class="fab fa-pinterest"></i></button>
+          <button class="update-icon" id='b_tumblr'><i style="color: #35465c;" class="fab fa-tumblr"></i></button>
+          <button class="update-icon" id='b_github'><i style="color: #333;" class="fab fa-github"></i></button>
+          <button class="update-icon" id='b_paypal'><i style="color: #3578E5;" class="fab fa-paypal"></i></button>
+          <button class="update-icon" id='b_spotify'><i style="color: #1DB954;" class="fab fa-spotify"></i></button>
+          <button class="update-icon" id='b_snap'><i style="color: #FFFC00;" class="fab fa-snapchat"></i></button>
+          <button class="update-icon" id='b_discord'><i style="color: #7289DA;" class="fab fa-discord"></i></button>
+          <button class="update-icon" id='b_skype'><i style="color: #00AFF0;" class="fab fa-skype"></i></button>
+          <button class="update-icon" id='b_steam'><i style="color: #112758;" class="fab fa-steam"></i></button>
+          <button class="update-icon" id='b_twitch'><i style="color: #6441a5;" class="fab fa-twitch"></i></button>
         </div>
         <a href = "login_pg/login"><input class="social-button" type = "button" value="Log In"></a>
         <a href = "login_pg/register"><input class="social-button" type = "button" value="Register"></a>

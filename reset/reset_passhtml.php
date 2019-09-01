@@ -15,7 +15,8 @@
     <meta charset="UTF-8">
     <meta name="HandheldFriendly" content="true">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="shortcut icon" type="image/x-icon" href="../resources/img/title.png"  />
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="../resources/img/title.png"/> -->
+    <link rel="icon" href="../resources/img/title.png">
     <link rel="stylesheet" href="../resources/css/master.css">
     <script src = "resources/js/password.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -61,21 +62,20 @@
     </div><!-- end top-nav -->
     <!-- ========== END HEADER ========== -->
     <div class="container main-container">
-      <div class="main">
+      <div class="main reset-page">
         <div class="user-title">
         <h1 class="fullname">Reset your password!</h1>
       </div>
       <form method="post" action="send_link.php">
         <p>Enter Email Address To Send Password Link</p>
-        <input type="text" name="email" required>
+        <input  type="text" name="email" placeholder="Your Email" required>
         <div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp"></div>
-        <input type="submit" name="submit_email"  required>
+        <input class="social-button" type="submit" name="submit_email"  required>
       </form>
 
       <a href="../login_pg/login"><input class="social-button go-back" type="button" value="Go Back"></a>
       </div>
     </div>
-
 
     <!-- ========== START FOOTER ========== -->
     <footer class="footer fixed">

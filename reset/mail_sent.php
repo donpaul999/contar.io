@@ -19,7 +19,7 @@
     <script src = "resources/js/password.js"></script>
 
   </head>
-  <body class="update-succes">
+  <body>
     <!-- ========== START HEADER ========== -->
     <div class="top-nav top-nav--burger-1 clearfix">
       <div class="logo">
@@ -61,15 +61,14 @@
     </div><!-- end top-nav -->
     <!-- ========== END HEADER ========== -->
     <div class="container main-container">
-      <div class="main">
+      <div class="main mail-sent">
         <div class="user-title">
-        <h1 class="fullname">Mail sent!</h1>
-      </div>
-      <a href="../index"><input class="social-button go-back" type="button" value="Go Back"></a>
-
+          <h1 class="fullname">Mail sent!</h1>
+        </div>
+        <p>If you did not received your mail, please check out your Spam box.</p>
+        <a href="../index"><input class="social-button go-back" type="button" value="Go Back"></a>
       </div>
     </div>
-
 
     <!-- ========== START FOOTER ========== -->
     <footer class="footer fixed">

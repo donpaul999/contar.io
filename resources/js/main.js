@@ -112,6 +112,36 @@ jQuery(document).ready(function(){
     $("#skype").toggleClass("active");
 
   });
+
+  $("#b_pinterest").click(function() {
+
+    $("#pinterest").toggleClass("active");
+
+  });
+
+  $("#b_twitch").click(function() {
+
+    $("#twitch").toggleClass("active");
+
+  });
+
+  $("#b_reddit").click(function() {
+
+    $("#reddit").toggleClass("active");
+
+  });
+
+  $("#b_tumblr").click(function() {
+
+    $("#tumblr").toggleClass("active");
+
+  });
+
+  $("#b_twitter").click(function() {
+
+    $("#twitter").toggleClass("active");
+
+  });
   //start sortable
   $( "#sortable" ).sortable();
   //end sortable

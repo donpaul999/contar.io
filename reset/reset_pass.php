@@ -30,48 +30,16 @@ if($_GET['key'] && $_GET['reset'])
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
       </head>
-      <body class="update-succes">
+      <body>
         <!-- ========== START HEADER ========== -->
         <div class="top-nav top-nav--burger-1 clearfix">
           <div class="logo">
               <a href="../contar"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
           </div><!-- end logo -->
-
-          <div class="menu-trigger">
-            <input type="checkbox">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div><!-- end menu-trigger -->
           <header class="header header--bgk">
             <div class="container">
               <div class="row">
                 <div class="col-sm-12">
-                  <nav class="full-menu">
-                    <ul class="srf-full-menu">
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">About</a></li>
-                      <li><a href="#">Blog</a></li>
-                      <li><a href="#">Services</a></li>
-                      <li><a href="#">Contact</a></li>
-                    </ul>
-                  </nav>
-                  <div class="info-area">
-                    <ul class="">
-                      <li>
-                        <a href="https://www.facebook.com/stefanut999" target='_blank'><i class="fab fa-facebook-f"></i></a>
-                      </li>
-                      <li>
-                        <a href="https://www.linkedin.com/in/paulstefancolta/" target='_blank'><i class="fab fa-linkedin-in"></i></i></a>
-                      </li>
-                      <li>
-                        <a href="https://www.instagram.com/paulstefancolta/" target='_blank'><i class="fab fa-instagram"></i></a>
-                      </li>
-                    </ul>
-                  </div><!-- end info-area -->
-                  <div class="mobile-info">
-                    <p>&copy; Paul Colta - Contar.io</p>
-                  </div><!-- end mobile-info -->
                 </div><!-- end col-sm-12 -->
               </div><!-- end row -->
             </div><!-- end container -->
@@ -79,22 +47,26 @@ if($_GET['key'] && $_GET['reset'])
         </div><!-- end top-nav -->
         <!-- ========== END HEADER ========== -->
         <div class="container main-container">
-          <div class="main">
+          <div class="main reset-page miscelaneous">
             <div class="user-title">
             <h1 class="fullname">Reset your password!</h1>
           </div>
           <form method="post" action="submit_new.php">
-          <input type="hidden" name="email" value="<?php echo $email;?>">
-          <input type="password" name='password' value="" pattern=".{8,}" title="Must contain at least 8 or more characters" id="password" placeholder="Password" required>
-          <div class="show-pass">
-            <input type="checkbox" onclick="showpass()"> <h5>Show Password</h5>
-          </div>
-          <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" oninput="check(this)" required maxlength="20">
-          <div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp" required></div>
-            <input type="submit" name="submit_password">
+            <input type="hidden" name="email" value="<?php echo $email;?>">
+            <input type="password" name='password' value="" pattern=".{8,}" title="Must contain at least 8 or more characters" id="password" placeholder="Password" required>
+            
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" oninput="check(this)" required maxlength="20">
+            <div class="show-pass">
+              <div class="show-pass__block">
+                <input type="checkbox" onclick="showpass()">
+                <h5>Show Password</h5><br>
+              </div>
+            </div>
+            <div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp" required></div>
+            <input class="social-button" type="submit" name="submit_password">
+             <a href="../login_pg/login"><input class="social-button go-back" type="button" value="Go Back"></a>
           </form>
-
-          <a href="../login_pg/login"><input class="social-button go-back" type="button" value="Go Back"></a>
+         
           </div>
         </div>
 

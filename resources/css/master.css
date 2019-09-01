@@ -12364,6 +12364,35 @@ p {
   text-align: center;
   width: 100%; }
 
+.mail-sent {
+  text-align: center; }
+  .mail-sent p {
+    margin: 20px 0 0 0; }
+
+.join {
+  float: right; }
+  .join .social-button {
+    border: 0;
+    top: 50%;
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0;
+    left: 90%; }
+    @media (max-width: 1366px) {
+      .join .social-button {
+        left: 86%; } }
+    @media (max-width: 800px) {
+      .join .social-button {
+        left: 79%; } }
+    @media (max-width: 600px) {
+      .join .social-button {
+        left: 63%; } }
+    .join .social-button:hover {
+      background-color: transparent;
+      color: #ff7777; }
+
 .copy-text {
   background-color: transparent;
   border: 1px solid #000;
@@ -12403,6 +12432,8 @@ p {
   background: transparent; }
   .update-icon i {
     font-size: 35px; }
+  .update-icon:focus, .update-icon:active {
+    outline: none; }
 
 .main > div {
   text-align: center; }
@@ -12459,6 +12490,170 @@ p {
 
 .home-container {
   margin-top: 30px; }
+  .home-container .main {
+    margin-top: 184px; }
+    .home-container .main .fullname {
+      margin-top: 30px; }
+  .home-container button:nth-child(1) {
+    -webkit-animation: fadein 2.5s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2.5s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2.5s;
+    /* Internet Explorer */
+    -o-animation: fadein 2.5s;
+    /* Opera < 12.1 */
+    animation: fadein 2.5s; }
+  .home-container button:nth-child(2) {
+    -webkit-animation: fadein 2.6s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2.6s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2.6s;
+    /* Internet Explorer */
+    -o-animation: fadein 2.6s;
+    /* Opera < 12.1 */
+    animation: fadein 2.6s; }
+  .home-container button:nth-child(3) {
+    -webkit-animation: fadein 2.65s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2.65s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2.65s;
+    /* Internet Explorer */
+    -o-animation: fadein 2.65s;
+    /* Opera < 12.1 */
+    animation: fadein 2.65s; }
+  .home-container button:nth-child(4) {
+    -webkit-animation: fadein 2.7s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2.7s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2.7s;
+    /* Internet Explorer */
+    -o-animation: fadein 2.7s;
+    /* Opera < 12.1 */
+    animation: fadein 2.7s; }
+  .home-container button:nth-child(5) {
+    -webkit-animation: fadein 2.75s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2.75s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2.75s;
+    /* Internet Explorer */
+    -o-animation: fadein 2.75s;
+    /* Opera < 12.1 */
+    animation: fadein 2.75s; }
+  .home-container button:nth-child(6) {
+    -webkit-animation: fadein 2.8s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2.8s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2.8s;
+    /* Internet Explorer */
+    -o-animation: fadein 2.8s;
+    /* Opera < 12.1 */
+    animation: fadein 2.8s; }
+  .home-container button:nth-child(7) {
+    -webkit-animation: fadein 2.85s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2.85s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2.85s;
+    /* Internet Explorer */
+    -o-animation: fadein 2.85s;
+    /* Opera < 12.1 */
+    animation: fadein 2.85s; }
+  .home-container button:nth-child(8) {
+    -webkit-animation: fadein 2.9s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2.9s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2.9s;
+    /* Internet Explorer */
+    -o-animation: fadein 2.9s;
+    /* Opera < 12.1 */
+    animation: fadein 2.9s; }
+  .home-container button:nth-child(9) {
+    -webkit-animation: fadein 2.95s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2.95s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2.95s;
+    /* Internet Explorer */
+    -o-animation: fadein 2.95s;
+    /* Opera < 12.1 */
+    animation: fadein 2.95s; }
+  .home-container button:nth-child(10) {
+    -webkit-animation: fadein 3s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 3s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 3s;
+    /* Internet Explorer */
+    -o-animation: fadein 3s;
+    /* Opera < 12.1 */
+    animation: fadein 3s; }
+  .home-container button:nth-child(11) {
+    -webkit-animation: fadein 3.25s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 3.25s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 3.25s;
+    /* Internet Explorer */
+    -o-animation: fadein 3.25s;
+    /* Opera < 12.1 */
+    animation: fadein 3.25s; }
+  .home-container button:nth-child(12) {
+    -webkit-animation: fadein 3.5s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 3.5s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 3.5s;
+    /* Internet Explorer */
+    -o-animation: fadein 3.5s;
+    /* Opera < 12.1 */
+    animation: fadein 3.5s; }
+  .home-container button:nth-child(13) {
+    -webkit-animation: fadein 3.75s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 3.75s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 3.75s;
+    /* Internet Explorer */
+    -o-animation: fadein 3.75s;
+    /* Opera < 12.1 */
+    animation: fadein 3.75s; }
+  .home-container button:nth-child(14) {
+    -webkit-animation: fadein 3.95s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 3.95s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 3.95s;
+    /* Internet Explorer */
+    -o-animation: fadein 3.95s;
+    /* Opera < 12.1 */
+    animation: fadein 3.95s; }
+  .home-container button:nth-child(15) {
+    -webkit-animation: fadein 4s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 4s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 4s;
+    /* Internet Explorer */
+    -o-animation: fadein 4s;
+    /* Opera < 12.1 */
+    animation: fadein 4s; }
+  .home-container button:nth-child(16) {
+    -webkit-animation: fadein 4.2s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 4.2s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 4.2s;
+    /* Internet Explorer */
+    -o-animation: fadein 4.2s;
+    /* Opera < 12.1 */
+    animation: fadein 4.2s; }
 
 .main-container {
   min-height: 100%; }
@@ -12499,7 +12694,7 @@ p {
 
 .main {
   overflow: auto;
-  padding-bottom: 100px; }
+  padding-bottom: 78px; }
 
 /***********************************************
 /* END GENERAL
@@ -12560,6 +12755,9 @@ p {
 ***********************************************/
 .home-container {
   text-align: center; }
+  @media (max-width: 600px) {
+    .home-container .main {
+      margin-top: 120px; } }
   .home-container a {
     display: block; }
   .home-container input {
@@ -12567,6 +12765,18 @@ p {
     cursor: pointer; }
   .home-container .user-title {
     margin-bottom: 40px; }
+  .home-container .home-icons {
+    display: none; }
+    @media (max-width: 800px) {
+      .home-container .home-icons {
+        margin-bottom: 40px;
+        display: block; }
+        .home-container .home-icons i {
+          font-size: 18px; } }
+
+@media (max-width: 800px) {
+  .home-icons-active {
+    display: none; } }
 
 /***********************************************
 /* END HOME CONTAINER
@@ -12578,7 +12788,7 @@ p {
   text-align: center;
   position: relative; }
   .contar-profile .main-container {
-    margin-top: 76.55px; }
+    margin-top: 50px; }
     .contar-profile .main-container .main {
       padding-top: 50px; }
   .contar-profile.active {
@@ -12591,7 +12801,7 @@ p {
   .user li #fb1 i:before, .user li #fb i:before {
     content: "" !important;
     color: #3578E5; }
-  .user li #ig i:before {
+  .user li #ig i:before, .user li #ig1 i:before {
     content: "\f16d";
     color: #C13584; }
   .user li #yt1 i:before, .user li #yt i:before {
@@ -12621,14 +12831,33 @@ p {
   .user li #paypal i:before, .user li #paypal1 i:before {
     color: #3b7bbf;
     content: "\f1ed"; }
+  .user li #pinterest i:before, .user li #pinterest1 i:before {
+    color: #bd081c;
+    content: "\f0d2"; }
+  .user li #twitch i:before, .user li #twitch1 i:before {
+    color: #6441a5;
+    content: "\f1e8"; }
+  .user li #reddit i:before, .user li #reddit1 i:before {
+    color: #ff4500;
+    content: "\f1a1"; }
+  .user li #tumblr i:before, .user li #tumblr1 i:before {
+    color: #35465c;
+    content: "\f173"; }
+  .user li #twitter i:before, .user li #twitter1 i:before {
+    color: #0099e5;
+    content: "\f099"; }
 
 .update-main #fb, .update-main #ig, .update-main #yt, .update-main #linked,
 .update-main #github, .update-main #spotify, .update-main #steam,
-.update-main #skype, .update-main #snap, .update-main #discord {
+.update-main #skype, .update-main #snap, .update-main #discord, .update-main #paypal,
+.update-main #twitter, .update-main #pinterest, .update-main #twitch,
+.update-main #reddit, .update-main #tumblr {
   display: none; }
   .update-main #fb.active, .update-main #ig.active, .update-main #yt.active, .update-main #linked.active,
   .update-main #github.active, .update-main #spotify.active, .update-main #steam.active,
-  .update-main #skype.active, .update-main #snap.active, .update-main #discord.active {
+  .update-main #skype.active, .update-main #snap.active, .update-main #discord.active, .update-main #paypal.active,
+  .update-main #twitter.active, .update-main #pinterest.active, .update-main #twitch.active,
+  .update-main #reddit.active, .update-main #tumblr.active {
     display: block; }
 
 .username {
@@ -12873,6 +13102,60 @@ p {
 /* END PROFILE-PAGE
 ***********************************************/
 /***********************************************
+/* START RESET
+***********************************************/
+.reset-page {
+  text-align: center; }
+  .reset-page .user-title {
+    margin-bottom: 50px; }
+  .reset-page form {
+    padding: 0 300px; }
+    .reset-page form p {
+      margin-bottom: 20px; }
+    .reset-page form h5 {
+      display: inline-block; }
+    .reset-page form input[type=password], .reset-page form input[type=text] {
+      border: 0;
+      color: #1f1f1f;
+      font-size: 14px;
+      font-weight: 400;
+      width: 100%;
+      padding: 0 0 3px;
+      margin-bottom: 35px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      -webkit-transition-delay: 0;
+      -o-transition-delay: 0;
+      transition-delay: 0;
+      -webkit-transition-property: all;
+      -webkit-transition-duration: 0.2s;
+      -webkit-transition-timing-function: ease-in-out;
+      -o-transition-property: all;
+      transition-property: all;
+      -o-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+      -o-transition-timing-function: ease-in-out;
+      transition-timing-function: ease-in-out;
+      background-color: transparent; }
+    .reset-page form .show-pass {
+      display: block;
+      margin-bottom: 20px; }
+    @media (max-width: 800px) {
+      .reset-page form {
+        padding: 0; } }
+  .reset-page .g-recaptcha {
+    margin-top: 20px; }
+  .reset-page .social-button {
+    margin-top: 0;
+    width: initial; }
+    .reset-page .social-button.go-back {
+      margin-top: 0; }
+  .reset-page.miscelaneous .g-recaptcha {
+    margin-bottom: 50px; }
+
+/***********************************************
+/* END RESET
+***********************************************/
+/***********************************************
 /* START LOGIN-CONTAINER
 ***********************************************/
 .form-wrap {
@@ -12946,6 +13229,7 @@ p {
 .footer {
   background: #f0f3f3;
   width: 100%;
+  height: 78px;
   padding: 10px 0;
   clear: both;
   position: relative; }
@@ -12994,7 +13278,7 @@ p {
 /* END FOOTER
 ***********************************************/
 /***********************************************
-/* START
+/* START  
 ***********************************************/
 /***********************************************
 /* START HEADER
@@ -13018,11 +13302,13 @@ p {
       .header .username > ul > li {
         display: none; }
     .header .username .sub-menu {
-      display: block;
+      display: none;
       visibility: visible;
       opacity: 1; }
       .header .username .sub-menu li:before {
         content: none; }
+  .header.active .sub-menu {
+    display: block; }
 
 .top-nav.active {
   height: 76.55px;
@@ -13252,7 +13538,7 @@ p {
         font-size: 1.2rem; } }
 
 /***********************************************
-/* END HEADER-BURGER-1
+/* END HEADER-BURGER-1  
 ***********************************************/
 /***********************************************
 /* START  HEADER-FULLSCREEN
@@ -13577,7 +13863,7 @@ p {
   .isotope-item {
     width: 100% !important; } }
 
-/*
+/* 
  *	Owl Carousel - Animate Plugin
  */
 .owl-carousel .animated {
@@ -13608,7 +13894,7 @@ p {
   100% {
     opacity: 0; } }
 
-/*
+/* 
  * 	Owl Carousel - Auto Height Plugin
  */
 .owl-height {
@@ -13618,7 +13904,7 @@ p {
   -o-transition: height 500ms ease-in-out;
   transition: height 500ms ease-in-out; }
 
-/*
+/* 
  *	Core Owl Carousel CSS File
  */
 .owl-carousel {
@@ -13711,7 +13997,7 @@ p {
 .no-js .owl-carousel {
   display: block; }
 
-/*
+/* 
  * 	Owl Carousel - Lazy Load Plugin
  */
 .owl-carousel .owl-item .owl-lazy {
@@ -13726,7 +14012,7 @@ p {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
 
-/*
+/* 
  * 	Owl Carousel - Video Plugin
  */
 .owl-carousel .owl-video-wrapper {
@@ -13786,38 +14072,15 @@ p {
 /* START HEADER
 ***********************************************/
 @media (max-width: 800px) {
-  .header {
-    opacity: 0;
-    visibility: hidden;
-    height: 100%;
-    width: 100%;
-    -webkit-transition-delay: 0;
-    -o-transition-delay: 0;
-    transition-delay: 0;
-    -webkit-transition-property: all;
-    -webkit-transition-duration: 0.2s;
-    -webkit-transition-timing-function: ease-in-out;
-    -o-transition-property: all;
-    transition-property: all;
-    -o-transition-duration: 0.2s;
-    transition-duration: 0.2s;
-    -o-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out; }
-    .header .col-sm-12 {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -moz-transform: translate(-50%, -50%);
-      -o-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%); }
-    .header.active {
-      opacity: 1;
-      visibility: visible;
-      background: #f9fbfc; }
-  .username {
-    display: none; }
+  .header .col-sm-12 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
   .update-icon {
     margin-right: 10px;
     margin-bottom: 20px; }
@@ -13894,8 +14157,6 @@ p {
       opacity: 1;
       visibility: visible;
       background: #f9fbfc; }
-  .logo {
-    display: none !important; }
   .full-menu {
     margin-bottom: 20px; }
   .full-menu, .info-area, .mobile-info {
@@ -13933,11 +14194,35 @@ p {
     margin-bottom: 0; } }
 
 /***********************************************
-/* END LANSCAPE
+/* END LANSCAPE 
 ***********************************************/
 /***********************************************
 /* START CONTAR
 ***********************************************/
+@media (max-width: 1030px) {
+  .header {
+    opacity: 0;
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    -webkit-transition-delay: 0;
+    -o-transition-delay: 0;
+    transition-delay: 0;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-property: all;
+    transition-property: all;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out; }
+  .active {
+    opacity: 1;
+    visibility: visible; }
+  .username {
+    display: none; } }
+
 @media (max-width: 800px) {
   .user-title {
     margin-top: 0; }
@@ -13966,9 +14251,6 @@ p {
     margin-top: 50px; }
   .form-wrap {
     padding: 0 20px; }
-    .form-wrap .social-button {
-      padding: initial !important;
-      width: 100% !important; }
     .form-wrap h5 {
       font-size: 12px; }
     .form-wrap input {
@@ -13981,7 +14263,7 @@ p {
       font-size: 14px; } }
 
 /***********************************************
-/* END CONTAR
+/* END CONTAR  
 ***********************************************/
 .fancybox-wrap,
 .fancybox-skin,
@@ -14298,7 +14580,7 @@ a.lightbox.hidden {
     font-size: 24px; }
 
 /***********************************************
-/* START C-HERO-1
+/* START C-HERO-1  
 ***********************************************/
 /*! jQuery UI - v1.12.1 - 2019-08-11
 * http://jqueryui.com

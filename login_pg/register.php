@@ -80,7 +80,6 @@ $ok = 0;
                     <input type="checkbox" onclick="showpass()">
                     <h5>Show Password</h5><br>
                   </div>
-
                 </div>
                 <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" oninput="check(this)" required maxlength="20">
                                   <div class="show-pass__block">

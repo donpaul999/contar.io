@@ -22,7 +22,7 @@
 		}
 
 		.sub-menu {
-			display: block;
+			display: none;
 			visibility: visible;
 			opacity: 1;
 			li {
@@ -30,6 +30,12 @@
 					content: none;
 				}
 			}
+		}
+	}
+
+	&.active {
+		.sub-menu {
+			display: block;
 		}
 	}
 }

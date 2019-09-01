@@ -50,8 +50,7 @@ $fn = mysqli_fetch_array($var);
         echo  '</div>';
       }
       else {
-        echo "<a href='../index'><input type = 'button' id='back' value='Join here'></a>";
-
+        echo "<a class='join' href='../index'><input class='social-button' type = 'button' id='back' value='Join here'></a>";
       }
       ?>
       <?php
@@ -94,6 +93,9 @@ $fn = mysqli_fetch_array($var);
         <div class="main">
           <div class="col-sm-12">
             <?php
+              // if ($ok !== 1) {
+              //   echo "<a class='join' href='../index'><input class='social-button' type = 'button' id='back' value='Join here'></a>";
+              // }
               require 'profile_code.php';
               function link_1($var)
               {
@@ -126,6 +128,10 @@ $fn = mysqli_fetch_array($var);
                   {
                     buttonorlist($row['instagram'], "ig", "Instagram", "ig1");
                   }
+                  if(!empty($row['twitter']) && !ctype_space($row['twitter']))
+                  {
+                    buttonorlist($row['twitter'], "twitter", "Twitter","twitter1");
+                  }
                   if(!empty($row['youtube']) && !ctype_space($row['youtube']))
                   {
                     buttonorlist($row['youtube'], "yt", "YouTube", "yt1");
@@ -134,6 +140,18 @@ $fn = mysqli_fetch_array($var);
                    {
                      buttonorlist($row['linkedin'], "linkedin", "LinkedIn", "linkedin1");
                    }
+                  if(!empty($row['reddit']) && !ctype_space($row['reddit']))
+                  {
+                    buttonorlist($row['reddit'], "reddit", "Reddit","reddit1");
+                  }
+                  if(!empty($row['pinterest']) && !ctype_space($row['pinterest']))
+                  {
+                    buttonorlist($row['pinterest'], "pinterest", "Pinterest","pinterest1");
+                  }
+                  if(!empty($row['tumblr']) && !ctype_space($row['tumblr']))
+                  {
+                    buttonorlist($row['tumblr'], "tumblr", "Tumblr","tumblr1");
+                  }
                   if(!empty($row['github']) && !ctype_space($row['github']))
                   {
                     buttonorlist($row['github'], "github", "GitHub","github1");
@@ -145,10 +163,6 @@ $fn = mysqli_fetch_array($var);
                   if(!empty($row['spotify']) && !ctype_space($row['spotify']))
                   {
                     buttonorlist($row['spotify'], "spotify", "Spotify","spotify1");
-                  }
-                  if(!empty($row['steam']) && !ctype_space($row['steam']))
-                  {
-                    buttonorlist($row['steam'], "steam", "Steam","steam1");
                   }
                  if(!empty($row['snapchat']) && !ctype_space($row['snapchat']))
                  {
@@ -162,21 +176,16 @@ $fn = mysqli_fetch_array($var);
                 {
                   buttonorlist($row['skype'], "skype", "Skype", "skype1");
                 }
+                if(!empty($row['steam']) && !ctype_space($row['steam']))
+                {
+                  buttonorlist($row['steam'], "steam", "Steam","steam1");
+                }
+                if(!empty($row['twitch']) && !ctype_space($row['twitch']))
+                {
+                  buttonorlist($row['twitch'], "twitch", "Twitch","twitch1");
+                }  
               echo  '</ul>';
               echo  '</div>';
-              // if($ok == 1)
-              // {
-              //   echo '<div class="username">';
-              //   echo '<ul>';
-              //   echo '<li><input type = "button" value='.$usr.'></li>';
-              //   echo '<ul class="sub-menu">';
-              //     echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
-              //     echo "<li><a href = '../update_pg/update'><input type = 'button' value='Update your profile'></a></li>";
-              //     echo "<li><a href='../update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
-              //   echo '</ul>';
-              //   echo  '</ul>';
-              //   echo  '</div>';
-              // }
               ?>
           </div><!-- end col-sm-12 -->
         </div><!-- end row -->
