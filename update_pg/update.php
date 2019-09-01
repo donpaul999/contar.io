@@ -24,40 +24,56 @@ $usr = $_SESSION['username'];
   <body class="update-profile">
 
   <!-- ========== START HEADER ========== -->
-  <div class="top-nav top-nav--burger-1 clearfix">
-    <div class="logo">
-        <a href="../contar"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
-    </div><!-- end logo -->
-    
-    <div class="menu-trigger">
-      <input type="checkbox">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div><!-- end menu-trigger -->
-    <header class="header header--bgk">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <?php
-              echo '<div class="username">';
-              echo '<ul>';
-              echo '<li><input type = "button" value='.$usr.'></li>';
-              echo '<ul class="sub-menu">';
-                echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
-                echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
-                echo "<li><a href='../update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
-              echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
-              echo '</ul>';
-              echo  '</ul>';
-              echo  '</div>';
-            ?>
-          </div><!-- end col-sm-12 -->
-        </div><!-- end row -->
-      </div><!-- end container -->
-    </header>
-  </div><!-- end top-nav -->
-  <!-- ========== END HEADER ========== -->
+    <div class="top-nav top-nav--burger-1 clearfix">
+      <div class="logo">
+          <a href="contar"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
+      </div><!-- end logo -->
+      <?php
+        echo '<div class="username">';
+        echo '<ul>';
+        echo '<li><input type = "button" value='.$usr.'></li>';
+        echo '<ul class="sub-menu">';
+          echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
+          echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
+          echo "<li><a href='update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
+          echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+        echo '</ul>';
+        echo  '</ul>';
+        echo  '</div>';
+        ?>
+      <?php
+      
+        echo'<div class="menu-trigger">';
+         echo' <input type="checkbox">';
+          echo'<span></span>';
+          echo'<span></span>';
+          echo'<span></span>';
+        echo'</div><!-- end menu-trigger -->';
+      
+      ?>
+      <header class="header header--bgk">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <?php
+                echo '<div class="username">';
+                echo '<ul>';
+                echo '<li><input type = "button" value='.$usr.'></li>';
+                echo '<ul class="sub-menu">';
+                  echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
+                  echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
+                  echo "<li><a href='update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
+                  echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+                echo '</ul>';
+                echo  '</ul>';
+                echo  '</div>';
+              ?>
+            </div><!-- end col-sm-12 -->
+          </div><!-- end row -->
+        </div><!-- end container -->
+      </header>
+    </div><!-- end top-nav -->
+    <!-- ========== END HEADER ========== -->
 
   <!-- ========== START UPDATE CONTAINER ========== -->
   <div class="container main-container">

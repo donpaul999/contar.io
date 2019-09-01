@@ -28,7 +28,7 @@ if(isset($_SESSION['loggedin']))
     <script src = "../resources/js/password.js"></script>
 
   </head>
-  <body class="update-succes">
+  <body>
     <!-- ========== START HEADER ========== -->
     <div class="top-nav top-nav--burger-1 clearfix">
       <div class="logo">
@@ -42,7 +42,7 @@ if(isset($_SESSION['loggedin']))
       echo '<ul class="sub-menu">';
         echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
         echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
-        echo "<li><a href='../update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
+        echo "<li><a href='update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
 echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
       echo '</ul>';
       echo  '</ul>';
@@ -68,10 +68,10 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
                 echo '<ul>';
                 echo '<li><input type = "button" value='.$username.'></li>';
                 echo '<ul class="sub-menu">';
-                  echo "<li><a href='contar'><input type = 'button' id='back' value='Home'></a></li>";
-                  echo "<li><a href = 'update_pg/update'><input type = 'button' value='Update your profile'></a></li>";
-                  echo "<li><a href='update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
-                  echo "<li><a href='login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+                  echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
+                  echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
+                  echo "<li><a href='update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
+                  echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
                 echo '</ul>';
                 echo  '</ul>';
                 echo  '</div>';
@@ -85,14 +85,14 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
 
     <div class="container main-container">
       <div class="main">
-        <div class="user-title">
+        <div class="user-title" style="margin-bottom: 30px;">
           <h1 class="fullname">Password changed succesful!</h1>
         </div>
         <?php
         if($ok == 1)
         echo '<a href ="../p/'.$username.'"><input class="social-button" type = "button" value="See your profile"></a>';
         ?>
-        <a href="../contar"><input class="social-button go-back" type="button" value="Go Back"></a>
+        <a href="../contar"><input class="social-button" type="button" value="Go Back"></a>
       </div>
     </div>
 

@@ -160,6 +160,10 @@ jQuery(document).ready(function(){
     $(this).toggleClass('active');
   });
 
+  $('.menu-trigger').click(function(){
+    $(this).toggleClass('active');
+  });
+
   // $("button").click(function (e) {
   //   e.stopPropagation();
   //   $('.copy-text').addClass('active');

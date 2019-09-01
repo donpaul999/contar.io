@@ -13278,7 +13278,7 @@ p {
 /* END FOOTER
 ***********************************************/
 /***********************************************
-/* START
+/* START  
 ***********************************************/
 /***********************************************
 /* START HEADER
@@ -13415,21 +13415,21 @@ p {
     opacity: 0;
     z-index: 2;
     -webkit-touch-callout: none; }
-    .menu-trigger input:checked ~ span {
-      opacity: 1;
-      -webkit-transform: rotate(45deg) translate(-2px, -18px);
-      -ms-transform: rotate(45deg) translate(-2px, -18px);
-      transform: rotate(45deg) translate(-2px, -18px);
-      background: #333; }
-      .menu-trigger input:checked ~ span:nth-last-child(3) {
-        opacity: 0;
-        -webkit-transform: rotate(0deg) scale(0.2, 0.2);
-        -ms-transform: rotate(0deg) scale(0.2, 0.2);
-        transform: rotate(0deg) scale(0.2, 0.2); }
-      .menu-trigger input:checked ~ span:nth-last-child(2) {
-        -webkit-transform: rotate(-45deg) translate(0, 17px);
-        -ms-transform: rotate(-45deg) translate(0, 17px);
-        transform: rotate(-45deg) translate(0, 17px); }
+  .menu-trigger.active input:checked ~ span {
+    opacity: 1;
+    -webkit-transform: rotate(45deg) translate(-2px, -18px);
+    -ms-transform: rotate(45deg) translate(-2px, -18px);
+    transform: rotate(45deg) translate(-2px, -18px);
+    background: #333; }
+    .menu-trigger.active input:checked ~ span:nth-last-child(3) {
+      opacity: 0;
+      -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+      -ms-transform: rotate(0deg) scale(0.2, 0.2);
+      transform: rotate(0deg) scale(0.2, 0.2); }
+    .menu-trigger.active input:checked ~ span:nth-last-child(2) {
+      -webkit-transform: rotate(-45deg) translate(0, 17px);
+      -ms-transform: rotate(-45deg) translate(0, 17px);
+      transform: rotate(-45deg) translate(0, 17px); }
   .menu-trigger span {
     display: block;
     width: 33px;
@@ -13538,7 +13538,7 @@ p {
         font-size: 1.2rem; } }
 
 /***********************************************
-/* END HEADER-BURGER-1
+/* END HEADER-BURGER-1  
 ***********************************************/
 /***********************************************
 /* START  HEADER-FULLSCREEN
@@ -13863,7 +13863,7 @@ p {
   .isotope-item {
     width: 100% !important; } }
 
-/*
+/* 
  *	Owl Carousel - Animate Plugin
  */
 .owl-carousel .animated {
@@ -13894,7 +13894,7 @@ p {
   100% {
     opacity: 0; } }
 
-/*
+/* 
  * 	Owl Carousel - Auto Height Plugin
  */
 .owl-height {
@@ -13904,7 +13904,7 @@ p {
   -o-transition: height 500ms ease-in-out;
   transition: height 500ms ease-in-out; }
 
-/*
+/* 
  *	Core Owl Carousel CSS File
  */
 .owl-carousel {
@@ -13997,7 +13997,7 @@ p {
 .no-js .owl-carousel {
   display: block; }
 
-/*
+/* 
  * 	Owl Carousel - Lazy Load Plugin
  */
 .owl-carousel .owl-item .owl-lazy {
@@ -14012,7 +14012,7 @@ p {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
 
-/*
+/* 
  * 	Owl Carousel - Video Plugin
  */
 .owl-carousel .owl-video-wrapper {
@@ -14194,7 +14194,7 @@ p {
     margin-bottom: 0; } }
 
 /***********************************************
-/* END LANSCAPE
+/* END LANSCAPE 
 ***********************************************/
 /***********************************************
 /* START CONTAR
@@ -14263,7 +14263,7 @@ p {
       font-size: 14px; } }
 
 /***********************************************
-/* END CONTAR
+/* END CONTAR  
 ***********************************************/
 .fancybox-wrap,
 .fancybox-skin,
@@ -14580,7 +14580,7 @@ a.lightbox.hidden {
     font-size: 24px; }
 
 /***********************************************
-/* START C-HERO-1
+/* START C-HERO-1  
 ***********************************************/
 /*! jQuery UI - v1.12.1 - 2019-08-11
 * http://jqueryui.com
@@ -16068,7 +16068,3 @@ body .ui-tooltip {
 .ui-widget-shadow {
   -webkit-box-shadow: 0 0 5px #666;
   box-shadow: 0 0 5px #666; }
-
-.logo a img {
-      max-height: 76.55px!important;
-  }

@@ -140,21 +140,25 @@
 	    opacity: 0; 
 	    z-index: 2; 
 	    -webkit-touch-callout: none;
+	}
 
-	    &:checked ~ span {
-	    	opacity: 1;
-			transform: rotate(45deg) translate(-2px, -18px);
-			background: #333;
+	&.active {
+		input {
+			&:checked ~ span {
+		    	opacity: 1;
+				transform: rotate(45deg) translate(-2px, -18px);
+				background: #333;
 
-			&:nth-last-child(3) {
-				opacity: 0;
-  				transform: rotate(0deg) scale(0.2, 0.2);
-			}
+				&:nth-last-child(3) {
+					opacity: 0;
+	  				transform: rotate(0deg) scale(0.2, 0.2);
+				}
 
-			&:nth-last-child(2) {
-				transform: rotate(-45deg) translate(0, 17px);
-			}
-	    }
+				&:nth-last-child(2) {
+					transform: rotate(-45deg) translate(0, 17px);
+				}
+		    }
+		}
 	}
 	span {
 		display: block;
