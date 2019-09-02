@@ -47,6 +47,10 @@ function upd($link, $site, &$ok, $user, $conectare)
    upd($_POST['pinterest'], "pinterest", $ok, $user, $conectare);
  }
 
+ if(!empty($_POST['patreon']) && !ctype_space($_POST['patreon'])){
+   upd($_POST['patreon'], "patreon", $ok, $user, $conectare);
+ }
+
  if(!empty($_POST['twitter']) && !ctype_space($_POST['twitter'])){
    upd($_POST['twitter'], "twitter", $ok, $user, $conectare);
  }

@@ -42,14 +42,14 @@ $usr = $_SESSION['username'];
         echo  '</div>';
         ?>
       <?php
-      
+
         echo'<div class="menu-trigger">';
          echo' <input type="checkbox">';
           echo'<span></span>';
           echo'<span></span>';
           echo'<span></span>';
         echo'</div><!-- end menu-trigger -->';
-      
+
       ?>
       <header class="header header--bgk">
         <div class="container">
@@ -87,6 +87,7 @@ $usr = $_SESSION['username'];
         <button class="update-icon" id='b_reddit'><i style="color: #ff4500;" class="fab fa-reddit"></i></button>
         <button class="update-icon" id='b_pinterest'><i style="color: #bd081c;" class="fab fa-pinterest"></i></button>
         <button class="update-icon" id='b_tumblr'><i style="color: #35465c;" class="fab fa-tumblr"></i></button>
+        <button class="update-icon" id='b_patreon'><i style="color: #35465c;" class="fab fa-patreon"></i></button>
         <button class="update-icon" id='b_github'><i style="color: #333;" class="fab fa-github"></i></button>
         <button class="update-icon" id='b_paypal'><i style="color: #3578E5;" class="fab fa-paypal"></i></button>
         <button class="update-icon" id='b_spotify'><i style="color: #1DB954;" class="fab fa-spotify"></i></button>
@@ -109,6 +110,7 @@ $usr = $_SESSION['username'];
               <input type="text" name="reddit" id='reddit' placeholder="Your Reddit profile or username: <?php echo $row['reddit']; ?>" maxlength="200">
               <input type="text" name="pinterest" id='pinterest' placeholder="Your Pinterest profile or username: <?php echo $row['pinterest']; ?>" maxlength="200">
               <input type="text" name="tumblr" id='tumblr' placeholder="Your Tumblr profile or username: <?php echo $row['tumblr']; ?>" maxlength="200">
+              <input type="text" name="patreon" id='patreon' placeholder="Your Patreon link: <?php echo $row['patreon']; ?>" maxlength="200">
               <input type="text" name="github" id='github' placeholder="Your GitHub profile: <?php echo $row['github']; ?>" maxlength="200">
               <input type="text" name="paypal" id='paypal' placeholder="Your PayPal.me link : <?php echo $row['paypal']; ?>" maxlength="200">
               <input type="text" name="spotify" id='spotify' placeholder="Your Spotify profile: <?php echo $row['spotify']; ?>" maxlength="200">

@@ -64,6 +64,7 @@ $ok = 0;
           <button class="update-icon" id='b_reddit'><i style="color: #ff4500;" class="fab fa-reddit"></i></button>
           <button class="update-icon" id='b_pinterest'><i style="color: #bd081c;" class="fab fa-pinterest"></i></button>
           <button class="update-icon" id='b_tumblr'><i style="color: #35465c;" class="fab fa-tumblr"></i></button>
+          <button class="update-icon" id='b_patreon'><i style="color: #35465c;" class="fab fa-patreon"></i></button>
           <button class="update-icon" id='b_github'><i style="color: #333;" class="fab fa-github"></i></button>
           <button class="update-icon" id='b_paypal'><i style="color: #3578E5;" class="fab fa-paypal"></i></button>
           <button class="update-icon" id='b_spotify'><i style="color: #1DB954;" class="fab fa-spotify"></i></button>
@@ -85,6 +86,7 @@ $ok = 0;
           <button class="update-icon" id='b_reddit'><i style="color: #ff4500;" class="fab fa-reddit"></i></button>
           <button class="update-icon" id='b_pinterest'><i style="color: #bd081c;" class="fab fa-pinterest"></i></button>
           <button class="update-icon" id='b_tumblr'><i style="color: #35465c;" class="fab fa-tumblr"></i></button>
+          <button class="update-icon" id='b_patreon'><i style="color: #35465c;" class="fab fa-patreon"></i></button>
           <button class="update-icon" id='b_github'><i style="color: #333;" class="fab fa-github"></i></button>
           <button class="update-icon" id='b_paypal'><i style="color: #3578E5;" class="fab fa-paypal"></i></button>
           <button class="update-icon" id='b_spotify'><i style="color: #1DB954;" class="fab fa-spotify"></i></button>

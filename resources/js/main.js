@@ -82,7 +82,7 @@ jQuery(document).ready(function(){
     $("#paypal").toggleClass("active");
 
   });
-  
+
   $("#b_spotify").click(function() {
 
     $("#spotify").toggleClass("active");
@@ -116,6 +116,12 @@ jQuery(document).ready(function(){
   $("#b_pinterest").click(function() {
 
     $("#pinterest").toggleClass("active");
+
+  });
+
+  $("#b_patreon").click(function() {
+
+    $("#patreon").toggleClass("active");
 
   });
 
@@ -225,7 +231,7 @@ function myFunction() {
   copyText.select();
   copyText.setSelectionRange(0, 99999);
   document.execCommand("copy");
-  
+
   var tooltip = document.getElementById("myTooltip");
   tooltip.innerHTML = "Copied: " + copyText.value;
 }

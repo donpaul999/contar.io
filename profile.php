@@ -153,6 +153,10 @@ $fn = mysqli_fetch_array($var);
                   {
                     buttonorlist($row['tumblr'], "tumblr", "Tumblr","tumblr1");
                   }
+                  if(!empty($row['patreon']) && !ctype_space($row['patreon']))
+                  {
+                    buttonorlist($row['patreon'], "patreon", "Patreon","patreon1");
+                  }
                   if(!empty($row['github']) && !ctype_space($row['github']))
                   {
                     buttonorlist($row['github'], "github", "GitHub","github1");
