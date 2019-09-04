@@ -98,23 +98,23 @@ $usr = $_SESSION['username'];
             <?php
             require '../profile_code.php';
             ?>
-              <input type="text" name="facebook" id='fb' placeholder="Your Facebook profile: <?php echo $row['facebook']; ?>" maxlength="200">
-              <input type="text" name="instagram" id='ig' placeholder="Your Instagram profile or username: <?php echo $row['instagram']; ?>" maxlength="200">
-              <input type="text" name="twitter" id='twitter' placeholder="Your Twitter profile or username: <?php echo $row['twitter']; ?>" maxlength="200">
-              <input type="text" name="youtube" id='yt' placeholder="Your YouTube channel: <?php echo $row['youtube']; ?>" maxlength="200">
-              <input type="text" name="linkedin" id='linked' placeholder="Your LinkedIn profile: <?php echo $row['linkedin']; ?>" maxlength="200">
-              <input type="text" name="reddit" id='reddit' placeholder="Your Reddit profile or username: <?php echo $row['reddit']; ?>" maxlength="200">
-              <input type="text" name="pinterest" id='pinterest' placeholder="Your Pinterest profile or username: <?php echo $row['pinterest']; ?>" maxlength="200">
-              <input type="text" name="tumblr" id='tumblr' placeholder="Your Tumblr profile or username: <?php echo $row['tumblr']; ?>" maxlength="200">
-              <input type="text" name="patreon" id='patreon' placeholder="Your Patreon link: <?php echo $row['patreon']; ?>" maxlength="200">
-              <input type="text" name="github" id='github' placeholder="Your GitHub profile: <?php echo $row['github']; ?>" maxlength="200">
-              <input type="text" name="paypal" id='paypal' placeholder="Your PayPal.me link : <?php echo $row['paypal']; ?>" maxlength="200">
-              <input type="text" name="spotify" id='spotify' placeholder="Your Spotify profile: <?php echo $row['spotify']; ?>" maxlength="200">
-              <input type="text" name="snapchat" id='snap' placeholder="Your Snapchat username: <?php echo $row['snapchat']; ?>" maxlength="200">
-              <input type="text" name="discord" id='discord' placeholder="Your Discord username + tag: <?php echo $row['discord']; ?>" maxlength="200">
-              <input type="text" name="skype" id='skype' placeholder="Your Skype username: <?php echo $row['skype']; ?>" maxlength="200">
-              <input type="text" name="steam" id='steam' placeholder="Your Steam profile: <?php echo $row['steam']; ?>" maxlength="200">
-              <input type="text" name="twitch" id='twitch' placeholder="Your Twitch profile: <?php echo $row['twitch']; ?>" maxlength="200">
+              <input type="text" name="facebook" id='fb' onclick="addtxt('fb','https://www.facebook.com/', '<?php echo $row['facebook']; ?>')" placeholder="Your Facebook profile: <?php echo $row['facebook']; ?>" maxlength="200">
+              <input type="text" name="instagram" id='ig' onclick="addtxt('ig','https://www.instagram.com/', '<?php echo $row['instagram']; ?>')" placeholder="Your Instagram profile or username: <?php echo $row['instagram']; ?>" maxlength="200">
+              <input type="text" name="twitter" id='twitter' onclick="addtxt('twitter','https://twitter.com/', '<?php echo $row['twitter']; ?>')" placeholder="Your Twitter profile or username: <?php echo $row['twitter']; ?>" maxlength="200">
+              <input type="text" name="youtube" id='yt' onclick="addtxt('yt','https://www.youtube.com/c/', '<?php echo $row['youtube']; ?>')" placeholder="Your YouTube channel: <?php echo $row['youtube']; ?>" maxlength="200">
+              <input type="text" name="linkedin" id='linked' onclick="addtxt('linked','https://www.linkedin.com/in/', '<?php echo $row['linkedin']; ?>')" placeholder="Your LinkedIn profile: <?php echo $row['linkedin']; ?>" maxlength="200">
+              <input type="text" name="reddit" id='reddit' onclick="addtxt('reddit','https://www.reddit.com/', '<?php echo $row['reddit']; ?>')" placeholder="Your Reddit profile or username: <?php echo $row['reddit']; ?>" maxlength="200">
+              <input type="text" name="pinterest" id='pinterest' onclick="addtxt('pinterest','https://www.pinterest.com/', '<?php echo $row['pinterest']; ?>')" placeholder="Your Pinterest profile or username: <?php echo $row['pinterest']; ?>" maxlength="200">
+              <input type="text" name="tumblr" id='tumblr' onclick="addtxt('tumblr','https://www.tumblr.com/blog/', '<?php echo $row['tumblr']; ?>')" placeholder="Your Tumblr profile or username: <?php echo $row['tumblr']; ?>" maxlength="200">
+              <input type="text" name="patreon" id='patreon' onclick="addtxt('patreon','https://www.patreon.com/', '<?php echo $row['patreon']; ?>')" placeholder="Your Patreon link: <?php echo $row['patreon']; ?>" maxlength="200">
+              <input type="text" name="github" id='github' onclick="addtxt('github','https://github.com/', '<?php echo $row['github']; ?>')"placeholder="Your GitHub profile: <?php echo $row['github']; ?>" maxlength="200">
+              <input type="text" name="paypal" id='paypal' onclick="addtxt('paypal','https://www.paypal.me', '<?php echo $row['paypal']; ?>')" placeholder="Your PayPal.me link : <?php echo $row['paypal']; ?>" maxlength="200">
+              <input type="text" name="spotify" id='spotify' onclick="addtxt('spotify','https://open.spotify.com/user/', '<?php echo $row['spotify']; ?>')" placeholder="Your Spotify profile: <?php echo $row['spotify']; ?>" maxlength="200">
+              <input type="text" name="snapchat" id='snap' onclick="addtxt('snap','', '<?php echo $row['snapchat']; ?>')" placeholder="Your Snapchat username: <?php echo $row['snapchat']; ?>" maxlength="200">
+              <input type="text" name="discord" id='discord' onclick="addtxt('discord','', '<?php echo $row['discord']; ?>')" placeholder="Your Discord username + tag: <?php echo $row['discord']; ?>" maxlength="200">
+              <input type="text" name="skype" id='skype' onclick="addtxt('skype','', '<?php echo $row['skype']; ?>')" placeholder="Your Skype username: <?php echo $row['skype']; ?>" maxlength="200">
+              <input type="text" name="steam" id='steam' onclick="addtxt('steam','', '<?php echo $row['steam']; ?>')" placeholder="Your Steam profile: <?php echo $row['steam']; ?>" maxlength="200">
+              <input type="text" name="twitch" id='twitch' onclick="addtxt('twitch','https://www.twitch.tv/', '<?php echo $row['twitch']; ?>')" placeholder="Your Twitch profile: <?php echo $row['twitch']; ?>" maxlength="200">
               <!-- start update -->
               <input type="submit" class="social-button" id="update" name="update" value="Update">
               <!-- end update -->
@@ -152,8 +152,17 @@ $usr = $_SESSION['username'];
   <script src="../resources/js/bootstrap.min.js"></script>
   <script src="../resources/js/plugins.js"></script>
   <script src="../resources/js/main.js"></script>
+  <script>
+  function addtxt(id, text, text2){
+    var elem = document.getElementById(id);
+    if(text2)
+      elem.value = text2;
+    else
+      elem.value = text;
+  }
 
+  </script>
   <!-- ========== END JS ========== -->
- 
+
   </body>
 </html>
