@@ -149,7 +149,7 @@
    <!-- ========== START HEADER ========== -->
     <div class="top-nav top-nav--burger-1 clearfix">
       <div class="logo">
-          <a href="register"><img src="resources/img/logo_png.png" alt="Contar-Logo"></a>
+          <a href="index"><img src="resources/img/logo_png.png" alt="Contar-Logo"></a>
       </div><!-- end logo -->
    </div>
 
