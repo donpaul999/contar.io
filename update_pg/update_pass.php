@@ -9,7 +9,7 @@ $username = $_SESSION['username'];
 if(!empty($_POST['change_pass']))
   {
     if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
-      $secretKey = '6Lexj7MUAAAAACPzsQJE1Myokq0wIqSeDtODI7Oo
+      $secretKey = '6Le2pbYUAAAAAN6emlMyNV1kXDsiSOfArEDHZyei
 ';
       $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']);
       $responseData = json_decode($verifyResponse);
@@ -56,20 +56,18 @@ if(!empty($_POST['change_pass']))
           <a href="../contar"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
       </div><!-- end logo -->
       <?php
-      if($ok == 1){
-      echo '<div class="username">';
-      echo '<ul>';
-      echo '<li><input type = "button" value='.$username.'></li>';
-      echo '<ul class="sub-menu">';
-        echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
-        echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
-        echo "<li><a href='update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
-echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
-      echo '</ul>';
-      echo  '</ul>';
-      echo  '</div>';
-    }
-      ?>
+        echo '<div class="username">';
+        echo '<ul>';
+        echo '<li><input type = "button" value='.$username.'></li>';
+        echo '<ul class="sub-menu">';
+          echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
+          echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
+          echo "<li><a href='update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
+          echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+        echo '</ul>';
+        echo  '</ul>';
+        echo  '</div>';
+        ?>
       <?php
 
         echo'<div class="menu-trigger">';
@@ -82,23 +80,19 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
       ?>
       <header class="header header--bgk">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <?php
-                echo '<div class="username">';
-                echo '<ul>';
-                echo '<li><input type = "button" value='.$username.'></li>';
-                echo '<ul class="sub-menu">';
-                  echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
-                  echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
-                  echo "<li><a href='update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
-                  echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
-                echo '</ul>';
-                echo  '</ul>';
-                echo  '</div>';
-              ?>
-            </div><!-- end col-sm-12 -->
-          </div><!-- end row -->
+            <?php
+              echo '<div class="username">';
+              echo '<ul>';
+              echo '<li><input type = "button" value='.$username.'></li>';
+              echo '<ul class="sub-menu">';
+                echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
+                echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
+                echo "<li><a href='update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
+                echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+              echo '</ul>';
+              echo  '</ul>';
+              echo  '</div>';
+            ?>
         </div><!-- end container -->
       </header>
     </div><!-- end top-nav -->
@@ -118,7 +112,7 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
                 <input type="checkbox" onclick="showpass()"> <h5>Show Password</h5>
               </div>
               <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" oninput="check(this)" required maxlength="20">
-              <div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp
+              <div class="g-recaptcha" data-sitekey=" 6Le2pbYUAAAAADKfsQeqYzGUbu2LVh39mcfCCeVd
 "></div>
               <input class="social-button"  type="submit" id="change_pass" name="change_pass" value="Change Password">
             </form>
@@ -157,7 +151,7 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
     <script src="../resources/js/plugins.js"></script>
     <script src="../resources/js/main.js"></script>
     <!-- ========== END JS ========== -->
-<!--Start Cookie Script--> <script type="text/javascript" charset="UTF-8" src="http://chs03.cookie-script.com/s/de14ee1f8e19ae0e12c4eff22fa89a19.js"></script> <!--End Cookie Script-->
+ 
   </body>
   <script>
   function check(input) {

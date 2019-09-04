@@ -40,23 +40,19 @@
       ?>
       <header class="header header--bgk">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <?php
-                echo '<div class="username">';
-                echo '<ul>';
-                echo '<li><input type = "button" value='.$username.'></li>';
-                echo '<ul class="sub-menu">';
-                  echo "<li><a href='contar'><input type = 'button' id='back' value='Home'></a></li>";
-                  echo "<li><a href = 'update_pg/update'><input type = 'button' value='Update your profile'></a></li>";
-                  echo "<li><a href='update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
-                  echo "<li><a href='login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
-                echo '</ul>';
-                echo  '</ul>';
-                echo  '</div>';
-              ?>
-            </div><!-- end col-sm-12 -->
-          </div><!-- end row -->
+            <?php
+              echo '<div class="username">';
+              echo '<ul>';
+              echo '<li><input type = "button" value='.$usr.'></li>';
+              echo '<ul class="sub-menu">';
+                echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
+                echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
+                echo "<li><a href='update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
+                echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+              echo '</ul>';
+              echo  '</ul>';
+              echo  '</div>';
+            ?>
         </div><!-- end container -->
       </header>
     </div><!-- end top-nav -->
@@ -69,7 +65,7 @@
       <form method="post" action="send_link.php">
         <p>Enter Email Address To Send Password Link</p>
         <input  type="text" name="email" placeholder="Your Email" required>
-        <div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp
+        <div class="g-recaptcha" data-sitekey=" 6Le2pbYUAAAAADKfsQeqYzGUbu2LVh39mcfCCeVd
 "></div>
         <input class="social-button" type="submit" name="submit_email"  required>
       </form>
@@ -108,7 +104,7 @@
     <script src="../resources/js/plugins.js"></script>
     <script src="../resources/js/main.js"></script>
     <!-- ========== END JS ========== -->
-<!--Start Cookie Script--> <script type="text/javascript" charset="UTF-8" src="http://chs03.cookie-script.com/s/de14ee1f8e19ae0e12c4eff22fa89a19.js"></script> <!--End Cookie Script-->
+ 
   </body>
 </html>
 <script>

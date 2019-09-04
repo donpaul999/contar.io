@@ -10,7 +10,7 @@ $ok = 0;
 
  <!DOCTYPE html>
  <html>
-   <head>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />   <head>
      <style>
      img[alt="www.000webhost.com"] {
          display: none !important;
@@ -64,7 +64,6 @@ $ok = 0;
           <button class="update-icon" id='b_reddit'><i style="color: #ff4500;" class="fab fa-reddit"></i></button>
           <button class="update-icon" id='b_pinterest'><i style="color: #bd081c;" class="fab fa-pinterest"></i></button>
           <button class="update-icon" id='b_tumblr'><i style="color: #35465c;" class="fab fa-tumblr"></i></button>
-          <button class="update-icon" id='b_patreon'><i style="color: #35465c;" class="fab fa-patreon"></i></button>
           <button class="update-icon" id='b_github'><i style="color: #333;" class="fab fa-github"></i></button>
           <button class="update-icon" id='b_paypal'><i style="color: #3578E5;" class="fab fa-paypal"></i></button>
           <button class="update-icon" id='b_spotify'><i style="color: #1DB954;" class="fab fa-spotify"></i></button>
@@ -86,7 +85,6 @@ $ok = 0;
           <button class="update-icon" id='b_reddit'><i style="color: #ff4500;" class="fab fa-reddit"></i></button>
           <button class="update-icon" id='b_pinterest'><i style="color: #bd081c;" class="fab fa-pinterest"></i></button>
           <button class="update-icon" id='b_tumblr'><i style="color: #35465c;" class="fab fa-tumblr"></i></button>
-          <button class="update-icon" id='b_patreon'><i style="color: #35465c;" class="fab fa-patreon"></i></button>
           <button class="update-icon" id='b_github'><i style="color: #333;" class="fab fa-github"></i></button>
           <button class="update-icon" id='b_paypal'><i style="color: #3578E5;" class="fab fa-paypal"></i></button>
           <button class="update-icon" id='b_spotify'><i style="color: #1DB954;" class="fab fa-spotify"></i></button>
@@ -131,7 +129,22 @@ $ok = 0;
   <script src="resources/js/plugins.js"></script>
   <script src="resources/js/main.js"></script>
   <!-- ========== END JS ========== -->
-<!--Start Cookie Script--> <script type="text/javascript" charset="UTF-8" src="http://chs03.cookie-script.com/s/de14ee1f8e19ae0e12c4eff22fa89a19.js"></script> <!--End Cookie Script-->
-  <!--Start Cookie Script--> <script type="text/javascript" charset="UTF-8" src="http://chs03.cookie-script.com/s/de14ee1f8e19ae0e12c4eff22fa89a19.js"></script> <!--End Cookie Script-->
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#237afc"
+    },
+    "button": {
+      "background": "#fff",
+      "text": "#237afc"
+    }
+  },
+  "content": {
+    "href": "policy.html"
+  }
+});
+</script>
    </body>
  </html>

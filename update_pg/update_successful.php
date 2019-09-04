@@ -24,7 +24,7 @@ $username = $_SESSION['username'];
     <script src = "resources/js/password.js"></script>
 
   </head>
-  <body class="update-succes">
+  <body>
     <!-- ========== START HEADER ========== -->
     <div class="top-nav top-nav--burger-1 clearfix">
       <div class="logo">
@@ -56,41 +56,35 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
       ?>
       <header class="header header--bgk">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <?php
-                echo '<div class="username">';
-                echo '<ul>';
-                echo '<li><input type = "button" value='.$username.'></li>';
-                echo '<ul class="sub-menu">';
-                  echo "<li><a href='contar'><input type = 'button' id='back' value='Home'></a></li>";
-                  echo "<li><a href = 'update_pg/update'><input type = 'button' value='Update your profile'></a></li>";
-                  echo "<li><a href='update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
-                  echo "<li><a href='login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
-                echo '</ul>';
-                echo  '</ul>';
-                echo  '</div>';
-              ?>
-            </div><!-- end col-sm-12 -->
-          </div><!-- end row -->
+            <?php
+              echo '<div class="username">';
+              echo '<ul>';
+              echo '<li><input type = "button" value='.$username.'></li>';
+              echo '<ul class="sub-menu">';
+                echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
+                echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
+                echo "<li><a href='update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
+                echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+              echo '</ul>';
+              echo  '</ul>';
+              echo  '</div>';
+            ?>
         </div><!-- end container -->
       </header>
     </div><!-- end top-nav -->
     <!-- ========== END HEADER ========== -->
     <div class="container main-container">
-      <div class="main">
+      <div class="main update-success">
         <div class="user-title">
-        <h1 class="fullname">Update succesful!</h1>
-      </div>
-      <?php
-      echo '<a href ="../p/'.$username.'"><input class="social-button" type = "button" value="See your profile"></a>';
-      ?>
-      <a href="../contar"><input class="social-button go-back" type="button" value="Go Back"></a>
-      
-      </div>
-    </div>
+          <h1 class="fullname">Update succesful!</h1>
+        </div><!-- end suer-title -->
+        <?php
+        echo '<a href ="../p/'.$username.'"><input class="social-button" type = "button" value="See your profile"></a>';
+        ?>
+        <a href="../contar"><input class="social-button go-back" type="button" value="Go Back"></a>
+      </div><!-- end main -->
+    </div><!-- end container -->
     
-
     <!-- ========== START FOOTER ========== -->
     <footer class="footer fixed">
       <div class="container">
@@ -121,6 +115,6 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
     <script src="../resources/js/plugins.js"></script>
     <script src="../resources/js/main.js"></script>
     <!-- ========== END JS ========== -->
-<!--Start Cookie Script--> <script type="text/javascript" charset="UTF-8" src="http://chs03.cookie-script.com/s/de14ee1f8e19ae0e12c4eff22fa89a19.js"></script> <!--End Cookie Script-->
+ 
   </body>
 </html>

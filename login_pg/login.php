@@ -11,7 +11,7 @@ if(!isset($_SESSION['wrong']))
     if($_SESSION['wrong'] >= 3){
       $ok = 0;
         if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
-          $secretKey = '6Lexj7MUAAAAACPzsQJE1Myokq0wIqSeDtODI7Oo
+          $secretKey = '6Le2pbYUAAAAAN6emlMyNV1kXDsiSOfArEDHZyei
 ';
           $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']);
           $responseData = json_decode($verifyResponse);
@@ -45,6 +45,7 @@ if(!isset($_SESSION['wrong']))
  ?>
  <!DOCTYPE html>
  <html>
+ <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />   <head>
    <head>
      <style>
      img[alt="www.000webhost.com"] {
@@ -102,10 +103,11 @@ if(!isset($_SESSION['wrong']))
             <input type="checkbox" onclick="showpass()"> <h5>Show Password</h5>
             <?php
             if($_SESSION['wrong'] >= 3)
-              echo '<div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp
+              echo '<div class="g-recaptcha" data-sitekey=" 6Le2pbYUAAAAADKfsQeqYzGUbu2LVh39mcfCCeVd
 "></div>';
               ?>
             <input class="social-button"  type="submit" id="login" name="login" value="Log In">
+            <a  href = "../reset/reset_passhtml"><input  class="social-button"  type = "button" value="Forgot password?"></a>
             <a  href = "register"><input  class="social-button"  type = "button" value="You don't have an account? Sign Up"></a>
         </form>
       </div>
@@ -150,6 +152,23 @@ if(!isset($_SESSION['wrong']))
   };
   </script>
   <!-- ========== END JS ========== -->
-<!--Start Cookie Script--> <script type="text/javascript" charset="UTF-8" src="http://chs03.cookie-script.com/s/de14ee1f8e19ae0e12c4eff22fa89a19.js"></script> <!--End Cookie Script-->
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+  <script>
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#237afc"
+      },
+      "button": {
+        "background": "#fff",
+        "text": "#237afc"
+      }
+    },
+    "content": {
+      "href": "policy.html"
+    }
+  });
+  
+  </script>
    </body>
  </html>

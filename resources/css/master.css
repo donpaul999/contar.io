@@ -12452,8 +12452,11 @@ p {
   display: block;
   margin-top: 70px; }
 
-.update-succes .social-button {
-  margin-top: 23%; }
+.update-success .user-title {
+  margin-bottom: 30px; }
+
+.update-success .go-back {
+  margin-top: 20px; }
 
 .login-failed {
   text-align: center; }
@@ -12846,18 +12849,21 @@ p {
   .user li #twitter i:before, .user li #twitter1 i:before {
     color: #0099e5;
     content: "\f099"; }
+  .user li #patreon i:before, .user li #patreon1 i:before {
+    content: "\f3d9";
+    color: #f96854; }
 
 .update-main #fb, .update-main #ig, .update-main #yt, .update-main #linked,
 .update-main #github, .update-main #spotify, .update-main #steam,
 .update-main #skype, .update-main #snap, .update-main #discord, .update-main #paypal,
 .update-main #twitter, .update-main #pinterest, .update-main #twitch,
-.update-main #reddit, .update-main #tumblr {
+.update-main #reddit, .update-main #tumblr, .update-main #patreon {
   display: none; }
   .update-main #fb.active, .update-main #ig.active, .update-main #yt.active, .update-main #linked.active,
   .update-main #github.active, .update-main #spotify.active, .update-main #steam.active,
   .update-main #skype.active, .update-main #snap.active, .update-main #discord.active, .update-main #paypal.active,
   .update-main #twitter.active, .update-main #pinterest.active, .update-main #twitch.active,
-  .update-main #reddit.active, .update-main #tumblr.active {
+  .update-main #reddit.active, .update-main #tumblr.active, .update-main #patreon.active {
     display: block; }
 
 .username {
@@ -13433,9 +13439,9 @@ p {
       -ms-transform: rotate(0deg) scale(0.2, 0.2);
       transform: rotate(0deg) scale(0.2, 0.2); }
     .menu-trigger.active input:checked ~ span:nth-last-child(2) {
-      -webkit-transform: rotate(-45deg) translate(0, 17px);
-      -ms-transform: rotate(-45deg) translate(0, 17px);
-      transform: rotate(-45deg) translate(0, 17px); }
+      -webkit-transform: rotate(-45deg) translate(-1.6px, 18px);
+      -ms-transform: rotate(-45deg) translate(-1.6px, 18px);
+      transform: rotate(-45deg) translate(-1.6px, 18px); }
   .menu-trigger span {
     display: block;
     width: 33px;
@@ -13495,15 +13501,6 @@ p {
       transition-duration: 0.2s;
       -o-transition-timing-function: ease-in-out;
       transition-timing-function: ease-in-out; }
-      .top-nav--burger-1 .header .col-sm-12 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%); }
       .top-nav--burger-1 .header.active {
         opacity: 1;
         visibility: visible;
@@ -14078,15 +14075,17 @@ p {
 /* START HEADER
 ***********************************************/
 @media (max-width: 800px) {
-  .header .col-sm-12 {
+  .header .username {
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
+  .header .sub-menu li {
+    line-height: 28px; }
+    .header .sub-menu li a {
+      font-size: 18px; }
   .update-icon {
     margin-right: 10px;
     margin-bottom: 20px; }
@@ -14150,15 +14149,6 @@ p {
     transition-duration: 0.2s;
     -o-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out; }
-    .header .col-sm-12 {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -moz-transform: translate(-50%, -50%);
-      -o-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%); }
     .header.active {
       opacity: 1;
       visibility: visible;
@@ -14228,6 +14218,13 @@ p {
     visibility: visible; }
   .username {
     display: none; } }
+
+@media (max-width: 600px) {
+  .show-pass input[type=checkbox], .form-wrap input[type=checkbox] {
+    width: 15px;
+    height: 15px;
+    top: 2px;
+    position: relative; } }
 
 @media (max-width: 800px) {
   .user-title {

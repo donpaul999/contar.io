@@ -155,7 +155,7 @@
 				}
 
 				&:nth-last-child(2) {
-					transform: rotate(-45deg) translate(0, 17px);
+					transform: rotate(-45deg) translate(-1.6px, 18px);
 				}
 		    }
 		}
@@ -207,13 +207,7 @@
 			height: 100%;
 			width: 100%;
 			@include transition();
-	
-			.col-sm-12 {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				@include translate(-50%, -50%);
-			}
+
 	
 			&.active {
 				opacity: 1;

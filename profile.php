@@ -17,6 +17,7 @@ $fn = mysqli_fetch_array($var);
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />   <head>
   <head>
     <meta charset="UTF-8">
     <meta name="HandheldFriendly" content="true">
@@ -66,23 +67,19 @@ $fn = mysqli_fetch_array($var);
 
       <header class="header header--bgk">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <?php
-                echo '<div class="username">';
-                echo '<ul>';
-                echo '<li><input type = "button" value='.$username.'></li>';
-                echo '<ul class="sub-menu">';
-                  echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
-                  echo "<li><a href = '../update_pg/update'><input type = 'button' value='Update your profile'></a></li>";
-                  echo "<li><a href='../update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
-                  echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
-                echo '</ul>';
-                echo  '</ul>';
-                echo  '</div>';
-              ?>
-            </div><!-- end col-sm-12 -->
-          </div><!-- end row -->
+            <?php
+              echo '<div class="username">';
+              echo '<ul>';
+              echo '<li><input type = "button" value='.$usr.'></li>';
+              echo '<ul class="sub-menu">';
+                echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
+                echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
+                echo "<li><a href='update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
+                echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+              echo '</ul>';
+              echo  '</ul>';
+              echo  '</div>';
+            ?>
         </div><!-- end container -->
       </header>
     </div><!-- end top-nav -->
@@ -228,7 +225,7 @@ $fn = mysqli_fetch_array($var);
   <script src="../resources/js/plugins.js"></script>
   <script src="../resources/js/main.js"></script>
   <!-- ========== END JS ========== -->
-<!--Start Cookie Script--> <script type="text/javascript" charset="UTF-8" src="http://chs03.cookie-script.com/s/de14ee1f8e19ae0e12c4eff22fa89a19.js"></script> <!--End Cookie Script-->
+
   </body>
   <script>
   function hide(index){
@@ -263,5 +260,28 @@ $fn = mysqli_fetch_array($var);
   //alert("Copied the text: " + copyText.value);
 }
 </script>
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#237afc"
+    },
+    "button": {
+      "background": "#fff",
+      "text": "#237afc"
+    }
+  },
+  "content": {
+    "href": "policy.html"
+  }
+});
 
+function addTxt(txt, field)
+{
+var myTxt = txt;
+var id = field;
+document.getElementById(id).value = myTxt;
+}
+</script>
 </html>

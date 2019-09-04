@@ -113,9 +113,13 @@
 	margin-top: 70px;
 }
 
-.update-succes {
-	.social-button {
-		margin-top: 23%;
+.update-success {
+	.user-title {
+		margin-bottom: 30px;
+	}
+
+	.go-back {
+		margin-top: 20px;
 	}
 }
 
@@ -623,6 +627,14 @@
 			}
 
 		}
+
+		#patreon, #patreon1 {//patreon
+			i:before {
+				content: "\f3d9";
+				color: #f96854;
+			}
+
+		}
 	}
 }
 
@@ -631,7 +643,7 @@
 	#github, #spotify, #steam, 
 	#skype, #snap, #discord, #paypal,
 	#twitter, #pinterest, #twitch,
-	#reddit, #tumblr {
+	#reddit, #tumblr, #patreon {
 		display: none;
 	
 		&.active {
@@ -756,10 +768,15 @@
 	-webkit-appearance: none;
 	font-weight: 600;
 	height: 56px;
-	padding: 0 45px;
+	padding: 0 30px;
 	max-width: 100%;
 	font-size: 20px;
 	font-family: 'nvRegular';
+
+	@media(max-width: 800px) {
+		padding: 0 30px;
+	}
+
 	@include transition;
 	i {
 		margin-top: 5%!important;
@@ -793,7 +810,7 @@
 	-webkit-appearance: none;
 	font-weight: 600;
 	height: 56px;
-	padding: 0 45px;
+	padding: 0 30px;
 	max-width: 100%;
 	font-size: 13.3333px;
 	@include transition;
@@ -802,6 +819,11 @@
 	justify-content: center;
 	flex-direction: column;
 	text-align: center;
+
+	@media(max-width: 800px) {
+		padding: 0 30px;
+	}
+
 	i {
 		font-size: 20px;
 		position: absolute;

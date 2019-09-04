@@ -1,6 +1,6 @@
 <?php
 
-  require '../conectare.php';
+  require 'conectare.php';
 $ok = 0;
 
  ?>
@@ -17,9 +17,9 @@ $ok = 0;
        <meta charset="UTF-8">
       <meta name="HandheldFriendly" content="true">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-      <link rel="shortcut icon" type="../image/x-icon" href="../resources/img/title.png"  />
-      <link rel="stylesheet" href="../resources/css/master.css">
-       <script src = "../resources/js/password.js"></script>
+      <link rel="shortcut icon" type=".../image/x-icon" href="resources/img/title.png"  />
+      <link rel="stylesheet" href="resources/css/master.css">
+       <script src = "resources/js/password.js"></script>
    </head>
    <body>
      <div class="container main-container privacy">
@@ -96,12 +96,11 @@ $ok = 0;
 
      <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
        </div>
-       <a href="register"><input class="social-button go-back" type="button" value="Go Back"></a>
      </div>
     <!-- ========== START HEADER ========== -->
      <div class="top-nav top-nav--burger-1 clearfix">
        <div class="logo">
-           <a href="register"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
+           <a href="index"><img src="resources/img/logo_png.png" alt="Contar-Logo"></a>
        </div><!-- end logo -->
     </div>
 
@@ -135,6 +134,6 @@ $ok = 0;
   <script src="../resources/js/plugins.js"></script>
   <script src="../resources/js/main.js"></script>
   <!-- ========== END JS ========== -->
-<!--Start Cookie Script--> <script type="text/javascript" charset="UTF-8" src="http://chs03.cookie-script.com/s/de14ee1f8e19ae0e12c4eff22fa89a19.js"></script> <!--End Cookie Script-->
+
    </body>
  </html>

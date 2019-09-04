@@ -6,7 +6,7 @@ if(isset($_POST['submit_password']) && $_POST['password'] && $_POST['email'])
   // Validate reCAPTCHA box
     if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
       // Google reCAPTCHA API secret key
-      $secretKey = '6Lexj7MUAAAAACPzsQJE1Myokq0wIqSeDtODI7Oo
+      $secretKey = '6Le2pbYUAAAAAN6emlMyNV1kXDsiSOfArEDHZyei
 ';
 
       // Verify the reCAPTCHA response

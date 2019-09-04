@@ -26,7 +26,7 @@ $usr = $_SESSION['username'];
   <!-- ========== START HEADER ========== -->
     <div class="top-nav top-nav--burger-1 clearfix">
       <div class="logo">
-          <a href="contar"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
+          <a href="../contar"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
       </div><!-- end logo -->
       <?php
         echo '<div class="username">';
@@ -53,23 +53,19 @@ $usr = $_SESSION['username'];
       ?>
       <header class="header header--bgk">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <?php
-                echo '<div class="username">';
-                echo '<ul>';
-                echo '<li><input type = "button" value='.$usr.'></li>';
-                echo '<ul class="sub-menu">';
-                  echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
-                  echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
-                  echo "<li><a href='update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
-                  echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
-                echo '</ul>';
-                echo  '</ul>';
-                echo  '</div>';
-              ?>
-            </div><!-- end col-sm-12 -->
-          </div><!-- end row -->
+            <?php
+              echo '<div class="username">';
+              echo '<ul>';
+              echo '<li><input type = "button" value='.$usr.'></li>';
+              echo '<ul class="sub-menu">';
+                echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
+                echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
+                echo "<li><a href='update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
+                echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+              echo '</ul>';
+              echo  '</ul>';
+              echo  '</div>';
+            ?>
         </div><!-- end container -->
       </header>
     </div><!-- end top-nav -->
@@ -87,7 +83,7 @@ $usr = $_SESSION['username'];
         <button class="update-icon" id='b_reddit'><i style="color: #ff4500;" class="fab fa-reddit"></i></button>
         <button class="update-icon" id='b_pinterest'><i style="color: #bd081c;" class="fab fa-pinterest"></i></button>
         <button class="update-icon" id='b_tumblr'><i style="color: #35465c;" class="fab fa-tumblr"></i></button>
-        <button class="update-icon" id='b_patreon'><i style="color: #35465c;" class="fab fa-patreon"></i></button>
+        <button class="update-icon" id='b_patreon'><i style="color: #f96854;" class="fab fa-patreon"></i></button>
         <button class="update-icon" id='b_github'><i style="color: #333;" class="fab fa-github"></i></button>
         <button class="update-icon" id='b_paypal'><i style="color: #3578E5;" class="fab fa-paypal"></i></button>
         <button class="update-icon" id='b_spotify'><i style="color: #1DB954;" class="fab fa-spotify"></i></button>
@@ -158,6 +154,6 @@ $usr = $_SESSION['username'];
   <script src="../resources/js/main.js"></script>
 
   <!-- ========== END JS ========== -->
-<!--Start Cookie Script--> <script type="text/javascript" charset="UTF-8" src="http://chs03.cookie-script.com/s/de14ee1f8e19ae0e12c4eff22fa89a19.js"></script> <!--End Cookie Script-->
+ 
   </body>
 </html>

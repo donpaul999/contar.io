@@ -5,6 +5,8 @@ $ok = 0;
 
  <!DOCTYPE html>
  <html>
+ <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />   <head>
+
    <head>
      <style>
      img[alt="www.000webhost.com"] {
@@ -40,23 +42,19 @@ $ok = 0;
       ?>
       <header class="header header--bgk">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <?php
-                echo '<div class="username">';
-                echo '<ul>';
-                echo '<li><input type = "button" value='.$username.'></li>';
-                echo '<ul class="sub-menu">';
-                  echo "<li><a href='contar'><input type = 'button' id='back' value='Home'></a></li>";
-                  echo "<li><a href = 'update_pg/update'><input type = 'button' value='Update your profile'></a></li>";
-                  echo "<li><a href='update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
-                  echo "<li><a href='login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
-                echo '</ul>';
-                echo  '</ul>';
-                echo  '</div>';
-              ?>
-            </div><!-- end col-sm-12 -->
-          </div><!-- end row -->
+            <?php
+              echo '<div class="username">';
+              echo '<ul>';
+              echo '<li><input type = "button" value='.$usr.'></li>';
+              echo '<ul class="sub-menu">';
+                echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
+                echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
+                echo "<li><a href='update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
+                echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+              echo '</ul>';
+              echo  '</ul>';
+              echo  '</div>';
+            ?>
         </div><!-- end container -->
       </header>
     </div><!-- end top-nav -->
@@ -84,10 +82,10 @@ $ok = 0;
                 <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" oninput="check(this)" required maxlength="20">
                                   <div class="show-pass__block">
                     <input type="checkbox" required>
-                    <h5>I have read and agree with <a href="privacy" style="color:blue">the Privacy Policy</a></h5>
+                    <h8>I have read and agree with the <a href="../privacy" style="color:blue"> Privacy Policy</a> and with <a href="../termsandcond" style="color:blue">the Terms and Conditions</a></h8>
                   </div>
                 <span id='message'></span>
-                <div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp
+                <div class="g-recaptcha" data-sitekey=" 6Le2pbYUAAAAADKfsQeqYzGUbu2LVh39mcfCCeVd
 "></div>
                 <input class="social-button" type="submit" id="submit" value="Sign Up">
                 <a href = "login"><input class="social-button" type = "button" value="Already registered? Log In"></a>
@@ -135,6 +133,22 @@ $ok = 0;
   };
   </script>
   <!-- ========== END JS ========== -->
-<!--Start Cookie Script--> <script type="text/javascript" charset="UTF-8" src="http://chs03.cookie-script.com/s/de14ee1f8e19ae0e12c4eff22fa89a19.js"></script> <!--End Cookie Script-->
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+  <script>
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#237afc"
+      },
+      "button": {
+        "background": "#fff",
+        "text": "#237afc"
+      }
+    },
+    "content": {
+      "href": "policy.html"
+    }
+  });
+  </script>
   </body>
  </html>

@@ -62,7 +62,7 @@ if($_GET['key'] && $_GET['reset'])
                 <h5>Show Password</h5><br>
               </div>
             </div>
-            <div class="g-recaptcha" data-sitekey="6Lexj7MUAAAAAPXCNk94uSkljxr_OttzF4-FXzmp
+            <div class="g-recaptcha" data-sitekey=" 6Le2pbYUAAAAADKfsQeqYzGUbu2LVh39mcfCCeVd
 " required></div>
             <input class="social-button" type="submit" name="submit_password">
              <a href="../login_pg/login"><input class="social-button go-back" type="button" value="Go Back"></a>
@@ -102,7 +102,7 @@ if($_GET['key'] && $_GET['reset'])
         <script src="../resources/js/plugins.js"></script>
         <script src="../resources/js/main.js"></script>
         <!-- ========== END JS ========== -->
-    <!--Start Cookie Script--> <script type="text/javascript" charset="UTF-8" src="http://chs03.cookie-script.com/s/de14ee1f8e19ae0e12c4eff22fa89a19.js"></script> <!--End Cookie Script-->
+     
       </body>
     </html>
     <script>
