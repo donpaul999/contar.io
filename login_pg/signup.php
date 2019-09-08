@@ -17,7 +17,8 @@ $ok = 0;
     // Validate reCAPTCHA box
       if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
         // Google reCAPTCHA API secret key
-        $secretKey = '6Le2pbYUAAAAAN6emlMyNV1kXDsiSOfArEDHZyei';
+        $secretKey = '6Le2pbYUAAAAAN6emlMyNV1kXDsiSOfArEDHZyei
+';
         // Verify the reCAPTCHA response
         $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']);
 
@@ -25,6 +26,7 @@ $ok = 0;
         $responseData = json_decode($verifyResponse);
 
         // If reCAPTCHA response is valid
+        echo $responseData->succes;
       if($responseData->success)
       {
       $query = mysqli_query($conectare, "SELECT * FROM users WHERE username= '$user'");
