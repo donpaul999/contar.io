@@ -11,8 +11,7 @@ if(!isset($_SESSION['wrong']))
     if($_SESSION['wrong'] >= 3){
       $ok = 0;
         if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
-          $secretKey = '6Le2pbYUAAAAAN6emlMyNV1kXDsiSOfArEDHZyei
-';
+          $secretKey = '6Le2pbYUAAAAAN6emlMyNV1kXDsiSOfArEDHZyei';
           $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']);
           $responseData = json_decode($verifyResponse);
         if($responseData->success)
@@ -103,8 +102,7 @@ if(!isset($_SESSION['wrong']))
             <input type="checkbox" onclick="showpass()"> <h5>Show Password</h5>
             <?php
             if($_SESSION['wrong'] >= 3)
-              echo '<div class="g-recaptcha" data-sitekey=" 6Le2pbYUAAAAADKfsQeqYzGUbu2LVh39mcfCCeVd
-"></div>';
+              echo '<div class="g-recaptcha" data-sitekey="6Le2pbYUAAAAADKfsQeqYzGUbu2LVh39mcfCCeVd"></div>';
               ?>
             <input class="social-button"  type="submit" id="login" name="login" value="Log In">
             <a  href = "../reset/reset_passhtml"><input  class="social-button"  type = "button" value="Forgot password?"></a>
@@ -168,7 +166,7 @@ if(!isset($_SESSION['wrong']))
       "href": "policy.html"
     }
   });
-  
+
   </script>
    </body>
  </html>

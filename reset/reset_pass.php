@@ -54,7 +54,7 @@ if($_GET['key'] && $_GET['reset'])
           <form method="post" action="submit_new.php">
             <input type="hidden" name="email" value="<?php echo $email;?>">
             <input type="password" name='password' value="" pattern=".{8,}" title="Must contain at least 8 or more characters" id="password" placeholder="Password" required>
-            
+
             <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" oninput="check(this)" required maxlength="20">
             <div class="show-pass">
               <div class="show-pass__block">
@@ -62,12 +62,11 @@ if($_GET['key'] && $_GET['reset'])
                 <h5>Show Password</h5><br>
               </div>
             </div>
-            <div class="g-recaptcha" data-sitekey=" 6Le2pbYUAAAAADKfsQeqYzGUbu2LVh39mcfCCeVd
-" required></div>
+            <div class="g-recaptcha" data-sitekey="6Le2pbYUAAAAADKfsQeqYzGUbu2LVh39mcfCCeVd" required></div>
             <input class="social-button" type="submit" name="submit_password">
              <a href="../login_pg/login"><input class="social-button go-back" type="button" value="Go Back"></a>
           </form>
-         
+
           </div>
         </div>
 
@@ -102,7 +101,7 @@ if($_GET['key'] && $_GET['reset'])
         <script src="../resources/js/plugins.js"></script>
         <script src="../resources/js/main.js"></script>
         <!-- ========== END JS ========== -->
-     
+
       </body>
     </html>
     <script>

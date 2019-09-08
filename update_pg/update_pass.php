@@ -9,8 +9,7 @@ $username = $_SESSION['username'];
 if(!empty($_POST['change_pass']))
   {
     if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
-      $secretKey = '6Le2pbYUAAAAAN6emlMyNV1kXDsiSOfArEDHZyei
-';
+      $secretKey = '6Le2pbYUAAAAAN6emlMyNV1kXDsiSOfArEDHZyei';
       $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']);
       $responseData = json_decode($verifyResponse);
     if($responseData->success)
@@ -112,8 +111,7 @@ if(!empty($_POST['change_pass']))
                 <input type="checkbox" onclick="showpass()"> <h5>Show Password</h5>
               </div>
               <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" oninput="check(this)" required maxlength="20">
-              <div class="g-recaptcha" data-sitekey=" 6Le2pbYUAAAAADKfsQeqYzGUbu2LVh39mcfCCeVd
-"></div>
+              <div class="g-recaptcha" data-sitekey="6Le2pbYUAAAAADKfsQeqYzGUbu2LVh39mcfCCeVd"></div>
               <input class="social-button"  type="submit" id="change_pass" name="change_pass" value="Change Password">
             </form>
           </div>
@@ -151,7 +149,7 @@ if(!empty($_POST['change_pass']))
     <script src="../resources/js/plugins.js"></script>
     <script src="../resources/js/main.js"></script>
     <!-- ========== END JS ========== -->
- 
+
   </body>
   <script>
   function check(input) {

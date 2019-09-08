@@ -65,8 +65,7 @@
       <form method="post" action="send_link.php">
         <p>Enter Email Address To Send Password Link</p>
         <input  type="text" name="email" placeholder="Your Email" required>
-        <div class="g-recaptcha" data-sitekey=" 6Le2pbYUAAAAADKfsQeqYzGUbu2LVh39mcfCCeVd
-"></div>
+        <div class="g-recaptcha" data-sitekey="6Le2pbYUAAAAADKfsQeqYzGUbu2LVh39mcfCCeVd"></div>
         <input class="social-button" type="submit" name="submit_email"  required>
       </form>
 
@@ -104,7 +103,7 @@
     <script src="../resources/js/plugins.js"></script>
     <script src="../resources/js/main.js"></script>
     <!-- ========== END JS ========== -->
- 
+
   </body>
 </html>
 <script>
