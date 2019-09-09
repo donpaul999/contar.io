@@ -82,7 +82,7 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
     <div class="container main-container">
       <div class="main">
         <div class="user-title" style="margin-bottom: 30px;">
-          <h1 class="fullname">Password changed succesful!</h1>
+          <h1 class="fullname">Password changed successful!</h1>
         </div>
         <?php
         if($ok == 1)
@@ -122,6 +122,6 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
     <script src="../resources/js/plugins.js"></script>
     <script src="../resources/js/main.js"></script>
     <!-- ========== END JS ========== -->
- 
+
   </body>
 </html>

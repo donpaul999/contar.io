@@ -50,7 +50,7 @@ try {
     $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'contario999@gmail.com';                     // SMTP username
-    $mail->Password   = 'pass';                               // SMTP password
+    $mail->Password   = 'ghmnxwuzfuxpyczf';                               // SMTP password
     $mail->SMTPSecure = 'ssl';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 465;                                    // TCP port to connect to
 
@@ -62,7 +62,7 @@ try {
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Password reset - Contar.io';
-    $mail->Body    = 'Hi! I can see that you forgot your password. Click on this '.$link.' to reset it';
+    $mail->Body    = 'Hi! I can see that you forgot your password. <p>Click on this '.$link.' to reset it.</p>';
 
     $mail->send();
     return header("location:mail_sent");

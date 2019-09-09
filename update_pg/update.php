@@ -155,7 +155,7 @@ $usr = $_SESSION['username'];
   <script>
   function addtxt(id, text, text2){
     var elem = document.getElementById(id);
-    if(text2)
+    if(text2 && text2 !=" ")
       elem.value = text2;
     else
       elem.value = text;

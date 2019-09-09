@@ -19,72 +19,72 @@ function upd($link, $site, &$ok, $user, $conectare)
   $ok = 1;
   //echo $_sql;
 }
- if(!empty($_POST['facebook']) && !ctype_space($_POST['facebook'])){
+ if(!empty($_POST['facebook'])){
    upd($_POST['facebook'], "facebook", $ok, $user, $conectare);
  }
 
- if(!empty($_POST['instagram']) && !ctype_space($_POST['instagram'])){
+ if(!empty($_POST['instagram'])){
    upd($_POST['instagram'], "instagram", $ok, $user, $conectare);
  }
 
- if(!empty($_POST['linkedin']) && !ctype_space($_POST['linkedin'])){
+ if(!empty($_POST['linkedin'])){
    upd($_POST['linkedin'], "linkedin", $ok, $user, $conectare);
  }
 
- if(!empty($_POST['github']) && !ctype_space($_POST['github'])){
+ if(!empty($_POST['github'])){
    upd($_POST['github'], "github", $ok, $user, $conectare);
  }
 
- if(!empty($_POST['reddit']) && !ctype_space($_POST['reddit'])){
+ if(!empty($_POST['reddit'])){
    upd($_POST['reddit'], "reddit", $ok, $user, $conectare);
  }
 
- if(!empty($_POST['tumblr']) && !ctype_space($_POST['tumblr'])){
+ if(!empty($_POST['tumblr'])){
    upd($_POST['tumblr'], "tumblr", $ok, $user, $conectare);
  }
 
- if(!empty($_POST['pinterest']) && !ctype_space($_POST['pinterest'])){
+ if(!empty($_POST['pinterest'])){
    upd($_POST['pinterest'], "pinterest", $ok, $user, $conectare);
  }
 
- if(!empty($_POST['patreon']) && !ctype_space($_POST['patreon'])){
+ if(!empty($_POST['patreon'])){
    upd($_POST['patreon'], "patreon", $ok, $user, $conectare);
  }
 
- if(!empty($_POST['twitter']) && !ctype_space($_POST['twitter'])){
+ if(!empty($_POST['twitter'])){
    upd($_POST['twitter'], "twitter", $ok, $user, $conectare);
  }
 
- if(!empty($_POST['twitch']) && !ctype_space($_POST['twitch'])){
+ if(!empty($_POST['twitch'])){
    upd($_POST['twitch'], "twitch", $ok, $user, $conectare);
  }
 
- if(!empty($_POST['paypal']) && !ctype_space($_POST['paypal'])){
+ if(!empty($_POST['paypal'])){
    upd($_POST['paypal'], "paypal", $ok, $user, $conectare);
  }
- if(!empty($_POST['spotify']) && !ctype_space($_POST['spotify'])){
+ if(!empty($_POST['spotify'])){
    upd($_POST['spotify'],"spotify", $ok, $user, $conectare);
  }
 
- if(!empty($_POST['snapchat']) && !ctype_space($_POST['snapchat'])){
+ if(!empty($_POST['snapchat'])){
    upd($_POST['snapchat'], "snapchat", $ok, $user, $conectare);
  }
 
- if(!empty($_POST['discord']) && !ctype_space($_POST['discord'])){
+ if(!empty($_POST['discord'])){
    $fb = $_POST['discord'];
    $site = "discord";
    upd($fb, $site, $ok, $user, $conectare);
  }
 
- if(!empty($_POST['skype']) && !ctype_space($_POST['skype'])){
+ if(!empty($_POST['skype'])){
    upd($_POST['skype'],"skype", $ok, $user, $conectare);
  }
 
- if(!empty($_POST['youtube']) && !ctype_space($_POST['youtube'])){
+ if(!empty($_POST['youtube'])){
    upd($_POST['youtube'], "youtube", $ok, $user, $conectare);
  }
 
- if(!empty($_POST['steam']) && !ctype_space($_POST['steam'])){
+ if(!empty($_POST['steam'])){
    upd( $_POST['steam'], "steam", $ok, $user, $conectare);
  }
 

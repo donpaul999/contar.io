@@ -61,7 +61,7 @@
         <div class="user-title">
           <h1 class="fullname">Mail sent!</h1>
         </div>
-        <p>If you did not received your mail, please check out your Spam box.</p>
+        <p>If you did not receive your mail, please check your Spam box.</p>
         <a href="../index"><input class="social-button go-back" type="button" value="Go Back"></a>
       </div>
     </div>
@@ -96,6 +96,6 @@
     <script src="../resources/js/plugins.js"></script>
     <script src="../resources/js/main.js"></script>
     <!-- ========== END JS ========== -->
- 
+
   </body>
 </html>

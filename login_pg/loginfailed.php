@@ -16,7 +16,7 @@ $ok = 0;
        <meta charset="UTF-8">
       <meta name="HandheldFriendly" content="true">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-      <link rel="shortcut icon" type="image/x-icon" href="resources/img/title.png"/>
+      <link rel="shortcut icon" type="image/x-icon" href="../resources/img/title.png"/>
       <link rel="stylesheet" href="../resources/css/master.css">
        <script src = "../resources/js/password.js"></script>
    </head>
@@ -31,11 +31,11 @@ $ok = 0;
      <div class="container main-container">
        <div class="main">
        <div class="user-title">
-          <h1 class="fullname">Login Failed! Username or the password are wrong </h1>
+          <h1 class="fullname">Login Failed! Username or the password are wrong. </h1>
         </div>
         <a href="login"><input class="social-button" type="button" value="Go Back"></a>
         <a href="../reset/reset_passhtml"><input class="social-button" type="button" value="You forgot your password?"></a>
-        <h2>If you have problems loging in contact me here</h2>
+        <h2>If you have problems loging in, contact me here:</h2>
         <a href="../p/stefanut999"><input class="social-button" type="button" value="Contact"></a>
        </div>
      </div>
@@ -69,7 +69,7 @@ $ok = 0;
     <script src="../resources/js/plugins.js"></script>
     <script src="../resources/js/main.js"></script>
     <!-- ========== END JS ========== -->
- 
+
     <!-- ========== END FOOTER ========== -->
    </body>
  </html>

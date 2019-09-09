@@ -6,8 +6,6 @@ if($_GET['key'] && $_GET['reset'])
 {
   $email=$_GET['key'];
   $pass=$_GET['reset'];
-  echo $email;
-  echo $pass;
   $select=mysqli_query($conectare, "select * from users where email='$email' and password='$pass'");
   if(mysqli_num_rows($select))
   {
