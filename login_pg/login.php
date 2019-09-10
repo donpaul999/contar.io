@@ -18,22 +18,40 @@ if(!isset($_SESSION['wrong']))
           $responseData = json_decode($verifyResponse);
         if($responseData->success)
          $ok = 1;
-       }
        else
         return header("location:captcha_log");
-     }
-    $username = $_POST['username'];
-    $password = md5($_POST['password']);
-    $query = "SELECT * FROM users WHERE username='$username' and password='$password'";
-    $result = mysqli_query($conectare, $query);
-    $count = mysqli_num_rows($result);
-    if($count > 0 && $ok == 1)
-      {
+      }
+    }
+        if(strlen($_POST['g_mail']) > 1)
+            {
+
+              $mail = $_POST['g_mail'];
+              $token = $_POST['access'];
+              $app_token = '825560317898128|wMleaJ0SQbbe5M02kGK2gj_TvSo';
+
+              $json = file_get_contents('https://graph.facebook.com/debug_token?%20input_token='.$token.'%20&access_token='.$app_token);
+              $data = json_decode($json, true);
+              $user_id = $data["data"]["user_id"];
+             $query = "SELECT * FROM users WHERE email='$mail' and user_id='$user_id'";
+
+            }
+          else{
+          $username = $_POST['username'];
+          $password = md5($_POST['password']);
+          $query = "SELECT * FROM users WHERE username='$username' and password='$password'";
+        }
+          $result = mysqli_query($conectare, $query);
+          $count = mysqli_num_rows($result);
+          if($count > 0 && $ok == 1)
+            {
+
         session_start();
         $_SESSION['loggedin'] = '1';
-        $_SESSION['username'] = $username;
+        $row = mysqli_fetch_array($result);
+        $_SESSION['username'] = $row['username'];
+
         require('../user_info/stats.php');
-        header("location:../contar");
+        return header("location:../contar");
       }
     else
     {
@@ -42,6 +60,7 @@ if(!isset($_SESSION['wrong']))
 
     }
   }
+
 
  ?>
  <!DOCTYPE html>
@@ -61,6 +80,79 @@ if(!isset($_SESSION['wrong']))
        <link rel="stylesheet" href="../resources/css/master.css">
        <script src = "../resources/js/password.js"></script>
        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+       <script>
+   function statusChangeCallback(response) {
+   console.log('statusChangeCallback');
+   console.log(response);
+   // The response object is returned with a status field that lets the
+   // app know the current login status of the person.
+   // Full docs on the response object can be found in the documentation
+   // for FB.getLoginStatus().
+   if (response.status === 'connected') {
+   testAPI();
+   } else if (response.status === 'not_authorized') {
+   // The person is logged into Facebook, but not your app.
+   document.getElementById('status').innerHTML = 'Login with Facebook ';
+   } else {
+   // The person is not logged into Facebook, so we're not sure if
+   // they are logged into this app or not.
+   document.getElementById('status').innerHTML = 'Login with Facebook ';
+   }
+   }
+   // This function is called when someone finishes with the Login
+   // Button. See the onlogin handler attached to it in the sample
+   // code below.
+   function checkLoginState() {
+   FB.getLoginStatus(function(response) {
+   statusChangeCallback(response);
+   });
+   }
+   window.fbAsyncInit = function() {
+   FB.init({
+   appId : '825560317898128',
+   cookie : true,
+   xfbml : true,
+   version : 'v4.0'
+   });
+   // Now that we've initialized the JavaScript SDK, we call
+   // FB.getLoginStatus(). This function gets the state of the
+   // person visiting this page and can return one of three states to
+   // the callback you provide. They can be:
+   //
+   // 1. Logged into your app ('connected')
+   // 2. Logged into Facebook, but not your app ('not_authorized')
+   // 3. Not logged into Facebook and can't tell if they are logged into
+   // your app or not.
+   //
+   // These three cases are handled in the callback function.
+   FB.getLoginStatus(function(response) {
+   statusChangeCallback(response);
+   });
+   };
+   // Load the SDK asynchronously
+   (function(d, s, id) {
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) return;
+   js = d.createElement(s); js.id = id;
+   js.src = "//connect.facebook.net/en_US/sdk.js";
+   fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+   // Here we run a very simple test of the Graph API after login is
+   // successful. See statusChangeCallback() for when this call is made.
+   function testAPI() {
+   console.log('Welcome! Fetching your information.... ');
+   FB.api('/me?fields=name,email', function(response) {
+   console.log('Successful login for: ' + response.name);
+   document.getElementById("status").innerHTML = '<p>Welcome, '+response.name+'! </p>';
+   document.getElementById("g_mail").value = response.email;
+   var access_token =   FB.getAuthResponse()['accessToken']
+   document.getElementById("access").value = access_token;
+   if(confirm('Continue with Facebook?')){
+   document.getElementById("login").click();
+    }
+});
+   }
+   </script>
    </head>
    <body>
     <!-- ========== START HEADER ========== -->
@@ -97,10 +189,15 @@ if(!isset($_SESSION['wrong']))
           <div class="user-title">
             <h1 class="fullname">Log In</h1>
           </div>
-
-            <input type="text" name="username" placeholder="Your username" required>
+          <div id="status">
+          </div>
+          <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+        </fb:login-button>
+        <input type="hidden" name="g_mail" id="g_mail" value="">
+        <input type="hidden" name="access" id="access" value="">
+            <input type="text" name="username" placeholder="Your username">
           <!--   <input type="email" name="email" placeholder="Email" required> -->
-          <input type="password" name="password" value="" id="password" placeholder="Password" required>
+          <input type="password" name="password" value="" id="password" placeholder="Password">
             <input type="checkbox" onclick="showpass()"> <h5>Show Password</h5>
             <?php
             if($_SESSION['wrong'] >= 3)
