@@ -86,7 +86,7 @@ $fn = mysqli_fetch_array($var);
     <!-- ========== END HEADER ========== -->
 
     <!-- ========== START PROFILE-CONTENT ========== -->
-    <div class="contar-profile">
+    <div class="contar-profile main-container">
       <div class="container main-container">
         <div class="main">
           <div class="col-sm-12">

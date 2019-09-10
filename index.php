@@ -27,7 +27,7 @@ $ok = 0;
     <div class="top-nav top-nav--burger-1 clearfix">
       <div class="logo">
           <a href="index"><img src="resources/img/logo_png.png" alt="Contar-Logo"></a>
-      </div><!-- end logo --><!-- end menu-trigger -->
+      </div><!-- end logo -->
       <header class="header header--bgk">
         <div class="container">
           <div class="row">
