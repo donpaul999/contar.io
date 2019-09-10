@@ -33,32 +33,40 @@ if(!isset($_SESSION['wrong']))
               $data = json_decode($json, true);
               $user_id = $data["data"]["user_id"];
              $query = "SELECT * FROM users WHERE email='$mail' and user_id='$user_id'";
-
             }
-          else{
-          $username = $_POST['username'];
+        if(strlen($_POST['username']) > 1)
+        {  $username = $_POST['username'];
           $password = md5($_POST['password']);
           $query = "SELECT * FROM users WHERE username='$username' and password='$password'";
+
         }
-          $result = mysqli_query($conectare, $query);
-          $count = mysqli_num_rows($result);
+        $result = mysqli_query($conectare, $query);
+        $count = mysqli_num_rows($result);
           if($count > 0 && $ok == 1)
             {
-
         session_start();
         $_SESSION['loggedin'] = '1';
         $row = mysqli_fetch_array($result);
-        $_SESSION['username'] = $row['username'];
+        $usr = $row['username'];
+        $_SESSION['username'] = $usr;
 
         require('../user_info/stats.php');
+        $query = "SELECT * FROM users WHERE user_id='$user_id'";
+        $result = mysqli_query($conectare, $query);
+        $count = mysqli_num_rows($result);
+        if($count == 0)
+          {
+            $query = "UPDATE users SET user_id='$user_id' WHERE username='$usr'";
+            $result = mysqli_query($conectare, $query);
+          }
         return header("location:../contar");
       }
     else
     {
       $_SESSION['wrong']++;
       return header("location:loginfailed");
-
     }
+
   }
 
 
