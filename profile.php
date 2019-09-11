@@ -30,6 +30,20 @@ $fn = mysqli_fetch_array($var);
     </div><!-- end user-title -->
   </head>
   <body>
+    <?php
+      if ($android == 1) {
+        echo
+        '
+          <div class="android-header">
+            <div class="text">
+              <p>Contar.io<br>
+              Get it on Google Play.</p>
+            </div>
+            <a href="#" class="android-button">Install</a>
+          </div>
+        ';
+      }
+    ?>
     <!-- ========== START HEADER ========== -->
     <div class="top-nav top-nav--burger-1 clearfix">
       <div class="logo">
