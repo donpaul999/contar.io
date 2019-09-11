@@ -1,5 +1,6 @@
 <?php
 require 'conectare.php';
+
 $ok = 0;
 
 session_start();
@@ -113,6 +114,6 @@ $ok = 1;
   <script src="resources/js/plugins.js"></script>
   <script src="resources/js/main.js"></script>
   <!-- ========== END JS ========== -->
- 
+
   </body>
 </html>
