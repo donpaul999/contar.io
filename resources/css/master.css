@@ -13322,6 +13322,62 @@ p {
   .header.active .sub-menu {
     display: block; }
 
+.android-header {
+  padding: 0 20px;
+  height: 75.55px;
+  background: #3e64ff;
+  background: -webkit-linear-gradient(183deg, #3e64ff 0%, #5edfff 35%, #3eddff 100%);
+  background: -o-linear-gradient(183deg, #3e64ff 0%, #5edfff 35%, #3eddff 100%);
+  background: linear-gradient(267deg, #3e64ff 0%, #5edfff 35%, #3eddff 100%);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .android-header p {
+    color: #fff;
+    font-size: 0.8rem;
+    line-height: 1.3; }
+  .android-header .text {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+.android-button {
+  background-color: transparent;
+  /* Green */
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 30px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  height: 10px; }
+
 .top-nav.active {
   height: 76.55px;
   background: #f9fbfc;

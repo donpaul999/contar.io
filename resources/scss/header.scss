@@ -40,6 +40,46 @@
 	}
 }
 
+.android-header {
+	padding: 0 20px;
+	height: 75.55px;
+	background: rgb(62,100,255);
+    background: linear-gradient(267deg, rgba(62,100,255,1) 0%, rgba(94,223,255,1) 35%, rgba(62,221,255,1) 100%);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+    	color: #fff;
+    	font-size: 0.8rem;
+    	line-height: 1.3;
+    }
+
+    .text {
+        align-items: center;
+	    justify-content: center;
+	    display: flex;
+    }
+}
+
+.android-button {
+	background-color: transparent; /* Green */
+	border: 1px solid #fff;
+	color: #fff;
+	padding: 15px 20px;
+	border-radius: 30px;
+	text-align: center;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+	font-size: 0.9rem;
+	height: 10px;
+}
+
 .top-nav {
 	&.active {
 		height: 76.55px;
