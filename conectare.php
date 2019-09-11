@@ -7,7 +7,7 @@ if(!$conectare)
     die(mysqli_connect_error());
   }
 
-$_SESSION['android'] = 0;
+$android = 0;
 
   $AndroidApp = 0;
  $AndroidBrowser = stripos($_SERVER['HTTP_USER_AGENT'], "Android");
@@ -17,11 +17,11 @@ $_SESSION['android'] = 0;
 
 
  if ($AndroidBrowser) {
-    $_SESSION['android'] = 1;
+    $android = 1;
  }
- 
+
  if($AndroidApp)
-  $_SESSION['android'] = 0;
+  $android = 0;
 
 
 ?>
