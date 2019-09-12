@@ -30,7 +30,7 @@ $ok = 1;
               <p>Contar.io<br>
               Get it on Google Play.</p>
             </div>
-            <a href="#" class="android-button">Install</a>
+            <a href="https://play.google.com/store/apps/details?id=io.contar.app" class="android-button">Install</a> 
           </div>
         ';
       }

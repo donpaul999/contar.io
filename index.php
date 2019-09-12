@@ -2,6 +2,37 @@
   require 'conectare.php';
 $ok = 0;
   session_start();
+  if(isset($_COOKIE['username']) && isset($_COOKIE['password']) && isset($_COOKIE['loggedin']))
+    if(!empty($_COOKIE['username']) && !empty($_COOKIE['password']) && !empty($_COOKIE['loggedin'])){
+    $username = $_COOKIE['username'];
+     $password = $_COOKIE['password'];
+     $ok = 1;
+     $query = "SELECT * FROM users WHERE username='$username' and password='$password'";
+
+   $result = mysqli_query($conectare, $query);
+   $count = mysqli_num_rows($result);
+     if($count > 0 && $ok == 1)
+       {
+   session_start();
+   $_SESSION['loggedin'] = '1';
+   $row = mysqli_fetch_array($result);
+   $usr = $row['username'];
+   $pass = $row['password'];
+   $_SESSION['username'] = $usr;
+
+   require('user_info/stats.php');
+   $result = mysqli_query($conectare, $query);
+   $count = mysqli_num_rows($result);
+   return header("location:contar");
+   }
+   else
+   {
+   $_SESSION['wrong']++;
+   return header("location:login_pg/loginfailed");
+   }
+
+  }
+
 
   if(isset($_SESSION['loggedin']))
   return header("location:contar");
@@ -25,14 +56,14 @@ $ok = 0;
    <body class="home">
     <?php
       if ($android == 1) {
-        echo 
+        echo
         '
           <div class="android-header">
             <div class="text">
               <p>Contar.io<br>
               Get it on Google Play.</p>
             </div>
-            <a href="#" class="android-button">Install</a>
+            <a href="https://play.google.com/store/apps/details?id=io.contar.app" class="android-button">Install</a>
           </div>
         ';
       }

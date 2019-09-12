@@ -8,6 +8,37 @@ $ok = 0;
 if(!isset($_SESSION['wrong']))
   $_SESSION['wrong'] = 0;
 
+  if(isset($_COOKIE['username']) && isset($_COOKIE['password']) && isset($_COOKIE['loggedin']))
+    if(!empty($_COOKIE['username']) && !empty($_COOKIE['password']) && !empty($_COOKIE['loggedin'])){
+    $username = $_COOKIE['username'];
+     $password = $_COOKIE['password'];
+     $ok = 1;
+     $query = "SELECT * FROM users WHERE username='$username' and password='$password'";
+
+   $result = mysqli_query($conectare, $query);
+   $count = mysqli_num_rows($result);
+     if($count > 0 && $ok == 1)
+       {
+   session_start();
+   $_SESSION['loggedin'] = '1';
+   $row = mysqli_fetch_array($result);
+   $usr = $row['username'];
+   $pass = $row['password'];
+   $_SESSION['username'] = $usr;
+
+   require('../user_info/stats.php');
+   $result = mysqli_query($conectare, $query);
+   $count = mysqli_num_rows($result);
+   return header("location:../contar");
+   }
+   else
+   {
+   $_SESSION['wrong']++;
+   return header("location:loginfailed");
+   }
+
+  }
+
   if(!empty($_POST['login']))
   {
     $ok = 1;
@@ -49,6 +80,7 @@ if(!isset($_SESSION['wrong']))
         $_SESSION['loggedin'] = '1';
         $row = mysqli_fetch_array($result);
         $usr = $row['username'];
+        $pass = $row['password'];
         $_SESSION['username'] = $usr;
 
         require('../user_info/stats.php');
@@ -60,6 +92,11 @@ if(!isset($_SESSION['wrong']))
             $query = "UPDATE users SET user_id='$user_id' WHERE username='$usr'";
             $result = mysqli_query($conectare, $query);
           }
+
+        setcookie("username", $usr, time() + 3600 * 24);
+        setcookie("password", $pass, time() + 3600 * 24);
+        setcookie("loggedin", 1, time() + 3600 * 24);
+
         return header("location:../contar");
       }
     else
@@ -166,14 +203,14 @@ if(!isset($_SESSION['wrong']))
    <body>
     <?php
       if ($android == 1) {
-        echo 
+        echo
         '
           <div class="android-header">
             <div class="text">
               <p>Contar.io<br>
               Get it on Google Play.</p>
             </div>
-            <a href="#" class="android-button">Install</a>
+            <a href="https://play.google.com/store/apps/details?id=io.contar.app" class="android-button">Install</a>
           </div>
         ';
       }
