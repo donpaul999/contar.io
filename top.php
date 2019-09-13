@@ -1,6 +1,11 @@
 <?php
-require '../conectare.php';
+  require 'conectare.php';
   $ok = 0;
+  session_start();
+  if(!isset($_SESSION['loggedin']))
+    return header("location:login_pg/login");
+  $username = $_SESSION['username'];
+  $ok = 1;
 ?>
 
 <!DOCTYPE html>
@@ -15,8 +20,8 @@ require '../conectare.php';
     <meta charset="UTF-8">
     <meta name="HandheldFriendly" content="true">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="shortcut icon" type="image/x-icon" href="../resources/img/title.png"  />
-    <link rel="stylesheet" href="../resources/css/master.css">
+    <link rel="shortcut icon" type="image/x-icon" href="resources/img/title.png"  />
+    <link rel="stylesheet" href="resources/css/master.css">
     <script src = "resources/js/password.js"></script>
 
   </head>
@@ -24,9 +29,9 @@ require '../conectare.php';
     <!-- ========== START HEADER ========== -->
     <div class="top-nav top-nav--burger-1 clearfix">
       <div class="logo">
-          <a href="../contar"><img src="../resources/img/logo_png.png" alt="Contar-Logo"></a>
+          <a href="contar"><img src="resources/img/logo_png.png" alt="Contar-Logo"></a>
       </div><!-- end logo -->
-
+      
 
       <?php
       if($ok == 1) {
@@ -40,18 +45,18 @@ require '../conectare.php';
       ?>
       <header class="header header--bgk">
         <div class="container">
-            <?php
-              echo '<div class="username">';
-              echo '<ul>';
-              echo '<li><input type = "button" value='.$usr.'></li>';
-              echo '<ul class="sub-menu">';
-                echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
-                echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
-                echo "<li><a href='update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
-                echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
-              echo '</ul>';
-              echo  '</ul>';
-              echo  '</div>';
+          <?php
+            echo '<div class="username">';
+            echo '<ul>';
+            echo '<li><input type = "button" value='.$username.'></li>';
+            echo '<ul class="sub-menu">';
+              echo "<li><a href='contar'><input type = 'button' id='back' value='Home'></a></li>";
+              echo "<li><a href = 'update_pg/update'><input type = 'button' value='Update your profile'></a></li>";
+              echo "<li><a href='update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
+              echo "<li><a href='login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+            echo '</ul>';
+            echo  '</ul>';
+            echo  '</div>';
             ?>
         </div><!-- end container -->
       </header>
@@ -60,14 +65,22 @@ require '../conectare.php';
     <div class="container main-container">
       <div class="main mail-sent">
         <div class="user-title">
-          <h1 class="fullname">Mail sent!</h1>
+          <h1 class="fullname">Rankings</h1>
         </div>
-        <p>If you did not receive your mail, please check your Spam box.</p>
-        <a href="../index"><input class="social-button go-back" type="button" value="Go Back"></a>
       </div>
-    </div>
-
-    <!-- ========== START FOOTER ========== -->
+    <?php
+      $place = 1;
+      $sql = "SELECT FullName, username, visits FROM users ORDER BY visits DESC LIMIT 5";
+      $result = mysqli_query($conectare, $sql);
+      while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+        echo '<a  href = p/'.$row['username'].'><p>'.$place.'. '.$row['FullName'].' : '.$row['visits'].' views</p></a>';
+        echo '</br>';
+        $place++;
+      }
+     ?>
+   </div>
+    <a href="contar"><input class="social-button go-back" type="button" value="Go Back"></a>
+      <!-- ========== START FOOTER ========== -->
     <footer class="footer fixed">
       <div class="container">
         <div class="row">
@@ -91,11 +104,11 @@ require '../conectare.php';
   <!-- ========== END FOOTER ========== -->
 
     <!-- ========== START JS ========== -->
-    <script src="../resources/js/jquery.js"></script>
+    <script src="resources/js/jquery.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="../resources/js/bootstrap.min.js"></script>
-    <script src="../resources/js/plugins.js"></script>
-    <script src="../resources/js/main.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+    <script src="resources/js/plugins.js"></script>
+    <script src="resources/js/main.js"></script>
     <!-- ========== END JS ========== -->
 
   </body>

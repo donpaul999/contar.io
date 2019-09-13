@@ -25,10 +25,7 @@ if(!isset($_SESSION['wrong']))
    $usr = $row['username'];
    $pass = $row['password'];
    $_SESSION['username'] = $usr;
-
    require('../user_info/stats.php');
-   $result = mysqli_query($conectare, $query);
-   $count = mysqli_num_rows($result);
    return header("location:../contar");
    }
    else

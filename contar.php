@@ -23,14 +23,14 @@ $ok = 1;
   <body>
     <?php
       if ($android == 1) {
-        echo 
+        echo
         '
           <div class="android-header">
             <div class="text">
               <p>Contar.io<br>
               Get it on Google Play.</p>
             </div>
-            <a href="https://play.google.com/store/apps/details?id=io.contar.app" class="android-button">Install</a> 
+            <a href="https://play.google.com/store/apps/details?id=io.contar.app" class="android-button">Install</a>
           </div>
         ';
       }
@@ -92,6 +92,7 @@ $ok = 1;
         <?php
           echo '<a href ="p/'.$username.'"><input class="social-button" type = "button" value="See your profile"></a>';
         ?>
+        <a href = 'top'><input type = 'button' class="social-button" value='Rankings'></a></li>
         <a href = 'update_pg/update'><input type = 'button' class="social-button" value='Update your profile'></a></li>
       </div>
     </div>

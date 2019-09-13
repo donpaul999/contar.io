@@ -1,9 +1,13 @@
 <?php
   require 'conectare.php';
 $ok = 0;
+
   session_start();
+
   if(isset($_COOKIE['username']) && isset($_COOKIE['password']) && isset($_COOKIE['loggedin']))
     if(!empty($_COOKIE['username']) && !empty($_COOKIE['password']) && !empty($_COOKIE['loggedin'])){
+      echo 1;
+      return;
     $username = $_COOKIE['username'];
      $password = $_COOKIE['password'];
      $ok = 1;
@@ -11,6 +15,7 @@ $ok = 0;
 
    $result = mysqli_query($conectare, $query);
    $count = mysqli_num_rows($result);
+
      if($count > 0 && $ok == 1)
        {
    session_start();
@@ -21,8 +26,6 @@ $ok = 0;
    $_SESSION['username'] = $usr;
 
    require('user_info/stats.php');
-   $result = mysqli_query($conectare, $query);
-   $count = mysqli_num_rows($result);
    return header("location:contar");
    }
    else

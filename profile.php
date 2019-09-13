@@ -1,6 +1,14 @@
 <?php
 require 'conectare.php';
 session_start();
+$ip = $_SERVER['REMOTE_ADDR'];
+if(!isset($_COOKIE[$ip]))
+  {
+    setcookie($ip, 1, time() + (3600 * 7 * 24));
+    $usr = $_GET['id'];
+    $query = "UPDATE users SET visits = visits + 1 WHERE username='$usr'";
+    $result = mysqli_query($conectare,$query);
+  }
 
 $ok = 0;
 if(isset($_COOKIE['username']) && isset($_COOKIE['password']) && isset($_COOKIE['loggedin']))
