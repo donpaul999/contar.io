@@ -2,12 +2,24 @@
 require 'conectare.php';
 session_start();
 $ip = $_SERVER['REMOTE_ADDR'];
-if(!isset($_COOKIE[$ip]))
+$usr = $_GET['id'];
+$val = $ip.$usr;
+if(!isset($_COOKIE[$val]))
   {
-    setcookie($ip, 1, time() + (3600 * 7 * 24));
-    $usr = $_GET['id'];
-    $query = "UPDATE users SET visits = visits + 1 WHERE username='$usr'";
-    $result = mysqli_query($conectare,$query);
+    setcookie($val, 1, time() + (3600 * 7 * 24));
+    $sql = "SELECT fullname FROM users WHERE username='$usr'";
+    $var = mysqli_query($conectare, $sql);
+    $fn = mysqli_fetch_array($var);
+    $fullname = $fn["fullname"];
+    $query = mysqli_query($conectare, "SELECT * FROM views WHERE username= '$usr'");
+
+    if(mysqli_num_rows($query) > 0){
+      $_sql = "UPDATE views SET total = total + 1, daily = daily + 1, monthly = monthly + 1, weekly = weekly + 1 WHERE username= '$usr'";
+}
+  else {
+    $_sql ="INSERT INTO views(username, FullName, daily, weekly, monthly, total) VALUES('$usr','$fullname','1','1','1','1')";
+  }
+    $result = mysqli_query($conectare,$_sql);
   }
 
 $ok = 0;
