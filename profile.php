@@ -175,6 +175,14 @@ $fn = mysqli_fetch_array($var);
                   }
               }
               if($username == $usr){
+                  $query = "SELECT * from views where username='$username'";
+                  $result = mysqli_query($conectare, $query);
+                  $row_views = mysqli_fetch_array($result);
+                  echo "Profile views:"."</br>";
+                  echo "Daily: ".$row_views['daily']."</br>";
+                  echo "Weekly: ".$row_views['weekly']."</br>";
+                  echo "Monthly: ".$row_views['monthly']."</br>";
+                  echo "Total: ".$row_views['total']."</br>";
                   echo "Share your profile:";
                   echo "<input id= 'share_profile' name= 'share_profile' value='https://contar.io/p/".$usr."'>";
                   echo  '<button class="copy-text" onclick="copy()">Copy text <span class="text-copied">Text copied</span></button>';
