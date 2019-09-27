@@ -178,11 +178,31 @@ $fn = mysqli_fetch_array($var);
                   $query = "SELECT * from views where username='$username'";
                   $result = mysqli_query($conectare, $query);
                   $row_views = mysqli_fetch_array($result);
-                  echo "Profile views:"."</br>";
-                  echo "Daily: ".$row_views['daily']."</br>";
-                  echo "Weekly: ".$row_views['weekly']."</br>";
-                  echo "Monthly: ".$row_views['monthly']."</br>";
-                  echo "Total: ".$row_views['total']."</br>";
+                  if(isset($_POST['views']) && $_POST['views'] != '')
+                    $var = $_POST['views'];
+                  else
+                    $var = "Select an option";
+                  echo'Profile views:
+                  <form method="POST">
+                  <select name="views">
+                  <option value='.$var.'>'.$var.'</option>';
+                  $topics=Array("Daily","Weekly","Monthly", "Total");
+                  foreach($topics as $topic){
+                      echo '<option value="'.$topic.'"'.($_POST['topic']==$topic?' selected="selected"':'').'>'.$topic.'</option>';
+                  }
+                  echo '</select>
+                  <input type="submit" name="submit" value="Search"/>';
+                  if(isset($_POST['views']) && $_POST['views'] != '')
+                    {
+                      echo "</br>".$_POST['views']." views: ";
+                      $views_t = $_POST['views'];
+                      $query = "SELECT $views_t FROM views WHERE username='$username'";
+                      $result = mysqli_query($conectare, $query);
+                      $arr = mysqli_fetch_array($result);
+                      echo $arr[$views_t];
+                    }
+                  echo '</br>
+                  </form>';
                   echo "Share your profile:";
                   echo "<input id= 'share_profile' name= 'share_profile' value='https://contar.io/p/".$usr."'>";
                   echo  '<button class="copy-text" onclick="copy()">Copy text <span class="text-copied">Text copied</span></button>';
