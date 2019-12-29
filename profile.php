@@ -4,6 +4,7 @@ session_start();
 $ip = $_SERVER['REMOTE_ADDR'];
 $usr = $_GET['id'];
 $val = $ip.$usr;
+$val = md5($val);
 if(!isset($_COOKIE[$val]))
   {
     setcookie($val, 1, time() + (3600 * 7 * 24));

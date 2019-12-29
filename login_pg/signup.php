@@ -1,13 +1,13 @@
 <?php
   require '../conectare.php';
   require '../user_info/UserInfo.php';
-$ok = 0;
-$token = $_POST['access'];
-$app_token = '825560317898128|wMleaJ0SQbbe5M02kGK2gj_TvSo';
-
-$json = file_get_contents('https://graph.facebook.com/debug_token?%20input_token='.$token.'%20&access_token='.$app_token);
-$data = json_decode($json, true);
-$user_id = $data["data"]["user_id"];
+  $ok = 0;
+  $token = $_POST['access'];
+  $app_token = '825560317898128|wMleaJ0SQbbe5M02kGK2gj_TvSo';
+  $user_id = '';
+  $json = file_get_contents('https://graph.facebook.com/debug_token?%20input_token='.$token.'%20&access_token='.$app_token);
+  $data = json_decode($json, true);
+  $user_id = $data["data"]["user_id"];
   $query = "SELECT * FROM users WHERE email='$mail'";
   $user =  str_replace("&lt","",str_replace("&gt","", $_POST['username']));
   $email =  str_replace("&lt","",str_replace("&gt","", $_POST['email']));

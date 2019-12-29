@@ -1,11 +1,11 @@
 <?php
   require 'conectare.php';
-  $ok = 0;
+  $ok = 1;
   session_start();
   if(!isset($_SESSION['loggedin']))
-    return header("location:login_pg/login");
-  $username = $_SESSION['username'];
-  $ok = 1;
+    $ok = 0;
+  else
+    $username = $_SESSION['username'];
 ?>
 
 <!DOCTYPE html>
@@ -34,14 +34,23 @@
 
 
       <?php
-      if($ok == 1) {
-        echo'<div class="menu-trigger">';
-         echo' <input type="checkbox">';
-          echo'<span></span>';
-          echo'<span></span>';
-          echo'<span></span>';
-        echo'</div><!-- end menu-trigger -->';
-      }
+       if($ok == 1)
+            {
+              echo '<div class="username">';
+              echo '<ul>';
+              echo '<li><input type = "button" value='.$username.'></li>';
+              echo '<ul class="sub-menu">';
+                echo "<li><a href='contar'><input type = 'button' id='back' value='Home'></a></li>";
+                echo "<li><a href = 'update_pg/update'><input type = 'button' value='Update your profile'></a></li>";
+                echo "<li><a href='update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
+                echo "<li><a href='login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
+              echo '</ul>';
+              echo  '</ul>';
+              echo  '</div>';
+            }
+            else {
+              echo "<a class='join' href='index'><input class='social-button' type = 'button' id='back' value='Join here'></a>";
+            }
       ?>
       <header class="header header--bgk">
         <div class="container">
@@ -107,7 +116,11 @@
             }
            ?>
    </div>
-    <a href="contar"><input class="social-button go-back" type="button" value="Go Back"></a>
+    <?php
+    if($ok == 1){
+        echo '<a href="contar"><input class="social-button go-back" type="button" value="Go Back"></a>';
+        }
+    ?>
       <!-- ========== START FOOTER ========== -->
     <footer class="footer fixed">
       <div class="container">
