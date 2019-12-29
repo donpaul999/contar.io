@@ -65,9 +65,12 @@ if(!isset($_SESSION['wrong']))
             }
         if(strlen($_POST['username']) > 1)
         {  $username = $_POST['username'];
-          $password = md5($_POST['password']);
-          $query = "SELECT * FROM users WHERE username='$username' and password='$password'";
-
+             $index = strpos($username, '@');
+             $password = md5($_POST['password']);
+             if($index != null)
+               $query = "SELECT * FROM users WHERE email='$username' and password='$password'";
+             else
+               $query = "SELECT * FROM users WHERE username='$username' and password='$password'";
         }
         $result = mysqli_query($conectare, $query);
         $count = mysqli_num_rows($result);
@@ -252,7 +255,7 @@ if(!isset($_SESSION['wrong']))
         </fb:login-button>
         <input type="hidden" name="g_mail" id="g_mail" value="">
         <input type="hidden" name="access" id="access" value="">
-            <input type="text" name="username" placeholder="Your username">
+            <input type="text" name="username" placeholder="Your email or username">
           <!--   <input type="email" name="email" placeholder="Email" required> -->
           <input type="password" name="password" value="" id="password" placeholder="Password">
             <input type="checkbox" onclick="showpass()"> <h5>Show Password</h5>
