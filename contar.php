@@ -89,10 +89,11 @@ $ok = 1;
           <div class="user-title">
           <h1 class="fullname">Welcome <?php echo $username; ?> !</h1>
         </div>
-        <?php
-          echo '<a href ="p/'.$username.'"><input class="social-button" type = "button" value="See your profile"></a>';
-        ?>
         <a href = 'top'><input type = 'button' class="social-button" value='Rankings'></a></li>
+        <?php
+        echo '<a href ="p/'.$username.'"><input class="social-button" type = "button" value="See your profile"></a>';
+        ?>
+        <a href = 'search_pg/search'><input type = 'button' class="social-button" value='Search for an user'></a>
         <a href = 'update_pg/update'><input type = 'button' class="social-button" value='Update your profile'></a></li>
       </div>
     </div>
