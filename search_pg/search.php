@@ -13,7 +13,7 @@ $ok = 1;
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+  <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="../resources/img/title.png" />
     <link rel="stylesheet" href="../resources/css/master.css">
@@ -51,6 +51,7 @@ $ok = 1;
         echo '<ul class="sub-menu">';
           echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
           echo "<li><a href = '../update_pg/update'><input type = 'button' value='Update your profile'></a></li>";
+          echo "<li><a href='../find'><input type = 'button' id='back' value='Search users'></a></li>";
           echo "<li><a href='../update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
           echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
         echo '</ul>';
@@ -76,6 +77,7 @@ $ok = 1;
               echo '<ul class="sub-menu">';
                 echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
                 echo "<li><a href = '../update_pg/update'><input type = 'button' value='Update your profile'></a></li>";
+                echo "<li><a href='../find'><input type = 'button' id='back' value='Search users'></a></li>";
                 echo "<li><a href='../update_pg/update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
                 echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
               echo '</ul>';
@@ -94,30 +96,28 @@ $ok = 1;
           <h1 class="fullname">Search for an user</h1>
         </div>
       </div>
-               <div class="search-box">
-                  <input type="text" autocomplete="off" placeholder="Search user" />
-                  <div class="result">
-                  </div>
-               </div>
+         <div class="search-box">
+           <input type="text" autocomplete="off" placeholder="Search user" />
+           <div class="result">
+         </div>
+     </div>
     </div>
     <!-- ========== END WELCOME CONTENT ========== -->
 
     <!-- ========== START FOOTER ========== -->
-    <footer class="footer fixed">
+    <footer class="footer fixed" id="searchfoot">
       <div class="container">
         <div class="row">
           <div class="footer__social">
             <ul class="social srf-full-menu">
                 <li>
-                  <li>
-                    <a href="https://www.facebook.com/stefanut999" target='_blank'><i class="fab fa-facebook-f"></i></a>
-                  </li>
-                  <li>
-                    <a href="https://www.linkedin.com/in/paulstefancolta/" target='_blank'><i class="fab fa-linkedin-in"></i></i></a>
-                  </li>
-                  <li>
-                    <a href="https://www.instagram.com/paulstefancolta/" target='_blank'><i class="fab fa-instagram"></i></a>
-                  </li>
+                  <a href="https://www.facebook.com/stefanut999" target='_blank'><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/paulstefancolta/" target='_blank'><i class="fab fa-linkedin-in"></i></i></a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/paulstefancolta/" target='_blank'><i class="fab fa-instagram"></i></a>
                 </li>
               </ul>
                <a href="#" class="copyright">&copy; Paul Colta - Contar.io</a>

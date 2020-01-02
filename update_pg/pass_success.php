@@ -42,6 +42,7 @@ if(isset($_SESSION['loggedin']))
       echo '<ul class="sub-menu">';
         echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
         echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
+        echo "<li><a href='../find'><input type = 'button' id='back' value='Search users'></a></li>";
         echo "<li><a href='update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
 echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
       echo '</ul>';
@@ -68,6 +69,7 @@ echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' va
               echo '<ul class="sub-menu">';
                 echo "<li><a href='../contar'><input type = 'button' id='back' value='Home'></a></li>";
                 echo "<li><a href = 'update'><input type = 'button' value='Update your profile'></a></li>";
+                echo "<li><a href='../find'><input type = 'button' id='back' value='Search users'></a></li>";
                 echo "<li><a href='update_pass'><input type = 'button' id='update_pass' value='Change password'></a></li>";
                 echo "<li><a href='../login_pg/logout.php'><input type = 'button' id='logout' value='Log Out'></a></li>";
               echo '</ul>';
