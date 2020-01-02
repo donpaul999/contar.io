@@ -85,8 +85,10 @@
       $sql = "SELECT FullName, username, daily FROM views ORDER BY daily DESC LIMIT 5";
       $result = mysqli_query($conectare, $sql);
       while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-        echo '<a  href = p/'.$row['username'].'><p>'.$place.'. '.$row['FullName'].' : '.$row['daily'].' views</p></a>';
-        echo '</br>';
+          if($row['daily'] != 0){
+              echo '<a  href = p/'.$row['username'].'><p>'.$place.'. '.$row['FullName'].' : '.$row['daily'].' views</p></a>';
+              echo '</br>';
+          }
         $place++;
       }
       echo "<h1>Weekly</h1>";
@@ -94,8 +96,10 @@
         $sql = "SELECT FullName, username, weekly FROM views ORDER BY weekly DESC LIMIT 5";
         $result = mysqli_query($conectare, $sql);
         while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-          echo '<a  href = p/'.$row['username'].'><p>'.$place.'. '.$row['FullName'].' : '.$row['weekly'].' views</p></a>';
-          echo '</br>';
+          if($row['weekly'] != 0){
+              echo '<a  href = p/'.$row['username'].'><p>'.$place.'. '.$row['FullName'].' : '.$row['weekly'].' views</p></a>';
+              echo '</br>';
+          }
           $place++;
         }
         echo "<h1>Monthly</h1>";
@@ -103,8 +107,10 @@
           $sql = "SELECT FullName, username, monthly FROM views ORDER BY monthly DESC LIMIT 5";
           $result = mysqli_query($conectare, $sql);
           while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-            echo '<a  href = p/'.$row['username'].'><p>'.$place.'. '.$row['FullName'].' : '.$row['monthly'].' views</p></a>';
-            echo '</br>';
+          if($row['monthly'] != 0){
+              echo '<a  href = p/'.$row['username'].'><p>'.$place.'. '.$row['FullName'].' : '.$row['monthly'].' views</p></a>';
+              echo '</br>';
+          }
             $place++;
           }
           echo "<h1>All time</h1>";
@@ -112,8 +118,10 @@
             $sql = "SELECT FullName, username,total FROM views ORDER BY total DESC LIMIT 5";
             $result = mysqli_query($conectare, $sql);
             while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+          if($row['total'] != 0){
               echo '<a  href = p/'.$row['username'].'><p>'.$place.'. '.$row['FullName'].' : '.$row['total'].' views</p></a>';
               echo '</br>';
+          }
               $place++;
             }
            ?>

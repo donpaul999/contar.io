@@ -193,8 +193,8 @@ $fn = mysqli_fetch_array($var);
                   foreach($topics as $topic){
                       echo '<option value="'.$topic.'"'.($_POST['topic']==$topic?' selected="selected"':'').'>'.$topic.'</option>';
                   }
-                  echo '</select>
-                  <input type="submit" name="submit" value="Search"/>';
+                  echo '</select>';
+                  echo '<input type="submit" name="submit" value="Search"/>';
                   if(isset($_POST['views']) && $_POST['views'] != '')
                     {
                       echo "</br>".$_POST['views']." views: ";
@@ -213,74 +213,94 @@ $fn = mysqli_fetch_array($var);
               }
               echo '<div class="user">';
               echo  '<ul>';
+              $is_empty = 0;
                  if(!empty($row['facebook']) && !ctype_space($row['facebook']))
                   {
+                    $is_empty++;
                     buttonorlist($row['facebook'], "fb", "Facebook", "fb1");
                   }
                   if(!empty($row['instagram']) && !ctype_space($row['instagram']))
                   {
+                    $is_empty++;
                     buttonorlist($row['instagram'], "ig", "Instagram", "ig1");
                   }
                   if(!empty($row['twitter']) && !ctype_space($row['twitter']))
                   {
+                    $is_empty++;
                     buttonorlist($row['twitter'], "twitter", "Twitter","twitter1");
                   }
                   if(!empty($row['youtube']) && !ctype_space($row['youtube']))
                   {
+                    $is_empty++;
                     buttonorlist($row['youtube'], "yt", "YouTube", "yt1");
                   }
                   if(!empty($row['linkedin']) && !ctype_space($row['linkedin']))
                    {
+                     $is_empty++;
                      buttonorlist($row['linkedin'], "linkedin", "LinkedIn", "linkedin1");
                    }
                   if(!empty($row['reddit']) && !ctype_space($row['reddit']))
                   {
+                    $is_empty++;
                     buttonorlist($row['reddit'], "reddit", "Reddit","reddit1");
                   }
                   if(!empty($row['pinterest']) && !ctype_space($row['pinterest']))
                   {
+                    $is_empty++;
                     buttonorlist($row['pinterest'], "pinterest", "Pinterest","pinterest1");
                   }
                   if(!empty($row['tumblr']) && !ctype_space($row['tumblr']))
                   {
+                    $is_empty++;
                     buttonorlist($row['tumblr'], "tumblr", "Tumblr","tumblr1");
                   }
                   if(!empty($row['patreon']) && !ctype_space($row['patreon']))
                   {
+                    $is_empty++;
                     buttonorlist($row['patreon'], "patreon", "Patreon","patreon1");
                   }
                   if(!empty($row['github']) && !ctype_space($row['github']))
                   {
+                    $is_empty++;
                     buttonorlist($row['github'], "github", "GitHub","github1");
                   }
                   if(!empty($row['paypal']) && !ctype_space($row['paypal']))
                   {
+                    $is_empty++;
                     buttonorlist($row['paypal'], "paypal", "PayPal","paypal1");
                   }
                   if(!empty($row['spotify']) && !ctype_space($row['spotify']))
                   {
+                    $is_empty++;
                     buttonorlist($row['spotify'], "spotify", "Spotify","spotify1");
                   }
                  if(!empty($row['snapchat']) && !ctype_space($row['snapchat']))
                  {
+                   $is_empty++;
                    buttonorlist($row['snapchat'], "snap", "Snapchat", "snap1");
                  }
                 if(!empty($row['discord']) && !ctype_space($row['discord']))
                 {
+                  $is_empty++;
                   buttonorlist($row['discord'], "discord", "Discord", "discord1");
                 }
                 if(!empty($row['skype']) && !ctype_space($row['skype']))
                 {
+                  $is_empty++;
                   buttonorlist($row['skype'], "skype", "Skype", "skype1");
                 }
                 if(!empty($row['steam']) && !ctype_space($row['steam']))
                 {
+                  $is_empty++;
                   buttonorlist($row['steam'], "steam", "Steam","steam1");
                 }
                 if(!empty($row['twitch']) && !ctype_space($row['twitch']))
                 {
+                  $is_empty++;
                   buttonorlist($row['twitch'], "twitch", "Twitch","twitch1");
                 }
+                if($is_empty == 0)
+                     echo "<a href = '../update_pg/update'><input type = 'button' class='social-button' value='Add your first account'></a>";
               echo  '</ul>';
               echo  '</div>';
               ?>

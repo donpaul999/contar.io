@@ -13,5 +13,5 @@ $ok = 0;
 
 
   $_SESSION['message']="You are logged out now!";
-  return header("location:login");
+  return header("location:../index");
  ?>

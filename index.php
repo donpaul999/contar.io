@@ -6,7 +6,6 @@ $ok = 0;
 
   if(isset($_COOKIE['username']) && isset($_COOKIE['password']) && isset($_COOKIE['loggedin']))
     if(!empty($_COOKIE['username']) && !empty($_COOKIE['password']) && !empty($_COOKIE['loggedin'])){
-      echo 1;
       return;
     $username = $_COOKIE['username'];
      $password = $_COOKIE['password'];
@@ -145,6 +144,7 @@ $ok = 0;
           <button class="update-icon" id='b_steam'><i style="color: #112758;" class="fab fa-steam"></i></button>
           <button class="update-icon" id='b_twitch'><i style="color: #6441a5;" class="fab fa-twitch"></i></button>
         </div>
+        <a href = "premium"><input class="social-button" type = "button" value="[NEW]Pre-order premium access![NEW]"></a>
         <a href = "login_pg/login"><input class="social-button" type = "button" value="Log In"></a>
         <a href = "login_pg/register"><input class="social-button" type = "button" value="Register"></a>
        </div><!-- end main  -->
