@@ -3,6 +3,9 @@
 <h4>Contar.io is a platform where you can store all of your online accounts in one place.</h4>
 <h3><b>NEW: Rankings added(https://contar.io/top) and also find users(http://contar.io/find)!</b></h3>
 <h5>More updates to come!</h5>
+
+![alt text](https://i.imgur.com/AHVBfex.png)
+
 Instead of sharing every online account you have, you can share all accounts at once with a simple link that has the following structure:<b>contar.io/p/username</b>
 <h5>This is how the profile page of an user looks like</h5>
 
