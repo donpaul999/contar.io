@@ -12,11 +12,13 @@
   $user =  str_replace("&lt","",str_replace("&gt","", $_POST['username']));
   $email =  str_replace("&lt","",str_replace("&gt","", $_POST['email']));
   $FullName =  str_replace("&lt","",str_replace("&gt","", $_POST['FullName']));
+  $gender = str_replace("&lt","",str_replace("&gt","", $_POST['gender']));
   $pass = md5($_POST['password']);
   $date = str_replace("&lt","",str_replace("&gt","",$_POST['birthdate']));
   $user =  str_replace(">","",str_replace("<","", $user));
   $email =  str_replace(">","",str_replace("<","", $email));
   $FullName =  str_replace(">","",str_replace("<","", $FullName ));
+  $gender = str_replace(">","",str_replace("<","", $gender ));
   $date = str_replace(">","",str_replace("<","",$date));
   //$sql = "INSERT INTO users VALUES ('$username', '$FullName', '$date', '$email', '$password')";
 
@@ -39,12 +41,12 @@
         return header("location:username_error");
       }else{
         $query = mysqli_query($conectare, "SELECT * FROM users WHERE email= '$email'");
-        if(mysqli_num_rows($query) > 0 ) { //check if there is already an entry for that username
+        if(mysqli_num_rows($query) > 0 ) { //check if there is already an entry for that email
           return header("location:email_error");
         }
         else{
-        $sql ="INSERT INTO users(user_id, username, FullName, birthdate, email, password) VALUES ('$user_id','$user', '$FullName','$date','$email','$pass')";
-				$result = mysqli_query($conectare, $sql);
+        $sql ="INSERT INTO users(user_id, username, FullName, birthdate, email, password, gender) VALUES ('$user_id','$user', '$FullName','$date','$email','$pass', '$gender')";
+		$result = mysqli_query($conectare, $sql);
         $ip = UserInfo::get_ip();
         $os = UserInfo::get_os();
         $browser = UserInfo::get_browser();

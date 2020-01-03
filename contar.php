@@ -91,6 +91,7 @@ $ok = 1;
           <div class="user-title">
           <h1 class="fullname">Welcome <?php echo $username; ?> !</h1>
         </div>
+        <a href = "premium"><input class="social-button" type = "button" value="[NEW]Pre-order premium access![NEW]"></a>
         <a href = 'top'><input type = 'button' class="social-button" value='Rankings'></a></li>
         <?php
         echo '<a href ="p/'.$username.'"><input class="social-button" type = "button" value="See your profile"></a>';

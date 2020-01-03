@@ -184,11 +184,17 @@ $ok = 0;
             <form method="POST" action="signup.php">
                 <h1 class="fullname">Register</h1>
                 <div id="status"></div>
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
                 <input type="hidden" name="access" id="access" value="">
                 <input type="text" name="username" id="username" placeholder="Your username - letters and numbers only" onkeypress="return alphanum(event)" required maxlength="25">
                 <input type="text" name="FullName" id="FullName" placeholder="Your Full Name - letters, space and dash only" onkeypress="return alphanumdash(event)" required maxlength="100">
                 <input required type="text" class="form-control" name="birthdate" placeholder="Your Birthdate" onfocus="(this.type='date')"/>
+                <select name="gender" id='gender' required>
+                    <option value="" selected disabled hidden>Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other(Non-binary)">Other(Non-binary)</option>
+                </select>
                 <input type="email" name="email" id="email" placeholder="Email" required maxlength="50">
                 <input type="password" name="password" value="" pattern=".{8,}" title="Must contain at least 8 or more characters" id="password" placeholder="Password" required>
                 <div class="show-pass">
