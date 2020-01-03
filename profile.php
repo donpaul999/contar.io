@@ -194,7 +194,7 @@ $fn = mysqli_fetch_array($var);
                       echo '<option value="'.$topic.'"'.($_POST['topic']==$topic?' selected="selected"':'').'>'.$topic.'</option>';
                   }
                   echo '</select>';
-                  echo '<input type="submit" name="submit" value="Search"/>';
+                  echo '<input type="submit" name="submit" value="Submit"/>';
                   if(isset($_POST['views']) && $_POST['views'] != '')
                     {
                       echo "</br>".$_POST['views']." views: ";

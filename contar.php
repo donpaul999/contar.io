@@ -8,6 +8,12 @@ if(!isset($_SESSION['loggedin']))
   return header("location:login_pg/login");
 $username = $_SESSION['username'];
 $ok = 1;
+$sql = "SELECT * from users where username = '$username'";
+$result = mysqli_query($conectare, $sql);
+$arr = mysqli_fetch_array($result);
+if($arr['gender'] == '')
+  return header("location:gender_set");
+
 ?>
 
 

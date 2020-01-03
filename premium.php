@@ -111,7 +111,7 @@ if($ok == 1){
          <p>Pre-order now the premium account that will include detailed stats for your account:</p>
          <ul>
             <li>--> Count of clicks for every social profile,</li>
-            <li>--> Stats about persons visiting your profile(age, region, genre),</li>
+            <li>--> Stats about persons visiting your profile(age, region, gender),</li>
             <li>--> Comparison between past and actual stats,</li>
             <li>--> Detailed graphs for everything above.</li>
          </ul>
