@@ -1,8 +1,14 @@
 <?php
 require 'conectare.php';
+require 'premium_pg/conectare2.php';
 session_start();
 $ip = $_SERVER['REMOTE_ADDR'];
 $usr = $_GET['id'];
+$sql = "SELECT * FROM users WHERE username= '$usr'";
+$var = mysqli_query($conectare, $sql);
+$fn = mysqli_fetch_array($var);
+if($fn['premium'] == 1)
+    $is_premium = 1;
 $val = $ip.$usr;
 $val = md5($val);
 if(!isset($_COOKIE[$val]))
@@ -59,6 +65,17 @@ $username = "./";
 if(isset($_SESSION['loggedin'])) {
   $ok = 1;
   $username = $_SESSION['username'];
+}
+if($is_premium == 1 && $_SESSION['loggedin'] == 1 && $usr != $username){
+    $sql = "SELECT * FROM ".$usr." WHERE username='$username'";
+    $var = mysqli_query($conectare2, $sql);
+    if(mysqli_num_rows($var) > 0){
+        $sql = "UPDATE ".$usr." SET views = views + 1 WHERE username = '$username'";
+    }
+    else{
+        $sql = "INSERT INTO ".$usr."(username) VALUES('$username')";
+    }
+    $var = mysqli_query($conectare2, $sql);
 }
 $sql = "SELECT fullname FROM users WHERE username='$usr'";
 $var = mysqli_query($conectare, $sql);
@@ -195,7 +212,7 @@ $fn = mysqli_fetch_array($var);
                   }
                   echo '</select>';
                   echo '<input type="submit" name="submit" value="Submit"/>';
-                  if(isset($_POST['views']) && $_POST['views'] != '')
+                  if(isset($_POST['views']) && $_POST['views'] != "Select an option")
                     {
                       echo "</br>".$_POST['views']." views: ";
                       $views_t = $_POST['views'];
@@ -299,7 +316,7 @@ $fn = mysqli_fetch_array($var);
                   $is_empty++;
                   buttonorlist($row['twitch'], "twitch", "Twitch","twitch1");
                 }
-                if($is_empty == 0)
+                if($is_empty == 0 && $username == $usr)
                      echo "<a href = '../update_pg/update'><input type = 'button' class='social-button' value='Add your first account'></a>";
               echo  '</ul>';
               echo  '</div>';

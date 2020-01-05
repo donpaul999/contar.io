@@ -253,6 +253,13 @@ img {
   vertical-align: middle;
   border-style: none; }
 
+#paypalpay{
+    margin: 0;
+    position: relative;
+    left: 50%;
+    transform: translate(-48%,-26%);
+}
+
 svg {
   overflow: hidden;
   vertical-align: middle; }

@@ -33,7 +33,6 @@ if($ok == 1){
     <link rel="shortcut icon" type="image/x-icon" href="resources/img/title.png" />
     <link rel="stylesheet" href="resources/css/master.css">
     <title>Contar.io</title>
-
   </head>
   <body>
     <?php
@@ -119,7 +118,7 @@ if($ok == 1){
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
         <input type="hidden" name="cmd" value="_s-xclick">
         <input type="hidden" name="hosted_button_id" value="5TYPL7LCKRVUY">
-        <table>
+        <table id='paypalpay'>
         <tbody>
         <tr><td><input type="hidden" name="on0" value="Payment options">Payment options</td></tr><tr><td><select name="os0">
         	<option value="Premium Account">Premium Account : €5.00 EUR - monthly</option>
