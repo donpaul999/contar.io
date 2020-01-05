@@ -1,7 +1,8 @@
 # contar.io
 <h2>Online "visiting card".</h2>
 <h4>Contar.io is a platform where you can store all of your online accounts in one place.</h4>
-<h3><b>NEW: Rankings added(https://contar.io/top) and also find users(http://contar.io/find)!</b></h3>
+<h3><b>NEW: Pre-orders for premium accounts that are coming soon are open now! --> https://contar.io/premium </b></h3>
+<h3><b>NEW: Rankings added(https://contar.io/top) and also find users(https://contar.io/find)!</b></h3>
 <h5>More updates to come!</h5>
 
 ![alt text](https://i.imgur.com/AHVBfex.png)
