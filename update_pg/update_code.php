@@ -88,6 +88,10 @@ function upd($link, $site, &$ok, $user, $conectare)
    upd( $_POST['steam'], "steam", $ok, $user, $conectare);
  }
 
+ if(!empty($_POST['tiktok'])){
+   upd($_POST['tiktok'], "TikTok", $ok, $user, $conectare);
+ }
+
 if($ok == 1)
  return header("location:update_successful");
 return header("location:update");

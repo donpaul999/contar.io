@@ -67,6 +67,8 @@ if(isset($_SESSION['loggedin'])) {
   $username = $_SESSION['username'];
 }
 if($is_premium == 1 && $_SESSION['loggedin'] == 1 && $usr != $username){
+    $sql = "CREATE TABLE IF NOT EXISTS ".$usr."(ID INT(255) NOT NULL AUTO_INCREMENT PRIMARY KEY, username VARCHAR(255), views INT(255) NOT NULL DEFAULT '1', fb INT(255) NOT NULL DEFAULT '0', ig INT(255) NOT NULL DEFAULT '0', linkedin INT(255) NOT NULL DEFAULT '0', github  INT(255) NOT NULL DEFAULT '0', spotify INT(255) NOT NULL DEFAULT '0', discord INT(255) NOT NULL DEFAULT '0', skype INT(255) NOT NULL DEFAULT '0', yt INT(255) NOT NULL DEFAULT '0', snap INT(255) NOT NULL DEFAULT '0', steam INT(255) NOT NULL DEFAULT '0', paypal INT(255) NOT NULL DEFAULT '0', reddit INT(255) NOT NULL DEFAULT '0', tumblr INT(255) NOT NULL DEFAULT '0', pinterest INT(255) NOT NULL DEFAULT '0', twitch INT(255) NOT NULL DEFAULT '0',twitter INT(255) NOT NULL DEFAULT '0', patreon INT(255) NOT NULL DEFAULT '0')";
+    $var = mysqli_query($conectare2, $sql);
     $sql = "SELECT * FROM ".$usr." WHERE username='$username'";
     $var = mysqli_query($conectare2, $sql);
     if(mysqli_num_rows($var) > 0){
@@ -241,6 +243,11 @@ $fn = mysqli_fetch_array($var);
                     $is_empty++;
                     buttonorlist($row['instagram'], "ig", "Instagram", "ig1");
                   }
+                  if(!empty($row['tiktok']) && !ctype_space($row['tiktok']))
+                     {
+                       $is_empty++;
+                       buttonorlist($row['tiktok'], "tiktok", "TikTok","tiktok1");
+                     }
                   if(!empty($row['twitter']) && !ctype_space($row['twitter']))
                   {
                     $is_empty++;
@@ -369,6 +376,7 @@ $fn = mysqli_fetch_array($var);
   }
 
   function swaptxt(index, text1, text2){
+    //$.post('phpurl.php', { id: index; usr: <?php echo json_encode($usr);?>; username: <?php echo json_encode($username);?>} );
     var elem = document.getElementById(index);
     if (elem.innerHTML === text1)
       elem.innerHTML = text2;

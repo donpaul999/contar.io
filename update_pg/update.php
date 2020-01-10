@@ -102,6 +102,7 @@ $usr = $_SESSION['username'];
             ?>
               <input type="text" name="facebook" id='fb' onclick="addtxt('fb','https://www.facebook.com/', '<?php echo $row['facebook']; ?>')" placeholder="Your Facebook profile: <?php echo $row['facebook']; ?>" maxlength="200">
               <input type="text" name="instagram" id='ig' onclick="addtxt('ig','https://www.instagram.com/', '<?php echo $row['instagram']; ?>')" placeholder="Your Instagram profile or username: <?php echo $row['instagram']; ?>" maxlength="200">
+              <input type="text" name="tiktok" id='tiktok' onclick="addtxt('tiktok','https://www.tiktok.com/', '<?php echo $row['tiktok']; ?>')" placeholder="Your TikTok profile: <?php echo $row['tiktok']; ?>" maxlength="200">
               <input type="text" name="twitter" id='twitter' onclick="addtxt('twitter','https://twitter.com/', '<?php echo $row['twitter']; ?>')" placeholder="Your Twitter profile or username: <?php echo $row['twitter']; ?>" maxlength="200">
               <input type="text" name="youtube" id='yt' onclick="addtxt('yt','https://www.youtube.com/c/', '<?php echo $row['youtube']; ?>')" placeholder="Your YouTube channel: <?php echo $row['youtube']; ?>" maxlength="200">
               <input type="text" name="linkedin" id='linked' onclick="addtxt('linked','https://www.linkedin.com/in/', '<?php echo $row['linkedin']; ?>')" placeholder="Your LinkedIn profile: <?php echo $row['linkedin']; ?>" maxlength="200">
