@@ -4,8 +4,8 @@ $ok = 0;
 
 if($_GET['key'] && $_GET['reset'])
 {
-  $email=$_GET['key'];
-  $pass=$_GET['reset'];
+  $email=htmlspecialchars($_GET['key']);
+  $pass=htmlspecialchars($_GET['reset']);
   $select=mysqli_query($conectare, "select * from users where email='$email' and password='$pass'");
   if(mysqli_num_rows($select))
   {
@@ -26,7 +26,6 @@ if($_GET['key'] && $_GET['reset'])
         <link rel="stylesheet" href="../resources/css/master.css">
         <script src = "../resources/js/password.js"></script>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
       </head>
       <body>
         <!-- ========== START HEADER ========== -->

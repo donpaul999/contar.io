@@ -2,8 +2,8 @@
 require 'conectare.php';
 require 'premium_pg/conectare2.php';
 session_start();
-$ip = $_SERVER['REMOTE_ADDR'];
-$usr = $_GET['id'];
+$ip = htmlspecialchars($_SERVER['REMOTE_ADDR']);
+$usr = htmlspecialchars($_GET['id']);
 $sql = "SELECT * FROM users WHERE username= '$usr'";
 $var = mysqli_query($conectare, $sql);
 $fn = mysqli_fetch_array($var);
@@ -11,6 +11,14 @@ if($fn['premium'] == 1)
     $is_premium = 1;
 $val = $ip.$usr;
 $val = md5($val);
+$sql = "SELECT fullname FROM users WHERE username='$usr'";
+$var = mysqli_query($conectare, $sql);
+$fn = mysqli_fetch_array($var);
+$fullname = $fn["fullname"];
+if(empty($fullname)){
+      return header("location:../index");
+}
+
 if(!isset($_COOKIE[$val]))
   {
     setcookie($val, 1, time() + (3600 * 7 * 24));
@@ -32,8 +40,8 @@ if(!isset($_COOKIE[$val]))
 $ok = 0;
 if(isset($_COOKIE['username']) && isset($_COOKIE['password']) && isset($_COOKIE['loggedin']))
   if(!empty($_COOKIE['username']) && !empty($_COOKIE['password']) && !empty($_COOKIE['loggedin'])){
-  $username = $_COOKIE['username'];
-   $password = $_COOKIE['password'];
+  $username = htmlspecialchars($_COOKIE['username']);
+   $password = htmlspecialchars($_COOKIE['password']);
    $ok = 1;
    $query = "SELECT * FROM users WHERE username='$username' and password='$password'";
 
@@ -60,11 +68,11 @@ if(isset($_COOKIE['username']) && isset($_COOKIE['password']) && isset($_COOKIE[
  }
 
 }
-$usr = $_GET['id'];
+$usr = htmlspecialchars($_GET['id']);
 $username = "./";
 if(isset($_SESSION['loggedin'])) {
   $ok = 1;
-  $username = $_SESSION['username'];
+  $username =  htmlspecialchars($_SESSION['username']);
 }
 if($is_premium == 1 && $_SESSION['loggedin'] == 1 && $usr != $username){
     $sql = "CREATE TABLE IF NOT EXISTS ".$usr."(ID INT(255) NOT NULL AUTO_INCREMENT PRIMARY KEY, username VARCHAR(255), views INT(255) NOT NULL DEFAULT '1', fb INT(255) NOT NULL DEFAULT '0', ig INT(255) NOT NULL DEFAULT '0', linkedin INT(255) NOT NULL DEFAULT '0', github  INT(255) NOT NULL DEFAULT '0', spotify INT(255) NOT NULL DEFAULT '0', discord INT(255) NOT NULL DEFAULT '0', skype INT(255) NOT NULL DEFAULT '0', yt INT(255) NOT NULL DEFAULT '0', snap INT(255) NOT NULL DEFAULT '0', steam INT(255) NOT NULL DEFAULT '0', paypal INT(255) NOT NULL DEFAULT '0', reddit INT(255) NOT NULL DEFAULT '0', tumblr INT(255) NOT NULL DEFAULT '0', pinterest INT(255) NOT NULL DEFAULT '0', twitch INT(255) NOT NULL DEFAULT '0',twitter INT(255) NOT NULL DEFAULT '0', patreon INT(255) NOT NULL DEFAULT '0')";
@@ -201,7 +209,7 @@ $fn = mysqli_fetch_array($var);
                   $result = mysqli_query($conectare, $query);
                   $row_views = mysqli_fetch_array($result);
                   if(isset($_POST['views']) && $_POST['views'] != '')
-                    $var = $_POST['views'];
+                    $var = htmlspecialchars($_POST['views']);
                   else
                     $var = "Select an option";
                   echo'Profile views:
@@ -217,7 +225,7 @@ $fn = mysqli_fetch_array($var);
                   if(isset($_POST['views']) && $_POST['views'] != "Select an option")
                     {
                       echo "</br>".$_POST['views']." views: ";
-                      $views_t = $_POST['views'];
+                      $views_t = htmlspecialchars($_POST['views']);
                       $query = "SELECT $views_t FROM views WHERE username='$username'";
                       $result = mysqli_query($conectare, $query);
                       $arr = mysqli_fetch_array($result);

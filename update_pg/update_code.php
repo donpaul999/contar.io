@@ -3,7 +3,7 @@
 $ok = 0;
  session_start();
  $ok = 0;
- $user = $_SESSION['username'];
+ $user = htmlspecialchars($_SESSION['username']);
 
 function upd($link, $site, &$ok, $user, $conectare)
 {
@@ -71,7 +71,7 @@ function upd($link, $site, &$ok, $user, $conectare)
  }
 
  if(!empty($_POST['discord'])){
-   $fb = $_POST['discord'];
+   $fb = htmlspecialchars($_POST['discord']);
    $site = "discord";
    upd($fb, $site, $ok, $user, $conectare);
  }

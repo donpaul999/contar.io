@@ -2,8 +2,8 @@
   require '../conectare.php';
   if(isset($_COOKIE['username']) && isset($_COOKIE['password']) && isset($_COOKIE['loggedin']))
     if(!empty($_COOKIE['username']) && !empty($_COOKIE['password']) && !empty($_COOKIE['loggedin'])){
-    $username = $_COOKIE['username'];
-     $password = $_COOKIE['password'];
+    $username = htmlspecialchars($_COOKIE['username']);
+     $password = htmlspecialchars($_COOKIE['password']);
      $ok = 1;
      $query = "SELECT * FROM users WHERE username='$username' and password='$password'";
 

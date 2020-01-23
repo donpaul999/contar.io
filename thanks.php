@@ -5,7 +5,7 @@ $ok = 0;
 
 session_start();
 if(isset($_SESSION['loggedin'])){
-    $username = $_SESSION['username'];
+    $username = htmlspecialchars($_SESSION['username']);
     $ok = 1;
     }
 ?>

@@ -5,7 +5,7 @@
   session_start();
   if(!isset($_SESSION['loggedin']))
         return header("location:../login_pg/login");
-  $username = $_SESSION['username'];
+  $username = htmlspecialchars($_SESSION['username']);
   $sql = "SELECT * FROM users WHERE username='$username'";
   $query = mysqli_query($conectare, $sql);
   $arr = mysqli_fetch_array($query);
@@ -122,7 +122,7 @@
               </ul>
               ';
         echo '<ul><h1>Age</h1>
-                 <li><h3>-  18: '.$data["age"]["-18"].'</h3></li>
+                 <li><h3>-18: '.$data["age"]["-18"].'</h3></li>
                  <li><h3>18-24: '.$data["age"]["18-24"].'</h3></li>
                  <li><h3>24+: '.$data["age"]["24+"].'</h3></li>
               </ul>

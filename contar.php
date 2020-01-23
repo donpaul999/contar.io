@@ -6,7 +6,8 @@ $ok = 0;
 session_start();
 if(!isset($_SESSION['loggedin']))
   return header("location:login_pg/login");
-$username = $_SESSION['username'];
+$username = htmlspecialchars($_SESSION['username']);
+
 $ok = 1;
 $sql = "SELECT * from users where username = '$username'";
 $result = mysqli_query($conectare, $sql);
@@ -19,7 +20,7 @@ if($arr['gender'] == '')
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+  <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="resources/img/title.png" />
     <link rel="stylesheet" href="resources/css/master.css">
@@ -97,13 +98,13 @@ if($arr['gender'] == '')
           <div class="user-title">
           <h1 class="fullname">Welcome <?php echo $username; ?> !</h1>
         </div>
-        <a href = "premium"><input class="social-button" type = "button" value="[NEW]Pre-order premium access![NEW]"></a>
-        <a href = 'top'><input type = 'button' class="social-button" value='Rankings'></a></li>
         <?php
         echo '<a href ="p/'.$username.'"><input class="social-button" type = "button" value="See your profile"></a>';
         ?>
-        <a href = 'search_pg/search'><input type = 'button' class="social-button" value='Search for an user'></a>
         <a href = 'update_pg/update'><input type = 'button' class="social-button" value='Update your profile'></a></li>
+        <a href = "premium"><input class="social-button" type = "button" value="[NEW]Pre-order premium access![NEW]"></a>
+        <a href = 'top'><input type = 'button' class="social-button" value='Rankings'></a></li>
+        <a href = 'search_pg/search'><input type = 'button' class="social-button" value='Search for an user'></a>
       </div>
     </div>
     <!-- ========== END WELCOME CONTENT ========== -->

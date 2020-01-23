@@ -4,7 +4,7 @@ $ok = 0;
 session_start();
 if(!isset($_SESSION['loggedin']))
   return header("location:../login_pg/login");
-$username = $_SESSION['username'];
+$username = htmlspecialchars($_SESSION['username']);
 
 if(!empty($_POST['change_pass']))
   {

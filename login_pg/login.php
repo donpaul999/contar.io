@@ -10,8 +10,8 @@ if(!isset($_SESSION['wrong']))
 
   if(isset($_COOKIE['username']) && isset($_COOKIE['password']) && isset($_COOKIE['loggedin']))
     if(!empty($_COOKIE['username']) && !empty($_COOKIE['password']) && !empty($_COOKIE['loggedin'])){
-    $username = $_COOKIE['username'];
-     $password = $_COOKIE['password'];
+    $username = htmlspecialchars($_COOKIE['username']);
+     $password = htmlspecialchars($_COOKIE['password']);
      $ok = 1;
      $query = "SELECT * FROM users WHERE username='$username' and password='$password'";
 
@@ -54,8 +54,8 @@ if(!isset($_SESSION['wrong']))
         if(strlen($_POST['g_mail']) > 1)
             {
 
-              $mail = $_POST['g_mail'];
-              $token = $_POST['access'];
+              $mail = htmlspecialchars($_POST['g_mail']);
+              $token = htmlspecialchars($_POST['access']);
               $app_token = '825560317898128|wMleaJ0SQbbe5M02kGK2gj_TvSo';
 
               $json = file_get_contents('https://graph.facebook.com/debug_token?%20input_token='.$token.'%20&access_token='.$app_token);
@@ -64,7 +64,7 @@ if(!isset($_SESSION['wrong']))
              $query = "SELECT * FROM users WHERE email='$mail' and user_id='$user_id'";
             }
         if(strlen($_POST['username']) > 1)
-        {  $username = $_POST['username'];
+        {  $username = htmlspecialchars($_POST['username']);
              $index = strpos($username, '@');
              $password = md5($_POST['password']);
              if($index != null)

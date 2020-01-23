@@ -4,7 +4,7 @@ $ok = 0;
 session_start();
 if(!isset($_SESSION['loggedin']))
   return header("location:../login_pg/login");
-$usr = $_SESSION['username'];
+$usr = htmlspecialchars($_SESSION['username']);
 ?>
 
 <!DOCTYPE html>

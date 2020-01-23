@@ -2,7 +2,7 @@
   session_start();
   require '../conectare.php';
   require 'UserInfo.php';
-  $username = $_SESSION['username'];
+  $username = htmlspecialchars($_SESSION['username']);
   $ip = UserInfo::get_ip();
   $os = UserInfo::get_os();
   $browser = UserInfo::get_browser();
