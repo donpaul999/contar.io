@@ -1,4 +1,6 @@
 # contar.io
+<h1>This is the old version of the website.</h1>
+<h5>It is my first personal project so I'm not going to delete it from GitHub.</h5>
 <h2>Online "visiting card".</h2>
 <h4>Contar.io is a platform where you can store all of your online accounts in one place.</h4>
 <h3><b>NEW: Pre-orders for premium accounts that are coming soon are open now! --> https://contar.io/premium </b></h3>
